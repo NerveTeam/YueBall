@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "YTKNetwork.h"
 @interface AppDelegate ()
 
 @end
@@ -47,5 +47,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+#pragma mark - PrivateMethod
+- (void)netWorkConfig {
+    YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
+    config.baseUrl = @"http://wu.she-cheng.com";
+}
 @end
