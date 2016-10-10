@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8CD3D3AE1DAA244600044ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3AD1DAA244600044ADB /* main.m */; };
-		8CD3D3B11DAA244600044ADB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3B01DAA244600044ADB /* AppDelegate.m */; };
-		8CD3D3B41DAA244600044ADB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3B31DAA244600044ADB /* ViewController.m */; };
-		8CD3D3B71DAA244600044ADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3D3B51DAA244600044ADB /* Main.storyboard */; };
 		8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3D3B81DAA244600044ADB /* Assets.xcassets */; };
 		8CD3D3C71DAA244600044ADB /* YueBallSportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3C61DAA244600044ADB /* YueBallSportTests.m */; };
 		8CD3D3D21DAA244600044ADB /* YueBallSportUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3D11DAA244600044ADB /* YueBallSportUITests.m */; };
@@ -54,6 +51,13 @@
 		8CD3D4891DAA3ABD00044ADB /* UIView+TopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D47F1DAA3ABD00044ADB /* UIView+TopBar.m */; };
 		8CD3D48A1DAA3ABD00044ADB /* UIViewController+AnimationHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D4811DAA3ABD00044ADB /* UIViewController+AnimationHUD.m */; };
 		8CD3D48B1DAA3ABD00044ADB /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D4831DAA3ABD00044ADB /* UIViewController+Navigation.m */; };
+		8CD3D4D21DAB43DE00044ADB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D4D11DAB43DE00044ADB /* AppDelegate.m */; };
+		8CD3D4D51DAB449A00044ADB /* YBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D4D41DAB449A00044ADB /* YBTabBarController.m */; };
+		8CD3D4DB1DAB44FF00044ADB /* YBNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D4DA1DAB44FF00044ADB /* YBNewsViewController.m */; };
+		8CD3D4DE1DAB450A00044ADB /* YBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D4DD1DAB450A00044ADB /* YBHomeViewController.m */; };
+		8CD3D4E11DAB451700044ADB /* YBFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D4E01DAB451700044ADB /* YBFindViewController.m */; };
+		8CD3D4E41DAB452500044ADB /* YBPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D4E31DAB452500044ADB /* YBPersonViewController.m */; };
+		8CD3D4E71DAB458A00044ADB /* YBMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D4E61DAB458A00044ADB /* YBMessageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,11 +80,6 @@
 /* Begin PBXFileReference section */
 		8CD3D3A91DAA244600044ADB /* YueBallSport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueBallSport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD3D3AD1DAA244600044ADB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8CD3D3AF1DAA244600044ADB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		8CD3D3B01DAA244600044ADB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
-		8CD3D3B21DAA244600044ADB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8CD3D3B31DAA244600044ADB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8CD3D3B61DAA244600044ADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CD3D3B81DAA244600044ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CD3D3BD1DAA244600044ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CD3D3C21DAA244600044ADB /* YueBallSportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YueBallSportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +172,20 @@
 		8CD3D4811DAA3ABD00044ADB /* UIViewController+AnimationHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AnimationHUD.m"; sourceTree = "<group>"; };
 		8CD3D4821DAA3ABD00044ADB /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
 		8CD3D4831DAA3ABD00044ADB /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
+		8CD3D4D01DAB43DE00044ADB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8CD3D4D11DAB43DE00044ADB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8CD3D4D31DAB449A00044ADB /* YBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTabBarController.h; sourceTree = "<group>"; };
+		8CD3D4D41DAB449A00044ADB /* YBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTabBarController.m; sourceTree = "<group>"; };
+		8CD3D4D91DAB44FF00044ADB /* YBNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNewsViewController.h; sourceTree = "<group>"; };
+		8CD3D4DA1DAB44FF00044ADB /* YBNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewsViewController.m; sourceTree = "<group>"; };
+		8CD3D4DC1DAB450A00044ADB /* YBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBHomeViewController.h; sourceTree = "<group>"; };
+		8CD3D4DD1DAB450A00044ADB /* YBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBHomeViewController.m; sourceTree = "<group>"; };
+		8CD3D4DF1DAB451700044ADB /* YBFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBFindViewController.h; sourceTree = "<group>"; };
+		8CD3D4E01DAB451700044ADB /* YBFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBFindViewController.m; sourceTree = "<group>"; };
+		8CD3D4E21DAB452500044ADB /* YBPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPersonViewController.h; sourceTree = "<group>"; };
+		8CD3D4E31DAB452500044ADB /* YBPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPersonViewController.m; sourceTree = "<group>"; };
+		8CD3D4E51DAB458A00044ADB /* YBMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageViewController.h; sourceTree = "<group>"; };
+		8CD3D4E61DAB458A00044ADB /* YBMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,9 +245,6 @@
 				8CD3D3F01DAA387800044ADB /* Manager */,
 				8CD3D40C1DAA387F00044ADB /* Vender */,
 				8CD3D3F81DAA387800044ADB /* Other */,
-				8CD3D3B21DAA244600044ADB /* ViewController.h */,
-				8CD3D3B31DAA244600044ADB /* ViewController.m */,
-				8CD3D3B51DAA244600044ADB /* Main.storyboard */,
 				8CD3D3AC1DAA244600044ADB /* Supporting Files */,
 			);
 			path = YueBallSport;
@@ -278,6 +288,7 @@
 		8CD3D3E01DAA387800044ADB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8CD3D4CF1DAB43AE00044ADB /* Other */,
 				8CD3D3E11DAA387800044ADB /* Find */,
 				8CD3D3E21DAA387800044ADB /* Home */,
 				8CD3D3E31DAA387800044ADB /* Me */,
@@ -290,6 +301,8 @@
 		8CD3D3E11DAA387800044ADB /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				8CD3D4DF1DAB451700044ADB /* YBFindViewController.h */,
+				8CD3D4E01DAB451700044ADB /* YBFindViewController.m */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -297,6 +310,8 @@
 		8CD3D3E21DAA387800044ADB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8CD3D4DC1DAB450A00044ADB /* YBHomeViewController.h */,
+				8CD3D4DD1DAB450A00044ADB /* YBHomeViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -304,6 +319,8 @@
 		8CD3D3E31DAA387800044ADB /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				8CD3D4E21DAB452500044ADB /* YBPersonViewController.h */,
+				8CD3D4E31DAB452500044ADB /* YBPersonViewController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -311,21 +328,17 @@
 		8CD3D3E41DAA387800044ADB /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				8CD3D3E51DAA387800044ADB /* Manager（管理类） */,
+				8CD3D4E51DAB458A00044ADB /* YBMessageViewController.h */,
+				8CD3D4E61DAB458A00044ADB /* YBMessageViewController.m */,
 			);
 			path = Message;
-			sourceTree = "<group>";
-		};
-		8CD3D3E51DAA387800044ADB /* Manager（管理类） */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Manager（管理类）";
 			sourceTree = "<group>";
 		};
 		8CD3D3E61DAA387800044ADB /* News */ = {
 			isa = PBXGroup;
 			children = (
+				8CD3D4D91DAB44FF00044ADB /* YBNewsViewController.h */,
+				8CD3D4DA1DAB44FF00044ADB /* YBNewsViewController.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -498,8 +511,8 @@
 		8CD3D3F81DAA387800044ADB /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				8CD3D3AF1DAA244600044ADB /* AppDelegate.h */,
-				8CD3D3B01DAA244600044ADB /* AppDelegate.m */,
+				8CD3D4D01DAB43DE00044ADB /* AppDelegate.h */,
+				8CD3D4D11DAB43DE00044ADB /* AppDelegate.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -737,6 +750,15 @@
 			path = YTKNetwork;
 			sourceTree = "<group>";
 		};
+		8CD3D4CF1DAB43AE00044ADB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D4D31DAB449A00044ADB /* YBTabBarController.h */,
+				8CD3D4D41DAB449A00044ADB /* YBTabBarController.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -799,6 +821,7 @@
 		8CD3D3A11DAA244600044ADB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YB;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = YueBall;
 				TargetAttributes = {
@@ -847,7 +870,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */,
-				8CD3D3B71DAA244600044ADB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,11 +900,11 @@
 				8CD3D45A1DAA3A5200044ADB /* YTKNetworkPrivate.m in Sources */,
 				8CD3D4201DAA3A2F00044ADB /* AFURLSessionManager.m in Sources */,
 				8CD3D43E1DAA3A4900044ADB /* UIWebView+AFNetworking.m in Sources */,
+				8CD3D4DB1DAB44FF00044ADB /* YBNewsViewController.m in Sources */,
 				8CD3D43B1DAA3A4900044ADB /* UIImageView+AFNetworking.m in Sources */,
-				8CD3D3B41DAA244600044ADB /* ViewController.m in Sources */,
 				8CD3D4551DAA3A5200044ADB /* YTKBatchRequestAgent.m in Sources */,
 				8CD3D43A1DAA3A4900044ADB /* UIButton+AFNetworking.m in Sources */,
-				8CD3D3B11DAA244600044ADB /* AppDelegate.m in Sources */,
+				8CD3D4E11DAB451700044ADB /* YBFindViewController.m in Sources */,
 				8CD3D41C1DAA3A2F00044ADB /* AFNetworkReachabilityManager.m in Sources */,
 				8CD3D4701DAA3AA100044ADB /* NSString+Utilities.m in Sources */,
 				8CD3D4881DAA3ABD00044ADB /* UIView+Position.m in Sources */,
@@ -892,12 +914,16 @@
 				8CD3D46E1DAA3AA100044ADB /* NSDictionary+Safe.m in Sources */,
 				8CD3D4861DAA3ABD00044ADB /* UIImage+Stretch.m in Sources */,
 				8CD3D4581DAA3A5200044ADB /* YTKNetworkAgent.m in Sources */,
+				8CD3D4E71DAB458A00044ADB /* YBMessageViewController.m in Sources */,
 				8CD3D4361DAA3A4900044ADB /* AFAutoPurgingImageCache.m in Sources */,
 				8CD3D4671DAA3A8D00044ADB /* BaseDataRequest.m in Sources */,
 				8CD3D41D1DAA3A2F00044ADB /* AFSecurityPolicy.m in Sources */,
+				8CD3D4E41DAB452500044ADB /* YBPersonViewController.m in Sources */,
 				8CD3D41E1DAA3A2F00044ADB /* AFURLRequestSerialization.m in Sources */,
+				8CD3D4D21DAB43DE00044ADB /* AppDelegate.m in Sources */,
 				8CD3D4641DAA3A8500044ADB /* NSDate+Utilities.m in Sources */,
 				8CD3D48A1DAA3ABD00044ADB /* UIViewController+AnimationHUD.m in Sources */,
+				8CD3D4D51DAB449A00044ADB /* YBTabBarController.m in Sources */,
 				8CD3D45B1DAA3A5200044ADB /* YTKRequest.m in Sources */,
 				8CD3D4731DAA3AA900044ADB /* DataRequest.m in Sources */,
 				8CD3D4531DAA3A5200044ADB /* YTKBaseRequest.m in Sources */,
@@ -909,6 +935,7 @@
 				8CD3D4631DAA3A8500044ADB /* NSArray+Safe.m in Sources */,
 				8CD3D41F1DAA3A2F00044ADB /* AFURLResponseSerialization.m in Sources */,
 				8CD3D41B1DAA3A2F00044ADB /* AFHTTPSessionManager.m in Sources */,
+				8CD3D4DE1DAB450A00044ADB /* YBHomeViewController.m in Sources */,
 				8CD3D48B1DAA3ABD00044ADB /* UIViewController+Navigation.m in Sources */,
 				8CD3D4371DAA3A4900044ADB /* AFImageDownloader.m in Sources */,
 				8CD3D4841DAA3ABD00044ADB /* UIButton+Extention.m in Sources */,
@@ -948,17 +975,6 @@
 			targetProxy = 8CD3D3CE1DAA244600044ADB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8CD3D3B51DAA244600044ADB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8CD3D3B61DAA244600044ADB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8CD3D3D41DAA244600044ADB /* Debug */ = {

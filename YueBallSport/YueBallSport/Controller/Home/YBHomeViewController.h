@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  YBHomeViewController.h
 //  YueBallSport
 //
-//  Created by Minlay on 16/10/9.
+//  Created by Minlay on 16/10/10.
 //  Copyright © 2016年 YueBall. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface YBHomeViewController : UIViewController
 
 @end
-

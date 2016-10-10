@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YTKNetwork.h"
+#import "YBTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self netWorkConfig];
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    YBTabBarController *tabBarController = [[YBTabBarController alloc]init];
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -48,6 +53,7 @@
 }
 
 #pragma mark - PrivateMethod
+// 设置网络
 - (void)netWorkConfig {
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
     config.baseUrl = @"http://wu.she-cheng.com";
