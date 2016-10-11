@@ -67,21 +67,21 @@
 		8CD3D5411DABB3A100044ADB /* TestImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5401DABB3A100044ADB /* TestImage.m */; };
 		8CD3D5441DABB3AB00044ADB /* TestPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5431DABB3AB00044ADB /* TestPlist.m */; };
 		8CD3D5471DABB3B500044ADB /* TestVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5461DABB3B500044ADB /* TestVideo.m */; };
-		8CD3D54A1DABB3CA00044ADB /* TestFindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5491DABB3CA00044ADB /* TestFindCell.m */; };
-		8CD3D54D1DABB3D300044ADB /* TestFindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D54C1DABB3D300044ADB /* TestFindView.m */; };
-		8CD3D5501DABB3DF00044ADB /* TestHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D54F1DABB3DF00044ADB /* TestHomeCell.m */; };
-		8CD3D5531DABB3F300044ADB /* TestHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5521DABB3F300044ADB /* TestHomeView.m */; };
-		8CD3D5561DABB40000044ADB /* TestMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5551DABB40000044ADB /* TestMeCell.m */; };
-		8CD3D5591DABB40800044ADB /* TestMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5581DABB40800044ADB /* TestMeView.m */; };
-		8CD3D55C1DABB41500044ADB /* TestMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D55B1DABB41500044ADB /* TestMessageCell.m */; };
-		8CD3D55F1DABB42200044ADB /* TestMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D55E1DABB42200044ADB /* TestMessageView.m */; };
-		8CD3D5621DABB42F00044ADB /* TestNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5611DABB42F00044ADB /* TestNewsCell.m */; };
-		8CD3D5651DABB43D00044ADB /* TestNewsViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5641DABB43D00044ADB /* TestNewsViews.m */; };
 		8CD3D5681DAC89B800044ADB /* TestFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5671DAC89B800044ADB /* TestFind.m */; };
 		8CD3D56B1DAC89C400044ADB /* TestHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D56A1DAC89C400044ADB /* TestHome.m */; };
 		8CD3D56E1DAC89CF00044ADB /* TestMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D56D1DAC89CF00044ADB /* TestMe.m */; };
 		8CD3D5711DAC89D800044ADB /* TestMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5701DAC89D800044ADB /* TestMessage.m */; };
 		8CD3D5741DAC89E200044ADB /* TestNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5731DAC89E200044ADB /* TestNews.m */; };
+		8CD3D5961DAC8B9A00044ADB /* TestFindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5791DAC8B9900044ADB /* TestFindCell.m */; };
+		8CD3D5971DAC8B9A00044ADB /* TestHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D57C1DAC8B9900044ADB /* TestHomeCell.m */; };
+		8CD3D5981DAC8B9A00044ADB /* TestMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D57F1DAC8B9900044ADB /* TestMeCell.m */; };
+		8CD3D5991DAC8B9A00044ADB /* TestMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5821DAC8B9900044ADB /* TestMessageCell.m */; };
+		8CD3D59A1DAC8B9A00044ADB /* TestNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5851DAC8B9900044ADB /* TestNewsCell.m */; };
+		8CD3D59B1DAC8B9A00044ADB /* TestFindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5891DAC8B9900044ADB /* TestFindView.m */; };
+		8CD3D59C1DAC8B9A00044ADB /* TestHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D58C1DAC8B9A00044ADB /* TestHomeView.m */; };
+		8CD3D59D1DAC8B9A00044ADB /* TestMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D58F1DAC8B9A00044ADB /* TestMeView.m */; };
+		8CD3D59E1DAC8B9A00044ADB /* TestMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */; };
+		8CD3D59F1DAC8B9A00044ADB /* TestNewsViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,26 +228,6 @@
 		8CD3D5431DABB3AB00044ADB /* TestPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPlist.m; sourceTree = "<group>"; };
 		8CD3D5451DABB3B500044ADB /* TestVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVideo.h; sourceTree = "<group>"; };
 		8CD3D5461DABB3B500044ADB /* TestVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVideo.m; sourceTree = "<group>"; };
-		8CD3D5481DABB3CA00044ADB /* TestFindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFindCell.h; path = YueBallSport/Resources/Video/TestFindCell.h; sourceTree = SOURCE_ROOT; };
-		8CD3D5491DABB3CA00044ADB /* TestFindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestFindCell.m; path = YueBallSport/Resources/Video/TestFindCell.m; sourceTree = SOURCE_ROOT; };
-		8CD3D54B1DABB3D300044ADB /* TestFindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFindView.h; path = YueBallSport/Resources/Video/TestFindView.h; sourceTree = SOURCE_ROOT; };
-		8CD3D54C1DABB3D300044ADB /* TestFindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestFindView.m; path = YueBallSport/Resources/Video/TestFindView.m; sourceTree = SOURCE_ROOT; };
-		8CD3D54E1DABB3DF00044ADB /* TestHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestHomeCell.h; path = YueBallSport/Resources/Video/TestHomeCell.h; sourceTree = SOURCE_ROOT; };
-		8CD3D54F1DABB3DF00044ADB /* TestHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestHomeCell.m; path = YueBallSport/Resources/Video/TestHomeCell.m; sourceTree = SOURCE_ROOT; };
-		8CD3D5511DABB3F300044ADB /* TestHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestHomeView.h; path = YueBallSport/Resources/Video/TestHomeView.h; sourceTree = SOURCE_ROOT; };
-		8CD3D5521DABB3F300044ADB /* TestHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestHomeView.m; path = YueBallSport/Resources/Video/TestHomeView.m; sourceTree = SOURCE_ROOT; };
-		8CD3D5541DABB40000044ADB /* TestMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestMeCell.h; path = YueBallSport/Resources/Video/TestMeCell.h; sourceTree = SOURCE_ROOT; };
-		8CD3D5551DABB40000044ADB /* TestMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestMeCell.m; path = YueBallSport/Resources/Video/TestMeCell.m; sourceTree = SOURCE_ROOT; };
-		8CD3D5571DABB40800044ADB /* TestMeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestMeView.h; path = YueBallSport/Resources/Video/TestMeView.h; sourceTree = SOURCE_ROOT; };
-		8CD3D5581DABB40800044ADB /* TestMeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestMeView.m; path = YueBallSport/Resources/Video/TestMeView.m; sourceTree = SOURCE_ROOT; };
-		8CD3D55A1DABB41500044ADB /* TestMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestMessageCell.h; path = YueBallSport/Resources/Video/TestMessageCell.h; sourceTree = SOURCE_ROOT; };
-		8CD3D55B1DABB41500044ADB /* TestMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestMessageCell.m; path = YueBallSport/Resources/Video/TestMessageCell.m; sourceTree = SOURCE_ROOT; };
-		8CD3D55D1DABB42200044ADB /* TestMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestMessageView.h; path = YueBallSport/Resources/Video/TestMessageView.h; sourceTree = SOURCE_ROOT; };
-		8CD3D55E1DABB42200044ADB /* TestMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestMessageView.m; path = YueBallSport/Resources/Video/TestMessageView.m; sourceTree = SOURCE_ROOT; };
-		8CD3D5601DABB42F00044ADB /* TestNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestNewsCell.h; path = YueBallSport/Resources/Video/TestNewsCell.h; sourceTree = SOURCE_ROOT; };
-		8CD3D5611DABB42F00044ADB /* TestNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestNewsCell.m; path = YueBallSport/Resources/Video/TestNewsCell.m; sourceTree = SOURCE_ROOT; };
-		8CD3D5631DABB43D00044ADB /* TestNewsViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestNewsViews.h; path = YueBallSport/Resources/Video/TestNewsViews.h; sourceTree = SOURCE_ROOT; };
-		8CD3D5641DABB43D00044ADB /* TestNewsViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestNewsViews.m; path = YueBallSport/Resources/Video/TestNewsViews.m; sourceTree = SOURCE_ROOT; };
 		8CD3D5661DAC89B800044ADB /* TestFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFind.h; sourceTree = "<group>"; };
 		8CD3D5671DAC89B800044ADB /* TestFind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFind.m; sourceTree = "<group>"; };
 		8CD3D5691DAC89C400044ADB /* TestHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHome.h; sourceTree = "<group>"; };
@@ -258,6 +238,26 @@
 		8CD3D5701DAC89D800044ADB /* TestMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessage.m; sourceTree = "<group>"; };
 		8CD3D5721DAC89E200044ADB /* TestNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNews.h; sourceTree = "<group>"; };
 		8CD3D5731DAC89E200044ADB /* TestNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNews.m; sourceTree = "<group>"; };
+		8CD3D5781DAC8B9900044ADB /* TestFindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFindCell.h; sourceTree = "<group>"; };
+		8CD3D5791DAC8B9900044ADB /* TestFindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFindCell.m; sourceTree = "<group>"; };
+		8CD3D57B1DAC8B9900044ADB /* TestHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHomeCell.h; sourceTree = "<group>"; };
+		8CD3D57C1DAC8B9900044ADB /* TestHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHomeCell.m; sourceTree = "<group>"; };
+		8CD3D57E1DAC8B9900044ADB /* TestMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMeCell.h; sourceTree = "<group>"; };
+		8CD3D57F1DAC8B9900044ADB /* TestMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMeCell.m; sourceTree = "<group>"; };
+		8CD3D5811DAC8B9900044ADB /* TestMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMessageCell.h; sourceTree = "<group>"; };
+		8CD3D5821DAC8B9900044ADB /* TestMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessageCell.m; sourceTree = "<group>"; };
+		8CD3D5841DAC8B9900044ADB /* TestNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNewsCell.h; sourceTree = "<group>"; };
+		8CD3D5851DAC8B9900044ADB /* TestNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNewsCell.m; sourceTree = "<group>"; };
+		8CD3D5881DAC8B9900044ADB /* TestFindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFindView.h; sourceTree = "<group>"; };
+		8CD3D5891DAC8B9900044ADB /* TestFindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFindView.m; sourceTree = "<group>"; };
+		8CD3D58B1DAC8B9A00044ADB /* TestHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHomeView.h; sourceTree = "<group>"; };
+		8CD3D58C1DAC8B9A00044ADB /* TestHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHomeView.m; sourceTree = "<group>"; };
+		8CD3D58E1DAC8B9A00044ADB /* TestMeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMeView.h; sourceTree = "<group>"; };
+		8CD3D58F1DAC8B9A00044ADB /* TestMeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMeView.m; sourceTree = "<group>"; };
+		8CD3D5911DAC8B9A00044ADB /* TestMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMessageView.h; sourceTree = "<group>"; };
+		8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessageView.m; sourceTree = "<group>"; };
+		8CD3D5941DAC8B9A00044ADB /* TestNewsViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNewsViews.h; sourceTree = "<group>"; };
+		8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNewsViews.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,9 +309,9 @@
 			isa = PBXGroup;
 			children = (
 				8CD3D52A1DABB13700044ADB /* Model */,
-				8CD3D3DF1DAA386B00044ADB /* Base */,
-				8CD3D3FD1DAA387800044ADB /* View */,
+				8CD3D5751DAC8B9900044ADB /* View */,
 				8CD3D3E01DAA387800044ADB /* Controller */,
+				8CD3D3DF1DAA386B00044ADB /* Base */,
 				8CD3D3F91DAA387800044ADB /* Resources */,
 				8CD3D3E71DAA387800044ADB /* Expand */,
 				8CD3D3F01DAA387800044ADB /* Manager */,
@@ -575,137 +575,6 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
-		8CD3D3FD1DAA387800044ADB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D3FE1DAA387800044ADB /* Cell */,
-				8CD3D4051DAA387800044ADB /* View */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8CD3D3FE1DAA387800044ADB /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D3FF1DAA387800044ADB /* Find */,
-				8CD3D4001DAA387800044ADB /* Home */,
-				8CD3D4011DAA387800044ADB /* Me */,
-				8CD3D4021DAA387800044ADB /* Message */,
-				8CD3D4041DAA387800044ADB /* News */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		8CD3D3FF1DAA387800044ADB /* Find */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D5481DABB3CA00044ADB /* TestFindCell.h */,
-				8CD3D5491DABB3CA00044ADB /* TestFindCell.m */,
-			);
-			path = Find;
-			sourceTree = "<group>";
-		};
-		8CD3D4001DAA387800044ADB /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D54E1DABB3DF00044ADB /* TestHomeCell.h */,
-				8CD3D54F1DABB3DF00044ADB /* TestHomeCell.m */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		8CD3D4011DAA387800044ADB /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D5541DABB40000044ADB /* TestMeCell.h */,
-				8CD3D5551DABB40000044ADB /* TestMeCell.m */,
-			);
-			path = Me;
-			sourceTree = "<group>";
-		};
-		8CD3D4021DAA387800044ADB /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D55A1DABB41500044ADB /* TestMessageCell.h */,
-				8CD3D55B1DABB41500044ADB /* TestMessageCell.m */,
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
-		8CD3D4041DAA387800044ADB /* News */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D5601DABB42F00044ADB /* TestNewsCell.h */,
-				8CD3D5611DABB42F00044ADB /* TestNewsCell.m */,
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
-		8CD3D4051DAA387800044ADB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D4061DAA387800044ADB /* Find */,
-				8CD3D4071DAA387800044ADB /* Home */,
-				8CD3D4081DAA387800044ADB /* Me */,
-				8CD3D4091DAA387800044ADB /* Message */,
-				8CD3D40B1DAA387800044ADB /* News */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8CD3D4061DAA387800044ADB /* Find */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D54B1DABB3D300044ADB /* TestFindView.h */,
-				8CD3D54C1DABB3D300044ADB /* TestFindView.m */,
-			);
-			path = Find;
-			sourceTree = "<group>";
-		};
-		8CD3D4071DAA387800044ADB /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D5511DABB3F300044ADB /* TestHomeView.h */,
-				8CD3D5521DABB3F300044ADB /* TestHomeView.m */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		8CD3D4081DAA387800044ADB /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D5571DABB40800044ADB /* TestMeView.h */,
-				8CD3D5581DABB40800044ADB /* TestMeView.m */,
-			);
-			path = Me;
-			sourceTree = "<group>";
-		};
-		8CD3D4091DAA387800044ADB /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D40A1DAA387800044ADB /* Manager（管理类） */,
-				8CD3D55D1DABB42200044ADB /* TestMessageView.h */,
-				8CD3D55E1DABB42200044ADB /* TestMessageView.m */,
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
-		8CD3D40A1DAA387800044ADB /* Manager（管理类） */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Manager（管理类）";
-			sourceTree = "<group>";
-		};
-		8CD3D40B1DAA387800044ADB /* News */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3D5631DABB43D00044ADB /* TestNewsViews.h */,
-				8CD3D5641DABB43D00044ADB /* TestNewsViews.m */,
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
 		8CD3D40C1DAA387F00044ADB /* Vender */ = {
 			isa = PBXGroup;
 			children = (
@@ -855,6 +724,129 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		8CD3D5751DAC8B9900044ADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D5761DAC8B9900044ADB /* Cell */,
+				8CD3D5861DAC8B9900044ADB /* View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CD3D5761DAC8B9900044ADB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D5771DAC8B9900044ADB /* Find */,
+				8CD3D57A1DAC8B9900044ADB /* Home */,
+				8CD3D57D1DAC8B9900044ADB /* Me */,
+				8CD3D5801DAC8B9900044ADB /* Message */,
+				8CD3D5831DAC8B9900044ADB /* News */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8CD3D5771DAC8B9900044ADB /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D5781DAC8B9900044ADB /* TestFindCell.h */,
+				8CD3D5791DAC8B9900044ADB /* TestFindCell.m */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		8CD3D57A1DAC8B9900044ADB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D57B1DAC8B9900044ADB /* TestHomeCell.h */,
+				8CD3D57C1DAC8B9900044ADB /* TestHomeCell.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8CD3D57D1DAC8B9900044ADB /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D57E1DAC8B9900044ADB /* TestMeCell.h */,
+				8CD3D57F1DAC8B9900044ADB /* TestMeCell.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		8CD3D5801DAC8B9900044ADB /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D5811DAC8B9900044ADB /* TestMessageCell.h */,
+				8CD3D5821DAC8B9900044ADB /* TestMessageCell.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		8CD3D5831DAC8B9900044ADB /* News */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D5841DAC8B9900044ADB /* TestNewsCell.h */,
+				8CD3D5851DAC8B9900044ADB /* TestNewsCell.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		8CD3D5861DAC8B9900044ADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D5871DAC8B9900044ADB /* Find */,
+				8CD3D58A1DAC8B9A00044ADB /* Home */,
+				8CD3D58D1DAC8B9A00044ADB /* Me */,
+				8CD3D5901DAC8B9A00044ADB /* Message */,
+				8CD3D5931DAC8B9A00044ADB /* News */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CD3D5871DAC8B9900044ADB /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D5881DAC8B9900044ADB /* TestFindView.h */,
+				8CD3D5891DAC8B9900044ADB /* TestFindView.m */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		8CD3D58A1DAC8B9A00044ADB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D58B1DAC8B9A00044ADB /* TestHomeView.h */,
+				8CD3D58C1DAC8B9A00044ADB /* TestHomeView.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8CD3D58D1DAC8B9A00044ADB /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D58E1DAC8B9A00044ADB /* TestMeView.h */,
+				8CD3D58F1DAC8B9A00044ADB /* TestMeView.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		8CD3D5901DAC8B9A00044ADB /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D5911DAC8B9A00044ADB /* TestMessageView.h */,
+				8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		8CD3D5931DAC8B9A00044ADB /* News */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3D5941DAC8B9A00044ADB /* TestNewsViews.h */,
+				8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -990,7 +982,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CD3D5621DABB42F00044ADB /* TestNewsCell.m in Sources */,
 				8CD3D4591DAA3A5200044ADB /* YTKNetworkConfig.m in Sources */,
 				8CD3D43C1DAA3A4900044ADB /* UIProgressView+AFNetworking.m in Sources */,
 				8CD3D4571DAA3A5200044ADB /* YTKChainRequestAgent.m in Sources */,
@@ -999,6 +990,7 @@
 				8CD3D43E1DAA3A4900044ADB /* UIWebView+AFNetworking.m in Sources */,
 				8CD3D4DB1DAB44FF00044ADB /* YBNewsViewController.m in Sources */,
 				8CD3D43B1DAA3A4900044ADB /* UIImageView+AFNetworking.m in Sources */,
+				8CD3D59D1DAC8B9A00044ADB /* TestMeView.m in Sources */,
 				8CD3D4551DAA3A5200044ADB /* YTKBatchRequestAgent.m in Sources */,
 				8CD3D43A1DAA3A4900044ADB /* UIButton+AFNetworking.m in Sources */,
 				8CD3D4E11DAB451700044ADB /* YBFindViewController.m in Sources */,
@@ -1008,9 +1000,8 @@
 				8CD3D43D1DAA3A4900044ADB /* UIRefreshControl+AFNetworking.m in Sources */,
 				8CD3D4561DAA3A5200044ADB /* YTKChainRequest.m in Sources */,
 				8CD3D3AE1DAA244600044ADB /* main.m in Sources */,
-				8CD3D5651DABB43D00044ADB /* TestNewsViews.m in Sources */,
-				8CD3D55C1DABB41500044ADB /* TestMessageCell.m in Sources */,
 				8CD3D46E1DAA3AA100044ADB /* NSDictionary+Safe.m in Sources */,
+				8CD3D5971DAC8B9A00044ADB /* TestHomeCell.m in Sources */,
 				8CD3D56E1DAC89CF00044ADB /* TestMe.m in Sources */,
 				8CD3D4861DAA3ABD00044ADB /* UIImage+Stretch.m in Sources */,
 				8CD3D5321DABB34C00044ADB /* TestManager.m in Sources */,
@@ -1020,47 +1011,48 @@
 				8CD3D4361DAA3A4900044ADB /* AFAutoPurgingImageCache.m in Sources */,
 				8CD3D4671DAA3A8D00044ADB /* BaseDataRequest.m in Sources */,
 				8CD3D41D1DAA3A2F00044ADB /* AFSecurityPolicy.m in Sources */,
+				8CD3D5961DAC8B9A00044ADB /* TestFindCell.m in Sources */,
 				8CD3D4E41DAB452500044ADB /* YBPersonViewController.m in Sources */,
-				8CD3D5531DABB3F300044ADB /* TestHomeView.m in Sources */,
 				8CD3D41E1DAA3A2F00044ADB /* AFURLRequestSerialization.m in Sources */,
 				8CD3D4D21DAB43DE00044ADB /* AppDelegate.m in Sources */,
 				8CD3D4641DAA3A8500044ADB /* NSDate+Utilities.m in Sources */,
+				8CD3D59C1DAC8B9A00044ADB /* TestHomeView.m in Sources */,
 				8CD3D5681DAC89B800044ADB /* TestFind.m in Sources */,
 				8CD3D48A1DAA3ABD00044ADB /* UIViewController+AnimationHUD.m in Sources */,
+				8CD3D5991DAC8B9A00044ADB /* TestMessageCell.m in Sources */,
 				8CD3D4D51DAB449A00044ADB /* YBTabBarController.m in Sources */,
+				8CD3D59B1DAC8B9A00044ADB /* TestFindView.m in Sources */,
 				8CD3D45B1DAA3A5200044ADB /* YTKRequest.m in Sources */,
 				8CD3D5351DABB36400044ADB /* TestConfig.m in Sources */,
 				8CD3D4731DAA3AA900044ADB /* DataRequest.m in Sources */,
 				8CD3D56B1DAC89C400044ADB /* TestHome.m in Sources */,
-				8CD3D55F1DABB42200044ADB /* TestMessageView.m in Sources */,
 				8CD3D5381DABB37100044ADB /* TestHandler.m in Sources */,
-				8CD3D5561DABB40000044ADB /* TestMeCell.m in Sources */,
 				8CD3D4531DAA3A5200044ADB /* YTKBaseRequest.m in Sources */,
 				8CD3D4381DAA3A4900044ADB /* AFNetworkActivityIndicatorManager.m in Sources */,
 				8CD3D45E1DAA3A7500044ADB /* MLTool.m in Sources */,
 				8CD3D4541DAA3A5200044ADB /* YTKBatchRequest.m in Sources */,
 				8CD3D4871DAA3ABD00044ADB /* UILabel+Extention.m in Sources */,
 				8CD3D46F1DAA3AA100044ADB /* NSFileManager+Utilities.m in Sources */,
-				8CD3D5501DABB3DF00044ADB /* TestHomeCell.m in Sources */,
 				8CD3D4631DAA3A8500044ADB /* NSArray+Safe.m in Sources */,
 				8CD3D53E1DABB38A00044ADB /* TestStorage.m in Sources */,
 				8CD3D41F1DAA3A2F00044ADB /* AFURLResponseSerialization.m in Sources */,
 				8CD3D41B1DAA3A2F00044ADB /* AFHTTPSessionManager.m in Sources */,
-				8CD3D54A1DABB3CA00044ADB /* TestFindCell.m in Sources */,
 				8CD3D5411DABB3A100044ADB /* TestImage.m in Sources */,
+				8CD3D59A1DAC8B9A00044ADB /* TestNewsCell.m in Sources */,
+				8CD3D5981DAC8B9A00044ADB /* TestMeCell.m in Sources */,
 				8CD3D5741DAC89E200044ADB /* TestNews.m in Sources */,
 				8CD3D5471DABB3B500044ADB /* TestVideo.m in Sources */,
 				8CD3D4DE1DAB450A00044ADB /* YBHomeViewController.m in Sources */,
+				8CD3D59F1DAC8B9A00044ADB /* TestNewsViews.m in Sources */,
 				8CD3D48B1DAA3ABD00044ADB /* UIViewController+Navigation.m in Sources */,
-				8CD3D54D1DABB3D300044ADB /* TestFindView.m in Sources */,
 				8CD3D4371DAA3A4900044ADB /* AFImageDownloader.m in Sources */,
 				8CD3D5441DABB3AB00044ADB /* TestPlist.m in Sources */,
-				8CD3D5591DABB40800044ADB /* TestMeView.m in Sources */,
 				8CD3D5711DAC89D800044ADB /* TestMessage.m in Sources */,
 				8CD3D5291DABAF0500044ADB /* YBBaseViewController.m in Sources */,
 				8CD3D4841DAA3ABD00044ADB /* UIButton+Extention.m in Sources */,
 				8CD3D4891DAA3ABD00044ADB /* UIView+TopBar.m in Sources */,
 				8CD3D4391DAA3A4900044ADB /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				8CD3D59E1DAC8B9A00044ADB /* TestMessageView.m in Sources */,
 				8CD3D4851DAA3ABD00044ADB /* UIImage+Crop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
