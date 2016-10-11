@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface YBMessageViewController : UIViewController
+#import "YBBaseViewController.h"
+@interface YBMessageViewController : YBBaseViewController
 
 @end

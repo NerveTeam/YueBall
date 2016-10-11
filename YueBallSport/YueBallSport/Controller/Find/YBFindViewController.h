@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface YBFindViewController : UIViewController
+#import "YBBaseViewController.h"
+@interface YBFindViewController : YBBaseViewController
 
 @end

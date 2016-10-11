@@ -7,11 +7,6 @@
 //
 
 #import "YBTabBarController.h"
-#import "YBMessageViewController.h"
-#import "YBNewsViewController.h"
-#import "YBHomeViewController.h"
-#import "YBFindViewController.h"
-#import "YBPersonViewController.h"
 #import "NSArray+Safe.h"
 #import "NSDictionary+Safe.h"
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface YBPersonViewController : UIViewController
+#import "YBBaseViewController.h"
+@interface YBPersonViewController : YBBaseViewController
 
 @end

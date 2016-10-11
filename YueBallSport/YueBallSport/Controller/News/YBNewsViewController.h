@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface YBNewsViewController : UIViewController
+#import "YBBaseViewController.h"
+@interface YBNewsViewController : YBBaseViewController
 
 @end

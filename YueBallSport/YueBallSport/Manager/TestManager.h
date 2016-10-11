@@ -1,5 +1,5 @@
 //
-//  YBHomeViewController.h
+//  TestManager.h
 //  YueBallSport
 //
 //  Created by Minlay on 16/10/10.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YBBaseViewController.h"
-@interface YBHomeViewController : YBBaseViewController
+
+@interface TestManager : UIViewController
 
 @end
