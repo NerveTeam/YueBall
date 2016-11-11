@@ -66,8 +66,6 @@
 
 @implementation UIViewController (Message)
 - (void)showMessage:(NSString *)message {
-    CGFloat SCREEN_WIDTH=[[UIScreen mainScreen] bounds].size.width;
-    CGFloat SCREEN_HEIGHT=[[UIScreen mainScreen] bounds].size.height;
     
     UIWindow * window = [UIApplication sharedApplication].keyWindow;
     UIView *showview =  [[UIView alloc]init];
