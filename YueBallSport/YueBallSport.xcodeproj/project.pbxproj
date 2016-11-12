@@ -136,7 +136,7 @@
 		8C1927041DD5925B00031BC5 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 8C1927011DD5925B00031BC5 /* css */; };
 		8C1927051DD5925B00031BC5 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8C1927021DD5925B00031BC5 /* images */; };
 		8C1927061DD5925B00031BC5 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 8C1927031DD5925B00031BC5 /* js */; };
-		8C70EBF21DD7670B009514EC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF11DD7670B009514EC /* JSONKit.m */; };
+		8C70EBF21DD7670B009514EC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF11DD7670B009514EC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8CD3D3AE1DAA244600044ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3AD1DAA244600044ADB /* main.m */; };
 		8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3D3B81DAA244600044ADB /* Assets.xcassets */; };
 		8CD3D3C71DAA244600044ADB /* YueBallSportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3C61DAA244600044ADB /* YueBallSportTests.m */; };
