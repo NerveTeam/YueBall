@@ -34,7 +34,9 @@
 }
 - (UIViewController *)addController:(NSDictionary *)info {
     Class className = NSClassFromString([info objectForKeyNotNull:@"class"]);
-    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:[[className alloc]init]];
+    UIViewController *vc = [[className alloc]init];
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:vc];
+    vc.navigationController.navigationBar.hidden = YES;
     navController.title = [info objectForKeyNotNull:@"title"];
     return navController;
 }
