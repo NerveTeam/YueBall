@@ -7,32 +7,47 @@
 //
 
 #import "YBNewsViewController.h"
+#import "MLMeunView.h"
+
 
 @interface YBNewsViewController ()
-
+// 菜单
+@property(nonatomic, strong)MLMeunView *meunView;
+// 频道数据
+@property(nonatomic, strong)NSArray *channelData;
 @end
 
 @implementation YBNewsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor greenColor];
+    [self initTopBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+// init菜单
+- (void)initTopBar {
+    self.navigationController.navigationBar.hidden = YES;
+    [self.view addSubview:self.meunView];
 }
+//- (void)viewWillLayoutSubviews {
+//
+//}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+#pragma mark - lazy
+- (MLMeunView *)meunView {
+    if (!_meunView) {
+        _meunView = [[MLMeunView alloc]initWithFrame:CGRectMake(0, 20, self.view.width, 44) titles:@[@"新闻",@"直播"] viewcontrollersInfo:self.channelData isParameter:NO];
+    }
+    return _meunView;
 }
-*/
-
+- (NSArray *)channelData {
+    if (!_channelData) {
+        _channelData = @[@"YBNewDetailViewController",@"YBLiveViewController"];
+    }
+    return _channelData;
+}
 @end

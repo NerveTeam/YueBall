@@ -216,6 +216,9 @@
 		8CD3D59D1DAC8B9A00044ADB /* TestMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D58F1DAC8B9A00044ADB /* TestMeView.m */; };
 		8CD3D59E1DAC8B9A00044ADB /* TestMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */; };
 		8CD3D59F1DAC8B9A00044ADB /* TestNewsViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */; };
+		8CFFFD5B1DD750D3004629FE /* YBNewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */; };
+		8CFFFD5E1DD750F4004629FE /* YBLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD5D1DD750F4004629FE /* YBLiveViewController.m */; };
+		8CFFFD6C1DD75C0F004629FE /* YBNewsSportListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD6B1DD75C0F004629FE /* YBNewsSportListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -670,6 +673,12 @@
 		8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessageView.m; sourceTree = "<group>"; };
 		8CD3D5941DAC8B9A00044ADB /* TestNewsViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNewsViews.h; sourceTree = "<group>"; };
 		8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNewsViews.m; sourceTree = "<group>"; };
+		8CFFFD591DD750D3004629FE /* YBNewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNewDetailViewController.h; sourceTree = "<group>"; };
+		8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewDetailViewController.m; sourceTree = "<group>"; };
+		8CFFFD5C1DD750F4004629FE /* YBLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLiveViewController.h; sourceTree = "<group>"; };
+		8CFFFD5D1DD750F4004629FE /* YBLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLiveViewController.m; sourceTree = "<group>"; };
+		8CFFFD6A1DD75C0F004629FE /* YBNewsSportListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNewsSportListViewController.h; sourceTree = "<group>"; };
+		8CFFFD6B1DD75C0F004629FE /* YBNewsSportListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewsSportListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1390,6 +1399,12 @@
 			children = (
 				8CD3D4D91DAB44FF00044ADB /* YBNewsViewController.h */,
 				8CD3D4DA1DAB44FF00044ADB /* YBNewsViewController.m */,
+				8CFFFD591DD750D3004629FE /* YBNewDetailViewController.h */,
+				8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */,
+				8CFFFD5C1DD750F4004629FE /* YBLiveViewController.h */,
+				8CFFFD5D1DD750F4004629FE /* YBLiveViewController.m */,
+				8CFFFD6A1DD75C0F004629FE /* YBNewsSportListViewController.h */,
+				8CFFFD6B1DD75C0F004629FE /* YBNewsSportListViewController.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -2034,6 +2049,7 @@
 				8CD3D4581DAA3A5200044ADB /* YTKNetworkAgent.m in Sources */,
 				8C1925DA1DD5901600031BC5 /* SNArticleBaseViewController+Support.m in Sources */,
 				8CD3D4E71DAB458A00044ADB /* YBMessageViewController.m in Sources */,
+				8CFFFD6C1DD75C0F004629FE /* YBNewsSportListViewController.m in Sources */,
 				8C1925251DD5901600031BC5 /* SNArticlePictureGroup.m in Sources */,
 				8CD3D53B1DABB37D00044ADB /* TestMacro.m in Sources */,
 				8C19252E1DD5901600031BC5 /* SNComment.m in Sources */,
@@ -2057,6 +2073,7 @@
 				8C1923D61DD57DC300031BC5 /* UIImageView+WebCache.m in Sources */,
 				8CD3D4E41DAB452500044ADB /* YBPersonViewController.m in Sources */,
 				8CD3D41E1DAA3A2F00044ADB /* AFURLRequestSerialization.m in Sources */,
+				8CFFFD5E1DD750F4004629FE /* YBLiveViewController.m in Sources */,
 				8C19217F1DD57C9B00031BC5 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				8C70EBF21DD7670B009514EC /* JSONKit.m in Sources */,
 				8C1923C71DD57DC300031BC5 /* NSData+ImageContentType.m in Sources */,
@@ -2073,6 +2090,7 @@
 				8CD3D48A1DAA3ABD00044ADB /* UIViewController+AnimationHUD.m in Sources */,
 				8C19253A1DD5901600031BC5 /* README.md in Sources */,
 				8CD3D5991DAC8B9A00044ADB /* TestMessageCell.m in Sources */,
+				8CFFFD5B1DD750D3004629FE /* YBNewDetailViewController.m in Sources */,
 				8CD3D4D51DAB449A00044ADB /* YBTabBarController.m in Sources */,
 				8C1925131DD5901600031BC5 /* NSArray+SNArticle.m in Sources */,
 				8C19217A1DD57C9B00031BC5 /* MASConstraintMaker.m in Sources */,
