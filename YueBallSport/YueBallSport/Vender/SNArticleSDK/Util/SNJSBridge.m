@@ -122,7 +122,7 @@ const float NJKFinalProgressValue = 0.9f;
 			if (callBackParamDic)
 			{
 				callBackString = [callBackString stringByReplacingOccurrencesOfString:SNJSBridgeCallBackParamKey
-																		   withString:[callBackParamDic JSONString]];
+																		   withString:[callBackParamDic SNJSONString]];
 			}
             else
             {

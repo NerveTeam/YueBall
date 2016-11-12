@@ -17,7 +17,7 @@
         [self executeJs:recommendStr];
         
         //通知JS做动画
-        NSString *dataStr = [NSString stringWithFormat:@"{\"data\":%@}", [_articleRecommend JSONString]];
+        NSString *dataStr = [NSString stringWithFormat:@"{\"data\":%@}", [_articleRecommend SNJSONString]];
         NSString *contentLoadJS = [NSString stringWithFormat:@"window.listener.trigger(\"content-load-success\",%@);",dataStr];
         [self executeJs:contentLoadJS];
     }

@@ -248,7 +248,7 @@ NSString * const PlaceHolder_IMG = @"<!--{IMG_%d}-->";
     //推荐    放在最后为了不影响单张图的tagId
 //    [self parseRecommendArticlesWithDict:data inArticle:article jsonDataArr:jsonDataArray];
     //生成jsonData
-    article.jsonData = [NSString stringWithFormat:@"{\"data\":%@}", [jsonDataArray JSONString]];
+    article.jsonData = [NSString stringWithFormat:@"{\"data\":%@}", [jsonDataArray SNJSONString]];
     
     return article;
 }

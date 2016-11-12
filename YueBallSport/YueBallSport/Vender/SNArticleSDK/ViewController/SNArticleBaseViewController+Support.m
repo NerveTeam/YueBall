@@ -182,7 +182,7 @@ static NSString *defineTitleStr = @"关心";
                                               },
                                       @"type":@"iSupport"}
                               };
-    NSString *dataJSONStr = [dataDic JSONString];
+    NSString *dataJSONStr = [dataDic SNJSONString];
     NSString *contentLoadJS = [NSString stringWithFormat:@"window.listener.trigger(\"content-load-success\",%@);",dataJSONStr];
     [self executeJs:contentLoadJS];
 }

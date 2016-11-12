@@ -24,7 +24,7 @@
     }
     [mulResultDic setObject:mulDataDic forKey:@"data"];
     
-    NSString *resultString = [mulResultDic JSONString];
+    NSString *resultString = [mulResultDic SNJSONString];
     if ([resultString rangeOfString:@"pollResult"].length <= 0) {
         return;
     }
