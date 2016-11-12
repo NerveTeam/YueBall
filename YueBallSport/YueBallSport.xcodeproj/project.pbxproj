@@ -211,7 +211,6 @@
 		8CD3D59D1DAC8B9A00044ADB /* TestMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D58F1DAC8B9A00044ADB /* TestMeView.m */; };
 		8CD3D59E1DAC8B9A00044ADB /* TestMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */; };
 		8CD3D59F1DAC8B9A00044ADB /* TestNewsViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */; };
-		8CFFFD741DD760DC004629FE /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD731DD760DC004629FE /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -656,8 +655,6 @@
 		8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessageView.m; sourceTree = "<group>"; };
 		8CD3D5941DAC8B9A00044ADB /* TestNewsViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNewsViews.h; sourceTree = "<group>"; };
 		8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNewsViews.m; sourceTree = "<group>"; };
-		8CFFFD721DD760DC004629FE /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		8CFFFD731DD760DC004629FE /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1520,7 +1517,6 @@
 		8CD3D40C1DAA387F00044ADB /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				8CFFFD711DD760DC004629FE /* JSONKit */,
 				8C1923E11DD5901500031BC5 /* SNArticleSDK */,
 				8C1923351DD57DC300031BC5 /* MJExtension */,
 				8C19234C1DD57DC300031BC5 /* MJRefresh */,
@@ -1796,15 +1792,6 @@
 			path = News;
 			sourceTree = "<group>";
 		};
-		8CFFFD711DD760DC004629FE /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				8CFFFD721DD760DC004629FE /* JSONKit.h */,
-				8CFFFD731DD760DC004629FE /* JSONKit.m */,
-			);
-			path = JSONKit;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2028,7 +2015,6 @@
 				8CD3D4E41DAB452500044ADB /* YBPersonViewController.m in Sources */,
 				8CD3D41E1DAA3A2F00044ADB /* AFURLRequestSerialization.m in Sources */,
 				8C19217F1DD57C9B00031BC5 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				8CFFFD741DD760DC004629FE /* JSONKit.m in Sources */,
 				8C1923C71DD57DC300031BC5 /* NSData+ImageContentType.m in Sources */,
 				8C1923B31DD57DC300031BC5 /* MJRefreshComponent.m in Sources */,
 				8C191ED51DD4658300031BC5 /* MLMeunItem.m in Sources */,
