@@ -137,6 +137,10 @@
 		8C1927051DD5925B00031BC5 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8C1927021DD5925B00031BC5 /* images */; };
 		8C1927061DD5925B00031BC5 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 8C1927031DD5925B00031BC5 /* js */; };
 		8C70EBF21DD7670B009514EC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF11DD7670B009514EC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8C70EBFC1DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF51DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m */; };
+		8C70EBFD1DD8707F009514EC /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF71DD8707F009514EC /* UITableView+FDKeyedHeightCache.m */; };
+		8C70EBFE1DD8707F009514EC /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF91DD8707F009514EC /* UITableView+FDTemplateLayoutCell.m */; };
+		8C70EBFF1DD87080009514EC /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBFB1DD8707F009514EC /* UITableView+FDTemplateLayoutCellDebug.m */; };
 		8CD3D3AE1DAA244600044ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3AD1DAA244600044ADB /* main.m */; };
 		8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3D3B81DAA244600044ADB /* Assets.xcassets */; };
 		8CD3D3C71DAA244600044ADB /* YueBallSportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3C61DAA244600044ADB /* YueBallSportTests.m */; };
@@ -502,6 +506,14 @@
 		8C1927031DD5925B00031BC5 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
 		8C70EBF01DD7670B009514EC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		8C70EBF11DD7670B009514EC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		8C70EBF41DD8707F009514EC /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		8C70EBF51DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		8C70EBF61DD8707F009514EC /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		8C70EBF71DD8707F009514EC /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		8C70EBF81DD8707F009514EC /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		8C70EBF91DD8707F009514EC /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		8C70EBFA1DD8707F009514EC /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		8C70EBFB1DD8707F009514EC /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		8CD3D3A91DAA244600044ADB /* YueBallSport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueBallSport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD3D3AD1DAA244600044ADB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CD3D3B81DAA244600044ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1235,6 +1247,21 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		8C70EBF31DD8707F009514EC /* UITableView-FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				8C70EBF41DD8707F009514EC /* UITableView+FDIndexPathHeightCache.h */,
+				8C70EBF51DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m */,
+				8C70EBF61DD8707F009514EC /* UITableView+FDKeyedHeightCache.h */,
+				8C70EBF71DD8707F009514EC /* UITableView+FDKeyedHeightCache.m */,
+				8C70EBF81DD8707F009514EC /* UITableView+FDTemplateLayoutCell.h */,
+				8C70EBF91DD8707F009514EC /* UITableView+FDTemplateLayoutCell.m */,
+				8C70EBFA1DD8707F009514EC /* UITableView+FDTemplateLayoutCellDebug.h */,
+				8C70EBFB1DD8707F009514EC /* UITableView+FDTemplateLayoutCellDebug.m */,
+			);
+			path = "UITableView-FDTemplateLayoutCell";
+			sourceTree = "<group>";
+		};
 		8CD3D3A01DAA244600044ADB = {
 			isa = PBXGroup;
 			children = (
@@ -1529,6 +1556,7 @@
 		8CD3D40C1DAA387F00044ADB /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				8C70EBF31DD8707F009514EC /* UITableView-FDTemplateLayoutCell */,
 				8C70EBEF1DD7670B009514EC /* JSONKit */,
 				8C1923E11DD5901500031BC5 /* SNArticleSDK */,
 				8C1923351DD57DC300031BC5 /* MJExtension */,
@@ -1970,6 +1998,7 @@
 				8CD3D43B1DAA3A4900044ADB /* UIImageView+AFNetworking.m in Sources */,
 				8CD3D59D1DAC8B9A00044ADB /* TestMeView.m in Sources */,
 				8CD3D4551DAA3A5200044ADB /* YTKBatchRequestAgent.m in Sources */,
+				8C70EBFD1DD8707F009514EC /* UITableView+FDKeyedHeightCache.m in Sources */,
 				8CD3D43A1DAA3A4900044ADB /* UIButton+AFNetworking.m in Sources */,
 				8C1925171DD5901600031BC5 /* UIApplication+SNUtil.m in Sources */,
 				8C1925351DD5901600031BC5 /* SNArticleParser+Weibo.m in Sources */,
@@ -2010,6 +2039,7 @@
 				8C19252E1DD5901600031BC5 /* SNComment.m in Sources */,
 				8C1923BE1DD57DC300031BC5 /* MJRefreshStateHeader.m in Sources */,
 				8C1925381DD5901600031BC5 /* SNCommentParser.m in Sources */,
+				8C70EBFC1DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				8CD3D4361DAA3A4900044ADB /* AFAutoPurgingImageCache.m in Sources */,
 				8C1925CB1DD5901600031BC5 /* SNArticleManager+Tag.m in Sources */,
 				8CD3D4671DAA3A8D00044ADB /* BaseDataRequest.m in Sources */,
@@ -2049,6 +2079,7 @@
 				8C1923D51DD57DC300031BC5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				8CD3D59B1DAC8B9A00044ADB /* TestFindView.m in Sources */,
 				8CD3D45B1DAA3A5200044ADB /* YTKRequest.m in Sources */,
+				8C70EBFE1DD8707F009514EC /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				8CD3D5351DABB36400044ADB /* TestConfig.m in Sources */,
 				8CD3D4731DAA3AA900044ADB /* DataRequest.m in Sources */,
 				8C1925D21DD5901600031BC5 /* SNImageUrlManager.m in Sources */,
@@ -2080,6 +2111,7 @@
 				8C1925C91DD5901600031BC5 /* SNArticleManager+Attitude.m in Sources */,
 				8CD3D53E1DABB38A00044ADB /* TestStorage.m in Sources */,
 				8C1923CA1DD57DC300031BC5 /* SDImageCacheConfig.m in Sources */,
+				8C70EBFF1DD87080009514EC /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				8C1923A71DD57DC300031BC5 /* MJExtensionConst.m in Sources */,
 				8C1923B11DD57DC300031BC5 /* MJRefreshAutoFooter.m in Sources */,
 				8CD3D41F1DAA3A2F00044ADB /* AFURLResponseSerialization.m in Sources */,
