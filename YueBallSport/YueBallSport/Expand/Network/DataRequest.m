@@ -25,3 +25,19 @@
     return YES;
 }
 @end
+
+@implementation NewsSportListRequest
+- (NSString *)requestUrl {
+    return @"http://wu.she-cheng.com/thinkphp/News/feed?";
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodGET;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end

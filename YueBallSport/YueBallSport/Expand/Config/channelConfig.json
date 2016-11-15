@@ -1,0 +1,52 @@
+{"channel" : {
+    "news" : {
+        "titles" :["中超",
+                  "英超",
+                  "西甲",
+                  "德甲",
+                  "意甲"
+        ],
+        "viewcontrollers" : [
+        {
+            "class" : "YBNewsSportListViewController",
+            "info" : {
+            "channelId" : "1"
+            }
+                            
+        },
+        {
+        "class" : "YBNewsSportListViewController",
+        "info" : {
+        "channelId" : "2"
+        }
+        
+        },
+        {
+        "class" : "YBNewsSportListViewController",
+        "info" : {
+        "channelId" : "3"
+        }
+        
+        },
+        {
+        "class" : "YBNewsSportListViewController",
+        "info" : {
+        "channelId" : "4"
+        }
+        
+        },
+        {
+        "class" : "YBNewsSportListViewController",
+        "info" : {
+        "channelId" : "5"
+        }
+        
+        }
+        ]
+    },
+    "message" : {
+    
+    }
+
+}
+}

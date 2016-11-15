@@ -9,5 +9,5 @@
 #import "YBBaseViewController.h"
 
 @interface YBNewsSportListViewController : YBBaseViewController
-
+@property(nonatomic, copy)NSString *channelId; // 频道id
 @end

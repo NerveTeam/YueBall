@@ -15,32 +15,31 @@
 @property(nonatomic, strong)MLMeunView *meunView;
 // 频道数据
 @property(nonatomic, strong)NSArray *channelData;
+// 导航背景
+@property(nonatomic, strong)UIView *topBarView;
 @end
 
 @implementation YBNewsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
     [self initTopBar];
 }
 
 
 // init菜单
 - (void)initTopBar {
-    self.navigationController.navigationBar.hidden = YES;
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.topBarView];
     [self.view addSubview:self.meunView];
+    [self.meunView show];
 }
-//- (void)viewWillLayoutSubviews {
-//
-//}
-
 
 
 #pragma mark - lazy
 - (MLMeunView *)meunView {
     if (!_meunView) {
-        _meunView = [[MLMeunView alloc]initWithFrame:CGRectMake(0, 20, self.view.width, 44) titles:@[@"新闻",@"直播"] viewcontrollersInfo:self.channelData isParameter:NO];
+        _meunView = [[MLMeunView alloc]initWithFrame:CGRectMake(0, StatusBarHeight, self.topBarView.width, TopBarHeight) titles:@[@"新闻",@"直播"] viewcontrollersInfo:self.channelData isParameter:NO];
     }
     return _meunView;
 }
@@ -49,5 +48,12 @@
         _channelData = @[@"YBNewDetailViewController",@"YBLiveViewController"];
     }
     return _channelData;
+}
+- (UIView *)topBarView {
+    if (!_topBarView) {
+        _topBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, StatusBarHeight + TopBarHeight)];
+        _topBarView.backgroundColor = RGBACOLOR(49, 179, 93, 1);
+    }
+    return _topBarView;
 }
 @end

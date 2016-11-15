@@ -12,3 +12,6 @@
 @interface TestRequest : BaseDataRequest
 
 @end
+@interface NewsSportListRequest : BaseDataRequest
+
+@end
