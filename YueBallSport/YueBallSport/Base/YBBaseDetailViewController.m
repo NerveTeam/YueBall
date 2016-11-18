@@ -13,6 +13,10 @@
 @end
 
 @implementation YBBaseDetailViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+}
 - (BOOL)hidesBottomBarWhenPushed {
     return YES;
 }

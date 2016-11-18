@@ -43,7 +43,6 @@
     navController.tabBarItem.selectedImage = [[UIImage imageNamed:[info objectForKeyNotNull:@"selectImg"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     return navController;
 }
-
 - (NSArray *)subViewControllers {
     if (!_subViewControllers) {
         _subViewControllers = [[YBFileHelper getChannelConfig]objectForKeyNotNull:@"tab"];
