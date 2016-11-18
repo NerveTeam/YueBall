@@ -304,7 +304,7 @@ static int waitIntervalForImage = 1;
     {
         WEAKSELF
         // _article.articleID , 请求参数变化
-        [self.baseDelegate requestAttitude:_article.commentSet.commentSetId withAttitudeBlock:^(BOOL success, NSDictionary *json) {
+        [self.baseDelegate requestAttitude:self.newsId withAttitudeBlock:^(BOOL success, NSDictionary *json) {
             if(!success)
                 return;
             STRONGSELF

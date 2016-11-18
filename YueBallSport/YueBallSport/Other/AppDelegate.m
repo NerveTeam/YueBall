@@ -18,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self netWorkConfig];
+[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     YBTabBarController *tabBarController = [[YBTabBarController alloc]init];
     self.window.rootViewController = tabBarController;

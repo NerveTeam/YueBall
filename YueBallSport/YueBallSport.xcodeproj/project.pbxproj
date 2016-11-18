@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C14D7991DDC374000323CB8 /* YBHotNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7981DDC374000323CB8 /* YBHotNewsViewController.m */; };
+		8C14D79F1DDC47ED00323CB8 /* YBBaseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D79E1DDC47ED00323CB8 /* YBBaseCollectionView.m */; };
+		8C14D7A21DDC493700323CB8 /* YBChannelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7A11DDC493700323CB8 /* YBChannelGroup.m */; };
+		8C14D7A51DDC4BC100323CB8 /* YBCollectionViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7A41DDC4BC100323CB8 /* YBCollectionViewBaseCell.m */; };
+		8C14D7A81DDC4C9500323CB8 /* YBChannelListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7A71DDC4C9500323CB8 /* YBChannelListCell.m */; };
+		8C14D7AB1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7AA1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m */; };
+		8C14D7AE1DDDA74A00323CB8 /* YBBaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7AD1DDDA74A00323CB8 /* YBBaseDetailViewController.m */; };
 		8C191ED51DD4658300031BC5 /* MLMeunItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191ED21DD4658300031BC5 /* MLMeunItem.m */; };
 		8C191ED61DD4658300031BC5 /* MLMeunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191ED41DD4658300031BC5 /* MLMeunView.m */; };
 		8C1921781DD57C9B00031BC5 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191EDB1DD57C9A00031BC5 /* MASCompositeConstraint.m */; };
@@ -241,7 +248,6 @@
 		8CD3D59F1DAC8B9A00044ADB /* TestNewsViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */; };
 		8CFFFD5B1DD750D3004629FE /* YBNewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */; };
 		8CFFFD5E1DD750F4004629FE /* YBLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD5D1DD750F4004629FE /* YBLiveViewController.m */; };
-		8CFFFD6C1DD75C0F004629FE /* YBNewsSportListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD6B1DD75C0F004629FE /* YBNewsSportListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +268,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C14D7971DDC374000323CB8 /* YBHotNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBHotNewsViewController.h; sourceTree = "<group>"; };
+		8C14D7981DDC374000323CB8 /* YBHotNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBHotNewsViewController.m; sourceTree = "<group>"; };
+		8C14D79D1DDC47ED00323CB8 /* YBBaseCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBBaseCollectionView.h; sourceTree = "<group>"; };
+		8C14D79E1DDC47ED00323CB8 /* YBBaseCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBBaseCollectionView.m; sourceTree = "<group>"; };
+		8C14D7A01DDC493700323CB8 /* YBChannelGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBChannelGroup.h; sourceTree = "<group>"; };
+		8C14D7A11DDC493700323CB8 /* YBChannelGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBChannelGroup.m; sourceTree = "<group>"; };
+		8C14D7A31DDC4BC100323CB8 /* YBCollectionViewBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBCollectionViewBaseCell.h; sourceTree = "<group>"; };
+		8C14D7A41DDC4BC100323CB8 /* YBCollectionViewBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBCollectionViewBaseCell.m; sourceTree = "<group>"; };
+		8C14D7A61DDC4C9500323CB8 /* YBChannelListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBChannelListCell.h; sourceTree = "<group>"; };
+		8C14D7A71DDC4C9500323CB8 /* YBChannelListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBChannelListCell.m; sourceTree = "<group>"; };
+		8C14D7A91DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
+		8C14D7AA1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
+		8C14D7AC1DDDA74A00323CB8 /* YBBaseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBBaseDetailViewController.h; sourceTree = "<group>"; };
+		8C14D7AD1DDDA74A00323CB8 /* YBBaseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBBaseDetailViewController.m; sourceTree = "<group>"; };
 		8C191ED11DD4658300031BC5 /* MLMeunItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeunItem.h; sourceTree = "<group>"; };
 		8C191ED21DD4658300031BC5 /* MLMeunItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMeunItem.m; sourceTree = "<group>"; };
 		8C191ED31DD4658300031BC5 /* MLMeunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeunView.h; sourceTree = "<group>"; };
@@ -744,8 +764,6 @@
 		8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewDetailViewController.m; sourceTree = "<group>"; };
 		8CFFFD5C1DD750F4004629FE /* YBLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLiveViewController.h; sourceTree = "<group>"; };
 		8CFFFD5D1DD750F4004629FE /* YBLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLiveViewController.m; sourceTree = "<group>"; };
-		8CFFFD6A1DD75C0F004629FE /* YBNewsSportListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNewsSportListViewController.h; sourceTree = "<group>"; };
-		8CFFFD6B1DD75C0F004629FE /* YBNewsSportListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewsSportListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1473,10 +1491,16 @@
 		8CD3D3DF1DAA386B00044ADB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8C14D7A31DDC4BC100323CB8 /* YBCollectionViewBaseCell.h */,
+				8C14D7A41DDC4BC100323CB8 /* YBCollectionViewBaseCell.m */,
+				8C14D79D1DDC47ED00323CB8 /* YBBaseCollectionView.h */,
+				8C14D79E1DDC47ED00323CB8 /* YBBaseCollectionView.m */,
 				8CD3D5271DABAF0500044ADB /* YBBaseViewController.h */,
 				8CD3D5281DABAF0500044ADB /* YBBaseViewController.m */,
 				8C70EC0A1DD8A2F7009514EC /* BaseModel.h */,
 				8C70EC0B1DD8A2F7009514EC /* BaseModel.m */,
+				8C14D7AC1DDDA74A00323CB8 /* YBBaseDetailViewController.h */,
+				8C14D7AD1DDDA74A00323CB8 /* YBBaseDetailViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1535,12 +1559,12 @@
 			children = (
 				8CD3D4D91DAB44FF00044ADB /* YBNewsViewController.h */,
 				8CD3D4DA1DAB44FF00044ADB /* YBNewsViewController.m */,
+				8C14D7971DDC374000323CB8 /* YBHotNewsViewController.h */,
+				8C14D7981DDC374000323CB8 /* YBHotNewsViewController.m */,
 				8CFFFD591DD750D3004629FE /* YBNewDetailViewController.h */,
 				8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */,
 				8CFFFD5C1DD750F4004629FE /* YBLiveViewController.h */,
 				8CFFFD5D1DD750F4004629FE /* YBLiveViewController.m */,
-				8CFFFD6A1DD75C0F004629FE /* YBNewsSportListViewController.h */,
-				8CFFFD6B1DD75C0F004629FE /* YBNewsSportListViewController.m */,
 				8C7548741DD9B83B00569DAE /* YBArticleViewController.h */,
 				8C7548751DD9B83B00569DAE /* YBArticleViewController.m */,
 				8C7548771DD9B86700569DAE /* YBArticleRequestDelegate.h */,
@@ -1566,6 +1590,8 @@
 		8CD3D3E81DAA387800044ADB /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				8C14D7A91DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.h */,
+				8C14D7AA1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m */,
 				8CD3D45F1DAA3A8500044ADB /* NSArray+Safe.h */,
 				8CD3D4601DAA3A8500044ADB /* NSArray+Safe.m */,
 				8CD3D4611DAA3A8500044ADB /* NSDate+Utilities.h */,
@@ -1934,6 +1960,8 @@
 		8CD3D5831DAC8B9900044ADB /* News */ = {
 			isa = PBXGroup;
 			children = (
+				8C14D7A61DDC4C9500323CB8 /* YBChannelListCell.h */,
+				8C14D7A71DDC4C9500323CB8 /* YBChannelListCell.m */,
 				8CD3D5841DAC8B9900044ADB /* TestNewsCell.h */,
 				8CD3D5851DAC8B9900044ADB /* TestNewsCell.m */,
 				8C70EC0D1DD9683C009514EC /* YBNewsSportListCell.h */,
@@ -1995,6 +2023,8 @@
 			children = (
 				8CD3D5941DAC8B9A00044ADB /* TestNewsViews.h */,
 				8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */,
+				8C14D7A01DDC493700323CB8 /* YBChannelGroup.h */,
+				8C14D7A11DDC493700323CB8 /* YBChannelGroup.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -2185,6 +2215,7 @@
 				8C1925261DD5901600031BC5 /* SNArticleTempImage.m in Sources */,
 				8C7548731DD9ACCE00569DAE /* UIView+SDExtension.m in Sources */,
 				8C1923B61DD57DC300031BC5 /* MJRefreshAutoGifFooter.m in Sources */,
+				8C14D7A51DDC4BC100323CB8 /* YBCollectionViewBaseCell.m in Sources */,
 				8CD3D4881DAA3ABD00044ADB /* UIView+Position.m in Sources */,
 				8C1925D61DD5901600031BC5 /* SNArticleBaseViewController+Gesture.m in Sources */,
 				8C1925DE1DD5901600031BC5 /* SNNewsWebView.m in Sources */,
@@ -2208,7 +2239,6 @@
 				8CD3D4581DAA3A5200044ADB /* YTKNetworkAgent.m in Sources */,
 				8C1925DA1DD5901600031BC5 /* SNArticleBaseViewController+Support.m in Sources */,
 				8CD3D4E71DAB458A00044ADB /* YBMessageViewController.m in Sources */,
-				8CFFFD6C1DD75C0F004629FE /* YBNewsSportListViewController.m in Sources */,
 				8C1925251DD5901600031BC5 /* SNArticlePictureGroup.m in Sources */,
 				8CD3D53B1DABB37D00044ADB /* TestMacro.m in Sources */,
 				8C19252E1DD5901600031BC5 /* SNComment.m in Sources */,
@@ -2232,6 +2262,7 @@
 				8C1925291DD5901600031BC5 /* SNArticleWeiboGroup.m in Sources */,
 				8C1923D61DD57DC300031BC5 /* UIImageView+WebCache.m in Sources */,
 				8CD3D4E41DAB452500044ADB /* YBPersonViewController.m in Sources */,
+				8C14D7AB1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m in Sources */,
 				8CD3D41E1DAA3A2F00044ADB /* AFURLRequestSerialization.m in Sources */,
 				8CFFFD5E1DD750F4004629FE /* YBLiveViewController.m in Sources */,
 				8C19217F1DD57C9B00031BC5 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -2261,12 +2292,14 @@
 				8CD3D45B1DAA3A5200044ADB /* YTKRequest.m in Sources */,
 				8C70EBFE1DD8707F009514EC /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				8CD3D5351DABB36400044ADB /* TestConfig.m in Sources */,
+				8C14D7A81DDC4C9500323CB8 /* YBChannelListCell.m in Sources */,
 				8CD3D4731DAA3AA900044ADB /* DataRequest.m in Sources */,
 				8C1925D21DD5901600031BC5 /* SNImageUrlManager.m in Sources */,
 				8CD3D56B1DAC89C400044ADB /* TestHome.m in Sources */,
 				8C1925CE1DD5901600031BC5 /* SNArticleCacheManager.m in Sources */,
 				8CD3D5381DABB37100044ADB /* TestHandler.m in Sources */,
 				8C19217E1DD57C9B00031BC5 /* NSArray+MASAdditions.m in Sources */,
+				8C14D79F1DDC47ED00323CB8 /* YBBaseCollectionView.m in Sources */,
 				8C1925D31DD5901600031BC5 /* SNJSBridge.m in Sources */,
 				8CD3D4531DAA3A5200044ADB /* YTKBaseRequest.m in Sources */,
 				8C70EC0C1DD8A2F7009514EC /* BaseModel.m in Sources */,
@@ -2277,6 +2310,7 @@
 				8C1925CA1DD5901600031BC5 /* SNArticleManager+Cache.m in Sources */,
 				8CD3D4541DAA3A5200044ADB /* YTKBatchRequest.m in Sources */,
 				8CD3D4871DAA3ABD00044ADB /* UILabel+Extention.m in Sources */,
+				8C14D7AE1DDDA74A00323CB8 /* YBBaseDetailViewController.m in Sources */,
 				8C1925CF1DD5901600031BC5 /* NSDate+Helper.m in Sources */,
 				8CD3D46F1DAA3AA100044ADB /* NSFileManager+Utilities.m in Sources */,
 				8C19252B1DD5901600031BC5 /* SNSpecalContent.m in Sources */,
@@ -2325,6 +2359,7 @@
 				8C75486F1DD9ACCE00569DAE /* TADotView.m in Sources */,
 				8CD3D5981DAC8B9A00044ADB /* TestMeCell.m in Sources */,
 				8C1925221DD5901600031BC5 /* SNArticleImage.m in Sources */,
+				8C14D7991DDC374000323CB8 /* YBHotNewsViewController.m in Sources */,
 				8CD3D5741DAC89E200044ADB /* TestNews.m in Sources */,
 				8CD3D5471DABB3B500044ADB /* TestVideo.m in Sources */,
 				8C1925211DD5901600031BC5 /* SNArticleGroupImage.m in Sources */,
@@ -2336,6 +2371,7 @@
 				8C1925201DD5901600031BC5 /* SNArticleDeepReadGroup.m in Sources */,
 				8C19251A1DD5901600031BC5 /* SNArticleAD.m in Sources */,
 				8C1921801DD57C9B00031BC5 /* View+MASAdditions.m in Sources */,
+				8C14D7A21DDC493700323CB8 /* YBChannelGroup.m in Sources */,
 				8C1925D91DD5901600031BC5 /* SNArticleBaseViewController+Recommend.m in Sources */,
 				8C1921781DD57C9B00031BC5 /* MASCompositeConstraint.m in Sources */,
 				8CD3D48B1DAA3ABD00044ADB /* UIViewController+Navigation.m in Sources */,

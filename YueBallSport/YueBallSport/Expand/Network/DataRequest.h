@@ -15,3 +15,7 @@
 @interface NewsSportListRequest : BaseDataRequest
 
 @end
+
+@interface HotNewsSportListRequest : BaseDataRequest
+
+@end

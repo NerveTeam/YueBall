@@ -7,64 +7,100 @@
 //
 
 #import "YBNewDetailViewController.h"
-#import "MLMeunView.h"
-#import "YBFileHelper.h"
-#import "NSDictionary+Safe.h"
-#import "SDCycleScrollView.h"
+#import "YBNewsSport.h"
+#import "YBNewsSportListCell.h"
+#import "YBArticleViewController.h"
+#import "MLTransition.h"
+#import "UIView+TopBar.h"
 
-@interface YBNewDetailViewController ()
-// 菜单
-@property(nonatomic, strong)MLMeunView *meunView;
-// 频道数据
-@property(nonatomic, strong)NSDictionary *channelData;
+@interface YBNewDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)YBNewsSport *sportList;
+@property(nonatomic, assign)NSInteger currentIndex;
+@property(nonatomic, strong)UITableView *tableView;
+@property(nonatomic, strong)UIView *topBar;
 
-@property(nonatomic, strong)SDCycleScrollView *cycleView;
 @end
 
 @implementation YBNewDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:self.cycleView];
-    [self.view addSubview:self.meunView];
-    [self.meunView show];
-    NSArray *imagesURLStrings = @[
-                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                                  ];
-    
-    // 情景三：图片配文字
-    NSArray *titles = @[@"园园大傻X",
-                        @"呵呵好呵呵好",
-                        @"哈哈哈哈哈哈"
-                        ];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            _cycleView.imageURLStringsGroup = imagesURLStrings;
-            _cycleView.titlesGroup = titles;
-    });
+    _currentIndex = 1;
+    [self loadData:_currentIndex];
+}
+
+- (void)loadData:(NSInteger)page {
+    self.sportList = [YBNewsSport requestNewsList:@{@"channelId":@(_channelId),@"page":@(page)} success:^(NSArray *dataList) {
+        [self stopRefresh];
+        if (page > 1) {
+            if (dataList.count < 20) {
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            }
+            NSMutableArray *temp = [[NSMutableArray alloc]initWithArray:self.dataList];
+            [temp addObjectsFromArray:dataList];
+            self.dataList = temp.copy;
+        }else {
+            if (dataList.count < 20) {
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            }
+            self.dataList = dataList;
+        }
+        [self.tableView reloadData];
+    } errorBack:^{
+        [self stopRefresh];
+    }];
+}
+
+- (void)stopRefresh {
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataList.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    YBNewsSportListCell *cell = [YBNewsSportListCell newsSportListCellWithTableView:tableView];
+    cell.sportList = self.dataList[indexPath.row];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [tableView fd_heightForCellWithIdentifier:@"YBNewsSportListCell" cacheByIndexPath:indexPath configuration:^(YBNewsSportListCell *cell) {
+        cell.sportList = self.dataList[indexPath.row];
+    }];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    YBNewsSport *sport = self.dataList[indexPath.row];
+    YBArticleViewController *article = [[YBArticleViewController alloc]initWithNewsId:[NSString stringWithFormat:@"%ld",sport.newsId]];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.navigationController pushViewController:article animated:YES];
 }
 
 #pragma mark - lazy
-- (MLMeunView *)meunView {
-    if (!_meunView) {
-        _meunView = [[MLMeunView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.cycleView.frame), self.view.width, 50) titles:[self.channelData objectForKeyNotNull:@"titles"] viewcontrollersInfo:[self.channelData objectForKeyNotNull:@"viewcontrollers"] isParameter:NO];
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.topBar.height, self.view.width, self.view.height - self.topBar.height)];
+        [_tableView registerClass:[YBNewsSportListCell class] forCellReuseIdentifier:NSStringFromClass([YBNewsSportListCell class])];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            _currentIndex = 1;
+            [self loadData:_currentIndex];
+        }];
+        _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            [self loadData:++_currentIndex];
+        }];
+        [self.view addSubview:_tableView];
     }
-    return _meunView;
+    return _tableView;
 }
-- (NSDictionary *)channelData {
-    if (!_channelData) {
-        _channelData = [[YBFileHelper getChannelConfig] objectForKeyNotNull:@"news"];
+- (UIView *)topBar {
+    if (!_topBar) {
+        _topBar = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, StatusBarHeight + TopBarHeight)];
+        _topBar = [_topBar topBarWithTintColor:nil title:self.channelName titleColor:[UIColor whiteColor] leftView:nil rightView:nil responseTarget:self];
+        [self.view addSubview:_topBar];
     }
-    return _channelData;
-}
-- (SDCycleScrollView *)cycleView {
-    if (!_cycleView) {
-        _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.width, self.view.width * 0.5) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
-        
-        _cycleView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
-        _cycleView.currentPageDotColor = [UIColor whiteColor];
-    }
-    return _cycleView;
+    return _topBar;
 }
 @end

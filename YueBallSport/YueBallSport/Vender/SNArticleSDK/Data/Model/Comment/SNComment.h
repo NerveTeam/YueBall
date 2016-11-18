@@ -62,7 +62,7 @@
 @property (nonatomic, assign) NSInteger wbVerifiedType;//微博认证类型（0：名人，1：政府，2：企业，3：媒体，4：校园，5：网站，6：应用，7：团体，其中0是黄V，1～7是蓝V）
 @property (nonatomic, assign) NSInteger wbVerified;//1是，0否
 @property (nonatomic, strong) NSString  *wbVerifyInfo;//认证信息
-@property (nonatomic, strong) NSString  *wbUserID;//认证信息
+@property (nonatomic, assign) NSInteger  wbUserID;//认证信息
 @property (nonatomic, assign) NSInteger  supportNum;
 @property (nonatomic, strong) NSDate    *publishDate;
 @property (nonatomic, assign) NSInteger isXiaoBian;              // 是否是小编回复（特殊标签显示）

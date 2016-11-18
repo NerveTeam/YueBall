@@ -1,48 +1,74 @@
 {"channel" : {
-    "news" : {
-        "titles" :["中超",
-                  "英超",
-                  "西甲",
-                  "德甲",
-                  "意甲"
-        ],
-        "viewcontrollers" : [
-        {
-            "class" : "YBNewsSportListViewController",
-            "info" : {
-            "channelId" : "1"
-            }
-                            
-        },
-        {
-        "class" : "YBNewsSportListViewController",
-        "info" : {
-        "channelId" : "2"
-        }
-        
-        },
-        {
-        "class" : "YBNewsSportListViewController",
-        "info" : {
-        "channelId" : "3"
-        }
-        
-        },
-        {
-        "class" : "YBNewsSportListViewController",
-        "info" : {
-        "channelId" : "4"
-        }
-        
-        },
-        {
-        "class" : "YBNewsSportListViewController",
-        "info" : {
-        "channelId" : "5"
-        }
-        
-        }
-        ]
+    "tab" : [
+            {
+            "title" :  "消息",
+             "class" : "YBMessageViewController",
+             "norImg" : "info",
+             "selectImg" : "info_click"
+            },
+             {
+             "title" :  "新闻",
+             "class" : "YBNewsViewController",
+             "norImg" : "news",
+             "selectImg" : "news_click"
+             },
+             {
+             "title" :  "踢球",
+             "class" : "YBHomeViewController",
+             "norImg" : "tiqiu",
+             "selectImg" : "tiqiu_click"
+             },
+             {
+             "title" :  "发现",
+             "class" : "YBFindViewController",
+             "norImg" : "faxian",
+             "selectImg" : "faxian_click"
+             },
+             {
+             "title" :  "我的",
+             "class" : "YBPersonViewController",
+             "norImg" : "mine",
+             "selectImg" : "mine_click"
+             }
+    
+    
+    ],
+    
+    "news" : [
+              {
+              "title" : "中超",
+              "channelId" : 1,
+              "channelName" : "中超新闻",
+              "icon" : "zhongchao"
+              },
+              {
+              "title" : "英超",
+              "channelId" : 2,
+              "channelName" : "英超新闻",
+              "icon" : "yingchao"
+              },
+              {
+              "title" : "西甲",
+              "channelId" : 3,
+              "channelName" : "西甲新闻",
+              "icon" : "xijia"
+              },
+              {
+              "title" : "德甲",
+              "channelId" : 4,
+              "channelName" : "德甲新闻",
+              "icon" : "dejia"
+              },
+              {
+              "title" : "意甲",
+              "channelId" : 5,
+              "channelName" : "意甲新闻",
+              "icon" : "yijia"
+              }
+    ],
+    
+    "information" : {
+    
     },
     "message" : {
     

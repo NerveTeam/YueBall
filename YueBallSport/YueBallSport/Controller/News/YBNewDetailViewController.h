@@ -6,8 +6,9 @@
 //  Copyright © 2016年 YueBall. All rights reserved.
 //
 
-#import "YBBaseViewController.h"
+#import "YBBaseDetailViewController.h"
 
-@interface YBNewDetailViewController : YBBaseViewController
-
+@interface YBNewDetailViewController : YBBaseDetailViewController
+@property(nonatomic, assign)NSInteger channelId; // 频道id
+@property(nonatomic, copy)NSString *channelName;
 @end

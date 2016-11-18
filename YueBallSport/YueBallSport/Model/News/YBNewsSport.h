@@ -25,6 +25,8 @@
                       errorBack:(Error)error;
 
 
-
++ (instancetype)requestHotNewsList:(NSDictionary *)parameter
+                          success:(Success)success
+                        errorBack:(Error)error;
 @end
 

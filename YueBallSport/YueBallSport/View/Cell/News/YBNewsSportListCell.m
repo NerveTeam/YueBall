@@ -97,6 +97,8 @@ static const CGFloat marginTop = 15;
 - (UIImageView *)img {
     if (!_img) {
         _img = [[UIImageView alloc]init];
+        _img.contentMode = UIViewContentModeScaleAspectFill;
+        _img.clipsToBounds = YES;
     }
     return _img;
 }
@@ -114,7 +116,7 @@ static const CGFloat marginTop = 15;
 }
 - (UIImageView *)commentIcon {
     if (!_commentIcon) {
-        _commentIcon = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"content_ic_comments@2x"]];
+        _commentIcon = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"comment"]];
     }
     return _commentIcon;
 }

@@ -46,6 +46,45 @@
      }];
 }
 
+/**
+ *  获取热门评论
+ *
+ *  @param articleId     commentid
+ *  @param attitudeBlock callback
+ */
+- (void)requestAttitude:(NSString *)articleId withAttitudeBlock:(SNGotAttitudeBlock)attitudeBlock {
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://wu.she-cheng.com/thinkphp/News/hotcomment?newsId=%@",articleId];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    //生成连接
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    
+    //建立连接并接收返回数据(异步执行)
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         NSDictionary *json;
+         if (data){
+             json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+         }else{
+             attitudeBlock(NO,nil);
+             return;
+         }
+         /* Parse successful. */
+         if (connectionError)
+         {
+             attitudeBlock(NO,nil);
+         }
+         /* Error. */
+         else
+         {
+             attitudeBlock(YES,json);
+         }
+     }];
+
+}
+
 - (NSString *)localImageUrlFromSNArticleImage:(SNArticleImage *)image {
     return image.url;
 }

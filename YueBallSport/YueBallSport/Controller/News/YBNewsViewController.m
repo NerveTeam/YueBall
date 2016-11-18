@@ -45,7 +45,7 @@
 }
 - (NSArray *)channelData {
     if (!_channelData) {
-        _channelData = @[@"YBNewDetailViewController",@"YBLiveViewController"];
+        _channelData = @[@"YBHotNewsViewController",@"YBLiveViewController"];
     }
     return _channelData;
 }
