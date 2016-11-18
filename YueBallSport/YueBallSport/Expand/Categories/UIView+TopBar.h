@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#define TintColor  RGBACOLOR(49, 179, 93, 1)
 @interface UIView (TopBar)
 - (instancetype)topBarWithTintColor:(UIColor *)tintColor
                               title:(NSString *)title

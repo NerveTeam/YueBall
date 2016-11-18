@@ -14,7 +14,7 @@
 @end
 @implementation BaseDataRequest
 - (NSString *)baseUrl {
-    return @"";
+    return @"http://wu.she-cheng.com";
 }
 - (NSString *)requestUrl {
     return @"";
@@ -59,24 +59,33 @@
     [baseRequest startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
         baseRequest.json = request.responseJSONObject;
         if (success) {
+            dispatch_async(dispatch_get_main_queue(), ^{
              success(request);
+            });
         }
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         if (failure) {
-             failure(request);   
+            dispatch_async(dispatch_get_main_queue(), ^{
+             failure(request);
+            });
         }
     }];
     return baseRequest;
 }
 
 - (void)requestFinished:(__kindof YTKBaseRequest *)request {
+    self.json = (NSDictionary *)request.responseObject;
     if ([__delegate respondsToSelector:@selector(requestFinished:)]) {
-        [__delegate requestFinished:request];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [__delegate requestFinished:request];
+        });
     }
 }
 - (void)requestFailed:(__kindof YTKBaseRequest *)request {
     if ([__delegate respondsToSelector:@selector(requestFailed:)]) {
-        [__delegate requestFailed:request];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [__delegate requestFailed:request];
+        });
     }
 }
 @end

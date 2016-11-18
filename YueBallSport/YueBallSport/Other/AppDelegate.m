@@ -17,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self netWorkConfig];
+    [self globalConfig];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     YBTabBarController *tabBarController = [[YBTabBarController alloc]init];
     self.window.rootViewController = tabBarController;
@@ -53,9 +53,16 @@
 }
 
 #pragma mark - PrivateMethod
-// 设置网络
-- (void)netWorkConfig {
+// 全局配置
+- (void)globalConfig {
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
     config.baseUrl = @"http://wu.she-cheng.com";
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    //    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+    //                                                       [UIColor whiteColor], UITextAttributeTextColor,
+    //                                                       nil] forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                       RGBACOLOR(49, 179, 93, 1), UITextAttributeTextColor,
+                                                       nil] forState:UIControlStateSelected];
 }
 @end

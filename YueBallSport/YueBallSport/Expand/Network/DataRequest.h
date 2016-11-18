@@ -12,3 +12,10 @@
 @interface TestRequest : BaseDataRequest
 
 @end
+@interface NewsSportListRequest : BaseDataRequest
+
+@end
+
+@interface HotNewsSportListRequest : BaseDataRequest
+
+@end

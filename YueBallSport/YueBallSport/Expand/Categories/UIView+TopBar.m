@@ -27,43 +27,43 @@ static const char *targetKey = "target";
                      responseTarget:(UIViewController *)target {
     
     self.target = target;
-    self.backgroundColor = tintColor;
+    self.backgroundColor = tintColor ? tintColor : TintColor;
     UILabel *titleLabel = [UILabel labelWithText:title fontSize:19 textColor:titleColor];
     [self addSubview:titleLabel];
     titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-//    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.equalTo(self);
-//        make.top.equalTo(self).offset(StatusBarHeight + 10);
-//    }];
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self);
+        make.top.equalTo(self).offset(StatusBarHeight + 10);
+    }];
     [titleLabel sizeToFit];
     
     if (leftView) {
         [self addSubview:leftView];
         [(UIButton *)leftView addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
         leftView.translatesAutoresizingMaskIntoConstraints = NO;
-//        [leftView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(self).offset(10);
-//            make.centerY.equalTo(titleLabel);;
-//        }];
+        [leftView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(10);
+            make.centerY.equalTo(self).offset(StatusBarHeight/2);
+        }];
     }
     
     
     if (rightView) {
         [self addSubview:rightView];
         rightView.translatesAutoresizingMaskIntoConstraints = NO;
-//        [rightView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.centerY.equalTo(titleLabel);
-//            make.right.equalTo(self.mas_right);
-//            make.width.offset(44);
-//            make.height.offset(44);
-//        }];
+        [rightView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self).offset(StatusBarHeight/2);
+            make.right.equalTo(self.mas_right);
+            make.width.offset(44);
+            make.height.offset(44);
+        }];
     }
     
     return self;
 }
 
 - (void)backClick {
-//    [self.target popViewControllerAnimated:YES];
+    [self.target.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)setTarget:(UIViewController *)target {

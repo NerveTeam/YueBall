@@ -15,16 +15,16 @@
     SNComment *comment = [[SNComment alloc] init];
     comment.parentId = [obj objectForKeySafely:@"parent"];
     comment.mId = [obj objectForKeySafely:@"mid"];
-    comment.userName = [obj objectForKeySafely:@"nick"];
-    comment.content = [obj objectForKeySafely:@"content"];
+    comment.userName = [obj objectForKeySafely:@"userName"];
+    comment.content = [obj objectForKeySafely:@"commentContent"];
     comment.publishDate = [NSDate dateFromTimestamp:[obj objectForKeySafely:@"time"]];
-    comment.supportNum = [[obj objectForKeySafely:@"agree"] intValue];
-    comment.iconURL = [obj objectForKeySafely:@"wbProfileImg"];
+    comment.supportNum = [[obj objectForKeySafely:@"support"] intValue];
+    comment.iconURL = [obj objectForKeySafely:@"headIcon"];
     comment.level = [NSString stringWithFormat:@"%d", [[obj objectForKeySafely:@"level"] intValue]];
     comment.source = [obj objectForKeySafely:@"userType"];
     comment.area = [obj objectForKeySafely:@"area"];
     comment.wbVerified = [[NSString stringWithFormat:@"%@", [obj objectForKeySafely:@"wbVerified"]] intValue];
-    comment.wbUserID = [obj objectForKeySafely:@"wbUserId"];
+    comment.wbUserID = [[obj objectForKeySafely:@"uid"] longValue];
     if ([obj objectForKeySafely:@"wbDescription"] != nil) {
         comment.wbVerifyInfo = [NSString stringWithFormat:@"%@", [obj objectForKeySafely:@"wbDescription"]];
     } else {

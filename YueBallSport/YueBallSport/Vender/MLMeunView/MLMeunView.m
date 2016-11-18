@@ -32,16 +32,17 @@ static float lineInset = 5;
 static float margin = 20;   // item距边框距离
 static float itemMargin = 25; // item间距
 
-- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titles viewcontrollersInfo:(NSArray *)controllersInfo isParameter:(BOOL)isParameter{
-   self =  [super initWithFrame:frame];
-    self.frame = CGRectMake(frame.origin.x, frame.origin.y, ScreenSize.width, ScreenSize.height - frame.origin.y);
+- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titles viewcontrollersInfo:(NSArray *)controllersInfo isParameter:(BOOL)isParameter {
+   self =  [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, ScreenSize.width, ScreenSize.height - frame.origin.y - frame.size.height)];
     self.isOnlyInit = !isParameter;
     self.meunHeight = frame.size.height;
     self.controllersInfo = controllersInfo;
     [self resetTopBar:titles];
-    [self addSubViewcontroller:0];
     self.backgroundColor = [UIColor clearColor];
     return self;
+}
+- (void)show {
+    [self addSubViewcontroller:0];
 }
 - (void)contentMoveToPage:(NSInteger)page {
     [self.contentScrollView setContentOffset:CGPointMake(page * self.width, 0) animated:NO];
@@ -198,6 +199,11 @@ static float itemMargin = 25; // item间距
             viewcontroller = [[UIViewController alloc]init];
         }
     }
+    
+    UIViewController *superController = self.viewController;
+    if (superController) {
+     [superController addChildViewController:viewcontroller];   
+    }
     [self.contentScrollView addSubview:viewcontroller.view];
     viewcontroller.view.frame = self.contentScrollView.bounds;
     viewcontroller.view.x = _contentScrollView.width * index;
@@ -302,6 +308,7 @@ static float itemMargin = 25; // item间距
     _line.x = item.x;
     _line.width = item.width;
 }
+
 
 #pragma mark - lazy
 - (UIScrollView *)meunScrollView {

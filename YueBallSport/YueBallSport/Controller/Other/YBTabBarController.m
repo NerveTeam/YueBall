@@ -9,6 +9,7 @@
 #import "YBTabBarController.h"
 #import "NSArray+Safe.h"
 #import "NSDictionary+Safe.h"
+#import "YBFileHelper.h"
 
 @interface YBTabBarController ()
 @property(nonatomic,strong)NSArray *subViewControllers;
@@ -38,17 +39,13 @@
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:vc];
     vc.navigationController.navigationBar.hidden = YES;
     navController.title = [info objectForKeyNotNull:@"title"];
+    navController.tabBarItem.image = [UIImage imageNamed:[info objectForKeyNotNull:@"norImg"]];
+    navController.tabBarItem.selectedImage = [[UIImage imageNamed:[info objectForKeyNotNull:@"selectImg"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     return navController;
 }
-
 - (NSArray *)subViewControllers {
     if (!_subViewControllers) {
-        _subViewControllers = @[
-        @{@"title":@"消息",@"class":@"YBMessageViewController"},
-        @{@"title":@"新闻",@"class":@"YBNewsViewController"},
-        @{@"title":@"踢球",@"class":@"YBHomeViewController"},
-        @{@"title":@"发现",@"class":@"YBFindViewController"},
-        @{@"title":@"我的",@"class":@"YBPersonViewController"}];
+        _subViewControllers = [[YBFileHelper getChannelConfig]objectForKeyNotNull:@"tab"];
     }
     return _subViewControllers;
 }

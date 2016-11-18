@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, InteractiveState) {
                        titles:(NSArray *)titles
           viewcontrollersInfo:(NSArray *)controllersInfo
                   isParameter:(BOOL)isParameter;
-
+- (void)show;
 - (void)resetMeun:(NSArray *)titles
 viewcontrollersInfo:(NSArray *)controllersInfo
       isParameter:(BOOL)isParameter;
