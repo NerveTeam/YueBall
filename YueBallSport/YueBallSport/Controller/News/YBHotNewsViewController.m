@@ -16,6 +16,7 @@
 #import "YBNewsSportListCell.h"
 #import "YBNewsSport.h"
 #import "YBArticleViewController.h"
+#import "YBNewsFoucs.h"
 
 @interface YBHotNewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 // 频道数据
@@ -28,29 +29,27 @@
 @property(nonatomic, strong)UITableView *hotTableView;
 // 分隔
 @property(nonatomic, strong)CALayer *separateLine;
+// 当前data索引值
 @property(nonatomic, assign)NSInteger currentIndex;
+// 热门列表请求对象
 @property(nonatomic,strong)YBNewsSport *sportList;
+// 热门数据
 @property(nonatomic, strong)NSArray *hotList;
+// 焦点图请求
+@property(nonatomic, strong)YBNewsFoucs *newsFoucs;
+
+@property(nonatomic, strong)NSArray *foucsArray;
 @end
 
 @implementation YBHotNewsViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *imagesURLStrings = @[
-                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                                  ];
-    
-    // 情景三：图片配文字
-    NSArray *titles = @[@"园园大傻X",
-                        @"呵呵好呵呵好",
-                        @"哈哈哈哈哈哈"
-                        ];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.cycleView.imageURLStringsGroup = imagesURLStrings;
-        self.cycleView.titlesGroup = titles;
-    });
+    self.newsFoucs = [YBNewsFoucs requestNewsFoucs:^(NSArray *dataList) {
+        self.foucsArray = dataList;
+        [self parseFoucs];
+    } error:^{
+        
+    }];
     _currentIndex = 1;
     [self loadData:_currentIndex];
     [self initNavigationBar];
@@ -92,8 +91,8 @@
         NSDictionary *info = [self.channelData safeObjectAtIndex:i];
         [item setImage:[UIImage imageNamed:[info objectForKeyNotNull:@"icon"]] forState:UIControlStateNormal];
         [item setTitle:[info objectForKeyNotNull:@"title"] forState:UIControlStateNormal];
-        [item setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        item.font = [UIFont systemFontOfSize:12];
+        [item setTitleColor:RGBACOLOR(20, 20, 20, 1) forState:UIControlStateNormal];
+        item.font = [UIFont systemFontOfSize:14];
         [item addTarget:self action:@selector(channelClick:) forControlEvents:UIControlEventTouchUpInside];
         [item layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:5];
         [self.navigationBar addSubview:item];
@@ -105,7 +104,7 @@
         }
         
        CALayer *separateLine = [CALayer layer];
-        separateLine.backgroundColor = [UIColor lightGrayColor].CGColor;
+        separateLine.backgroundColor = RGBACOLOR(235, 235, 235, 1).CGColor;
         CGFloat height = 30;
         CGFloat Y = (self.navigationBar.height - height) / 2;
         separateLine.frame = CGRectMake(CGRectGetMaxX(item.frame) + 2 * margin, Y, 1, height);
@@ -120,7 +119,17 @@
     detail.channelName = [[self.channelData safeObjectAtIndex:item.tag] objectForKeyNotNull:@"channelName"];
     [self.navigationController pushViewController:detail animated:YES];
 }
-
+- (void)parseFoucs {
+    NSMutableArray *imagesURLStrings = [[NSMutableArray alloc]init];
+    NSMutableArray *titles = [[NSMutableArray alloc]init];
+    
+    for (YBNewsFoucs * foucs in self.foucsArray) {
+        [imagesURLStrings addObject:foucs.imgUrl];
+        [titles addObject:foucs.title];
+    }
+        self.cycleView.imageURLStringsGroup = imagesURLStrings.copy;
+        self.cycleView.titlesGroup = titles.copy;
+}
 
 #pragma mark - delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -158,6 +167,7 @@
         
         _cycleView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
         _cycleView.currentPageDotColor = [UIColor whiteColor];
+        _cycleView.titleLabelTextFont = [UIFont systemFontOfSize:14];
         [self.view addSubview:_cycleView];
     }
     return _cycleView;
@@ -173,7 +183,7 @@
 - (CALayer *)separateLine {
     if (!_separateLine) {
         _separateLine = [CALayer layer];
-        _separateLine.backgroundColor = [UIColor lightGrayColor].CGColor;
+        _separateLine.backgroundColor = RGBACOLOR(235, 235, 235, 1).CGColor;
         _separateLine.frame = CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), self.view.width, 1);
         [self.view.layer addSublayer:_separateLine];
     }

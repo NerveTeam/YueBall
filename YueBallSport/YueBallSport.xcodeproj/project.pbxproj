@@ -14,6 +14,7 @@
 		8C14D7A81DDC4C9500323CB8 /* YBChannelListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7A71DDC4C9500323CB8 /* YBChannelListCell.m */; };
 		8C14D7AB1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7AA1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m */; };
 		8C14D7AE1DDDA74A00323CB8 /* YBBaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7AD1DDDA74A00323CB8 /* YBBaseDetailViewController.m */; };
+		8C14D7F61DE2FC6900323CB8 /* YBNewsFoucs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7F51DE2FC6900323CB8 /* YBNewsFoucs.m */; };
 		8C191ED51DD4658300031BC5 /* MLMeunItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191ED21DD4658300031BC5 /* MLMeunItem.m */; };
 		8C191ED61DD4658300031BC5 /* MLMeunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191ED41DD4658300031BC5 /* MLMeunView.m */; };
 		8C1921781DD57C9B00031BC5 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191EDB1DD57C9A00031BC5 /* MASCompositeConstraint.m */; };
@@ -282,6 +283,8 @@
 		8C14D7AA1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		8C14D7AC1DDDA74A00323CB8 /* YBBaseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBBaseDetailViewController.h; sourceTree = "<group>"; };
 		8C14D7AD1DDDA74A00323CB8 /* YBBaseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBBaseDetailViewController.m; sourceTree = "<group>"; };
+		8C14D7F41DE2FC6900323CB8 /* YBNewsFoucs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNewsFoucs.h; sourceTree = "<group>"; };
+		8C14D7F51DE2FC6900323CB8 /* YBNewsFoucs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewsFoucs.m; sourceTree = "<group>"; };
 		8C191ED11DD4658300031BC5 /* MLMeunItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeunItem.h; sourceTree = "<group>"; };
 		8C191ED21DD4658300031BC5 /* MLMeunItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMeunItem.m; sourceTree = "<group>"; };
 		8C191ED31DD4658300031BC5 /* MLMeunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeunView.h; sourceTree = "<group>"; };
@@ -1896,6 +1899,8 @@
 				8CD3D5731DAC89E200044ADB /* TestNews.m */,
 				8C70EC071DD88404009514EC /* YBNewsSport.h */,
 				8C70EC081DD88404009514EC /* YBNewsSport.m */,
+				8C14D7F41DE2FC6900323CB8 /* YBNewsFoucs.h */,
+				8C14D7F51DE2FC6900323CB8 /* YBNewsFoucs.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -2355,6 +2360,7 @@
 				8C1925D11DD5901600031BC5 /* SNArticleSetting.m in Sources */,
 				8C7548991DDB09E500569DAE /* MLBridgeBlock.m in Sources */,
 				8C19217C1DD57C9B00031BC5 /* MASViewAttribute.m in Sources */,
+				8C14D7F61DE2FC6900323CB8 /* YBNewsFoucs.m in Sources */,
 				8CD3D59A1DAC8B9A00044ADB /* TestNewsCell.m in Sources */,
 				8C75486F1DD9ACCE00569DAE /* TADotView.m in Sources */,
 				8CD3D5981DAC8B9A00044ADB /* TestMeCell.m in Sources */,

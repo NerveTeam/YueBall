@@ -7,9 +7,6 @@
 //
 
 #import "YBNewsSport.h"
-#import "MJExtension.h"
-#import "DataRequest.h"
-#import "NSDictionary+Safe.h"
 
 @interface YBNewsSport ()<DataRequestDelegate>
 

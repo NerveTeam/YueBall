@@ -7,9 +7,9 @@
 //
 
 #import "MLMeunItem.h"
-#define NormalColor [UIColor blackColor]
-#define SelectColor [UIColor redColor]
-#define NormalFont [UIFont systemFontOfSize:14]
+#define NormalColor RGBACOLOR(164, 206, 179, 1)
+#define SelectColor [UIColor whiteColor]
+#define NormalFont [UIFont systemFontOfSize:16]
 #define SelectFont [UIFont systemFontOfSize:16]
 
 @interface MLMeunItem ()

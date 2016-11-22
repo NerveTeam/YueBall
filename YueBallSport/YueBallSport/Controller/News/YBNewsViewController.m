@@ -52,7 +52,7 @@
 - (UIView *)topBarView {
     if (!_topBarView) {
         _topBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, StatusBarHeight + TopBarHeight)];
-        _topBarView.backgroundColor = RGBACOLOR(49, 179, 93, 1);
+        _topBarView.backgroundColor = RGBACOLOR(4, 147, 71, 1);
     }
     return _topBarView;
 }

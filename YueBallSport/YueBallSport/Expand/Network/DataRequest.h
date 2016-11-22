@@ -19,3 +19,7 @@
 @interface HotNewsSportListRequest : BaseDataRequest
 
 @end
+
+@interface HotNewsFoucsRequest : BaseDataRequest
+
+@end

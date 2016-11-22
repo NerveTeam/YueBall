@@ -72,6 +72,7 @@
     UIImageView *imageView = [[UIImageView alloc] init];
     _imageView = imageView;
     [self.contentView addSubview:imageView];
+    _imageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 - (void)setupTitleLabel

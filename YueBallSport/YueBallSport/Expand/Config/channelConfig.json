@@ -7,7 +7,7 @@
              "selectImg" : "info_click"
             },
              {
-             "title" :  "新闻",
+             "title" :  "资讯",
              "class" : "YBNewsViewController",
              "norImg" : "news",
              "selectImg" : "news_click"

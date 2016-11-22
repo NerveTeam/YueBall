@@ -343,7 +343,7 @@ static float itemMargin = 25; // item间距
 - (UIView *)line {
     if (!_line) {
         _line = [[UIView alloc]init];
-        _line.backgroundColor = [UIColor redColor];
+        _line.backgroundColor = [UIColor whiteColor];
         MLMeunItem *item = [self.itemArray firstObject];
         _line.y = self.meunScrollView.height - 2;
         _line.height = 2;
