@@ -23,3 +23,7 @@
 @interface HotNewsFoucsRequest : BaseDataRequest
 
 @end
+
+@interface ReplayCommentRequest : BaseDataRequest
+
+@end

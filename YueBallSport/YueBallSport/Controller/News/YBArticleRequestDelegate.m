@@ -16,7 +16,7 @@
 - (void)requestArticleWithArticleId:(NSString *)articleId articleUrl:(NSString *)articleUrl articleBlock:(SNGotArticleBlock)articleBlock {
     
     
-    NSString *urlString = [NSString stringWithFormat:@"http://wu.she-cheng.com/thinkphp/News/article?newsId=%@",articleId];
+    NSString *urlString = [NSString stringWithFormat:@"http://wu.she-cheng.com/thinkphp/news/article?newsId=%@",articleId];
     NSURL *url = [NSURL URLWithString:urlString];
     
     //生成连接
@@ -54,7 +54,7 @@
  */
 - (void)requestAttitude:(NSString *)articleId withAttitudeBlock:(SNGotAttitudeBlock)attitudeBlock {
     
-    NSString *urlString = [NSString stringWithFormat:@"http://wu.she-cheng.com/thinkphp/News/hotcomment?newsId=%@",articleId];
+    NSString *urlString = [NSString stringWithFormat:@"http://wu.she-cheng.com/thinkphp/news/hotcomment?newsId=%@",articleId];
     NSURL *url = [NSURL URLWithString:urlString];
     
     //生成连接

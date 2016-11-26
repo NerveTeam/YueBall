@@ -28,7 +28,7 @@
 
 @implementation NewsSportListRequest
 - (NSString *)requestUrl {
-    return @"http://wu.she-cheng.com/thinkphp/News/feed?";
+    return @"http://wu.she-cheng.com/thinkphp/news/feed?";
 }
 - (YTKRequestMethod)requestMethod {
     return YTKRequestMethodGET;
@@ -45,7 +45,7 @@
 
 @implementation HotNewsSportListRequest
 - (NSString *)requestUrl {
-    return @"http://wu.she-cheng.com/thinkphp/News/hotlist?";
+    return @"http://wu.she-cheng.com/thinkphp/news/hotlist?";
 }
 - (YTKRequestMethod)requestMethod {
     return YTKRequestMethodGET;
@@ -61,10 +61,26 @@
 
 @implementation HotNewsFoucsRequest
 - (NSString *)requestUrl {
-    return @"http://wu.she-cheng.com/thinkphp/News/foucs";
+    return @"http://wu.she-cheng.com/thinkphp/news/foucs";
 }
 - (YTKRequestMethod)requestMethod {
     return YTKRequestMethodGET;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+@implementation ReplayCommentRequest
+- (NSString *)requestUrl {
+    return @"http://wu.she-cheng.com/thinkphp/comment/replay";
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
 }
 - (YTKResponseSerializerType)responseSerializerType {
     return YTKResponseSerializerTypeJSON;

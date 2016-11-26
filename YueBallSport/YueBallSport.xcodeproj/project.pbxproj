@@ -172,6 +172,7 @@
 		8C75489D1DDB09E500569DAE /* MLSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7548931DDB09E500569DAE /* MLSphere.m */; };
 		8C75489E1DDB09E500569DAE /* MLSubmit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7548951DDB09E500569DAE /* MLSubmit.m */; };
 		8C75489F1DDB09E500569DAE /* UIViewController+MLSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7548981DDB09E500569DAE /* UIViewController+MLSegue.m */; };
+		8CABD1761DE54A2B00812AB7 /* MLCommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CABD1751DE54A2B00812AB7 /* MLCommentInputView.m */; };
 		8CD3D3AE1DAA244600044ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3AD1DAA244600044ADB /* main.m */; };
 		8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3D3B81DAA244600044ADB /* Assets.xcassets */; };
 		8CD3D3C71DAA244600044ADB /* YueBallSportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3C61DAA244600044ADB /* YueBallSportTests.m */; };
@@ -247,6 +248,7 @@
 		8CD3D59D1DAC8B9A00044ADB /* TestMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D58F1DAC8B9A00044ADB /* TestMeView.m */; };
 		8CD3D59E1DAC8B9A00044ADB /* TestMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */; };
 		8CD3D59F1DAC8B9A00044ADB /* TestNewsViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */; };
+		8CFF927C1DE6EA3900C4CDEF /* YBArticlePullTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF927B1DE6EA3900C4CDEF /* YBArticlePullTipView.m */; };
 		8CFFFD5B1DD750D3004629FE /* YBNewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */; };
 		8CFFFD5E1DD750F4004629FE /* YBLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD5D1DD750F4004629FE /* YBLiveViewController.m */; };
 /* End PBXBuildFile section */
@@ -607,6 +609,8 @@
 		8C7548961DDB09E500569DAE /* MLTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTransition.h; sourceTree = "<group>"; };
 		8C7548971DDB09E500569DAE /* UIViewController+MLSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MLSegue.h"; sourceTree = "<group>"; };
 		8C7548981DDB09E500569DAE /* UIViewController+MLSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MLSegue.m"; sourceTree = "<group>"; };
+		8CABD1741DE54A2B00812AB7 /* MLCommentInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCommentInputView.h; sourceTree = "<group>"; };
+		8CABD1751DE54A2B00812AB7 /* MLCommentInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCommentInputView.m; sourceTree = "<group>"; };
 		8CD3D3A91DAA244600044ADB /* YueBallSport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueBallSport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD3D3AD1DAA244600044ADB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CD3D3B81DAA244600044ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -763,6 +767,8 @@
 		8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessageView.m; sourceTree = "<group>"; };
 		8CD3D5941DAC8B9A00044ADB /* TestNewsViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNewsViews.h; sourceTree = "<group>"; };
 		8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNewsViews.m; sourceTree = "<group>"; };
+		8CFF927A1DE6EA3900C4CDEF /* YBArticlePullTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBArticlePullTipView.h; sourceTree = "<group>"; };
+		8CFF927B1DE6EA3900C4CDEF /* YBArticlePullTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBArticlePullTipView.m; sourceTree = "<group>"; };
 		8CFFFD591DD750D3004629FE /* YBNewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNewDetailViewController.h; sourceTree = "<group>"; };
 		8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewDetailViewController.m; sourceTree = "<group>"; };
 		8CFFFD5C1DD750F4004629FE /* YBLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLiveViewController.h; sourceTree = "<group>"; };
@@ -1426,6 +1432,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		8CABD1731DE54A2B00812AB7 /* MLCommentInputView */ = {
+			isa = PBXGroup;
+			children = (
+				8CABD1741DE54A2B00812AB7 /* MLCommentInputView.h */,
+				8CABD1751DE54A2B00812AB7 /* MLCommentInputView.m */,
+			);
+			path = MLCommentInputView;
+			sourceTree = "<group>";
+		};
 		8CD3D3A01DAA244600044ADB = {
 			isa = PBXGroup;
 			children = (
@@ -1745,6 +1760,7 @@
 		8CD3D40C1DAA387F00044ADB /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				8CABD1731DE54A2B00812AB7 /* MLCommentInputView */,
 				8C7548871DDB09E500569DAE /* MLTransition */,
 				8C75485D1DD9ACCE00569DAE /* SDCycleScrollView */,
 				8C70EBF31DD8707F009514EC /* UITableView-FDTemplateLayoutCell */,
@@ -2026,6 +2042,8 @@
 		8CD3D5931DAC8B9A00044ADB /* News */ = {
 			isa = PBXGroup;
 			children = (
+				8CFF927A1DE6EA3900C4CDEF /* YBArticlePullTipView.h */,
+				8CFF927B1DE6EA3900C4CDEF /* YBArticlePullTipView.m */,
 				8CD3D5941DAC8B9A00044ADB /* TestNewsViews.h */,
 				8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */,
 				8C14D7A01DDC493700323CB8 /* YBChannelGroup.h */,
@@ -2266,6 +2284,7 @@
 				8C1925391DD5901600031BC5 /* SNParser.m in Sources */,
 				8C1925291DD5901600031BC5 /* SNArticleWeiboGroup.m in Sources */,
 				8C1923D61DD57DC300031BC5 /* UIImageView+WebCache.m in Sources */,
+				8CABD1761DE54A2B00812AB7 /* MLCommentInputView.m in Sources */,
 				8CD3D4E41DAB452500044ADB /* YBPersonViewController.m in Sources */,
 				8C14D7AB1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m in Sources */,
 				8CD3D41E1DAA3A2F00044ADB /* AFURLRequestSerialization.m in Sources */,
@@ -2342,6 +2361,7 @@
 				8CD3D41F1DAA3A2F00044ADB /* AFURLResponseSerialization.m in Sources */,
 				8C19251D1DD5901600031BC5 /* SNArticleAppInfo.m in Sources */,
 				8C19217B1DD57C9B00031BC5 /* MASLayoutConstraint.m in Sources */,
+				8CFF927C1DE6EA3900C4CDEF /* YBArticlePullTipView.m in Sources */,
 				8CD3D41B1DAA3A2F00044ADB /* AFHTTPSessionManager.m in Sources */,
 				8C1923CE1DD57DC300031BC5 /* SDWebImageDownloaderOperation.m in Sources */,
 				8C75486E1DD9ACCE00569DAE /* TAAnimatedDotView.m in Sources */,

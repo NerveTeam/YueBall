@@ -11,7 +11,7 @@
 #import "UIViewController+MLSegue.h"
 #import "MLPercentInteractiveTransition.h"
 #define navigationBar toController.navigationController.navigationBar
-#define Duration 2 // 动画时长
+#define Duration 1 // 动画时长
 #define UIScreen_Width [UIScreen mainScreen].bounds.size.width
 #define UIScreen_Height [UIScreen mainScreen].bounds.size.height
 #define movePosition 300
@@ -72,6 +72,7 @@ UIViewControllerJumpType _jumpType; // 跳转类型
 + (animationType)Gradient:(completion)finish{
     
     animationType gradient = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
+        [self transitionSeting:toController];
         fromView.alpha = 1.0;
         toView.alpha = 0.0;
         navigationBar.alpha = 0.0;
@@ -89,6 +90,7 @@ UIViewControllerJumpType _jumpType; // 跳转类型
 }
 + (animationType)Zoom:(completion)finish {
     animationType zoom = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
+        [self transitionSeting:toController];
         CABasicAnimation *windowSpecial   = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
         fromView.alpha = 0.5;
         toView.alpha = 0.5;
@@ -194,7 +196,7 @@ UIViewControllerJumpType _jumpType; // 跳转类型
 
 + (animationType)FlipPage:(completion)finish {
 animationType FlipPage = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
-    
+    [self transitionSeting:toController];
     toView.alpha = 0.2;
     //增加透视的transform
     CATransform3D transform = CATransform3DIdentity;
@@ -229,7 +231,7 @@ animationType FlipPage = ^(UIView *containerView,UIView *fromView,UIView *toView
 
 + (animationType)Flip:(completion)finish {
     animationType Flip = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
-        
+        [self transitionSeting:toController];
         if ([self checkJumpMode]) {
             toView.alpha = 0.0;
             [fromView addSubview:toView];
@@ -262,6 +264,7 @@ animationType FlipPage = ^(UIView *containerView,UIView *fromView,UIView *toView
 
 + (animationType)CubeFlip:(completion)finish {
     animationType CubeFlip = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
+        [self transitionSeting:toController];
         [fromView addSubview:toView];
         CATransition *transition = [CATransition animation];
         fromView.alpha = 1.0;
@@ -289,6 +292,7 @@ animationType FlipPage = ^(UIView *containerView,UIView *fromView,UIView *toView
 
 + (animationType)Ripple:(completion)finish {
     animationType Ripple = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
+        [self transitionSeting:toController];
         [fromView addSubview:toView];
         CATransition *transition = [CATransition animation];
         toView.alpha = 0.0;
@@ -308,6 +312,7 @@ animationType FlipPage = ^(UIView *containerView,UIView *fromView,UIView *toView
 
 + (animationType)Stack:(completion)finish {
     animationType Stack = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
+        [self transitionSeting:toController];
         [fromView addSubview:toView];
         CATransition *transition = [CATransition animation];
         toView.alpha = 0.0;
@@ -327,6 +332,7 @@ animationType FlipPage = ^(UIView *containerView,UIView *fromView,UIView *toView
 }
 + (animationType)Blinds:(completion)finish {
     animationType Stack = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
+        [self transitionSeting:toController];
         toView.alpha = 0.5;
         CATransform3D transformScale = [self checkJumpMode] ? [self blindsSetting:toView] : [self blindsSetting:fromView];
         [UIView animateWithDuration:Duration delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -347,6 +353,7 @@ animationType FlipPage = ^(UIView *containerView,UIView *fromView,UIView *toView
 }
 + (animationType)Tile:(completion)finish {
     animationType Tile = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
+        [self transitionSeting:toController];
         CGRect toViewFrame = toView.frame;
         toView.frame = CGRectMake(0, 0, 20, 20);;
         fromView.alpha = 0.5;
