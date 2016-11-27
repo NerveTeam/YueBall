@@ -16,7 +16,7 @@
 #import "YBArticlePullTipView.h"
 #import "MLTransition.h"
 
-@interface YBArticleViewController ()<MLCommentInputViewDelegate,DataRequestDelegate>
+@interface YBArticleViewController ()<MLCommentInputViewDelegate,DataRequestDelegate,SNArticleActionProtocal>
 
 @property(nonatomic, strong)UIView *topBar;
 @property(nonatomic, strong)UIButton *backItem;
@@ -119,12 +119,12 @@ static CGFloat pullStartPosition = 20; // 下拉初始点
 
 - (void)requestFinished:(BaseDataRequest *)request {
     if ([request isKindOfClass:[ReplayCommentRequest class]]) {
-        
+        [self.commentInputView endEditing:YES];
     }
 }
 - (void)requestFailed:(BaseDataRequest *)request {
     if ([request isKindOfClass:[ReplayCommentRequest class]]) {
-        
+//        [self.commentInputView endEditing:YES];
     }
 }
 

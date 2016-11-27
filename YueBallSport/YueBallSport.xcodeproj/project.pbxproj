@@ -15,6 +15,9 @@
 		8C14D7AB1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7AA1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m */; };
 		8C14D7AE1DDDA74A00323CB8 /* YBBaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7AD1DDDA74A00323CB8 /* YBBaseDetailViewController.m */; };
 		8C14D7F61DE2FC6900323CB8 /* YBNewsFoucs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7F51DE2FC6900323CB8 /* YBNewsFoucs.m */; };
+		8C162C3F1DEAB2A0009A3514 /* YBArticleViewController+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C162C3E1DEAB2A0009A3514 /* YBArticleViewController+Action.m */; };
+		8C162C421DEAB4B4009A3514 /* YBAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C162C411DEAB4B4009A3514 /* YBAlbum.m */; };
+		8C162C451DEAB603009A3514 /* YBAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C162C441DEAB603009A3514 /* YBAlbumViewController.m */; };
 		8C191ED51DD4658300031BC5 /* MLMeunItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191ED21DD4658300031BC5 /* MLMeunItem.m */; };
 		8C191ED61DD4658300031BC5 /* MLMeunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191ED41DD4658300031BC5 /* MLMeunView.m */; };
 		8C1921781DD57C9B00031BC5 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191EDB1DD57C9A00031BC5 /* MASCompositeConstraint.m */; };
@@ -287,6 +290,12 @@
 		8C14D7AD1DDDA74A00323CB8 /* YBBaseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBBaseDetailViewController.m; sourceTree = "<group>"; };
 		8C14D7F41DE2FC6900323CB8 /* YBNewsFoucs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNewsFoucs.h; sourceTree = "<group>"; };
 		8C14D7F51DE2FC6900323CB8 /* YBNewsFoucs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewsFoucs.m; sourceTree = "<group>"; };
+		8C162C3D1DEAB2A0009A3514 /* YBArticleViewController+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YBArticleViewController+Action.h"; sourceTree = "<group>"; };
+		8C162C3E1DEAB2A0009A3514 /* YBArticleViewController+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YBArticleViewController+Action.m"; sourceTree = "<group>"; };
+		8C162C401DEAB4B4009A3514 /* YBAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBAlbum.h; sourceTree = "<group>"; };
+		8C162C411DEAB4B4009A3514 /* YBAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBAlbum.m; sourceTree = "<group>"; };
+		8C162C431DEAB603009A3514 /* YBAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBAlbumViewController.h; sourceTree = "<group>"; };
+		8C162C441DEAB603009A3514 /* YBAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBAlbumViewController.m; sourceTree = "<group>"; };
 		8C191ED11DD4658300031BC5 /* MLMeunItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeunItem.h; sourceTree = "<group>"; };
 		8C191ED21DD4658300031BC5 /* MLMeunItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMeunItem.m; sourceTree = "<group>"; };
 		8C191ED31DD4658300031BC5 /* MLMeunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeunView.h; sourceTree = "<group>"; };
@@ -1587,6 +1596,10 @@
 				8C7548751DD9B83B00569DAE /* YBArticleViewController.m */,
 				8C7548771DD9B86700569DAE /* YBArticleRequestDelegate.h */,
 				8C7548781DD9B86700569DAE /* YBArticleRequestDelegate.m */,
+				8C162C3D1DEAB2A0009A3514 /* YBArticleViewController+Action.h */,
+				8C162C3E1DEAB2A0009A3514 /* YBArticleViewController+Action.m */,
+				8C162C431DEAB603009A3514 /* YBAlbumViewController.h */,
+				8C162C441DEAB603009A3514 /* YBAlbumViewController.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -2042,6 +2055,8 @@
 		8CD3D5931DAC8B9A00044ADB /* News */ = {
 			isa = PBXGroup;
 			children = (
+				8C162C401DEAB4B4009A3514 /* YBAlbum.h */,
+				8C162C411DEAB4B4009A3514 /* YBAlbum.m */,
 				8CFF927A1DE6EA3900C4CDEF /* YBArticlePullTipView.h */,
 				8CFF927B1DE6EA3900C4CDEF /* YBArticlePullTipView.m */,
 				8CD3D5941DAC8B9A00044ADB /* TestNewsViews.h */,
@@ -2280,6 +2295,7 @@
 				8CD3D5961DAC8B9A00044ADB /* TestFindCell.m in Sources */,
 				8C1923B81DD57DC300031BC5 /* MJRefreshAutoStateFooter.m in Sources */,
 				8C1923CB1DD57DC300031BC5 /* SDWebImageCompat.m in Sources */,
+				8C162C3F1DEAB2A0009A3514 /* YBArticleViewController+Action.m in Sources */,
 				8C1923D01DD57DC300031BC5 /* SDWebImagePrefetcher.m in Sources */,
 				8C1925391DD5901600031BC5 /* SNParser.m in Sources */,
 				8C1925291DD5901600031BC5 /* SNArticleWeiboGroup.m in Sources */,
@@ -2335,6 +2351,7 @@
 				8CD3D4541DAA3A5200044ADB /* YTKBatchRequest.m in Sources */,
 				8CD3D4871DAA3ABD00044ADB /* UILabel+Extention.m in Sources */,
 				8C14D7AE1DDDA74A00323CB8 /* YBBaseDetailViewController.m in Sources */,
+				8C162C421DEAB4B4009A3514 /* YBAlbum.m in Sources */,
 				8C1925CF1DD5901600031BC5 /* NSDate+Helper.m in Sources */,
 				8CD3D46F1DAA3AA100044ADB /* NSFileManager+Utilities.m in Sources */,
 				8C19252B1DD5901600031BC5 /* SNSpecalContent.m in Sources */,
@@ -2399,6 +2416,7 @@
 				8C1921801DD57C9B00031BC5 /* View+MASAdditions.m in Sources */,
 				8C14D7A21DDC493700323CB8 /* YBChannelGroup.m in Sources */,
 				8C1925D91DD5901600031BC5 /* SNArticleBaseViewController+Recommend.m in Sources */,
+				8C162C451DEAB603009A3514 /* YBAlbumViewController.m in Sources */,
 				8C1921781DD57C9B00031BC5 /* MASCompositeConstraint.m in Sources */,
 				8CD3D48B1DAA3ABD00044ADB /* UIViewController+Navigation.m in Sources */,
 				8C1923D21DD57DC300031BC5 /* UIImage+GIF.m in Sources */,
