@@ -31,7 +31,7 @@
 // 此方法必须实现
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     
-    return 2;
+    return 1;
 }
 // 关键方法，所有动画在这里实现
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {

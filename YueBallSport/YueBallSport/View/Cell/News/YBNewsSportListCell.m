@@ -82,15 +82,16 @@ static const CGFloat marginTop = 15;
         }];
     
         [self.commentCount mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.commentIcon.mas_left).offset(-marginLeft);
+            make.right.equalTo(self.commentIcon.mas_left).offset(-marginLeft/2);
             make.bottom.equalTo(self.commentIcon);
         }];
 
 }
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
-        _titleLabel = [UILabel labelWithText:nil fontSize:15];
+        _titleLabel = [UILabel labelWithText:nil fontSize:16];
         _titleLabel.numberOfLines = 2;
+        _titleLabel.textColor = RGBACOLOR(20, 20, 20, 1);
     }
     return _titleLabel;
 }
@@ -105,12 +106,14 @@ static const CGFloat marginTop = 15;
 - (UILabel *)postDate {
     if (!_postDate) {
         _postDate = [UILabel labelWithText:nil fontSize:12];
+        _postDate.textColor = RGBACOLOR(194, 194, 194, 1);
     }
     return _postDate;
 }
 - (UILabel *)commentCount {
     if (!_commentCount) {
         _commentCount = [UILabel labelWithText:nil fontSize:12];
+        _commentCount.textColor = RGBACOLOR(194, 194, 194, 1);
     }
     return _commentCount;
 }

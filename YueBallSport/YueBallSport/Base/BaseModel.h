@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "MJExtension.h"
+#import "DataRequest.h"
+#import "NSDictionary+Safe.h"
 typedef void(^Success)(NSArray *dataList);
 typedef void(^Error)();
 @interface BaseModel : NSObject

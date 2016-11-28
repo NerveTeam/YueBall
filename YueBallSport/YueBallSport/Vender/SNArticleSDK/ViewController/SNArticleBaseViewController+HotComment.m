@@ -205,7 +205,7 @@
         
         [javascript appendFormat:@"<span class=\"icon_location\">%@%@</span>",areaString,sourceString];
         [javascript appendFormat:@"<span class=\"icon_reply\" ui-link=\"method:comment_reply;type:%d;index:%d\"><em></em>回复</span>",commentType,i];
-        [javascript appendFormat:@"<span data-pl=\"comment-like\" class=\"icon_praise\" click-type=\"comment-like\" ui-param=\"pos:1;type:%d;index:%d;mid:1;\"><em></em>%@</span>",commentType,i, [NSString numberToXWan:comment.supportNum]];
+        [javascript appendFormat:@"<span data-pl=\"comment-like\" class=\"icon_praise\" click-type=\"comment-like\" ui-param=\"pos:1;type:%d;index:%d;mid:%d;\"><em></em>%@</span>",commentType,i,comment.mId,[NSString numberToXWan:comment.supportNum]];
         [javascript appendFormat:@"</div>"];
         [javascript appendFormat:@"</li>"];
     }

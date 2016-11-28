@@ -181,7 +181,7 @@ define('lib/more/es5-safe',function(require,exports,module){
 
 
 /**
- * @fileoverview zepto lib 混合文件
+ * @fileoverview zepto lib 混合文件 
  * @authors liangdong2 <liangdong2@staff.sina.com.cn>
  */
 define('lib/core/chaos/zepto',function(require,exports,module){
@@ -938,7 +938,7 @@ define('lib/common/jsbridge',function(require,exports,module){
 		if(!container){
 			container = $('<div></div>').hide().appendTo(document.body);
 		}
-
+	
 		var iframe = $(document.createElement('iframe'));
 		iframe.attr('src', src);
 		iframe.hide().appendTo(container);
@@ -970,7 +970,7 @@ define('lib/common/jsbridge',function(require,exports,module){
 			var src = PROTOCOL + name;
 			var message = getPostMessage(conf, name);
 			var iframe;
-
+			
 			//客户端可以暴露一个对象接收数据
 			//规范接收数据的对象名称为:jsBridge, 方法名称为:process
 			if(
@@ -2676,7 +2676,7 @@ define('lib/core/zepto/ajax',function(require,exports,module){
 });
 
 /**
- * @fileoverview zepto 函数扩充插件
+ * @fileoverview zepto 函数扩充插件 
  * @authors liangdong2 <liangdong2@staff.sina.com.cn>
  */
 define('lib/core/extra/zepto/zepto',function(require,exports,module){
@@ -2725,7 +2725,7 @@ define('lib/core/extra/zepto/zepto',function(require,exports,module){
 
 
 /**
- * @fileoverview zepto插件 - 提供免前缀设置CSS3功能
+ * @fileoverview zepto插件 - 提供免前缀设置CSS3功能 
  * @authors liangdong2 <liangdong2@staff.sina.com.cn>
  */
 define('lib/core/extra/zepto/prefixfree',function(require,exports,module){
@@ -2930,7 +2930,7 @@ define('lib/core/extra/zepto/prefixfree',function(require,exports,module){
 
 
 /**
- * @fileoverview zepto transform属性获取与设置
+ * @fileoverview zepto transform属性获取与设置 
  * @authors liangdong2 <liangdong2@staff.sina.com.cn>
  * @param {String} property 要设置的 transform 属性
  * @param {Object} property transform 键值对
@@ -3127,7 +3127,7 @@ define('lib/core/extra/zepto/transit',function(require,exports,module){
 				// triggered by setTimeout
 				$(this).unbind(endEvent, wrappedCallback);
 			}
-
+			
 			fired = true;
 			$(this).css(cssReset);
 			if(callback){
@@ -3563,7 +3563,7 @@ define('lib/more/events',function(require,exports,module){
 });
 
 /**
- * @fileoverview 获取唯一ID
+ * @fileoverview 获取唯一ID 
  * @authors liangdong2 <liangdong2@staff.sina.com.cn>
  */
 
@@ -3580,7 +3580,7 @@ define('lib/kit/util/getUniqueKey',function(require,exports,module){
 
 
 /**
- * @fileoverview 公共组件
+ * @fileoverview 公共组件 
  * @authors liangdong2 <liangdong2@staff.sina.com.cn>
  */
 define('conf/global',function(require,exports,module){
@@ -3861,7 +3861,7 @@ define('mods/ui/imgbox',function(require,exports,module){
 			}
 			//此处主要针对gif无论下载成功与否，都必须隐藏loading图
 			imgBox.find('.C_gifloading').hide();
-
+			
 			if(url){
 				imgNode.css('opacity',1);
 				if(imgNode.hasAttr('data-src')){
@@ -3951,7 +3951,7 @@ define('mods/ui/imgbox',function(require,exports,module){
 	};
 
 });
-
+ 
 
 /**
  * @fileoverview 接受客户端下载的图片并展示
@@ -4090,25 +4090,25 @@ define('mods/ui/imgsbox', function(require, exports, module) {
             eachTarget(targets);
         }
 
-
+        
         function testUrl(targets) {
             var issucc = false,flag = 0;
             targets.forEach(function(item){
                 if(item && item.res && item.res.url) {
                     flag++;
-                }
+                } 
             });
             isSucc = flag == targets.length;
             if(!isSucc) {
                 targets.forEach(function(item){
                         // 清空src，添加加载失败样式
-                        $imgNode = item.$target;
+                        $imgNode = item.$target; 
                         $imgNode.attr('src', '');
                         //此处添加透明度，是因为部分android手机设置img src＝“” 的时候，即使设置成功，图片并不消失。
                         $imgNode.css('opacity', 0);
                         $parent.addClass(uiconf.styleError);
                         $parent.removeClass(uiconf.styleLoading);
-                });
+                }); 
             }
             return isSucc;
         }
@@ -4140,7 +4140,7 @@ define('mods/ui/imgsbox', function(require, exports, module) {
                         if (local) {
                             imgNode.attr('data-local', '1');
                         }
-
+                        
                 })
             });
 
@@ -4178,7 +4178,7 @@ define('mods/ui/imgsbox', function(require, exports, module) {
                 var imgNodes = findImgNode(imgBox);
                 imgBox.removeClass(uiconf.styleError).addClass(uiconf.styleLoading);
                 imgNodes.each(function(){
-                    var imgNode = $(this);
+                    var imgNode = $(this); 
                     var datasrc = getDataSrc(imgNode);
                     if (imgNode.attr('data-local') === '1' && datasrc.gif) {
                         $bridge.request('loadImg', {
@@ -4294,7 +4294,7 @@ define('mods/ui/slides',function(require,exports,module){
 		var margin = Math.min(marginLeft, marginRight);
 		box.css('margin-left', margin + 'px');
 		box.css('margin-right', margin + 'px');
-
+		
 		var slide = new $iScroll(box.get(0), {
 			disableMouse: true,
 			disablePointer: true,
@@ -4312,7 +4312,7 @@ define('mods/ui/slides',function(require,exports,module){
 		slide.on('scrollStart', function(){
 			links.attr('link-status', 'disabled');
 		});
-
+		
 		slide.on('scrollEnd',function(){
 			links.attr('link-status', '');
 			//修复小米手机bug，在滑动的过程中点击元素，滑动结束后背景色不是原来的颜色
@@ -4322,7 +4322,7 @@ define('mods/ui/slides',function(require,exports,module){
 		});
 		//此处设置最外层元素宽度，是因为在ios8下，左右滑动图集和深度阅读组件，在页面渲染完成后，
 		//存在空白情况，即组件位置存在(所占据的高度存在)，可以响应js各种事件，但是内容不显示，
-		//怀疑是应用css3动画引起的渲染bug，所以此处设置宽度，触发页面重绘，希望可以让展示正常
+		//怀疑是应用css3动画引起的渲染bug，所以此处设置宽度，触发页面重绘，希望可以让展示正常 
 		//先设置，等待后续反馈
 		box.css('width',itemWidth * li.length + 'px');
 	};
@@ -4574,7 +4574,7 @@ define('mods/ui/textlimit',function(require,exports,module){
 			//此处comppadding＊1.5 是因为box里有边距6px 此处需要和设计构建协商
 			box.css('height', compHeight - compPadding*1.5 - titleHeight- moreHeight);
 		}
-
+		
 		var boxNode = box.get(0);
 		var textNode = text.get(0);
 		var height = box.height();
@@ -4621,7 +4621,7 @@ define('mods/ui/textlimit',function(require,exports,module){
 			}
 		}
 
-
+		
 		//部分android手机上，未能在循环文字更新后更新scrollHeight值
 		//检测发现用计时器打断后可以得到正确的高度，因此在最后阶段使用计时器来循环检测文本内容是否超出区域
 		//部分android手机，如果初次timeout设置太短，依然无法取得正确的scrollHeight值
@@ -4691,9 +4691,9 @@ define('mods/ui/textlimit',function(require,exports,module){
 		// 	}
 		// });
 	};
-
+	
 	$htmlRender.ready(buildTextLimit);
-
+	
 
 	module.exports = {
 		init : function(options){
@@ -4824,6 +4824,7 @@ define('mods/comp/render',function(require,exports,module){
 						targetList[name] = targetNode;
 					}
 				}
+
 				$(html).insertBefore(targetNode);
 			});
 		});
@@ -5092,7 +5093,7 @@ define('mods/comp/audio',function(require,exports,module){
 			}
 		}
 	});
-
+	
 	//全部音频播放器
 	var players = [];
 
@@ -5315,7 +5316,7 @@ define('mods/comp/mediaSpread',function(require,exports,module){
 	if($CONFIG && $CONFIG.platform === "ios"){
 		$channelApp.on('content-load', updateRssStatus);
 	}
-
+	
 	$htmlRender.ready(buildMediaRSS);
 
 	module.exports = {
@@ -5381,9 +5382,9 @@ define('mods/comp/votes',function(require,exports,module){
 					'<div class="tit">',
 						'<span>{{name}}</span>',
 					'</div>',
-					'<em class="percent_num">{{percent}}%</em>',
 					'<div class="range">',
 						'<span class="persent{{percent}}" style="width:{{percent}}%;">',
+							'<em><b>{{percent}}%</b></em>',
 						'</span>',
 					'</div>',
 					'<div class="icon_result">已选</div>',
@@ -5411,9 +5412,9 @@ define('mods/comp/votes',function(require,exports,module){
 					'<div class="tit">',
 						'<span>{{name}}</span>',
 					'</div>',
-					'<em class="percent_num">{{percent}}%</em>',
 					'<div class="range">',
 						'<span class="persent{{percent}}" style="width:{{percent}}%;">',
+							'<em><b>{{percent}}%</b></em>',
 						'</span>',
 					'</div>',
 					'<div class="icon_result">已选</div>',
@@ -5491,8 +5492,7 @@ define('mods/comp/votes',function(require,exports,module){
 						if(rs && rs.status === 0){
 							$.extend(data, rs.data);
 							that.set('uid', data.uid || '');
-							if(rs.data.isVoted + '' === '1'){
-							// if(rs.data.isVoted + '' === '0'){
+							if(rs.data.isVoted + '' === '0'){
 								that.saveVoteRecord(data.uid, para);
 							}
 							that.set('voted', true);
@@ -5632,6 +5632,7 @@ define('mods/comp/votes',function(require,exports,module){
 			});
 			rs.data.isEnded = rs.data.pollState + '' !== '1';
 			rs.data.isVoted = this.get("voted");
+
 			//检查本地的投票记录
 			if(uid){
 				var recordKey = uid + '_' + rs.data.voteId;
@@ -5712,8 +5713,6 @@ define('mods/comp/votes',function(require,exports,module){
 				this.showResult();
 				this.voteDone = true;
 				return;
-			}else{
-				this.showPKVoting();
 			}
 			this.checkSubmit();
 			this.checkCurrentTab();
@@ -5841,8 +5840,8 @@ define('mods/comp/votes',function(require,exports,module){
 				}, 500, 'ease-out',$.loop);
 			});
 		},
-		attachIcon : function(el, type){
-			$(el.parent()).addClass(type+'_on');
+		attachIcon : function(el){
+			$(el.children().get(1)).addClass('on');
 		},
 		setLineStyle : function(type,up,down){
 			if(type === "up"){
@@ -5894,7 +5893,7 @@ define('mods/comp/votes',function(require,exports,module){
 							var upPercent = that.getPkPercent(upEl,otherNum);
 							that.setLineStyle('up',up,down);
 							that.animateStart(up,upPercent,down);
-							that.attachIcon(el,'support');
+							that.attachIcon(el);
 							that.voteDone = true;
 						}
 					});
@@ -5909,7 +5908,7 @@ define('mods/comp/votes',function(require,exports,module){
 							var downPercent = that.getPkPercent(downEl, otherNum);
 							that.setLineStyle('down',up,down);
 							that.animateStart(down,downPercent,up);
-							that.attachIcon(el,'oppose');
+							that.attachIcon(el);
 							that.voteDone = true;
 						}
 					});
@@ -5938,7 +5937,7 @@ define('mods/comp/votes',function(require,exports,module){
 				'(' + voteData.data.voterNum + '人参与)'
 			);
 			//为避免百分比文案与已选按钮重叠，需要计算.range元素的最大宽度
-			// elResult.find('.range').css('width', window.innerWidth - 160 + 'px');
+			elResult.find('.range').css('width', window.innerWidth - 160 + 'px');
 		},
 		//检查投票是否过期
 		checkOverdue: function(){
@@ -5982,11 +5981,10 @@ define('mods/comp/votes',function(require,exports,module){
 			var vm = this.vm;
 			var elToggle = this.role('toggle');
 			var vdata = vm.getData();
-			var isPK = vdata.data.pkStyleFlag;
-			var isOverdue = vm.get('isOverdue');
-			var pkOverdue = isOverdue && isPK === 1;
-			var voteOverdue = isOverdue && isPK !== 1;
-			var hadVote = !isOverdue && vm.get('voted');
+			var pkOverdue = vm.get('isOverdue') && vdata.data.pkStyleFlag === 1;
+			var voteOverdue = vm.get('isOverdue') && vdata.data.pkStyleFlag !== 1;
+			var hadVote = !vm.get('isOverdue') && vm.get('voted');
+			//debugger
 			if(pkOverdue){
 				// debugger
 				var up = this.role('up');
@@ -6013,7 +6011,6 @@ define('mods/comp/votes',function(require,exports,module){
 				elToggle.html('已投票');
 			}else{
 				elToggle.html('参与投票');
-
 			}
 			this.renderResult();
 			this.role('question').hide();
@@ -6022,14 +6019,9 @@ define('mods/comp/votes',function(require,exports,module){
 		//显示问题界面
 		showQuestion : function(){
 			var elToggle = this.role('toggle');
-			elToggle.html('进行中');
+			elToggle.html('查看结果');
 			this.role('question').show();
 			this.role('result').hide();
-		},
-		// 显示pk 进行中
-		showPKVoting: function(){
-			var voting = this.role('voting');
-			voting.show();
 		}
 	});
 
@@ -6118,7 +6110,7 @@ define('mods/comp/commentLike',function(require,exports,module){
 								}else{
 									el.html('<em></em>' + (curNum + 1));
 								}
-
+								
 							}
 						}
 					}
@@ -6144,7 +6136,7 @@ define('mods/comp/commentLike',function(require,exports,module){
 
 define('mods/comp/commentFloor',function(require,exports,module){
 	var $htmlRender = require('lib/common/htmlRender');
-
+	
 	var selector = {
 		contentAllBtn: '[click-type="comment-content-all"]',
 		floorBox: '[data-role="hot_cmnt_floor_box"]',
@@ -6234,7 +6226,7 @@ define('mods/ui/gifLoad',function(require,exports,module){
 		styleError : 'C_download'
 	};
 	var gifData;
-
+	
 	//获取gif图片进入替换的地址
 	var getDataSrc = function(imgNode){
 		imgNode = $(imgNode);
@@ -6293,7 +6285,7 @@ define('mods/ui/gifLoad',function(require,exports,module){
 			});
 		}
 	}
-
+	
 	function scrollGifLoad(){
 		// 滚去的高度
 		var sTop = $(window).scrollTop();
@@ -6376,7 +6368,7 @@ define('mods/comp/digger',function(require,exports,module){
 	var data = {};
 	var tmpFlagState, scrollFlag, isPublish = false, bindeEventFlag;
 	var lfLine, rgLine, attitude, tip, wrapper, wrap, lineWrap;
-
+	
 	//公用效果集合
 	var common = {
 		opacity : function(el,val){
@@ -6571,7 +6563,7 @@ define('mods/comp/digger',function(require,exports,module){
 				'opacity': 1
 			}, 500, 'ease-out',$.loop);
 		});
-
+		
 		setTimeout(function(){
 			isPublish = false;
 			wrap.attr('attitude','0');
@@ -6837,7 +6829,7 @@ define('mods/comp/shareEntry',function(require,exports,module){
 			}
 		});
 	}
-
+	
 	$htmlRender.ready(initShareListen);
 
 	module.exports = {
@@ -7034,7 +7026,7 @@ define('mods/comp/loadRecommend', function(require,exports,module){
 		}
 	}
 	// }
-
+	
 	module.exports = {
 		init : function(options){
 			$.extend(compconf, options);
@@ -7087,7 +7079,7 @@ define('mods/comp/iSupport',function(require,exports,module){
 		moduleName: 'iSupport',
 	};
 	//var $doc = $(document);
-
+  
 	function extend(src, target, cover){
     cover = cover || false;
     for(var i in target){
@@ -7153,7 +7145,7 @@ define('mods/comp/iSupport',function(require,exports,module){
 	      if(!this.eventMap){
 	        this.eventMap = {};
 	      }
-	      eventMap = this.eventMap;
+	      eventMap = this.eventMap; 
 	      if(!eventMap.hasOwnProperty(eventName)){
 	        eventObj = eventMap[eventName] = initEvent(typeof(isLive) === 'boolean' ? isLive : true);
 	        eventObj.liveEvents.push(params);
@@ -7264,14 +7256,14 @@ define('mods/comp/iSupport',function(require,exports,module){
     },
     get workerQueue(){
 			return this._workerQueue || (this._workerQueue = {
-				len: 0,
-				busy: 0,
-				wait: [], // item is number
+				len: 0, 
+				busy: 0, 
+				wait: [], // item is number 
 				all: [] // item is dict
 			});
 		},
 		set workerQueue(val){
-		  return null;
+		  return null;	
 		},
 	};
 
@@ -7338,7 +7330,7 @@ define('mods/comp/iSupport',function(require,exports,module){
         signCount: cnf.elems.signCountNode,
         totalCount: cnf.elems.totalCountNode,
         animateArea: cnf.elems.animateAreaNode,
-        wrappBox: cnf.elems.wrappBoxNode,
+        wrappBox: cnf.elems.wrappBoxNode, 
       };
       this.addEvent();
     },
@@ -7358,7 +7350,7 @@ define('mods/comp/iSupport',function(require,exports,module){
         stat.signState = 0;
         elems.signBox.hide();
       }, cnf.signHideDelay);
-
+      
       stat.curCount ++;
       elems.signCount.text(this.convNum(stat.curCount));
       stat.totalCount ++;
@@ -7453,7 +7445,7 @@ define('mods/comp/iSupport',function(require,exports,module){
 		}catch(err){
 			console.log(err);
 		}
-
+		
 		if(!iSupportData){
 			return;
 		}
@@ -7527,7 +7519,7 @@ define('mods/comp/iSupport',function(require,exports,module){
 					changeCurrent(_tpl,false);
 				});
 			}
-
+			
 		},
 		init : function(iCareAdData){
 			// try{
@@ -7548,7 +7540,7 @@ define('mods/comp/iSupport',function(require,exports,module){
 			// 	item = {type:this.modueName,data:iCareAdData.data},
 			// 	targetNode = $(this.tpl),
 			// 	html = $mustache.render(_tpl, iCareAdData);
-
+			
 			//targetNode && targetNode.replaceWith($(html));
 			//$htmlRender.renderItem(item);
 			this.addListener();
@@ -7564,7 +7556,7 @@ define('mods/comp/iSupport',function(require,exports,module){
 		if(wrapperParent.css('display')=='none'){
 				wrapperParent.css('display','block');
 		}
-	}
+	}	
 
 	function changeCurrent(ele,isShow){
 		var parentWrap = $(ele).parent(),
@@ -7593,7 +7585,7 @@ define('mods/comp/iSupport',function(require,exports,module){
 			if(rs && rs.data.type === 'iCareAd'){
 				iCareAd.init(rs.data);
 			}
-		});
+		});		
 	});
 
 	module.exports = {
@@ -7697,7 +7689,7 @@ define('mods/bridge/global',function(require,exports,module){
 });
 
 /**
- * @fileoverview 解析自定义属性值为一个对象，或者将一个hash对象解析为一个自定义属性值，以类似CSS的键值对方式。
+ * @fileoverview 解析自定义属性值为一个对象，或者将一个hash对象解析为一个自定义属性值，以类似CSS的键值对方式。 
  * @authors liangdong2 <liangdong2@staff.sina.com.cn>
  * @example
 	var $propQuery = require('lib/kit/util/propQuery');
@@ -7817,7 +7809,7 @@ define('mods/channel/app',function(require,exports,module){
 });
 
 /**
- * @fileoverview iScroll模拟滚动条
+ * @fileoverview iScroll模拟滚动条 
  * @authors xiaoyue3 <xiaoyue3@staff.sina.com.cn>
  */
 
@@ -7855,7 +7847,7 @@ var utils = (function () {
 			transform = vendors[i] + 'ransform';
 			if ( transform in _elementStyle ){
 				return vendors[i].substr(0, vendors[i].length-1);
-			}
+			} 
 		}
 		return false;
 	})();
@@ -7883,7 +7875,7 @@ var utils = (function () {
 	};
 
 	me.prefixPointerEvent = function (pointerEvent) {
-		return window.MSPointerEvent ?
+		return window.MSPointerEvent ? 
 			'MSPointer' + pointerEvent.charAt(9).toUpperCase() + pointerEvent.substr(10):
 			pointerEvent;
 	};
@@ -8093,7 +8085,7 @@ function IScroll (el, options) {
 
 		snapThreshold: 0.334,
 
-// INSERT POINT: OPTIONS
+// INSERT POINT: OPTIONS 
 
 		startX: 0,
 		startY: 0,
@@ -8119,7 +8111,7 @@ function IScroll (el, options) {
 	for ( var i in options ) {
 		this.options[i] = options[i];
 	}
-
+	
 	// Normalize options
 	this.translateZ = this.options.HWCompositing && utils.hasPerspective ? ' translateZ(0)' : '';
 
@@ -8153,7 +8145,7 @@ function IScroll (el, options) {
 
 // INSERT POINT: NORMALIZATION
 
-	// Some defaults
+	// Some defaults	
 	this.x = 0;
 	this.y = 0;
 	this.directionX = 0;
@@ -8693,7 +8685,7 @@ IScroll.prototype = {
 		//此处默认开启3d加速渲染，后期如果有需要判断是否开启3d加速，此处可添加判断。
 		this.scrollerStyle[utils.style.transform] = 'translate3d(' + x + 'px,' + y + 'px, 0px)';
 		// this.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)' + this.translateZ;
-
+			
 
 /* REPLACE END: _translate */
 
@@ -8987,9 +8979,9 @@ IScroll.prototype = {
 			this.options.snap = this.scroller.querySelectorAll(this.options.snap);
 		}
 
-		//@xiaoyue3 modified 2015-06-04
+		//@xiaoyue3 modified 2015-06-04 
 		//获取外层wapper元素的offsetleft值
-		var wrapperOffsetLeft = this.wrapper.offsetLeft;
+		var wrapperOffsetLeft = this.wrapper.offsetLeft; 
 
 		this.on('refresh', function () {
 			var i = 0, l,
@@ -9046,10 +9038,10 @@ IScroll.prototype = {
 					if ( !this.pages[m] ) {
 						this.pages[m] = [];
 					}
-					//@xiaoyue3 modified 2015-06-04
+					//@xiaoyue3 modified 2015-06-04 
 					//此处x加上wrapperOffsetLeft是希望snap的时候，获取正确的元素初始滚动距离
 					x = Math.max(-el[i].offsetLeft+wrapperOffsetLeft, this.maxScrollX);
-
+					
 					y = Math.max(-el[i].offsetTop, this.maxScrollY);
 					cx = x - Math.round(el[i].offsetWidth / 2);
 					cy = y - Math.round(el[i].offsetHeight / 2);
@@ -9738,7 +9730,7 @@ Indicator.prototype = {
 				this.maxBoundaryX = this.maxPosX;
 			}
 
-			this.sizeRatioX = this.options.speedRatioX || (this.scroller.maxScrollX && (this.maxPosX / this.scroller.maxScrollX));
+			this.sizeRatioX = this.options.speedRatioX || (this.scroller.maxScrollX && (this.maxPosX / this.scroller.maxScrollX));	
 		}
 
 		if ( this.options.listenY ) {
@@ -9937,7 +9929,7 @@ define('lib/kit/util/template',function(require,exports,module){
 	module.exports = function(obj){
 		var tpl = {};
 		var that = {};
-
+		
 		that.set = function(object){
 			$.extend(that, object);
 			$.extend(tpl, object);

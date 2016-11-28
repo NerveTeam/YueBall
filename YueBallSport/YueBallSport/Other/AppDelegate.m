@@ -62,7 +62,7 @@
     //                                                       [UIColor whiteColor], UITextAttributeTextColor,
     //                                                       nil] forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                       RGBACOLOR(49, 179, 93, 1), UITextAttributeTextColor,
+                                                       RGBACOLOR(4, 147, 71, 1), UITextAttributeTextColor,
                                                        nil] forState:UIControlStateSelected];
 }
 @end

@@ -31,7 +31,7 @@ header, footer, article, section, nav, menu, hgroup { display: block; clear: bot
 .M_topimg .topimg img{width:100%;}
 .M_topimg .gradientbg{position:absolute;top:0;left:0;width:100%;height:100%;background:url(../images/gradient@2x.png) repeat-x;    background-size: contain;}
 .M_topimg .toptitle{position:absolute;bottom:0;right:0;left:0;padding:0 20px 19px;}
-.M_main{margin:0 0 44px;overflow:hidden;}
+.M_main{margin:44px 0;overflow:hidden;}
 .M_main.android{margin-bottom:0 !important;}
 .M_top + .M_main { margin-top: 93.333%; }
 /*原创来源*/
@@ -46,8 +46,8 @@ header, footer, article, section, nav, menu, hgroup { display: block; clear: bot
 .M_media .txt {  line-height: 1; float: left; margin-top: 19px;}
 /*M_source 来源*/
 .M_topimg .source,.M_source .source{padding-top:16px;}
-.M_topimg .toptitle .time,.M_source .time{float:right;}
-.M_topimg .toptitle .year,.M_source .year{display:inline-block;padding-right:5px;}
+.M_topimg .toptitle .time,.M_source .time{float:right;} 
+.M_topimg .toptitle .year,.M_source .year{display:inline-block;padding-right:5px;} 
 .M_timesource { line-height: 15px; margin-bottom: 8px;}
 /*引言*/
 .M_quote{position:relative;background:none;}
@@ -64,7 +64,8 @@ h2.M_contentbg,h5{background:none; font-weight:normal;}
 .M_timeline .M_depth p{padding-top:0;}
 /*tag*/
 .M_tag { font-size: 16px; font-weight: normal; position: relative; clear: both; height: 26px;   }
-.M_tag span { line-height: 18px; position: absolute; display: inline-block; height: 18px;padding-left:10px; font-size: 12px;  }
+.M_tag span { line-height: 18px; position: absolute; display: inline-block; height: 18px;padding-left:14px;  }
+.M_tag span:before{position:absolute;content:'';width:4px;height:18px;left:0;background-color:#F00;border-radius:0 1px 1px 0;}
 /*video*/
 .M_video { position: relative; background: #f3f3f3; }
 .grey{background-color:#f3f3f3 !important;background-image: url() !important;}
@@ -138,55 +139,35 @@ h4 { font-weight: normal; text-align: left; color: #888;}
 .M_puzzlepic .photo.p_3_2 .item{margin-top:-66.7%;}
 
 /*正文投票*/
-.M_vote{background: #ECECEC;}
 .M_vote .M_tag span:before{top:12px;}
 .M_vote .vtitle span em {  font-style: normal; padding-left: 6px; }
-.M_vote .vtitle a ,.M_vote .vtitle .end { display: inline-block;float: right; font-style: normal;margin-right:10px; color: #dd0000; font-size: 12px;}
-.M_vote .vtitle a:link,.M_vote .vtitle a:visited{color: #dd0000;}
-.M_vote .vtitle a:hover,.M_vote .vtitle a:active{color: #dd0000;}
-.M_vote .q_title {line-height: 27px; padding: 10px 15px 10px 10px; border-top: 1px solid #ddd; color:#262626; font-size: 17px;}
-.M_vote .q_icon{display: inline-block; float: left; width: 30px; height: 17px; line-height: 17px; margin: 5px 7px 0 0; color:#fff; background: #dd0000; font-size: 12px; text-align: center; border-radius: 3px;}
+.M_vote .vtitle a ,.M_vote .vtitle .end { display: inline-block;float: right; font-style: normal;margin-right:10px;}
+.M_vote .q_title {  font-weight: 400; line-height: 32px; padding: 18px 15px 12px; border-top: 1px solid #dbdbdb; }
+.M_vote .q_icon{display:inline-block;width:33px;height:19px;margin-right:8px;line-height:19px;text-align: center; vertical-align: text-bottom;}
 .M_vote .q_title .q_img, .M_vote .q_title .q_imgd { display: inline-block; float: left; width: 36px; height: 20px; margin: 4px 6px 0 0; background: url(../images/radiotxt.png) no-repeat; background-size: 100%; }
 .M_vote .q_title .q_imgd { width: 36px; height: 20px; background: url(../images/multiplechoicetxt.png) no-repeat; background-size: 100%; }
-.M_vote .list {}
-.M_vote .list li { line-height:25px; overflow: hidden; margin-left: 10px; border-top: 1px solid #ddd;}
-.M_vote .list li:active{  margin-left: 0; padding-left: 10px; background: #ddd; border-bottom: 1px solid #ddd;}
-.M_vote .list li:active + li{border-top:0;}
-.M_vote .list li:active label{background: #ddd;}
-.M_vote .qtxt { display: block; overflow: hidden; padding-left: 6px; color: #1e1e1e; }
+.M_vote .list { margin-bottom: 10px; }
+.M_vote .list li { line-height:25px; overflow: hidden;border-top: 1px solid #fff; }
+.M_vote .qtxt { display: block; overflow: hidden; padding-left: 6px; }
 .M_vote .list input[type='radio'], .M_vote .list input[type='checkbox'] { display: none; }
 .M_vote .list input[type='radio'] + label, .M_vote .list input[type='checkbox'] + label { display: block; padding: 13px 16px 13px 0; }
-/*.M_vote .list input[type='radio'] + label:active, .M_vote .list input[type='checkbox'] + label:active { margin-left: 0; padding-left: 10px; background: #ddd; }*/
-.M_vote .list input[type='radio'] + label:active + label, .M_vote .list input[type='checkbox'] + label:active + label{ border-top:0;}
-.M_vote .list input[type='radio'] + label span.ico { float: left;
-    width: 16px;
-    height: 16px;
-    margin: 4px 0 0 0;
-    cursor: pointer;
-    vertical-align: -5px;
-    background: url(../images/radio.png) 0 0 no-repeat;
-    background-size: 16px 16px;}
-.M_vote .list input[type='checkbox'] + label span.ico { float: left; width: 18px; height: 16px; margin: 4px 0 0 0; cursor: pointer; vertical-align: -5px; background: url(../images/multiplechoice.png) 0 0 no-repeat; background-size: 18px 16px; }
-.M_vote .list input[type='radio']:checked + label span.ico { background-image: url(../images/radiocur.png); }
-.M_vote .list input[type='checkbox']:checked + label span.ico { background-image: url(../images/multiplechoicecur.png); }
-.M_vote .btn_zone{padding-bottom:20px; border-top: 1px solid #ddd;}
-.M_vote .btn_q { font-size: 16px; line-height: 44px; height: 44px; margin: 20px 10px 0; text-align: center; background-color:#dd0000; }
+.M_vote .list input[type='radio'] + label span.ico { float: left; width: 24px; height: 24px; margin: 0px 0 0 12px; cursor: pointer; vertical-align: -5px; background: url(../images/radio.png) left top no-repeat; background-size: 24px 24px; }
+.M_vote .list input[type='checkbox'] + label span.ico { float: left; width: 24px; height: 24px; margin: 0px 0 0 12px; cursor: pointer; vertical-align: -5px; background: url(../images/multiplechoice.png) left top no-repeat; background-size: 24px 24px; }
+.M_vote .list input[type='radio']:checked + label span.ico { background: url(../images/radiocur.png) left top no-repeat; background-size: 24px 24px; }
+.M_vote .list input[type='checkbox']:checked + label span.ico { background: url(../images/multiplechoicecur.png) left top no-repeat; background-size: 24px 24px; }
+.M_vote .btn_zone{padding-bottom:16px;}
+.M_vote .btn_q { font-size: 16px; line-height: 36px; height: 36px; margin: 12px 16px 0; text-align: center;  }
 .M_vote .btn_q.active { opacity: .3; filter: alpha(opacity=30); -moz-opacity: .3; }
 .M_vote .btn_q.gray { background: #ddd; opacity: 1; }
-.M_vote .btn_partake {  line-height: 56px; height: 56px; text-align: center; border-top: 1px solid #ddd;}
-.M_vote .list2{padding-bottom: 5px;}
-.M_vote .list2 li {  line-height: 25px; overflow: hidden; padding: 10px 10px 15px; position: relative; }
-.M_vote .list2 .tit{padding-right: 50px;margin-bottom: 4px;}
-.M_vote .list2 .range { font-size: 12px; float: left; width: 100%; height: 5px; overflow: hidden; margin-top: 2px; color: #888; background: #ddd; border-radius:2px; }
-.M_vote .list2 .percent_num { position: absolute; right: 15px; top: 10px; font-size: 12px; text-align: right;font-weight: normal; display: block; width: 40px;  }
-.M_vote .list2 .range em { display: none; }
-.M_vote .list2 .range span { display: block; width: 100%; height: 5px; overflow: hidden; margin-right: 4px; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-animation: animations .5s ease-out; -ms-animation: animations .5s ease-out; animation: animations .5s ease-out;  background-color: #999; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-perspective: 1000; perspective: 1000; border-radius: 2px;}
-.M_vote .list2 .range .persent0 { width: 0; margin-left: -5px; }
+.M_vote .btn_partake {  line-height: 56px; height: 56px; text-align: center; }
+.M_vote .list2 li {  line-height: 25px; overflow: hidden; padding: 15px;  border-top: 1px solid #fff; }
+.M_vote .list2 li .range { font-size: 12px; float: left; width: 175px; margin-top: 2px; color: #888; }
+.M_vote .list2 li .range b { font-weight: normal; display: block; width: 40px; text-align: left; }
+.M_vote .list2 li .range em { font-style: normal; line-height: 10px; display: block; float: right; margin-right: -45px; }
+.M_vote .list2 li .range span { display: inline-block; width: 100%; height: 8px; margin-right: 4px; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-animation: animations .5s ease-out; -ms-animation: animations .5s ease-out; animation: animations .5s ease-out; vertical-align: 0; background-color: #749f3e; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-perspective: 1000; perspective: 1000; }
+.M_vote .list2 li .range .persent0 { width: 0; margin-left: -5px; }
 .M_vote .list2 .icon_result { display: none; }
-/*.M_vote .list2 .active .icon_result { display: block; float: right;font-weight:bold;}*/
-.M_vote .list2 .active, .M_vote .list2 li.active .percent_num, .M_vote .list2 li.active .tit{color: #dd0000;}
-.M_vote .list2 li.active .range span{background-color:#e62f17;}
-
+.M_vote .list2 .active .icon_result { display: block; float: right;font-weight:bold;}
 @-webkit-keyframes animations {
  from {
  width: 0;
@@ -333,7 +314,6 @@ h4 { font-weight: normal; text-align: left; color: #888;}
 .M_comment li .source { line-height: 1.5; margin-top: 13px;  overflow: hidden;}
 .M_comment li .icon_location { float: left;width: 53%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .M_comment li .icon_reply, .M_comment li .icon_praise { float: right; }
-.M_comment li .icon_reply{display: none;}
 .M_comment li .icon_location b { font-weight: normal; margin-right: 8px; }
 .M_comment li .icon_location em, .M_comment li .icon_reply em, .M_comment li .icon_praise em, .M_comment li .open span { width: 14px; height: 14px; vertical-align: -2px; margin-right: 4px; display: inline-block; }
 .M_comment li .icon_location.active, .M_comment li .icon_reply:active, .M_comment li .icon_reply.active, .M_comment li .icon_praise:active, .M_comment li .icon_praise.active { opacity: .3; }
@@ -378,15 +358,15 @@ h4 { font-weight: normal; text-align: left; color: #888;}
 .grouptxt_w .deep_more{margin:0 5px;}
 
 /*小编pk&提问*/
-.M_editor{background-color:#ECECEC;}
+.M_editor{background-color:#FFF;border:1px solid #dbdbdb;}
 .M_editor .M_s_con{position:relative;padding:11px 15px 16px;}
 .M_editor .M_s_ans{border-top:1px solid #dbdbdb;padding:13px 15px;}
-.M_editor.M_pk .M_s_con{padding:10px 10px 0;}
-.M_editor.M_pk .M_s_ans{border:none;padding-top:0;margin-bottom:13px;}
-.M_editor .pk_txt{ line-height:27px; font-size: 17px;}
-.M_editor .pk_txt .q_icon{position:relative; float: left; color:#fff;margin:5px 7px 4px 0;font-size:12px;width:30px; height:17px; line-height:17px;background-color:#dd0000;font-weight:normal;border-radius: 3px; vertical-align: middle; text-align: center;}
-.M_editor .pk_point{height:90px;padding-top:15px;}
-.M_editor .pk_act{position:relative;z-index:1;height:56px;padding:5px 0 5px;margin:0 -3px;}
+.M_editor.M_pk .M_s_con{padding:23px 15px 0;}
+.M_editor.M_pk .M_s_ans{border:none;padding-top:0;margin-bottom:20px;}
+.M_editor .pk_txt{font-weight: 400;line-height:32px;vertical-align: bottom;}
+.M_editor .pk_txt .q_icon{ display: inline-block;width: 33px;text-align: center; height: 19px;line-height: 19px;vertical-align: text-bottom;margin-right:8px;}
+.M_editor .pk_point{height:105px;padding-top:16px;}
+.M_editor .pk_act{position:relative;z-index:1;height:56px;padding:12px 0 5px;margin:0 -3px;}
 .M_editor .pk_point .pk_side {position:relative;width:84px;border:1px solid #dbdbdb;padding:15px 10px;}
 .M_editor .pk_point .pk_side .attitude{ overflow:hidden;line-height:18px;height:36px;}
 .M_editor .pk_side.up {float:left;}
@@ -394,38 +374,31 @@ h4 { font-weight: normal; text-align: left; color: #888;}
 .M_editor .pk_point .pk_side .side{font-weight:bold;margin-bottom:4px;}
 .M_editor .pk_point .pk_side.up .side{color:#f84c4d;}
 .M_editor .pk_point .pk_side.down .side{color:#326fd3;}
-.M_editor .arrow{position:absolute;bottom:-7px;width:8px;height:10px;}
-.M_editor .up .arrow{left:-1px;background:url(../images/arrow_2x.png) 0 0 no-repeat;background-size:8px auto;}
-.M_editor .down .arrow{right:-1px;background:url(../images/arrow_2x.png) 0 0 no-repeat;background-size:8px auto;-moz-transform:scaleX(-1); -webkit-transform:scaleX(-1); -o-transform:scaleX(-1); transform:scaleX(-1);}
-
-.M_editor .vs{width:100%;text-align:center; line-height: 85px; font-style: italic;}
-.M_editor .pk_act .pk_side{position:absolute;top:12px;z-index:3;width:71px;height:48px;}
-.M_editor .bar .up{background-color:#f84c4b;left:0px;}
-.M_editor .bar .down{background-color:#326fd3;right:0px;}
-.M_editor .pk_act .pk_side.up{background:url(../images/left_btn2x.png) 0 0 no-repeat;background-size:71px auto; top: 6px; left:25px;}
-.M_editor .pk_act .pk_side.down{background:url(../images/right_btn2x.png) 0 0 no-repeat;background-size:71px auto; top: 6px; right:25px;}
-.M_editor .pk_act .pk_side em{display: inline-block; top: 21px; position: relative; font-size: 10px;}
-.M_editor .pk_act .pk_side.up em{left:75px; color: #f84c4b; text-align: left;}
-.M_editor .pk_act .pk_side.down em{right:75px; color: #326fd3; text-align: right;}
-.M_editor .pk_act.support_on .pk_side.up{background-image:url(../images/left_btn_on2x.png);}
-.M_editor .pk_act.support_on .pk_side.down{background-image:url(../images/right_btn_off2x.png);}
-.M_editor .pk_act.oppose_on .pk_side.up{background-image:url(../images/left_btn_off2x.png);}
-.M_editor .pk_act.oppose_on .pk_side.down{background-image:url(../images/right_btn_on2x.png);}
-.M_editor .pk_act .bar{position: relative;margin: 16px 95px;}
-.M_editor .pk_act .bar span{position:absolute;display:inline-block;height:4px;}
-.M_editor .pk_act .bar .up{width:50%;left:0; border-radius: 4px 0 0 4px;}
-.M_editor .pk_act .bar .down{width:50%;right:0; border-radius: 0 4px 4px 0;}
+.M_editor .arrow{position:absolute;bottom:-6px;width:15px;height:6px;}
+.M_editor .up .arrow{left:-1px;background:url(../images/arrow_l2x.png) center no-repeat;background-size:15px auto;}
+.M_editor .down .arrow{right:-1px;background:url(../images/arrow_r2x.png) center no-repeat;background-size:15px auto;}
+.M_editor .vs{width:100%;text-align:center; line-height: 100px;}
+.M_editor .pk_act .pk_side{position:absolute;top:12px;z-index:3;width:56px;height:56px;border:2px solid #FFF;line-height:56px;text-align:center;font-weight:bold;}
+.M_editor .pk_act .pk_side.up,.M_editor .bar .up{background-color:#f84c4b;left:0px;}
+.M_editor .pk_act .pk_side.down,.M_editor .bar .down{background-color:#326fd3;right:0px;}
+.M_editor .pk_act .pk_side .status{position:absolute;width:23px;height:18px;bottom:0;right:-6px;}
+.M_editor .pk_act .pk_side.up .on{background:url(../images/right_up2x.png) center no-repeat;background-size:23px auto;}
+.M_editor .pk_act .pk_side.down .on{background:url(../images/right_down2x.png) center no-repeat;background-size:23px auto;}
+.M_editor .pk_act .bar{position: relative;margin: 28px 60px;}
+.M_editor .pk_act .bar span{position:absolute;display:inline-block;height:6px;}
+.M_editor .pk_act .bar .up{width:50%;left:0;}
+.M_editor .pk_act .bar .down{width:50%;right:0;}
 .M_editor .q_title{height:35px;font-weight:400;}
 .M_editor .q_title span{vertical-align: middle;}
 .M_editor .q_logo{display:inline-block;margin-right:10px;width:35px;height:35px;background:url(../images/red_question.png) no-repeat;background-size:35px auto;}
 .M_editor .q_txt{font-size:16px;line-height:20px;color:#555;margin-top:10px;}
 .M_editor .a_txt{color:#888;font-size:14px;line-height:16px;}
 .M_editor .a_txt span{float:right;display:inline-block;width:18px;height:18px;margin-top:1px;background:url(../images/search_next_ico@2x.png) center no-repeat!important;background-size:18px 18px!important;}
-.M_editor .p_tip{position:relative;display:none;text-align:center;width: 100%;line-height:1;margin:-18px 0 15px;color: #1e1e1e;}
+.M_editor .p_tip{position:relative;display:none;text-align:center;width: 100%;line-height:1;margin:0 0 20px;}
 .M_editor .p_tip.on{display:block;}
-.M_editor .p_tip_overdue,.M_editor .p_tip em{ color: #999;}
-.M_editor .tip{position:relative;display:inline-block;padding:0 5px;line-height:18px; height:18px;z-index:1; clear:both; font-size: 13px;}
-.M_editor .pk_point .pk_side,.M_editor .vs{ color: #1e1e1e;}
+.M_editor .tip{position:relative;display:inline-block;padding:0 5px;line-height:18px; height:18px;border-top:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;background-color:#FFF;z-index:1; clear:both}
+.M_editor .tip:before{position:absolute;content:'';width:18px;bottom: -1px;border:1px solid #dcdcdc;border-radius:100% 0 0 100%;top:-1px;border-right:none;z-index:-1;left:-18px;background-color:#FFF;}
+.M_editor .tip:after{position:absolute;content:'';width:18px;height:18px;border:1px solid #dcdcdc;border-radius:0 100% 100% 0;top:-1px;border-left:none;right:-18px;z-index:-1;background-color:#FFF;}
 
 /*分享入口*/
 .M_share{margin:30px 10px 30px 15px;}
@@ -469,7 +442,7 @@ h4 { font-weight: normal; text-align: left; color: #888;}
 .M_relateNews ul{}
 .M_relateNews ul li{clear: both;padding:0 15px;}
 .M_relateNews ul li:first-child dl{padding-top:0;}
-.M_relateNews dl{position:relative;padding:12px 0;}
+.M_relateNews dl{position:relative;padding:10px 0;}
 .M_relateNews .dt{position: relative;float: left;width: 85px;height: 63px;margin-right: 8px;overflow:hidden;}
 .M_relateNews .dt img{ width: 100%;font-size: 0;}
 .M_relateNews .dd{height:63px;overflow: hidden;}
@@ -893,9 +866,9 @@ h4 { font-weight: normal; text-align: left; color: #888;}
 /*间距*/
 .M_media {position:relative; overflow: hidden; margin: 10px 20px 0;padding-bottom: 10px; }
 .M_pw, .M_vote, .M_listennews, h5, .M_weibo,.M_promote,.M_editor{ overflow: hidden; margin: 30px 15px; }
-.M_puzzlepic .list,.M_videof, .M_picf{overflow: hidden; margin: 0 20px 5px;}
+.M_puzzlepic .list,.M_videof, .M_picf{overflow: hidden; margin: 20px 20px 30px;}
 .M_key .keyword{margin:10px 15px 0;}
-.M_source, h2, #host_comment .comments{ position:relative;overflow: hidden; margin: 0 20px; }
+.M_source, h2, #host_comment .comments{ position:relative;overflow: hidden; margin: 0 15px; }
 h4 { overflow: hidden; margin: 8px 0px 0; }
 .group_title{margin-left:15px;margin-right:15px;}
 .M_tag { margin: 30px 0 10px; }
@@ -905,7 +878,7 @@ h4 { overflow: hidden; margin: 8px 0px 0; }
 h2.abstract, h5{padding: 0 5px 20px;}
 h2.abstract{margin-top:20px;}
 .M_picsmall { overflow: hidden; margin: 20px auto 30px; }
-.M_source { padding: 16px 0px; margin-bottom:20px;}
+.M_source { padding: 16px 5px 16px; margin-bottom:20px;}
 h2.M_contentbg,h5{padding:15px 10px;}
 .M_quote{padding:17px 20px 14px;}
 .M_quote .quote_txt{padding:0 0 14px;}
@@ -913,7 +886,7 @@ h2.M_contentbg,h5{padding:15px 10px;}
 .M_largep{margin-top:40px;}
 .M_smallp{margin-top:15px;}
 .M_timeline .time_list{padding:10px 19px 0;margin-bottom:20px;}
-.M_vote .vtitle,.M_editor .vtitle{margin:0; line-height: 40px; height: 40px;}
+.M_vote .vtitle,.M_editor .vtitle{margin:0; line-height: 44px; height: 44px;}
 .M_editor .M_tag span:before{top:12px;}
 .M_vote .vtitle span,.M_editor .vtitle span{line-height:44px;}
 .M_videogroup,.M_groupimg, .M_hdgroupimg{margin-top:20px;margin-bottom:30px;}
@@ -945,19 +918,19 @@ h2.abstract:after,.M_media:after,.M_source:after,.M_quote .people:after, .M_comm
 .M_quote .people:after{top:0;}
 .N_night .M_source:after,.N_night .M_media:after,.N_night h2.abstract:after,.N_night .M_quote .people:after,.N_night .M_comment li:after,.N_night .M_relateNews dl:after{background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(51,51,51,1)), to(rgba(51,51,51,0))); background: gradient(linear, 0 0, 0 100%, from(rgba(51,51,51,1)), to(rgba(51,51,51,0)));}
 /*rule border*/
-.line_3,h2.M_contentbg,h5,.M_quote,.M_relateNews .option span.txt,.M_relateNews .option span.video,.M_relateNews .option span.ads,.M_key .keyword a,.M_share .M_platform .item,.M_listennews .listennews,.M_weibo,.M_grouptxt .ntxt,.M_comment li .floor,.M_comment li .userInfo .tit span.tips{border:1px solid rgba(214,214,214,0.4);}
+.line_3,h2.M_contentbg,h5,.M_quote,.M_editor,.M_relateNews .option span.txt,.M_relateNews .option span.video,.M_relateNews .option span.ads,.M_key .keyword a,.M_share .M_platform .item,.M_listennews .listennews,.M_vote,.M_vote .q_icon,.M_editor .pk_txt .q_icon,.M_weibo,.M_grouptxt .ntxt,.M_comment li .floor,.M_comment li .userInfo .tit span.tips{/* border:1px solid #d6d6d6; */border:1px solid rgba(214,214,214,0.4);}
 .M_comment li .floor{border-bottom:none;}
 .line_3_bottom,.M_editor .vtitle,.M_comment li .floor:last-child{border-bottom:1px solid rgba(214,214,214,0.4);}
-.line_3_top,.M_vote .btn_reasult,.M_weibo .picbox,.M_comment li .floor,.M_weibo .bottombar{border-top:1px solid rgba(214,214,214,0.4);}
+.line_3_top,.M_vote .btn_partake,.M_vote .btn_reasult,.M_weibo .picbox,.M_comment li .floor,.M_weibo .bottombar{border-top:1px solid rgba(214,214,214,0.4);}
 .line_2,.M_key .keyword a,.M_comment li .floor{/* border-color:#e4e4e4; */border-color:rgba(228,228,228,0.4);}
-.line_3,.M_editor .M_s_ans,.M_depth,.grouptxt_w .deep_more, .M_timeline .deep_more,.M_timeline .time_title span,.M_weibo .bottombar .boder,.M_grouptxt .bottombar dd.boder,.M_editor .pk_point .pk_side,.M_timeline .time_item{border-color:rgba(214,214,214,0.4);}
-.M_weibo .picwidth:before{border-bottom-color:rgba(214,214,214,0.4);}
+.line_3,.M_editor .M_s_ans,.M_depth,.grouptxt_w .deep_more, .M_timeline .deep_more,.M_timeline .time_title span,.M_weibo .bottombar .boder,.M_grouptxt .bottombar dd.boder,.M_editor .pk_point .pk_side,.M_timeline .time_item,.M_vote .q_title{border-color:rgba(214,214,214,0.4);}
+.M_weibo .picwidth:before{border-bottom-color:rgba(214,214,214,0.4);} 
 .line_4,.M_share .M_platform .item,.M_editor .tip,.M_editor .tip:before,.M_editor .tip:after{border-color:#ececec;}
 .bg_color_1,.M_weibo .picmore ul li .photo{border-color:#f8f8f8;}
 .bg_color_1_bottom,.M_weibo .picwidth:after{border-bottom-color:#f8f8f8; }
 .bg_color_4,.M_weibo .hearder .picmore ul li .photo,.M_editor .pk_act .pk_side{border-color:#fff;}
 .shadow_line_3,.M_app{box-shadow: 0 0 5px rgba(214, 214, 214, 0.6);}
-.icon_red_1,.M_relateNews .option span.txt,.M_comment li .userInfo .tit span.sina_editor{border-color:#e62f17;}
+.icon_red_1,.M_relateNews .option span.txt,.M_vote .q_icon,.M_editor .pk_txt .q_icon,.M_comment li .userInfo .tit span.sina_editor{border-color:#e62f17;}
 .icon_blue_1,.M_relateNews .option span.video{border-color:#357bdf;}
 .icon_blue_2,.M_relateNews .more .icon,.M_more .icon,.M_comment li .f_more:after{border-color:#3192f1;}
 .M_relateNews .option span.ads,.M_promote li .tit{border-color:#ff8a00;}
@@ -970,7 +943,7 @@ h2.abstract:after,.M_media:after,.M_source:after,.M_quote .people:after, .M_comm
 .N_night .line_4,.N_night .M_share .M_platform .item,.N_night .M_editor .tip,.N_night .M_editor .tip:before,.N_night .M_editor .tip:after{border-color:#1b1b1b;}
 .N_night .bg_color_1,.N_night .M_weibo .picmore ul li .photo{border-color:#1f1f1f;}
 .N_night .bg_color_4,.N_night .M_weibo .hearder .picmore ul li .photo,.N_night .M_editor .pk_act .pk_side{border-color:#262626;}
-.N_night .icon_red_1,.N_night .M_relateNews .option span.txt,.N_night .M_comment li .userInfo .tit span.sina_editor{border-color:#ad3534;}
+.N_night .icon_red_1,.N_night .M_relateNews .option span.txt,.N_night .M_vote .q_icon,.N_night .M_editor .pk_txt .q_icon,.N_night .M_comment li .userInfo .tit span.sina_editor{border-color:#ad3534;}
 .N_night .icon_blue_1,.N_night .M_relateNews .option span.video{border-color:#2a5885;}
 .N_night .icon_blue_2,.N_night .M_relateNews .more .icon,.N_night .M_more .icon,.N_night .M_comment li .f_more:after{border-color:#32689E;}
 .N_night .M_relateNews .option span.ads,.N_night .M_promote li .tit{border-color:#ae5e00;}
@@ -981,51 +954,47 @@ h2.abstract:after,.M_media:after,.M_source:after,.M_quote .people:after, .M_comm
 
 /*rule radius*/
 .M_app .img,.M_app .img img,.N_night .M_app .img:after{border-radius:6px;}
-h2.M_contentbg,h5,.M_quote,.M_app,.M_promote li .tit,.M_promote .promotea em,.M_listennews .listennews,.M_vote .q_icon,.M_editor .pk_txt .q_icon,.M_vote .btn_q,.M_puzzlepic .total, .M_pic .bigphoto .icon,.M_weibo,.M_weibo .picmore ul li .icon, .M_weibo .pic .icon,.M_grouptxt .ntxt,.M_hdgroupimg .title span:nth-of-type(2),.M_comment li .userInfo .tit span.tips,.M_app .M_s_app{border-radius:3px;}
+h2.M_contentbg,h5,.M_quote,.M_editor,.M_app,.M_promote li .tit,.M_promote .promotea em,.M_listennews .listennews,.M_vote,.M_vote .q_icon,.M_editor .pk_txt .q_icon,.M_vote .btn_q,.M_puzzlepic .total, .M_pic .bigphoto .icon,.M_weibo,.M_weibo .picmore ul li .icon, .M_weibo .pic .icon,.M_grouptxt .ntxt,.M_hdgroupimg .title span:nth-of-type(2),.M_comment li .userInfo .tit span.tips,.M_app .M_s_app{border-radius:3px;}
 .M_app .down,.M_relateNews .option span{border-radius:2px;}
-.M_key .keyword a,.M_share .M_platform .item,.M_weibo .head, .M_grouptxt .ntxt .head,.N_night .M_grouptxt .ntxt .head:after, .N_night .M_weibo .head:after,.M_weibo .head img{border-radius:100px;}
+.M_key .keyword a,.M_share .M_platform .item,.M_vote .list2 li .range span,.M_weibo .head, .M_grouptxt .ntxt .head,.N_night .M_grouptxt .ntxt .head:after, .N_night .M_weibo .head:after,.M_editor .pk_act .pk_side,.M_weibo .head img{border-radius:100px;}
 .M_depth,.M_comment li .floor:first-child{border-radius:3px 3px 0 0;}
 .grouptxt_w .deep_more, .M_timeline .deep_more,.M_comment li .floor:last-child{border-radius:0 0 3px 3px;}
-.M_editor .pk_point .pk_side{    position: relative; width: 100px; border: 1px solid #ddd; font-size: 13px; padding: 7px 10px; border-radius: 4px 4px 4px 0; background: #F5F5F5;}
-.M_editor .pk_point .pk_side.up{border-radius:5px 5px 5px 0;}
-.M_editor .pk_point .pk_side.down{border-radius:5px 5px 0 5px;}
+.M_editor .pk_point .pk_side.up{border-radius:3px 3px 3px 0;}
+.M_editor .pk_point .pk_side.down{border-radius:3px 3px 0 3px;}
 
 /*rule font-size*/
 .M_share .M_platform .item{font-size:0;}
 .f_sizea,.M_editor .vs{font-size:20px;}
 .f_sizeb,.M_editor .q_title,.M_relateNews .title,.M_depth .title,.M_timeline .time_title,.M_vote .btn_q,.M_vote .btn_partake{font-size:17px;}
-.f_sizec,h2,h5,.M_editor .q_txt,.M_listennews .listennews .txt .title,.M_depth p,.M_vote .qtxt,.M_vote .list2 li,.M_weibo .titile, .M_grouptxt .ntxt .titile,.M_weibo .hearder .txt,.M_weibo .picf .txt,.M_grouptxt .ntxt p,.M_comment li .show_all_repaly,.M_editor .pk_act .pk_side,.M_quote .quote_txt,.M_editorInput{font-size:15px;}
+.f_sizec,h2,h5,.M_editor .q_txt,.M_tag,.M_listennews .listennews .txt .title,.M_depth p,.M_vote .qtxt,.M_vote .list2 li,.M_weibo .titile, .M_grouptxt .ntxt .titile,.M_weibo .hearder .txt,.M_weibo .picf .txt,.M_grouptxt .ntxt p,.M_comment li .show_all_repaly,.M_editor .pk_point .pk_side,.M_editor .pk_act .pk_side,.M_quote .quote_txt,.M_editorInput{font-size:15px;}
 .f_sized,.M_topimg .source,.M_source .source,.M_quote .people,.M_app .txt .title,h4,.M_comment li .tit,.M_comment li .f_tit,.M_comment li .f_more,.M_comment li .source,.M_media{font-size:13px;}
-.f_sizee,.M_relateNews .option,.M_share .M_platform .txt,.M_listennews .listennews .txt p,.M_vote .list2 .active .icon_result,.M_puzzlepic .total, .M_pic .bigphoto .icon,.M_weibo .picmore ul li .icon, .M_weibo .pic .icon,.M_hdgroupimg .title span:nth-of-type(2),.M_comment li .userInfo .tit span.tips{font-size:11px;}
-.f_sizef,.M_app .txt p,.M_weibo .time, .M_grouptxt .ntxt .time,.M_comment li .time,.M_comment li .mark,.M_comment li .f_tit span{font-size:10px;}
+.f_sizee,.M_relateNews .option,.M_share .M_platform .txt,.M_listennews .listennews .txt p,.M_vote .list2 li .range b,.M_vote .list2 .active .icon_result,.M_puzzlepic .total, .M_pic .bigphoto .icon,.M_weibo .picmore ul li .icon, .M_weibo .pic .icon,.M_hdgroupimg .title span:nth-of-type(2),.M_comment li .userInfo .tit span.tips{font-size:11px;}
+.f_sizef,.M_app .txt p,.M_weibo .time, .M_grouptxt .ntxt .time,.M_comment li .time,.M_comment li .mark,.M_comment li .f_tit span,.M_editor .tip{font-size:10px;}
 .f_sizeg,.M_app .down,.M_key .keyword a,.M_promote li .tit,.M_promote .promotea em,.M_vote .vtitle span em,.M_vote .q_icon,.M_editor .pk_txt .q_icon{font-size:12px;}
 .f_sizeh,h1{font-size: 24px;}
-.f_sizei{font-size:19px;}
-.f_sizek,.M_editor .a_txt,.M_relateNews .more,.M_more,.M_promote li a,.grouptxt_w .deep_more, .M_timeline .deep_more,.M_weibo .bottombar li,.M_grouptxt .bottombar dd,.M_isupport .support .supnum,.M_isupport .support .supnum .number{font-size:14px;}
+.f_sizei,.M_vote .q_title,.M_editor .pk_txt{font-size:19px;}
+.f_sizek,.M_editor .a_txt,.M_relateNews .more,.M_more,.M_promote li a,.grouptxt_w .deep_more, .M_timeline .deep_more,.M_vote .vtitle a,.M_vote .vtitle .end,.M_weibo .bottombar li,.M_grouptxt .bottombar dd,.M_isupport .support .supnum,.M_isupport .support .supnum .number{font-size:14px;}
 .f_sizej,.M_comment li .txt,.M_comment li .f_txt{font-size:16px;}
 
-
 /*rule color*/
-.f_color_1,h1,h3, .M_p, .M_pw .M_p strong,.M_editor .q_title,.M_app .txt .title,.M_tag,.M_relateNews .title,.M_listennews .listennews .txt .title,.M_depth .title,.M_timeline .time_title,.M_comment li .txt,.M_comment li .f_txt,.M_quote .quote_txt{ color:#1e1e1e;}
+.f_color_1,h1,h3, .M_p, .M_pw .M_p strong,.M_editor .q_title,.M_app .txt .title,.M_tag,.M_relateNews .title,.M_listennews .listennews .txt .title,.M_depth .title,.M_timeline .time_title,.M_comment li .txt,.M_comment li .f_txt,.M_quote .quote_txt{ color:#111;} 
 .f_color_2,.M_comment li .f_tit,.M_comment li .source{color:#888;}
-.f_color_3,.M_weibo .titile, .M_grouptxt .ntxt .titile,.M_editor .pk_txt{color:#111;}
+.f_color_3,.M_vote .q_title,.M_weibo .titile, .M_grouptxt .ntxt .titile,.M_editor .pk_txt{color:#111;}
 .f_color_6,.M_relateNews .option,.M_listennews .listennews .txt p,.M_vote .vtitle span em,h4,.M_weibo .time, .M_grouptxt .ntxt .time,.M_comment li .tit,.M_comment li .time,.M_comment li .mark,.M_source .source,.M_media{color:#aaa;}
 .f_color_7,.M_topimg .toptitle h1,.M_topimg .toptitle .source,.M_app .down,.M_promote li .tit,.M_promote .promotea em,.M_vote .btn_q,.M_puzzlepic .total, .M_pic .bigphoto .icon,.M_weibo .picmore ul li .icon, .M_weibo .pic .icon,.M_hdgroupimg .title span:nth-of-type(2),.M_editor .pk_act .pk_side,.M_hdgroupimg .title, .M_videogroup li .title{color:#FFF;}
 .f_color_8,.M_quote .people{color:#c9c9c9;}
-.f_color_9,h2,h5,.M_editor .q_txt,.M_app .txt p,.M_key .keyword a,.M_share .M_platform .txt,.M_depth p,.M_vote .qtxt,.M_vote .list2 li,.M_vote .btn_partake,.M_weibo .hearder .txt,.M_weibo .picf .txt,.M_weibo .bottombar li,.M_grouptxt .ntxt p,.M_grouptxt .bottombar dd,.M_attitude .tip,.M_editorInput{color:#666;}
-.M_vote .qtxt, .M_vote .list2 li{color:#1e1e1e;}
-.f_color_red_1,.M_relateNews .option span.txt,.M_listennews .error_message p .error,.M_vote .list2 .active .icon_result,.M_comment li .userInfo .tit span.sina_editor,.M_editor .pk_point .pk_side.up .side,.M_isupport .support .supnum,.M_share .M_platform .ads .txt{color:#e62f17;}
+.f_color_9,h2,h5,.M_editor .q_txt,.M_app .txt p,.M_key .keyword a,.M_share .M_platform .txt,.M_depth p,.M_vote .qtxt,.M_vote .vtitle .end,.M_vote .list2 li,.M_vote .btn_partake,.M_weibo .hearder .txt,.M_weibo .picf .txt,.M_weibo .bottombar li,.M_grouptxt .ntxt p,.M_grouptxt .bottombar dd,.M_editor .pk_point .pk_side,.M_editor .vs,.M_attitude .tip,.M_editor .tip,.M_editorInput{color:#666;}
+.f_color_red_1,.M_relateNews .option span.txt,.M_listennews .error_message p .error,.M_vote .q_icon,.M_editor .pk_txt .q_icon,.M_vote .list2 .active .icon_result,.M_comment li .userInfo .tit span.sina_editor,.M_editor .pk_point .pk_side.up .side,.M_isupport .support .supnum,.M_share .M_platform .ads .txt{color:#e62f17;}
 .f_color_blue_1,.M_relateNews .option span.video,.M_editor .pk_point .pk_side.down .side{color:#357bdf;}
-.f_color_blue_2,a,a:active, a.active, a:focus,.M_editor .a_txt,.M_relateNews .more,.M_more,.M_promote li a,.grouptxt_w .deep_more, .M_timeline .deep_more,.M_comment li .show_all_repaly,.M_comment li .f_more{color:#3192f1;}
+.f_color_blue_2,a,a:active, a.active, a:focus,.M_editor .a_txt,.M_relateNews .more,.M_more,.M_promote li a,.grouptxt_w .deep_more, .M_timeline .deep_more,.M_vote .vtitle a,.M_comment li .show_all_repaly,.M_comment li .f_more{color:#3192f1;}
 .f_color_grey_1,.M_source .source{color:#aaa;}
 .f_color_yellow_1,.M_comment li .userInfo .tit span.replay_sina_editor{color: #ffbd0c;}
 .M_relateNews .option span.ads,.M_promote li .tit{color:#ff8a00}
-/*.f_vote_red,.M_vote .list2 li:first-child .percent_num{color:#e62f17;}*/
-/*.M_vote .list2 li:first-child .tit{color: #dd0000;}*/
-/*.f_vote_blue,.M_vote .list2 li:nth-child(4n+2) .percent_num{color:#357bdf;}*/
-/*.f_vote_yellow,.M_vote .list2 li:nth-child(4n+3) .percent_num{color:#ffbd0c;}*/
-/*.f_vote_green,.M_vote .list2 li:nth-child(4n+4) .percent_num{color:#3cb780;}*/
-.N_night .f_color_1,.N_night h1,.N_night .M_quote .quote_txt,.N_night h3,.N_night .M_p,.N_night .M_pw .M_p strong,.N_night .M_editor .q_title,.N_night .M_app .txt .title,.N_night .M_tag,.N_night .M_relateNews .title,.N_night .M_listennews .listennews .txt .title,.N_night .M_depth .title,.N_night .M_timeline .time_title,.N_night .M_comment li .txt,.N_night .M_comment li .f_txt{ color:#8c8c8c;}
+.f_vote_red,.M_vote .list2 li:nth-child(4n+1) .range b{color:#e62f17;}
+.f_vote_blue,.M_vote .list2 li:nth-child(4n+2) .range b{color:#357bdf;}
+.f_vote_yellow,.M_vote .list2 li:nth-child(4n+3) .range b{color:#ffbd0c;}
+.f_vote_green,.M_vote .list2 li:nth-child(4n+4) .range b{color:#3cb780;}
+.N_night .f_color_1,.N_night h1,.N_night .M_quote .quote_txt,.N_night h3,.N_night .M_p,.N_night .M_pw .M_p strong,.N_night .M_editor .q_title,.N_night .M_app .txt .title,.N_night .M_tag,.N_night .M_relateNews .title,.N_night .M_listennews .listennews .txt .title,.N_night .M_depth .title,.N_night .M_timeline .time_title,.N_night .M_comment li .txt,.N_night .M_comment li .f_txt{ color:#8c8c8c;} 
 .N_night .f_color_2,.N_night .M_comment li .f_tit,.N_night .M_comment li .source{color:#595959;}
 .N_night .f_color_3,.N_night .M_vote .q_title,.N_night .M_weibo .titile,.N_night .M_grouptxt .ntxt .titile,.N_night .M_editor .pk_txt{color:#777;}
 .N_night .f_color_6,.N_night .M_relateNews .option,.N_night .M_listennews .listennews .txt p,.N_night .M_vote .vtitle span em,.N_night h4,.N_night .M_weibo .time,.N_night .M_grouptxt .ntxt .time,.N_night .M_comment li .tit,.N_night .M_comment li .time,.N_night .M_comment li .mark,.N_night .M_source .source,.N_night .M_media{color:#4c4c4c;}
@@ -1038,25 +1007,25 @@ h2.M_contentbg,h5,.M_quote,.M_app,.M_promote li .tit,.M_promote .promotea em,.M_
 .N_night .M_relateNews .option span.ads{color:#ae5e00;}
 .N_night .M_promote li .tit{color:#ae5e00;}
 .N_night .f_color_yellow_1,.N_night .M_comment li .userInfo .tit span.replay_sina_editor{color: #987412;}
-.N_night .f_vote_red,.N_night .M_vote .list2 li:first-child .percent_num{color:#ad3534;}
-/*.N_night .f_vote_blue,.N_night .M_vote .list2 li:nth-child(4n+2) .percent_num{color:#2a5885;}
-.N_night .f_vote_yellow,.N_night .M_vote .list2 li:nth-child(4n+3) .percent_num{color:#987412;}
-.N_night .f_vote_green,.N_night .M_vote .list2 li:nth-child(4n+4) .percent_num{color:#0e7245;}*/
+.N_night .f_vote_red,.N_night .M_vote .list2 li:nth-child(4n+1) .range b{color:#ad3534;}
+.N_night .f_vote_blue,.N_night .M_vote .list2 li:nth-child(4n+2) .range b{color:#2a5885;}
+.N_night .f_vote_yellow,.N_night .M_vote .list2 li:nth-child(4n+3) .range b{color:#987412;}
+.N_night .f_vote_green,.N_night .M_vote .list2 li:nth-child(4n+4) .range b{color:#0e7245;}
 
 /*rule background*/
 .bg_color_1,.M_weibo .picbox{background-color:#f8f8f8;}
-.bg_color_3,/* .M_vote .list input[type='radio']:checked + label, .M_vote .list input[type='checkbox']:checked + label */{background-color:#eee;}
-.bg_color_4,.M_quote,.M_key .keyword a,.M_share .M_platform .item,.M_listennews .listennews,.M_depth,.grouptxt_w .deep_more, .M_timeline .deep_more,.N_night .M_timeline .time_title span,.M_weibo,.M_weibo .bottombar,.M_grouptxt .ntxt,.M_comment li .floor,.M_app .M_s_app,.M_attitude .tip,.M_attitude .tip:before,.M_editor .tip:before{background-color:#FFF;}
-.bg_color_red_1,.M_app .down,.M_tag span:before,.M_vote .btn_q .M_editor .bar .up{background-color:#dd0000;}
-.bg_color_blue_1, .M_editor .bar .down{background-color:#357bdf;}
+.bg_color_3,.M_vote .list input[type='radio']:checked + label, .M_vote .list input[type='checkbox']:checked + label{background-color:#eee;}
+.bg_color_4,.M_quote,.M_editor,.M_key .keyword a,.M_share .M_platform .item,.M_listennews .listennews,.M_depth,.grouptxt_w .deep_more, .M_timeline .deep_more,.N_night .M_timeline .time_title span,.M_vote, .M_vote .list2 .active,.M_weibo,.M_weibo .bottombar,.M_grouptxt .ntxt,.M_comment li .floor,.M_app .M_s_app,.M_editor .tip,.M_attitude .tip,.M_attitude .tip:before,.M_editor .tip:before{background-color:#FFF;}
+.bg_color_red_1,.M_app .down,.M_tag span:before,.M_vote .btn_q,.M_editor .pk_act .pk_side.up, .M_editor .bar .up{background-color:#e62f17;}
+.bg_color_blue_1,.M_editor .pk_act .pk_side.down, .M_editor .bar .down{background-color:#357bdf;}
 .M_promote .promotea em{background:#ff8a00;}
 .M_puzzlepic .total, .M_pic .bigphoto .icon,.M_hdgroupimg .title span:nth-of-type(2){background:rgba(0,0,0,0.5);}
 .line_4,.separator{background-color:#ececec;}
 .M_vote .btn_q.gray{background-color:#c9c9c9;}
-/*.vote_red,.M_vote .list2 li:first-child .range span{background-color:#e62f17;}*/
-/*.vote_blue,.M_vote .list2 li:nth-child(4n+2) .range span{background-color:#357bdf;}
+.vote_red,.M_vote .list2 li:nth-child(4n+1) .range span{background-color:#e62f17;}
+.vote_blue,.M_vote .list2 li:nth-child(4n+2) .range span{background-color:#357bdf;}
 .vote_yellow,.M_vote .list2 li:nth-child(4n+3) .range span{background-color:#ffbd0c;}
-.vote_green,.M_vote .list2 li:nth-child(4n+4) .range span{background-color:#3cb780;}*/
+.vote_green,.M_vote .list2 li:nth-child(4n+4) .range span{background-color:#3cb780;}
 .bg_color_1.active,.M_weibo .picbox,.active .M_depth,.active .deep_more, .M_weibo .M_wbcontent.active, .M_weibo .M_wbcontent.active .picwidth, .M_weiboboxm.active .M_weibo, .active.M_editor{background-color:#f8f8f8;}
 .N_night .bg_color_1,.N_night .M_weibo .picbox{background-color:#1f1f1f;}
 .N_night .bg_color_3,.N_night .M_vote .list input[type='radio']:checked + label,.N_night .M_vote .list input[type='checkbox']:checked + label{background-color:#1b1b1b;}
@@ -1068,9 +1037,9 @@ h2.M_contentbg,h5,.M_quote,.M_app,.M_promote li .tit,.M_promote .promotea em,.M_
 .N_night .M_puzzlepic .total,.N_night .M_pic .bigphoto .icon,.N_night .M_hdgroupimg .title span:nth-of-type(2){background:rgba(0,0,0,0.5);}
 .N_night .M_vote .btn_q.gray{background-color:#3a3a3a;}
 .N_night .vote_red,.N_night .M_vote .list2 li:nth-child(4n+1) .range span{background-color:#ad3534;}
-/*.N_night .vote_blue,.N_night .M_vote .list2 li:nth-child(4n+2) .range span{background-color:#2a5885;}
+.N_night .vote_blue,.N_night .M_vote .list2 li:nth-child(4n+2) .range span{background-color:#2a5885;}
 .N_night .vote_yellow,.N_night .M_vote .list2 li:nth-child(4n+3) .range span{background-color:#987412;}
-.N_night .vote_green,.N_night .M_vote .list2 li:nth-child(4n+4) .range span{background-color:#0e7245;}*/
+.N_night .vote_green,.N_night .M_vote .list2 li:nth-child(4n+4) .range span{background-color:#0e7245;}
 .N_night .bg_color_1.active,.N_night .active .M_depth,.N_night .active .deep_more,.N_night .M_weibo .M_wbcontent.active, .N_night .M_weibo .M_wbcontent.active .picwidth, .N_night .M_weiboboxm.active .M_weibo, .N_night .active.M_editor{background-color:#1f1f1f;}
 
 /*font-family*/
@@ -1094,13 +1063,13 @@ h2.M_contentbg,h5,.M_quote,.M_app,.M_promote li .tit,.M_promote .promotea em,.M_
 	.M_share .M_platform .txt{font-size:9px;}
 }
 @media screen and (min-width:375px) and (max-width:413px) {
-	.M_editor .pk_point .pk_side{width:100px;}
+	.M_editor .pk_point .pk_side{width:105px;}
 	.M_share .M_platform .txt{font-size:10px;}
 }
 @media screen and (min-width:413px) {
 	.M_editor .pk_point .pk_side{width:130px;}
 }
-
+ 
 
 /*小*/
 .s_small { font-size: 17px; line-height: 1.68; }
@@ -1118,7 +1087,7 @@ h2.M_contentbg,h5,.M_quote,.M_app,.M_promote li .tit,.M_promote .promotea em,.M_
 .s_large h4{ font-size: 16px;line-height: 1.4; }
 /* .s_large .M_timeline .time_title{ font-size:19px; } */
 /*超大*/
-.s_largemore { font-size: 24px; line-height: 1.68; }
+.s_largemore { font-size: 23px; line-height: 1.68; }
 /* .s_largemore h3, .s_largemore .M_p,.s_largemore .M_quote{ font-size: 26px; } */
 .s_largemore h4 { font-size: 18px;line-height: 1.4; }
 /* .s_largemore .M_timeline .time_title{ font-size:23px; } */
