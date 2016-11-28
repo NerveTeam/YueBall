@@ -45,12 +45,12 @@ static CGFloat pullStartPosition = 20; // 下拉初始点
 }
 
 - (void)setupUI {
-//    [self initTopBar];
     [self initPullClosePageView];
     self.webView.frame = CGRectMake(0,
-                                    self.topBar.height,
+                                    0,
                                     self.view.width,
-                                    self.view.height - self.topBar.height);
+                                    self.view.height);
+    [self.view addSubview:self.topBar];
 }
 - (void)initPullClosePageView {
     [self.webView addSubview:self.pullTipView];
@@ -133,7 +133,6 @@ static CGFloat pullStartPosition = 20; // 下拉初始点
     if (!_topBar) {
         _topBar = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, StatusBarHeight + TopBarHeight)];
         _topBar = [_topBar topBarWithTintColor:nil title:nil titleColor:nil leftView:self.backItem rightView:self.shareItem responseTarget:self];
-        [self.view addSubview:_topBar];
     }
     return _topBar;
 }

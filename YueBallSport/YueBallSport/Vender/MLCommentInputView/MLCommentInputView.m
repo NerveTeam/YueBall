@@ -175,12 +175,12 @@ typedef NS_ENUM(NSInteger ,KeyboardType) {
 - (UIButton *)commentTip {
     if (!_commentTip) {
         _commentTip = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_commentTip setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_commentTip setTitleColor:RGBACOLOR(4, 147, 71, 1) forState:UIControlStateNormal];
         _commentTip.font = [UIFont systemFontOfSize:13];
         [_commentTip setImage:[UIImage imageNamed:@"comment"] forState:UIControlStateNormal];
         [_commentTip sizeToFit];
         _commentTip.width = 100;
-        [_commentTip setTitle:@"1010评论" forState:UIControlStateNormal];
+        [_commentTip setTitle:@"0评论" forState:UIControlStateNormal];
         _commentTip.x = CGRectGetMaxX(self.commentInputField.frame) + 10;
         CGFloat height = _commentTip.imageView.height;
         _commentTip.y = (self.height - height)/2;
@@ -193,7 +193,7 @@ typedef NS_ENUM(NSInteger ,KeyboardType) {
     if (!_sendView) {
         _sendView = [[UIButton alloc]init];
         [_sendView setTitle:@"发送" forState:UIControlStateNormal];
-        [_sendView setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_sendView setTitleColor:RGBACOLOR(4, 147, 71, 1) forState:UIControlStateNormal];
         _sendView.font = [UIFont systemFontOfSize:16];
         [_sendView sizeToFit];
         _sendView.x = CGRectGetMaxX(self.commentInputTextView.frame)+10;

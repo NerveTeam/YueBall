@@ -51,8 +51,8 @@
 @interface SNComment : NSObject
 
 
-@property (nonatomic, strong) NSString  *parentId;
-@property (nonatomic, strong) NSString  *mId;
+@property (nonatomic, assign) NSInteger  parentId;
+@property (nonatomic, assign) NSInteger  mId;
 @property (nonatomic, strong) NSString  *userName;
 @property (nonatomic, strong) NSString  *content;
 @property (nonatomic, strong) NSString  *iconURL;

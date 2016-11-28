@@ -32,6 +32,9 @@ static const NSString *albumViewControllerKey = @"albumViewController";
     [self.view addSubview:self.albumViewController.view];
     
 }
+- (void)sn_requestCallback:(NSDictionary *)userInfo {
+
+}
 
 - (YBAlbumViewController *)albumViewController {
     YBAlbumViewController *albumVc = objc_getAssociatedObject(self, (__bridge void *)(albumViewControllerKey));

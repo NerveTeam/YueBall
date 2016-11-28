@@ -13,8 +13,8 @@
 - (SNComment *)commentWithDictionary:(NSDictionary *)obj
 {
     SNComment *comment = [[SNComment alloc] init];
-    comment.parentId = [obj objectForKeySafely:@"parent"];
-    comment.mId = [obj objectForKeySafely:@"mid"];
+    comment.parentId = [[obj objectForKeySafely:@"parent"] longValue];
+    comment.mId = [[obj objectForKeySafely:@"mid"] longValue];
     comment.userName = [obj objectForKeySafely:@"userName"];
     comment.content = [obj objectForKeySafely:@"commentContent"];
     comment.publishDate = [NSDate dateFromTimestamp:[obj objectForKeySafely:@"time"]];
