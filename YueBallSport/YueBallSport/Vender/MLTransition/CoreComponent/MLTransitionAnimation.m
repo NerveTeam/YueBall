@@ -8,6 +8,7 @@
 
 #import "MLTransitionAnimation.h"
 #import "UIView+Position.h"
+#import "NSArray+Safe.h"
 #define isIOS8 [UIDevice currentDevice].systemVersion.doubleValue > 8.0
 
 @interface MLTransitionAnimation ()
@@ -31,7 +32,7 @@
 // 此方法必须实现
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     
-    return 1;
+    return 2;
 }
 // 关键方法，所有动画在这里实现
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -40,6 +41,8 @@
     UIView *toView = nil;
     UIViewController *toVc =[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+   fromVc = [self checkVisitViewcontroller:fromVc];
+   toVc = [self checkVisitViewcontroller:toVc];
     if (isIOS8) {
         
         fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
@@ -72,4 +75,19 @@
     animationBlock(containerView,fromView,toView,toVc,fromVc);
 }
 
+
+- (UIViewController *)checkVisitViewcontroller:(UIViewController *)currentVc {
+    if ([currentVc isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *nav = (UINavigationController *)currentVc;
+        return  nav.topViewController;
+        
+    }
+    if ([currentVc isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tab = (UITabBarController *)currentVc;
+        NSArray *subVc = tab.viewControllers;
+        UINavigationController *nav = [subVc safeObjectAtIndex:tab.selectedIndex];
+        return  nav.topViewController;
+    }
+    return currentVc;
+}
 @end

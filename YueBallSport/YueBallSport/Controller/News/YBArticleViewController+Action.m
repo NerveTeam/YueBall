@@ -9,6 +9,8 @@
 #import "YBArticleViewController+Action.h"
 #import <objc/runtime.h>
 #import "YBAlbumViewController.h"
+#import "YBLoginViewController.h"
+#import "MLTransition.h"
 
 @interface YBArticleViewController ()<SNArticleActionProtocal>
 @property(nonatomic, strong)YBAlbumViewController *albumViewController;
@@ -33,7 +35,8 @@ static const NSString *albumViewControllerKey = @"albumViewController";
     
 }
 - (void)sn_requestCallback:(NSDictionary *)userInfo {
-
+    self.spring = YES;
+    [self presentViewcontroller:[[YBLoginViewController alloc]init] animationType:UIViewAnimationTypeFall completion:nil];
 }
 
 - (YBAlbumViewController *)albumViewController {
