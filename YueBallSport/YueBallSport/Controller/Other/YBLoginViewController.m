@@ -9,7 +9,7 @@
 #import "YBLoginViewController.h"
 #import "UIView+TopBar.h"
 #import "MLTransition.h"
-#import <ShareSDK/ShareSDK.h>
+
 #import <ShareSDKExtension/SSEThirdPartyLoginHelper.h>
 
 @interface YBLoginViewController ()
@@ -35,44 +35,7 @@
     [self dismissViewcontrollerAnimationType:UIViewAnimationTypeSlideOut completion:nil];
 }
 - (void)weiboLogin {
-//    [SSEThirdPartyLoginHelper loginByPlatform:SSDKPlatformTypeQQ
-//                                   onUserSync:^(SSDKUser *user, SSEUserAssociateHandler associateHandler) {
-//                                       
-//                                       //在此回调中可以将社交平台用户信息与自身用户系统进行绑定，最后使用一个唯一用户标识来关联此用户信息。
-//                                       //在此示例中没有跟用户系统关联，则使用一个社交用户对应一个系统用户的方式。将社交用户的uid作为关联ID传入associateHandler。
-//                                       associateHandler (user.uid, user, user);
-//                                       NSLog(@"dd%@",user.rawData);
-//                                       NSLog(@"dd%@",user.credential);
-//                                       
-//                                   }
-//                                onLoginResult:^(SSDKResponseState state, SSEBaseUser *user, NSError *error) {
-//                                    
-//                                    if (state == SSDKResponseStateSuccess)
-//                                    {
-//                                        
-//                                    }
-//                                    
-//                                }];
-    [ShareSDK cancelAuthorize:SSDKPlatformTypeSinaWeibo];
-    [ShareSDK getUserInfo:SSDKPlatformTypeSinaWeibo
-
-           onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
-     {
-         if (state == SSDKResponseStateSuccess)
-         {
-             
-             NSLog(@"uid=%@",user.uid);
-             NSLog(@"%@",user.credential);
-             NSLog(@"token=%@",user.credential.token);
-             NSLog(@"nickname=%@",user.nickname);
-         }
-         
-         else
-         {
-             NSLog(@"%@",error);
-         }
-         
-     }];
+    
 }
 - (void)setupUI {
     [self.view addSubview:self.topBar];
