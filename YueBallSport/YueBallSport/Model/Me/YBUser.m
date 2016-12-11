@@ -7,7 +7,8 @@
 //
 
 #import "YBUser.h"
+#import "MJExtension.h"
 
 @implementation YBUser
-
+MJCodingImplementation
 @end

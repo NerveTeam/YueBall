@@ -10,8 +10,6 @@
 #import "UIView+TopBar.h"
 #import "MLTransition.h"
 
-#import <ShareSDKExtension/SSEThirdPartyLoginHelper.h>
-
 @interface YBLoginViewController ()
 @property(nonatomic,strong)UIView *topBar;
 @end
@@ -25,6 +23,7 @@
     UIButton *weibo = [UIButton new];
     [weibo setTitle:@"微博登录" forState:UIControlStateNormal];
     [weibo setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    weibo.font = [UIFont systemFontOfSize:12];
     weibo.backgroundColor = [UIColor redColor];
     [weibo addTarget:self action:@selector(weiboLogin) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:weibo];

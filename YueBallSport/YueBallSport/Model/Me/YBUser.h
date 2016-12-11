@@ -13,8 +13,8 @@
 @property(nonatomic, assign)NSInteger uid;
 @property(nonatomic, copy)NSString *icon;
 @property(nonatomic, assign)NSInteger teamId;
-@property(nonatomic, assign)NSInteger age;
+@property(nonatomic, assign)NSInteger sex;
 //@property(nonatomic, assign)NSString *location;
 @property(nonatomic, copy)NSString *personality;
-@property(nonatomic, copy)NSString *token;
+//@property(nonatomic, copy)NSString *token;
 @end
