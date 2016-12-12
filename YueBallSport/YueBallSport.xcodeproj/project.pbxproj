@@ -18,6 +18,15 @@
 		8C162C3F1DEAB2A0009A3514 /* YBArticleViewController+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C162C3E1DEAB2A0009A3514 /* YBArticleViewController+Action.m */; };
 		8C162C421DEAB4B4009A3514 /* YBAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C162C411DEAB4B4009A3514 /* YBAlbum.m */; };
 		8C162C451DEAB603009A3514 /* YBAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C162C441DEAB603009A3514 /* YBAlbumViewController.m */; };
+		600266ED1DFD07C900E1A6D2 /* YBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 600266EC1DFD07C900E1A6D2 /* YBPopupMenu.m */; };
+		6023D33B1DDEE67800E44B80 /* YBMessageUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023D33A1DDEE67800E44B80 /* YBMessageUser.m */; };
+		6023D33E1DDEEA8B00E44B80 /* YBMessageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023D33D1DDEEA8B00E44B80 /* YBMessageConfig.m */; };
+		602F18981DF158F0002893DF /* jiahao.png in Resources */ = {isa = PBXBuildFile; fileRef = 602F18971DF158F0002893DF /* jiahao.png */; };
+		604D345D1DE680E400940B49 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 604D345C1DE680E400940B49 /* LaunchScreen.strings */; };
+		604D34601DE68D2B00940B49 /* YBMessageMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604D345F1DE68D2B00940B49 /* YBMessageMapViewController.m */; };
+		60D11D941DF1165C00A01F7E /* scource.json in Resources */ = {isa = PBXBuildFile; fileRef = 60D11D931DF1165C00A01F7E /* scource.json */; };
+		60D11D971DF135D100A01F7E /* YBMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D11D961DF135D100A01F7E /* YBMessageModel.m */; };
+		60F2A4CF1DEC7BA0006E63B3 /* YBContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */; };
 		8C191ED51DD4658300031BC5 /* MLMeunItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191ED21DD4658300031BC5 /* MLMeunItem.m */; };
 		8C191ED61DD4658300031BC5 /* MLMeunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191ED41DD4658300031BC5 /* MLMeunView.m */; };
 		8C1921781DD57C9B00031BC5 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C191EDB1DD57C9A00031BC5 /* MASCompositeConstraint.m */; };
@@ -298,6 +307,22 @@
 		8C162C431DEAB603009A3514 /* YBAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBAlbumViewController.h; sourceTree = "<group>"; };
 		8C162C441DEAB603009A3514 /* YBAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBAlbumViewController.m; sourceTree = "<group>"; };
 		2F74A7986AF9AD00C5D19811 /* Pods-YueBallSport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YueBallSport.release.xcconfig"; path = "Pods/Target Support Files/Pods-YueBallSport/Pods-YueBallSport.release.xcconfig"; sourceTree = "<group>"; };
+		600266EB1DFD07C900E1A6D2 /* YBPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenu.h; sourceTree = "<group>"; };
+		600266EC1DFD07C900E1A6D2 /* YBPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPopupMenu.m; sourceTree = "<group>"; };
+		6023D3381DDEE63F00E44B80 /* YBMessageConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageConstant.h; sourceTree = "<group>"; };
+		6023D3391DDEE67800E44B80 /* YBMessageUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageUser.h; sourceTree = "<group>"; };
+		6023D33A1DDEE67800E44B80 /* YBMessageUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageUser.m; sourceTree = "<group>"; };
+		6023D33C1DDEEA8B00E44B80 /* YBMessageConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageConfig.h; sourceTree = "<group>"; };
+		6023D33D1DDEEA8B00E44B80 /* YBMessageConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageConfig.m; sourceTree = "<group>"; };
+		602F18971DF158F0002893DF /* jiahao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiahao.png; sourceTree = "<group>"; };
+		604D345C1DE680E400940B49 /* LaunchScreen.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LaunchScreen.strings; sourceTree = "<group>"; };
+		604D345E1DE68D2B00940B49 /* YBMessageMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageMapViewController.h; sourceTree = "<group>"; };
+		604D345F1DE68D2B00940B49 /* YBMessageMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageMapViewController.m; sourceTree = "<group>"; };
+		60D11D931DF1165C00A01F7E /* scource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scource.json; sourceTree = "<group>"; };
+		60D11D951DF135D100A01F7E /* YBMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageModel.h; sourceTree = "<group>"; };
+		60D11D961DF135D100A01F7E /* YBMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageModel.m; sourceTree = "<group>"; };
+		60F2A4CD1DEC7BA0006E63B3 /* YBContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBContactManager.h; sourceTree = "<group>"; };
+		60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBContactManager.m; sourceTree = "<group>"; };
 		8307CD0FC5BE3426EA5FB53A /* Pods-YueBallSport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YueBallSport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YueBallSport/Pods-YueBallSport.debug.xcconfig"; sourceTree = "<group>"; };
 		8C191ED11DD4658300031BC5 /* MLMeunItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeunItem.h; sourceTree = "<group>"; };
 		8C191ED21DD4658300031BC5 /* MLMeunItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMeunItem.m; sourceTree = "<group>"; };
@@ -814,6 +839,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		600266EA1DFD07C900E1A6D2 /* YBPopupMenu */ = {
+			isa = PBXGroup;
+			children = (
+				600266EB1DFD07C900E1A6D2 /* YBPopupMenu.h */,
+				600266EC1DFD07C900E1A6D2 /* YBPopupMenu.m */,
+			);
+			path = YBPopupMenu;
+			sourceTree = "<group>";
+		};
 		8C191ED01DD4658300031BC5 /* MLMeunView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1584,6 +1618,20 @@
 			children = (
 				8CD3D4E51DAB458A00044ADB /* YBMessageViewController.h */,
 				8CD3D4E61DAB458A00044ADB /* YBMessageViewController.m */,
+				6023D33C1DDEEA8B00E44B80 /* YBMessageConfig.h */,
+				6023D33D1DDEEA8B00E44B80 /* YBMessageConfig.m */,
+				6023D3381DDEE63F00E44B80 /* YBMessageConstant.h */,
+				6023D3391DDEE67800E44B80 /* YBMessageUser.h */,
+				6023D33A1DDEE67800E44B80 /* YBMessageUser.m */,
+				604D345E1DE68D2B00940B49 /* YBMessageMapViewController.h */,
+				604D345F1DE68D2B00940B49 /* YBMessageMapViewController.m */,
+				60F2A4CD1DEC7BA0006E63B3 /* YBContactManager.h */,
+				60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */,
+				60D11D951DF135D100A01F7E /* YBMessageModel.h */,
+				60D11D961DF135D100A01F7E /* YBMessageModel.m */,
+				604D345C1DE680E400940B49 /* LaunchScreen.strings */,
+				60D11D931DF1165C00A01F7E /* scource.json */,
+				602F18971DF158F0002893DF /* jiahao.png */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -1783,6 +1831,7 @@
 				8CABD1731DE54A2B00812AB7 /* MLCommentInputView */,
 				8C7548871DDB09E500569DAE /* MLTransition */,
 				8C75485D1DD9ACCE00569DAE /* SDCycleScrollView */,
+				600266EA1DFD07C900E1A6D2 /* YBPopupMenu */,
 				8C70EBF31DD8707F009514EC /* UITableView-FDTemplateLayoutCell */,
 				8C70EBEF1DD7670B009514EC /* JSONKit */,
 				8C1923E11DD5901500031BC5 /* SNArticleSDK */,
@@ -2208,12 +2257,15 @@
 				8C70EC031DD87F80009514EC /* channelConfig.json in Resources */,
 				8C1927041DD5925B00031BC5 /* css in Resources */,
 				8C75485B1DD9A4D800569DAE /* content_ic_comments@2x.png in Resources */,
+				60D11D941DF1165C00A01F7E /* scource.json in Resources */,
 				8C1923BF1DD57DC300031BC5 /* MJRefresh.bundle in Resources */,
 				8C75485C1DD9A4D800569DAE /* content_ic_comments@3x.png in Resources */,
 				8C1927061DD5925B00031BC5 /* js in Resources */,
+				602F18981DF158F0002893DF /* jiahao.png in Resources */,
 				8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */,
 				8C1923A61DD57DC300031BC5 /* Info.plist in Resources */,
 				8C19253B1DD5901600031BC5 /* articleTemplate.html in Resources */,
+				604D345D1DE680E400940B49 /* LaunchScreen.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2321,6 +2373,7 @@
 				8CD3D4E11DAB451700044ADB /* YBFindViewController.m in Sources */,
 				8CD3D41C1DAA3A2F00044ADB /* AFNetworkReachabilityManager.m in Sources */,
 				8C1925361DD5901600031BC5 /* SNArticleParser.m in Sources */,
+				6023D33B1DDEE67800E44B80 /* YBMessageUser.m in Sources */,
 				8CD3D4701DAA3AA100044ADB /* NSString+Utilities.m in Sources */,
 				8C1923CC1DD57DC300031BC5 /* SDWebImageDecoder.m in Sources */,
 				8C1925DD1DD5901600031BC5 /* SNArticleHelper.m in Sources */,
@@ -2345,6 +2398,7 @@
 				8C1925DC1DD5901600031BC5 /* SNArticleBaseViewController.m in Sources */,
 				8C1923BD1DD57DC300031BC5 /* MJRefreshNormalHeader.m in Sources */,
 				8C1923CD1DD57DC300031BC5 /* SDWebImageDownloader.m in Sources */,
+				6023D33E1DDEEA8B00E44B80 /* YBMessageConfig.m in Sources */,
 				8C1923AF1DD57DC300031BC5 /* NSObject+MJProperty.m in Sources */,
 				8CD3D56E1DAC89CF00044ADB /* TestMe.m in Sources */,
 				8CD3D4861DAA3ABD00044ADB /* UIImage+Stretch.m in Sources */,
@@ -2391,6 +2445,7 @@
 				8CD3D4641DAA3A8500044ADB /* NSDate+Utilities.m in Sources */,
 				8C19252A1DD5901600031BC5 /* SNPoll.m in Sources */,
 				8C1923A91DD57DC300031BC5 /* MJProperty.m in Sources */,
+				60F2A4CF1DEC7BA0006E63B3 /* YBContactManager.m in Sources */,
 				8CD3D59C1DAC8B9A00044ADB /* TestHomeView.m in Sources */,
 				8C1923C31DD57DC300031BC5 /* UIScrollView+MJRefresh.m in Sources */,
 				8CD3D5681DAC89B800044ADB /* TestFind.m in Sources */,
@@ -2411,6 +2466,7 @@
 				8CD3D4731DAA3AA900044ADB /* DataRequest.m in Sources */,
 				8C1925D21DD5901600031BC5 /* SNImageUrlManager.m in Sources */,
 				8CD3D56B1DAC89C400044ADB /* TestHome.m in Sources */,
+				60D11D971DF135D100A01F7E /* YBMessageModel.m in Sources */,
 				8C1925CE1DD5901600031BC5 /* SNArticleCacheManager.m in Sources */,
 				8CD3D5381DABB37100044ADB /* TestHandler.m in Sources */,
 				8C19217E1DD57C9B00031BC5 /* NSArray+MASAdditions.m in Sources */,
@@ -2478,6 +2534,7 @@
 				8CD3D5981DAC8B9A00044ADB /* TestMeCell.m in Sources */,
 				8C1925221DD5901600031BC5 /* SNArticleImage.m in Sources */,
 				8C14D7991DDC374000323CB8 /* YBHotNewsViewController.m in Sources */,
+				604D34601DE68D2B00940B49 /* YBMessageMapViewController.m in Sources */,
 				8CD3D5741DAC89E200044ADB /* TestNews.m in Sources */,
 				8CD3D5471DABB3B500044ADB /* TestVideo.m in Sources */,
 				8C1925211DD5901600031BC5 /* SNArticleGroupImage.m in Sources */,
@@ -2517,6 +2574,7 @@
 				8C75489D1DDB09E500569DAE /* MLSphere.m in Sources */,
 				8C1923D81DD57DC300031BC5 /* UIView+WebCacheOperation.m in Sources */,
 				8CD3D59E1DAC8B9A00044ADB /* TestMessageView.m in Sources */,
+				600266ED1DFD07C900E1A6D2 /* YBPopupMenu.m in Sources */,
 				8CD3D4851DAA3ABD00044ADB /* UIImage+Crop.m in Sources */,
 				8C75489B1DDB09E500569DAE /* MLTransitionAnimation.m in Sources */,
 				8C1925371DD5901600031BC5 /* SNAttitudeParser.m in Sources */,

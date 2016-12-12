@@ -23,6 +23,7 @@ typedef enum : NSUInteger {
  *  显示大量数据的控件
  */
 @property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic,assign)BOOL isInfo;
 
 /**
  *  初始化init的时候设置tableView的样式才有效

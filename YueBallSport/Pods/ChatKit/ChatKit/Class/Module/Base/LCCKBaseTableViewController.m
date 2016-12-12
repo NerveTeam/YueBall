@@ -37,7 +37,14 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        CGRect tableViewFrame = self.view.bounds;
+        
+        CGRect tableViewFrame ;
+        if (!_isInfo) {
+             tableViewFrame = self.view.bounds;
+        }else{
+             tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-49);
+        }
+//        CGRect tableViewFrame = self.view.bounds;
         UITableView *tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:self.tableViewStyle];
         tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         tableView.backgroundColor = [UIColor clearColor];
