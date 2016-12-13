@@ -152,28 +152,17 @@
     [navView addSubview:rightBtn];
     [rightBtn addTarget:self action:@selector(addFunction:) forControlEvents:UIControlEventTouchUpInside];
     
-//    self.table = [[CCZTableButton alloc] initWithFrame:CGRectMake(CGRectGetMinX(rightBtn.frame)-100+23, CGRectGetMaxY(rightBtn.frame), 100, 0)];
-//    self.table.backgroundColor = [UIColor blackColor];
-//    self.table.offsetXOfArrow = 40;
-//    self.table.wannaToClickTempToDissmiss = NO;
-//    [self.table addItems:@[@"Objective-C",@"Swift",@"C++",@"C",@"Python",@"Javascript"]];
-//    [self.table selectedAtIndexHandle:^(NSUInteger index, NSString *itemName) {
-//        NSLog(@"%@",itemName);
-//    }];
     
 }
 #pragma mark -- 添加好友
 -(void)addFunction:(UIButton *)button{
     
 //    [self.table show];
-     [YBPopupMenu showRelyOnView:button titles:TITLES icons:ICONS menuWidth:120 delegate:self];
+     [YBPopupMenu showRelyOnView:button titles:TITLES icons:ICONS menuWidth:150 delegate:self];
     return;
     
     NSLog(@"添加好友");//针对于只添加 userId -> 业务逻辑： 添加好友完毕，会从新刷新联系人列表（从新获取联系人数据源）
    
-    
-    
-
 }
 #pragma mark - YBPopupMenuDelegate
 - (void)ybPopupMenuDidSelectedAtIndex:(NSInteger)index ybPopupMenu:(YBPopupMenu *)ybPopupMenu
@@ -516,7 +505,11 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
 //             [self lcck_hideHUDForView:fromViewController.view];
              if (conversation) {
                  
+                 self.navigationController.navigationBar.hidden = NO;
                  [self pushConversationViewController:conversation];
+                 
+                 //设置群头像
+                 [self lcck_exampleChangeGroupAvatarURLsForConversationId:conversation.conversationId shouldInsert:NO];
                  
 //                 [self lcck_showSuccess:@"创建成功"
 //                                 toView:fromViewController.view];
@@ -533,12 +526,54 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
              }
          }];
     }];
-//    UINavigationController *navigationViewController =
-//    [[UINavigationController alloc] initWithRootViewController:contactListViewController];
-//    [self presentViewController:contactListViewController animated:YES completion:nil];
-    [self.navigationController pushViewController:contactListViewController animated:YES];
-    contactListViewController.navigationController.navigationBar.hidden = NO;
+    UINavigationController *navigationViewController =
+    [[UINavigationController alloc] initWithRootViewController:contactListViewController];
+     navigationViewController.navigationController.navigationBar.hidden = NO;
+    [self presentViewController:navigationViewController animated:YES completion:nil];
+    
+//    [navigationViewController.navigationBar setBackgroundColor:YBMESSAGE_NavgationBarBackGroundColor];
+//    contactListViewController.navigationController.navigationBar.hidden = NO;
+//    [contactListViewController.navigationController.navigationBar setBackgroundColor:YBMESSAGE_NavgationBarBackGroundColor];
+    navigationViewController.title = @"创建群聊";
+    [navigationViewController.navigationBar setTranslucent:YES];
+    [navigationViewController.navigationBar setBarTintColor:YBMESSAGE_NavgationBarBackGroundColor];
+    [navigationViewController.navigationBar setTintColor:[UIColor whiteColor]];
+
 }
+#pragma mark -- 设置群头像
+- (void)lcck_exampleChangeGroupAvatarURLsForConversationId:(NSString *)conversationId
+                                              shouldInsert:(BOOL)shouldInsert {
+//    [self lcck_showMessage:@"正在设置群头像"];
+    [[LCCKConversationService sharedInstance]
+     fecthConversationWithConversationId:conversationId
+     callback:^(AVIMConversation *conversation, NSError *error) {
+         [conversation
+          lcck_setObject:
+          LCCKTestConversationGroupAvatarURLs[arc4random_uniform(
+                                                                 (int)LCCKTestConversationGroupAvatarURLs.count -
+                                                                 1)]
+          forKey:LCCKConversationGroupAvatarURLKey
+          callback:^(BOOL succeeded, NSError *error) {
+//              [self lcck_hideHUD];
+              if (succeeded) {
+//                  [self lcck_showSuccess:@"设置群头像成功"];
+                  if (shouldInsert) {
+                      [[LCChatKit sharedInstance]                   insertRecentConversation:conversation];
+                  }
+                  [[NSNotificationCenter defaultCenter]
+                   postNotificationName:
+                   LCCKNotificationConversationListDataSourceUpdated
+                   object:self];
+              } else {
+                  LCCKLog(@"系统对话请通过REST API修改，或者直接到控制台修改"
+                          @"APP端不支持直接修改");
+//                  [self lcck_showError:@"设置群头像失败"];
+              }
+          }];
+     }];
+}
+
+
 
 #pragma mark -- 进入地图界面
 -(void)setPreviewLocationMessage{

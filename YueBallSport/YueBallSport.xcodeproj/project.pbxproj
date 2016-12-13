@@ -22,6 +22,8 @@
 		6023D33B1DDEE67800E44B80 /* YBMessageUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023D33A1DDEE67800E44B80 /* YBMessageUser.m */; };
 		6023D33E1DDEEA8B00E44B80 /* YBMessageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023D33D1DDEEA8B00E44B80 /* YBMessageConfig.m */; };
 		602F18981DF158F0002893DF /* jiahao.png in Resources */ = {isa = PBXBuildFile; fileRef = 602F18971DF158F0002893DF /* jiahao.png */; };
+		602F913B1E00458B009C06E9 /* YBGroupChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602F913A1E00458B009C06E9 /* YBGroupChatDetailViewController.m */; };
+		602F913D1E0046C2009C06E9 /* groupscource.json in Resources */ = {isa = PBXBuildFile; fileRef = 602F913C1E0046C2009C06E9 /* groupscource.json */; };
 		604D345D1DE680E400940B49 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 604D345C1DE680E400940B49 /* LaunchScreen.strings */; };
 		604D34601DE68D2B00940B49 /* YBMessageMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604D345F1DE68D2B00940B49 /* YBMessageMapViewController.m */; };
 		60D11D941DF1165C00A01F7E /* scource.json in Resources */ = {isa = PBXBuildFile; fileRef = 60D11D931DF1165C00A01F7E /* scource.json */; };
@@ -315,6 +317,9 @@
 		6023D33C1DDEEA8B00E44B80 /* YBMessageConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageConfig.h; sourceTree = "<group>"; };
 		6023D33D1DDEEA8B00E44B80 /* YBMessageConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageConfig.m; sourceTree = "<group>"; };
 		602F18971DF158F0002893DF /* jiahao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiahao.png; sourceTree = "<group>"; };
+		602F91391E00458B009C06E9 /* YBGroupChatDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBGroupChatDetailViewController.h; sourceTree = "<group>"; };
+		602F913A1E00458B009C06E9 /* YBGroupChatDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBGroupChatDetailViewController.m; sourceTree = "<group>"; };
+		602F913C1E0046C2009C06E9 /* groupscource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = groupscource.json; sourceTree = "<group>"; };
 		604D345C1DE680E400940B49 /* LaunchScreen.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LaunchScreen.strings; sourceTree = "<group>"; };
 		604D345E1DE68D2B00940B49 /* YBMessageMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageMapViewController.h; sourceTree = "<group>"; };
 		604D345F1DE68D2B00940B49 /* YBMessageMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageMapViewController.m; sourceTree = "<group>"; };
@@ -1629,8 +1634,11 @@
 				60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */,
 				60D11D951DF135D100A01F7E /* YBMessageModel.h */,
 				60D11D961DF135D100A01F7E /* YBMessageModel.m */,
+				602F91391E00458B009C06E9 /* YBGroupChatDetailViewController.h */,
+				602F913A1E00458B009C06E9 /* YBGroupChatDetailViewController.m */,
 				604D345C1DE680E400940B49 /* LaunchScreen.strings */,
 				60D11D931DF1165C00A01F7E /* scource.json */,
+				602F913C1E0046C2009C06E9 /* groupscource.json */,
 				602F18971DF158F0002893DF /* jiahao.png */,
 			);
 			path = Message;
@@ -2261,6 +2269,7 @@
 				8C1923BF1DD57DC300031BC5 /* MJRefresh.bundle in Resources */,
 				8C75485C1DD9A4D800569DAE /* content_ic_comments@3x.png in Resources */,
 				8C1927061DD5925B00031BC5 /* js in Resources */,
+				602F913D1E0046C2009C06E9 /* groupscource.json in Resources */,
 				602F18981DF158F0002893DF /* jiahao.png in Resources */,
 				8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */,
 				8C1923A61DD57DC300031BC5 /* Info.plist in Resources */,
@@ -2352,6 +2361,7 @@
 				8CD3D43C1DAA3A4900044ADB /* UIProgressView+AFNetworking.m in Sources */,
 				8C70EC061DD88003009514EC /* YBFileHelper.m in Sources */,
 				8CD3D4571DAA3A5200044ADB /* YTKChainRequestAgent.m in Sources */,
+				602F913B1E00458B009C06E9 /* YBGroupChatDetailViewController.m in Sources */,
 				8C1925321DD5901600031BC5 /* SNArticleParser+Image.m in Sources */,
 				8C75489F1DDB09E500569DAE /* UIViewController+MLSegue.m in Sources */,
 				8CD3D45A1DAA3A5200044ADB /* YTKNetworkPrivate.m in Sources */,

@@ -1,0 +1,41 @@
+{
+    "status":0,
+    "member":[
+              {
+              "chatId":"1001",
+              "chatName" : "王园园",
+              "chatRemark":"王园园",
+              "chatIcon":"http://www.avatarsdb.com/avatars/tom_and_jerry2.jpg",
+              "chatSign":"相信自己一切皆有可能",
+              "chatArea":"北京海淀",
+              "sex"   : 1
+              },
+              {
+              "chatId":"1002",
+              "chatName" : "罗成瑶",
+              "chatRemark":"王园园",
+              "chatIcon":"http://www.avatarsdb.com/avatars/jerry.jpg",
+              "chatSign":"相信自己一切皆有可能",
+              "chatArea":"北京海淀",
+              "sex"   : 1,
+              },
+              {
+              "chatId":"1003",
+              "chatName" : "吴明磊",
+              "chatRemark":"王园园",
+              "chatIcon":"http://www.avatarsdb.com/avatars/young_harry.jpg",
+              "chatSign":"相信自己一切皆有可能",
+              "chatArea":"北京海淀",
+              "sex"   : 1
+              },
+              {
+              "chatId":"1004",
+              "chatName" : "韩森",
+              "chatRemark":"王园园",
+              "chatIcon":"http://www.avatarsdb.com/avatars/bath_bob.jpg",
+              "chatSign":"相信自己一切皆有可能",
+              "chatArea":"北京海淀",
+              "sex"   : 1
+              }
+              ]
+}
