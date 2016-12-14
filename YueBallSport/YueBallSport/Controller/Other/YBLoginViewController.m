@@ -9,6 +9,7 @@
 #import "YBLoginViewController.h"
 #import "UIView+TopBar.h"
 #import "MLTransition.h"
+#import "YBUserLogin.h"
 
 @interface YBLoginViewController ()
 @property(nonatomic,strong)UIView *topBar;
@@ -28,13 +29,30 @@
     [weibo addTarget:self action:@selector(weiboLogin) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:weibo];
     weibo.frame = CGRectMake(100, 100, 50, 50);
+    
+    UIButton *qq = [UIButton new];
+    [qq setTitle:@"QQ登录" forState:UIControlStateNormal];
+    [qq setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    qq.font = [UIFont systemFontOfSize:12];
+    qq.backgroundColor = [UIColor redColor];
+    [qq addTarget:self action:@selector(qqLogin) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:qq];
+    qq.frame = CGRectMake(100, 200, 50, 50);
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     self.spring = YES;
     [self dismissViewcontrollerAnimationType:UIViewAnimationTypeSlideOut completion:nil];
 }
 - (void)weiboLogin {
+    [[YBUserLogin getInstance]thirdLogin:ThirdPlatformTypeWeibo callBack:^(BOOL success, YBUser *user) {
+        
+    }];
+}
+
+- (void)qqLogin {
+[[YBUserLogin getInstance]thirdLogin:ThirdPlatformTypeQQ callBack:^(BOOL success, YBUser *user) {
     
+}];
 }
 - (void)setupUI {
     [self.view addSubview:self.topBar];
