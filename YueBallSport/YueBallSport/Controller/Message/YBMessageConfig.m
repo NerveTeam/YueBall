@@ -17,6 +17,7 @@
 
 #import "YBMessageModel.h"
 #import "MJExtension.h"
+#import "YBMessageViewController.h"
 //#import "LCCKLoginViewController.h"
 #if XCODE_VERSION_GREATER_THAN_OR_EQUAL_TO_8
 /// Notification become independent from UIKit
@@ -44,11 +45,20 @@ static NSString * const YBMessagesLeanCloudAPPKEY = @"niorDKoncl9M166yh9B3kRn7";
 #ifdef DEBUG
     [AVOSCloud setAllLogsEnabled:YES];
 #endif
+    
+   
 }
 
 //每次启用ChatKit 服务都需要调用
 +(void)ChatKitConfig{
+    
+    
     [LCChatKit setAppId:YBMessagesLeanCloudAPPID appKey:YBMessagesLeanCloudAPPKEY];
+    
+    [YBMessageConfig registerRemoteNotification];
+    //不配置要崩溃
+    [YBMessageConfig lcck_setFetchProfiles];
+    
     
 }
 
@@ -231,7 +241,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
             
             NSLog(@"clientId-  %@",clientId);
 
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"chatId like %@", clientId];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userId like %@", clientId];
             //这里的LCCKContactProfiles，LCCKProfileKeyPeerId都为事先的宏定义，
             
             
@@ -242,9 +252,9 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
             NSLog(@"searchedUsers-%@",searchedUsers);
             if (searchedUsers.count > 0) {
                 YBMessageModel *user = searchedUsers[0];
-                NSURL *avatarURL = [NSURL URLWithString:user.chatIcon];
-                YBMessageUser *user_ = [YBMessageUser userWithUserId:user.chatId
-                                                                name:user.chatName
+                NSURL *avatarURL = [NSURL URLWithString:user.headIcon];
+                YBMessageUser *user_ = [YBMessageUser userWithUserId:user.userId
+                                                                name:user.userName
                                                            avatarURL:avatarURL
                                                             clientId:clientId];
                 [users addObject:user_];
@@ -275,11 +285,9 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     [LCCKInputViewPluginPickImage registerSubclass];
     [LCCKInputViewPluginLocation registerSubclass];
     
-    
 }
 
 -(NSArray *)LCCKContactProfilesArr{
-    
     
     //获取文件路径
     NSString *filePath = [[NSBundle mainBundle]pathForResource:@"scource"ofType:@"json"];

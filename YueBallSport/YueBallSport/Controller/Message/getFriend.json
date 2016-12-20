@@ -1,0 +1,15 @@
+{
+    "status":0,
+    "member":[
+              {
+              "userId":"1009",
+              "userName" : "更二蛋",
+              "userNameRemark":"王园园",
+              "headIcon":"http://www.avatarsdb.com/avatars/tom_and_jerry2.jpg",
+              "userSign":"相信自己一切皆有可能",
+              "location":"北京海淀",
+              "sex"   : 1,
+              "chatIcon" : "http://www.avatarsdb.com/avatars/tom_and_jerry2.jpg"
+              }
+              ]
+}

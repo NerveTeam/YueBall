@@ -10,9 +10,9 @@
 
 @interface YBMessageModel : NSObject
 
-@property (nonatomic,copy)NSString * chatId;
-@property (nonatomic,copy)NSString * chatName;
+@property (nonatomic,copy)NSString * userId;
+@property (nonatomic,copy)NSString * userName;
 
-@property (nonatomic,copy)NSString * chatIcon;
+@property (nonatomic,copy)NSString * headIcon;
 
 @end

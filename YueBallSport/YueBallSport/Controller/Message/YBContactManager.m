@@ -47,8 +47,7 @@
             
             for (YBMessageModel * model in [config LCCKContactProfilesArr]) {
                 
-                 NSLog(@"profilesArr %@",model.chatId);
-                  [_contactIDs addObject:model.chatId];
+                  [_contactIDs addObject:model.userId];
             }
             
 //            for (NSArray *contacts in __LCCKContactsOfSections) {

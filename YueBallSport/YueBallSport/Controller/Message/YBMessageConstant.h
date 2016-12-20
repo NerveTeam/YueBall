@@ -29,7 +29,6 @@
 #define LCCKDeveloperPeerId @"571dae7375c4cd3379024b2f"
 
 #define YBMESSAGE_NavgationBarBackGroundColor [UIColor colorWithRed:72/255.0 green:187/255.0 blue:91/255.0 alpha:1.0f]
-#define RGBCOLOR(r, g, b) [UIColor colorWithRed : (r) / 255.0 green : (g) / 255.0 blue : (b) / 255.0 alpha : 1]
 
 #define NAVIGATION_COLOR_IMKIT RGBCOLOR(40, 130, 226)
 #define NAVIGATION_COLOR NAVIGATION_COLOR_IMKIT
