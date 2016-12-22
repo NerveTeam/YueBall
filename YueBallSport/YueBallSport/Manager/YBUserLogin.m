@@ -11,6 +11,10 @@
 #import "DataRequest.h"
 #import "NSFileManager+Utilities.h"
 #import <ShareSDK/ShareSDK.h>
+#import "NSDictionary+Safe.h"
+
+NSString *const UserLoginSuccess = @"UserLoginSuccess";
+NSString *const UserLoginError = @"UserLoginError";
 
 @interface YBUserLogin ()<DataRequestDelegate>
 @property(nonatomic, copy)thirdLoginBlock loginBlock;
@@ -45,6 +49,7 @@ static YBUserLogin *_instance;
              if (block) {
                  block(NO,nil);
              }
+             [self postNotification:NO];
          }
          
      }];
@@ -57,12 +62,12 @@ static YBUserLogin *_instance;
     _loginMode = UserLoginModeNone;
 }
 
-- (void)userLogin {
-
+- (void)userLogin:(NSString *)account password:(NSString *)pwd {
+    _loginMode = UserLoginModeThisPlatform;
+    
 }
 
 - (void)userMessageRegister {
-
 }
 
 - (BOOL)isLoginIn {
@@ -105,19 +110,50 @@ static YBUserLogin *_instance;
 - (void)requestFinished:(BaseDataRequest *)request {
     if ([request isKindOfClass:[ThirdLoginRequest class]]) {
         // 解析
-        if (_loginBlock) {
-            _loginBlock(YES,nil);
-        }
+        [self parseLogin:request.json];
     }
 }
 
 - (void)requestFailed:(BaseDataRequest *)request {
     if ([request isKindOfClass:[ThirdLoginRequest class]]) {
-        // 解析
-        
         if (_loginBlock) {
             _loginBlock(NO,nil);
         }
+        [self postNotification:NO];
+    }
+}
+
+// 解析
+- (void)parseLogin:(NSDictionary *)json {
+    NSDictionary *result = [json objectForKeyNotNull:@"result"];
+    NSDictionary *status = [result objectForKeyNotNull:@"status"];
+    NSInteger code = [[status objectForKeyNotNull:@"code"] longValue];
+    if (code) {
+        if (_loginBlock) {
+            _loginBlock(NO,nil);
+        }
+        [self postNotification:NO];
+    }
+    NSDictionary *data = [result objectForKeyNotNull:@"data"];
+    _userInfo = [YBUser mj_objectWithKeyValues:data];
+    [self saveUserInfo];
+    if (_loginBlock) {
+        _loginBlock(YES,self.userInfo);
+    }
+    [self postNotification:YES];
+    
+}
+- (void)postNotification:(BOOL)success {
+    if (success) {
+        if ([_delegate respondsToSelector:@selector(loginFinish:)]) {
+            [_delegate loginFinish:self.userInfo];
+        }
+        [[NSNotificationCenter defaultCenter]postNotificationName:UserLoginSuccess object:nil];
+    }else {
+        if ([_delegate respondsToSelector:@selector(loginError)]) {
+            [_delegate loginError];
+        }
+        [[NSNotificationCenter defaultCenter]postNotificationName:UserLoginError object:nil];
     }
 }
 @end

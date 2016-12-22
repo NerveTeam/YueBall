@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface YBUser : NSObject
+@interface YBUser : BaseModel
 @property(nonatomic, copy)NSString *name;
 @property(nonatomic, assign)NSInteger uid;
 @property(nonatomic, copy)NSString *icon;

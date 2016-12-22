@@ -13,6 +13,7 @@
 #import "YBMessageViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
+#import <SMS_SDK/SMSSDK.h>
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
@@ -134,6 +135,8 @@
                  break;
          }
      }];
+    
+    [SMSSDK registerApp:@"1a28be815e0f7" withSecret:@"3a1e3a48c99b869c705524b7fb0c5d05"];
 }
 
 // 全局配置

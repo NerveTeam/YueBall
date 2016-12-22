@@ -89,4 +89,17 @@
     CGImageRef imageRef = [context createCGImage:vignetteImage fromRect:(CGRect){CGPointZero, scaledSize}];
     return [UIImage imageWithCGImage:imageRef scale:[[UIScreen mainScreen] scale] orientation:UIImageOrientationUp];
 }
+- (UIImage *)scaleToSize:(CGSize)scaleSize {
+    // Create a graphics image context
+    UIGraphicsBeginImageContext(scaleSize);
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [self drawInRect:CGRectMake(0,0,scaleSize.width,scaleSize.height)];
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    // End the context
+    UIGraphicsEndImageContext();
+    // Return the new image.
+    return newImage;
+}
 @end

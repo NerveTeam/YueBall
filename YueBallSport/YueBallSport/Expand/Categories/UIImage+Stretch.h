@@ -42,6 +42,13 @@
  */
 + (UIImage *)compressImg:(UIImage *)img quality:(float)qly;
 /**
+ *  图片压缩至size大小
+ *
+ *
+ *  @return 新图片
+ */
+- (UIImage *)scaleToSize:(CGSize)scaleSize;
+/**
  *  图片虚化(常见于下拉放大虚化)
  *
  *  @param _image 当前对象

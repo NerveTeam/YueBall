@@ -95,7 +95,7 @@ static const NSString *domain = @"http://wu.she-cheng.com/thinkphp/";
 
 @implementation ThirdLoginRequest
 - (NSString *)requestUrl {
-    return [domain stringByAppendingString:@"user/login/third"];
+    return [domain stringByAppendingString:@"login/third"];
 }
 - (YTKRequestMethod)requestMethod {
     return YTKRequestMethodPOST;

@@ -25,9 +25,15 @@ typedef void(^thirdLoginBlock)(BOOL success, YBUser *user);
 
 @protocol YBUserLoginDelegate <NSObject>
 @optional
+// 用户登录成功
 - (void)loginFinish:(YBUser *)userInfo;
+// 用户登录失败
 - (void)loginError;
 @end
+// 用户登录成功通知
+extern NSString *const UserLoginSuccess;
+// 用户登录失败通知
+extern NSString *const UserLoginError;
 
 @interface YBUserLogin : NSObject
 /**
@@ -38,7 +44,10 @@ typedef void(^thirdLoginBlock)(BOOL success, YBUser *user);
  *  当前用户登录的方式
  */
 @property(nonatomic, assign, readonly)UserLoginMode loginMode;
-
+/**
+ *  登录代理
+ */
+@property(nonatomic, weak)id<YBUserLoginDelegate> delegate;
 + (instancetype)getInstance;
 /**
  *  第三方登录/注册
@@ -55,7 +64,7 @@ typedef void(^thirdLoginBlock)(BOOL success, YBUser *user);
 /**
  *  用户登录
  */
-- (void)userLogin;
+- (void)userLogin:(NSString *)account password:(NSString *)pwd;
 /**
  *  判断用户是否登录
  */
