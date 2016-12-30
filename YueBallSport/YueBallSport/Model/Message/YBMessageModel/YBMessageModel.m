@@ -10,7 +10,15 @@
 
 @implementation YBMessageModel
 
-
++ (YBMessageModel *) modelWithName:(NSString *)userName friendId:(NSString *)uid image:(NSString *)image{
+    
+    YBMessageModel *newDemoModel = [[self alloc]init];
+    newDemoModel.userName = userName;
+    newDemoModel.uid = uid;
+    newDemoModel.headIcon = image;
+    return newDemoModel;
+    
+}
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [super init];
     if (!self) {

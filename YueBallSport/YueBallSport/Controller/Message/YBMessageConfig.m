@@ -226,6 +226,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
                                         @"code":@(code),
                                         NSLocalizedDescriptionKey : errorReasonText,
                                         };
+            
             NSError *error = [NSError errorWithDomain:NSStringFromClass([self class])
                                                  code:code
                                              userInfo:errorInfo];
@@ -234,22 +235,32 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
             return;
         }
         
-        NSMutableArray *users = [NSMutableArray arrayWithCapacity:userIds.count];
+//        NSMutableArray *users = [NSMutableArray arrayWithCapacity:userIds.count];
 #warning 注意：以下方法循环模拟了通过 userIds 同步查询 users 信息的过程，这里需要替换为 App 的 API 同步查询
         //以下是设置用户体系
+        
+        //用户本身
+        YBMessageUser *user_ = [YBMessageUser userWithUserId:YBMessageUserId
+                                                        name:YBMessageUserId
+                                                   avatarURL:[NSURL URLWithString:@"http://www.avatarsdb.com/avatars/bath_bob.jpg"]
+                                                    clientId:YBMessageUserId];
+
+        NSMutableArray * users = [[NSMutableArray alloc]initWithObjects:user_, nil];
         
         [userIds enumerateObjectsUsingBlock:^(NSString *_Nonnull clientId, NSUInteger idx,
                                               BOOL *_Nonnull stop) {
             
             
+            //除去用户本身 ，其他 人的 配置信息
+            
             NSLog(@"clientId-  %@",clientId);
 
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uid like %@", clientId];
-            //这里的LCCKContactProfiles，LCCKProfileKeyPeerId都为事先的宏定义，
             
             
             YBMessageConfig * config = [[YBMessageConfig alloc]init];
             [config LCCKContactProfilesArr];
+            
             NSArray *searchedUsers = [[config LCCKContactProfilesArr] filteredArrayUsingPredicate:predicate];
             
             NSLog(@"searchedUsers-%@",searchedUsers);
@@ -260,6 +271,8 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
                                                                 name:user.userName
                                                            avatarURL:avatarURL
                                                             clientId:clientId];
+                
+        
                 [users addObject:user_];
             } else {
                 //注意：如果网络请求失败，请至少提供 ClientId！
@@ -293,54 +306,11 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 #pragma mark -- 获取好友列表 数组
 -(NSArray *)LCCKContactProfilesArr{
     
-//    NSDictionary * dict = @{
-//                            @"selfuid" : @"22"
-//                            };
-//    FriendListRequest * request = [FriendListRequest requestDataWithParameters:dict successBlock:^(YTKRequest *request) {
-//        
-//        NSLog(@"获取好友列表 数组 %@",request.responseString);
-//        
-//        NSString *status = [request.responseObject  objectForKeyNotNull:@"status"];
-//        if ([status isEqualToString:@"0"]) {
-//            NSMutableArray *data = [request.responseObject objectForKeyNotNull:@"msg"];
-//            NSArray *list = [YBMessageModel mj_objectArrayWithKeyValuesArray:data];
-//            
-//            self.friendListArray = [list mutableCopy];
-//            
-//            [YBMessageConfig lcck_setFetchProfiles];
-//        }
-//        
-//    } failureBlock:^(YTKRequest *request) {
-//        
-//    }];
-    
-   
-//    NSData *outputData = [[NSUserDefaults standardUserDefaults] objectForKey:@"YBMessageFriendList"];
-//    NSMutableArray *outputDict = [NSKeyedUnarchiver unarchiveObjectWithData:outputData];
-    //    NSLog(@"OA保存的字典 == %@", outputDict);
-    
-    
-//    //获取文件路径
-//    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"scource"ofType:@"json"];
-//    
-//    //根据文件路径读取数据
-//    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
-//    
-//    //格式化成json数据
-//    id jsonObject = [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingMutableContainers error:nil];
-//    
-////    NSString * s = [[NSString alloc]initWithData:jdata encoding:NSUTF8StringEncoding];
-//    
-//    
-//    NSArray * arr = [jsonObject objectForKey:@"member"];
-    
     
     YBContactManager * yb = [[YBContactManager alloc]init];
     [yb getFiledPathFriendList];
     [yb getArrary:[yb getFiledPathFriendList]];
     
- 
-
    
     return [yb getArrary:[yb getFiledPathFriendList]];
 

@@ -97,7 +97,7 @@
 {
     NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
     
-    [dict setSafeObject:@"22" forKey:@"muid"];
+    [dict setSafeObject:YBMessageUserId forKey:@"muid"];
     [dict setSafeObject:searchBar.text forKey:@"fuid"];
     
     NSLog(@"查询好友id    =%@",searchBar.text);

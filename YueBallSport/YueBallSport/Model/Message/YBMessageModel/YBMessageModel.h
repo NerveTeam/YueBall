@@ -15,4 +15,8 @@
 
 @property (nonatomic,copy)NSString * headIcon;
 
+
+
++ (YBMessageModel *) modelWithName:(NSString *)userName friendId:(NSString *)uid image:(NSString *)image;
+
 @end

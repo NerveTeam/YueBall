@@ -60,48 +60,43 @@
     [[LCChatKit sharedInstance] openWithClientId:@"21"
                                         callback:^(BOOL succeeded, NSError *error) {
                                             if (succeeded) {
-                                                
-                              
-                                                    NSDictionary * dict = @{
-                                                                            @"selfuid" : YBMessageUserId
-                                                                            };
-                                                     [FriendListRequest requestDataWithParameters:dict successBlock:^(YTKRequest *request) {
-                                                
-                                                        DLog(@"获取好友列表 数组 %@",request.responseString);
-                                                
-                                                        NSString *status = [request.responseObject  objectForKeyNotNull:@"status"];
-                                                        if ([status isEqualToString:@"0"]) {
-                                                            NSMutableArray *data = [request.responseObject objectForKeyNotNull:@"msg"];
-                                                            NSArray *list = [YBMessageModel mj_objectArrayWithKeyValuesArray:data];
-                                                            
 
-                                                            
-                                                           //把获取到的好友列表 数据 存储到本地
-                                                            YBContactManager * yb =[YBContactManager defaultManager];
-                                                            
-                                                            [yb delegateFile:[yb getFiledPathFriendList]];
-                                                            
-                                                            [yb wirte:list writeTo:[yb getFiledPathFriendList]];
-                                                            
-                                                            [YBMessageConfig lcck_setFetchProfiles];
-                                                            
-//配置 联系人列表  信息-- 当第一次没有好友的时候，不会执行，所以在添加好友的时候 初始化 联系人列表；**********
-                                                            [self setContactListViewController];
-                                                            
-                                                            //此操作是说明，当_segmentedCtrol.selectedSegmentIndex == 1；且数据还没 收到的时候，重新刷新下联系人列表
-                                                            if (_segmentedCtrol.selectedSegmentIndex == 1) {
-                                                                 [self segmentedClick:_segmentedCtrol];
-                                                            }
-                                                        }
+                                                NSDictionary * dict = @{
+                                                                        @"selfuid" : YBMessageUserId
+                                                                        };
+                                                [FriendListRequest requestDataWithParameters:dict successBlock:^(YTKRequest *request) {
+                                                    
+                                                    DLog(@"获取好友列表 数组 %@",request.responseString);
+                                                    
+                                                    NSString *status = [request.responseObject  objectForKeyNotNull:@"status"];
+                                                    if ([status isEqualToString:@"0"]) {
+                                                        NSMutableArray *data = [request.responseObject objectForKeyNotNull:@"msg"];
+                                                        NSArray *list = [YBMessageModel mj_objectArrayWithKeyValuesArray:data];
                                                         
-                                                    } failureBlock:^(YTKRequest *request) {
-                                                        DLog(@"获取好友列表 数组 失败=%@",request.error);
-                                                    }];
-
+                                                        
+                                                        //把获取到的好友列表 数据 存储到本地
+                                                        YBContactManager * yb =[YBContactManager defaultManager];
+                                                        
+                                                        [yb delegateFile:[yb getFiledPathFriendList]];
+                                                        
+                                                        [yb wirte:list writeTo:[yb getFiledPathFriendList]];
+                                                        
+                                                        [YBMessageConfig lcck_setFetchProfiles];
+                                                        
+                                                        //配置 联系人列表  信息-- 当第一次没有好友的时候，不会执行，所以在添加好友的时候 初始化 联系人列表；**********
+                                                        [self setContactListViewController];
+                                                        
+                                                        //此操作是说明，当_segmentedCtrol.selectedSegmentIndex == 1；且数据还没 收到的时候，重新刷新下联系人列表
+                                                        if (_segmentedCtrol.selectedSegmentIndex == 1) {
+                                                            [self segmentedClick:_segmentedCtrol];
+                                                        }
+                                                    }
+                                                    
+                                                } failureBlock:^(YTKRequest *request) {
+                                                    DLog(@"获取好友列表 数组 失败=%@",request.error);
+                                                }];
                                                 
-                                                
-                                               
-                                                
+  
                                             } else {
                                                 //展示 登录失败
                                             }
@@ -111,9 +106,16 @@
     
     [self initSubViews];
 }
+
+-(void)getFriendsSource{
+    
+  
+}
+
+
 #pragma mark -- 切换SegmentedControl
 -(void)segmentedClick:(UISegmentedControl *)segment{
-        
+    
     for (UIView * view in self.contactView.subviews) {
         [view removeFromSuperview];
     }
