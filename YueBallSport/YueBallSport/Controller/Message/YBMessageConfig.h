@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface YBMessageConfig : NSObject
+@property (nonatomic,strong)NSMutableArray * friendListArray;
 
 /**
  LeanCloud 配置的相关信息

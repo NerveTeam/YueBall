@@ -13,7 +13,7 @@
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{
              @"friendName": @"userName",
-             @"friendId": @"userId" ,
+             @"friendId": @"uid" ,
              @"headIcon":@"headIcon",
              @"groupName" : @"groupName",
              @"chatIcon" : @"chatIcon",

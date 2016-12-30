@@ -20,6 +20,8 @@
 #import "DemoModel.h"
 @interface YBMessageViewController : YBBaseViewController
 
+@property (nonatomic,strong)UISegmentedControl * segmentedCtrol;
+
 @property (strong, nonatomic) DataManager *dataManager;
 @property (nonatomic,strong)NSMutableArray * allPersonIds;
 

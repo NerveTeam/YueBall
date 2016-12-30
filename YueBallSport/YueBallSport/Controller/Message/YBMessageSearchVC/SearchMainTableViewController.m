@@ -10,6 +10,9 @@
 #import "SearchResultTableViewController.h"
 #import "DemoModel.h"
 #import "DemoCell.h"
+#import "DataRequest.h"
+#import "NSDictionary+Safe.h"
+#import "MJExtension.h"
 
 @interface SearchMainTableViewController ()<UISearchBarDelegate,UISearchControllerDelegate,UISearchResultsUpdating>
 
@@ -22,7 +25,7 @@
 @property BOOL searchControllerWasActive;
 @property BOOL searchControllerSearchFieldWasFirstResponder;
 
-@property (nonatomic, strong) NSArray *models;
+@property (nonatomic, strong) NSMutableArray *models;
 
 @end
 
@@ -31,6 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.models = [[NSMutableArray alloc]init];;
     
     self.title = @"添加好友";
     // Uncomment the following line to preserve selection between presentations.
@@ -87,11 +92,45 @@
     return YES;
 }
 
+#pragma mark -- 点击搜索时，查询用户
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar                    // called when keyboard search button pressed
 {
-    self.models =  [[DataManager alloc]init].queryFriendArray;
+    NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
     
-    [self updateArray:searchBar.text];
+    [dict setSafeObject:@"22" forKey:@"muid"];
+    [dict setSafeObject:searchBar.text forKey:@"fuid"];
+    
+    NSLog(@"查询好友id    =%@",searchBar.text);
+   
+    [dict setSafeObject:@"0" forKey:@"actionType"];
+    
+    AddFriendRequest * request = [AddFriendRequest requestDataWithParameters:dict successBlock:^(YTKRequest *request) {
+        
+        NSLog(@"查询好友json    =%@",request.responseString);
+        NSString * status = [request.responseObject objectForKeyNotNull:@"status"];
+        if ([status isEqualToString:@"0"]) {
+            
+            [self.models removeAllObjects];
+            DemoModel * model = [DemoModel mj_objectWithKeyValues:[request.responseObject objectForKeyNotNull:@"msg"]];
+            
+            [self.models addObject:model];
+//            self.models =  [[DataManager alloc]init].queryFriendArray;
+//            [self updateArray:searchBar.text];
+            
+            
+            SearchResultTableViewController *tableController = (SearchResultTableViewController *)self.searchController.searchResultsController;
+            tableController.filteredModels = self.models;
+            [tableController.tableView reloadData];
+
+        }
+        
+    } failureBlock:^(YTKRequest *request) {
+        
+        NSLog(@"查询好友失败    =%@",request.error);
+        
+    }];
+    
+   
 }
 - (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar                   // called when bookmark button pressed
 {

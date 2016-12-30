@@ -18,6 +18,9 @@
 #import "YBMessageModel.h"
 #import "MJExtension.h"
 #import "YBMessageViewController.h"
+#import "DataRequest.h"
+#import "NSDictionary+Safe.h"
+#import "YBContactManager.h"
 //#import "LCCKLoginViewController.h"
 #if XCODE_VERSION_GREATER_THAN_OR_EQUAL_TO_8
 /// Notification become independent from UIKit
@@ -241,7 +244,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
             
             NSLog(@"clientId-  %@",clientId);
 
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userId like %@", clientId];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uid like %@", clientId];
             //这里的LCCKContactProfiles，LCCKProfileKeyPeerId都为事先的宏定义，
             
             
@@ -253,7 +256,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
             if (searchedUsers.count > 0) {
                 YBMessageModel *user = searchedUsers[0];
                 NSURL *avatarURL = [NSURL URLWithString:user.headIcon];
-                YBMessageUser *user_ = [YBMessageUser userWithUserId:user.userId
+                YBMessageUser *user_ = [YBMessageUser userWithUserId:user.uid
                                                                 name:user.userName
                                                            avatarURL:avatarURL
                                                             clientId:clientId];
@@ -287,26 +290,59 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
 }
 
+#pragma mark -- 获取好友列表 数组
 -(NSArray *)LCCKContactProfilesArr{
     
-    //获取文件路径
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"scource"ofType:@"json"];
-    
-    //根据文件路径读取数据
-    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
-    
-    //格式化成json数据
-    id jsonObject = [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingMutableContainers error:nil];
-    
-//    NSString * s = [[NSString alloc]initWithData:jdata encoding:NSUTF8StringEncoding];
-    
-    
-    NSArray * arr = [jsonObject objectForKey:@"member"];
- 
-    NSArray * modelArr = [YBMessageModel mj_objectArrayWithKeyValuesArray:arr];
+//    NSDictionary * dict = @{
+//                            @"selfuid" : @"22"
+//                            };
+//    FriendListRequest * request = [FriendListRequest requestDataWithParameters:dict successBlock:^(YTKRequest *request) {
+//        
+//        NSLog(@"获取好友列表 数组 %@",request.responseString);
+//        
+//        NSString *status = [request.responseObject  objectForKeyNotNull:@"status"];
+//        if ([status isEqualToString:@"0"]) {
+//            NSMutableArray *data = [request.responseObject objectForKeyNotNull:@"msg"];
+//            NSArray *list = [YBMessageModel mj_objectArrayWithKeyValuesArray:data];
+//            
+//            self.friendListArray = [list mutableCopy];
+//            
+//            [YBMessageConfig lcck_setFetchProfiles];
+//        }
+//        
+//    } failureBlock:^(YTKRequest *request) {
+//        
+//    }];
     
    
-    return modelArr;
+//    NSData *outputData = [[NSUserDefaults standardUserDefaults] objectForKey:@"YBMessageFriendList"];
+//    NSMutableArray *outputDict = [NSKeyedUnarchiver unarchiveObjectWithData:outputData];
+    //    NSLog(@"OA保存的字典 == %@", outputDict);
+    
+    
+//    //获取文件路径
+//    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"scource"ofType:@"json"];
+//    
+//    //根据文件路径读取数据
+//    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
+//    
+//    //格式化成json数据
+//    id jsonObject = [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingMutableContainers error:nil];
+//    
+////    NSString * s = [[NSString alloc]initWithData:jdata encoding:NSUTF8StringEncoding];
+//    
+//    
+//    NSArray * arr = [jsonObject objectForKey:@"member"];
+    
+    
+    YBContactManager * yb = [[YBContactManager alloc]init];
+    [yb getFiledPathFriendList];
+    [yb getArrary:[yb getFiledPathFriendList]];
+    
+ 
+
+   
+    return [yb getArrary:[yb getFiledPathFriendList]];
 
 }
 

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YBMessageModel : NSObject
+@interface YBMessageModel : NSObject<NSCoding>
 
-@property (nonatomic,copy)NSString * userId;
+@property (nonatomic,copy)NSString * uid;
 @property (nonatomic,copy)NSString * userName;
 
 @property (nonatomic,copy)NSString * headIcon;

@@ -27,3 +27,22 @@
 @interface ReplayCommentRequest : BaseDataRequest
 
 @end
+//获取好友列表
+@interface FriendListRequest : BaseDataRequest
+
+@end
+
+//查询用户->添加好友->删除好友
+@interface AddFriendRequest : BaseDataRequest
+
+@end
+//创建群聊把群聊ID加入数据库
+@interface AddChatIdRequest : BaseDataRequest
+
+@end
+//获取群聊详情(群聊好友列表)
+@interface ChatGroupDetailRequest : BaseDataRequest
+
+@property (nonatomic,copy)NSString * urlStr;
+
+@end

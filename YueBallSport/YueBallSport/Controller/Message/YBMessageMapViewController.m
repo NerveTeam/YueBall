@@ -55,7 +55,7 @@
     
     
     if (![CLLocationManager locationServicesEnabled]) {
-        NSLog(@"定位服务当前可能尚未打开，请设置打开！");
+        DLog(@"定位服务当前可能尚未打开，请设置打开！");
         
     }
     

@@ -11,4 +11,5 @@
 @interface YBNewDetailViewController : YBBaseDetailViewController
 @property(nonatomic, assign)NSInteger channelId; // 频道id
 @property(nonatomic, copy)NSString *channelName;
+
 @end

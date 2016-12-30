@@ -8,7 +8,8 @@
 
 #import "YBMessageViewController+setting.h"
 #import "YBMessageViewController.h"
-
+#import "DataRequest.h"
+#import "NSDictionary+Safe.h"
 
 @implementation YBMessageViewController (setting)
 
@@ -25,6 +26,8 @@
     [[LCChatKit sharedInstance] setConversationEditActionBlock:^NSArray *(
                                                                           NSIndexPath *indexPath, NSArray<UITableViewRowAction *> *editActions,
                                                                           AVIMConversation *conversation, LCCKConversationListViewController *controller) {
+        
+        
         return [self lcck_exampleConversationEditActionAtIndexPath:indexPath
                                                       conversation:conversation
                                                         controller:controller];
@@ -46,6 +49,7 @@
     return [self lcck_rightButtonsAtIndexPath:indexPath conversation:conversation controller:controller];
 }
 
+#pragma mark -- 删除某个最近联系人的会话
 - (NSArray *)lcck_rightButtonsAtIndexPath:(NSIndexPath *)indexPath
                              conversation:(AVIMConversation *)conversation
                                controller:(LCCKConversationListViewController *)controller {
@@ -112,7 +116,7 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
 
 
 
-#pragma mark - 聊天页面的设置
+#pragma mark - 聊天页面的设置 -> 打开一个会话的操作 进入群聊详情页面
 /**
  *  打开一个会话的操作
  */
@@ -130,7 +134,11 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
                                                           action:^(UIBarButtonItem *sender, UIEvent *event) {
                                                               NSString *title = @"打开群聊详情";
                                                               NSString *subTitle = [NSString stringWithFormat:@"群聊id：%@", conversation.conversationId];
+                                                              
+                                                              
+                                                              
                                                               YBGroupChatDetailViewController * vc = [[YBGroupChatDetailViewController alloc]init];
+                                                              vc.groupConversation = conversation;
                                                               [self.navigationController pushViewController:vc animated:YES];
                                                           }];
         } else if (conversation.members.count == 2) { //设置点击rightButton为单聊的Style,和对应事件
@@ -243,7 +251,9 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
 }
 
 #pragma mark -- 创建群聊
+#pragma mark -- 创建群聊把群聊ID加入数据库接口
 -(void)exampleCreateGroupConversationFromViewController:(UIViewController *)fromViewController {
+    
     // FIXME: add more to allPersonIds
     NSArray *allPersonIds = [[YBContactManager defaultManager] fetchContactPeerIds];
     NSArray *users = [[LCChatKit sharedInstance] getCachedProfilesIfExists:allPersonIds
@@ -271,24 +281,48 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
              //             [self lcck_hideHUDForView:fromViewController.view];
              if (conversation) {
                  
-                 self.navigationController.navigationBar.hidden = NO;
-                 [self pushConversationViewController:conversation];
+                
+                 NSString * chatIcon = LCCKTestConversationGroupAvatarURLs[arc4random_uniform(
+                                                                                (int)LCCKTestConversationGroupAvatarURLs.count -
+                                                                                1)];
+                 //插入数据库chat表 ---插入的conversation.conversationId     为群聊ID
                  
-                 //设置群头像
-                 [self lcck_exampleChangeGroupAvatarURLsForConversationId:conversation.conversationId shouldInsert:NO];
+                 NSMutableArray * arr = [NSMutableArray arrayWithObject:currentClientID];
+                 //把当前用户的id 也加入到创建群聊成员id  中，传给后台服务器
+                 [arr addObjectsFromArray:peerIds];
                  
-                 //                 [self lcck_showSuccess:@"创建成功"
-                 //                                 toView:fromViewController.view];
-                 //                 [self
-                 //                  exampleOpenConversationViewControllerWithConversaionId:
-                 //                  conversation.conversationId
-                 //                  fromNavigationController:
-                 //                  viewController
-                 //                  .navigationController];
+                 
+                 NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
+                 
+                 [dict setSafeObject:conversation.conversationId forKey:@"chatId"];
+                 [dict setSafeObject:chatIcon forKey:@"chatIcon"];
+                 [dict setSafeObject:peerIds forKey:@"member"];
+                 [dict setSafeObject:@"0" forKey:@"actionType"];
+                 
+                 DLog(@"传入参数----+ %@",dict);
+                [AddChatIdRequest requestDataWithParameters:dict successBlock:^(YTKRequest *request) {
+                     
+                     DLog(@"插入数据库chat表--+ %@",request.responseString);
+                     
+                     NSString *status = [request.responseObject  objectForKeyNotNull:@"status"];
+                     if ([status isEqualToString:@"0"]) {
+                         
+                         self.navigationController.navigationBar.hidden = NO;
+                         [self pushConversationViewController:conversation];
+                         
+                         self.segmentedCtrol.selectedSegmentIndex = 0;
+                         //设置群头像
+                         [self lcck_exampleChangeGroupAvatarURLsForConversationId:conversation.conversationId inertChatIcon:chatIcon shouldInsert:NO];
+                     }
+                     
+                 } failureBlock:^(YTKRequest *request) {
+                     DLog(@"传入参数----+ %@",request.error);
+                 }];
+                 
+                
              } else {
-                 NSLog(@"创建失败");
-                 //                 [self lcck_showError:@"创建失败"
-                 //                               toView:fromViewController.view];
+                 DLog(@"创建失败");
+                 
              }
          }];
     }];
@@ -297,9 +331,6 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
     navigationViewController.navigationController.navigationBar.hidden = NO;
     [self presentViewController:navigationViewController animated:YES completion:nil];
     
-    //    [navigationViewController.navigationBar setBackgroundColor:YBMESSAGE_NavgationBarBackGroundColor];
-    //    contactListViewController.navigationController.navigationBar.hidden = NO;
-    //    [contactListViewController.navigationController.navigationBar setBackgroundColor:YBMESSAGE_NavgationBarBackGroundColor];
     navigationViewController.title = @"创建群聊";
     [navigationViewController.navigationBar setTranslucent:YES];
     [navigationViewController.navigationBar setBarTintColor:YBMESSAGE_NavgationBarBackGroundColor];
@@ -308,16 +339,14 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
 }
 #pragma mark -- 设置群头像
 - (void)lcck_exampleChangeGroupAvatarURLsForConversationId:(NSString *)conversationId
-                                              shouldInsert:(BOOL)shouldInsert {
+                                             inertChatIcon:(NSString *)chatIcon shouldInsert:(BOOL)shouldInsert {
     //    [self lcck_showMessage:@"正在设置群头像"];
     [[LCCKConversationService sharedInstance]
      fecthConversationWithConversationId:conversationId
      callback:^(AVIMConversation *conversation, NSError *error) {
          [conversation
           lcck_setObject:
-          LCCKTestConversationGroupAvatarURLs[arc4random_uniform(
-                                                                 (int)LCCKTestConversationGroupAvatarURLs.count -
-                                                                 1)]
+         chatIcon
           forKey:LCCKConversationGroupAvatarURLKey
           callback:^(BOOL succeeded, NSError *error) {
               //              [self lcck_hideHUD];
@@ -344,7 +373,7 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
     
     __weak __typeof(self) weakSelf = self;
     [[LCChatKit sharedInstance]setPreviewLocationMessageBlock:^(CLLocation *location, NSString *geolocations, NSDictionary *userInfo) {
-        NSLog(@"geolocations---%@ \n  userInfo-%@",geolocations,userInfo);
+        DLog(@"geolocations---%@ \n  userInfo-%@",geolocations,userInfo);
         YBMessageMapViewController * locationVC = [[YBMessageMapViewController alloc]initWithLocation:location];
         locationVC.subtitle = geolocations;
         [weakSelf.navigationController pushViewController:locationVC animated:YES];

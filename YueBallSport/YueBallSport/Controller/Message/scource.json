@@ -2,7 +2,7 @@
     "status":0,
     "member":[
               {
-              "userId":"1001",
+              "uid":"1001",
               "userName" : "王园园",
               "userRemark":"王园园",
               "headIcon":"http://www.avatarsdb.com/avatars/tom_and_jerry2.jpg",
@@ -11,7 +11,7 @@
               "sex"   : 1
               },
               {
-              "userId":"1002",
+              "uid":"1002",
               "userName" : "罗成瑶",
               "userRemark":"王园园",
               "headIcon":"http://www.avatarsdb.com/avatars/jerry.jpg",
@@ -20,7 +20,7 @@
               "sex"   : 1,
               },
               {
-              "userId":"1003",
+              "uid":"1003",
               "userName" : "吴明磊",
               "userRemark":"王园园",
               "headIcon":"http://www.avatarsdb.com/avatars/young_harry.jpg",
@@ -29,7 +29,7 @@
               "sex"   : 1
               },
               {
-              "userId":"1004",
+              "uid":"1004",
               "userName" : "韩森",
               "userRemark":"王园园",
               "headIcon":"http://www.avatarsdb.com/avatars/bath_bob.jpg",

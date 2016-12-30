@@ -20,7 +20,11 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M1Y-34-SHE"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M1Y-34-SHE">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="77" id="KZb-Zc-adx"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>

@@ -9,12 +9,22 @@
 #import <Foundation/Foundation.h>
 
 @interface YBContactManager : NSObject
+@property (strong, nonatomic) NSMutableArray *contactIDs;
 
 + (instancetype)defaultManager;
+
+
+- (NSString *)storeFilePath;
 
 - (NSArray *)fetchContactPeerIds;
 - (BOOL)existContactForPeerId:(NSString *)peerId;
 - (BOOL)addContactForPeerId:(NSString *)peerId;
 - (BOOL)removeContactForPeerId:(NSString *)peerId;
+
+
+-(NSString *)getFiledPathFriendList;
+-(void)delegateFile:(NSString *)filePath;
+-(void)wirte:(NSArray *)resultDic writeTo:(NSString *)file;
+-(NSArray *)getArrary:(NSString *)filePath;
 
 @end

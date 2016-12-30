@@ -19,7 +19,7 @@
 #import "MJExtension.h"
 @interface YBContactManager ()
 
-@property (strong, nonatomic) NSMutableArray *contactIDs;
+//@property (strong, nonatomic) NSMutableArray *contactIDs;
 
 @end
 
@@ -41,13 +41,13 @@
     if (!_contactIDs) {
         _contactIDs = [NSMutableArray arrayWithContentsOfFile:[self storeFilePath]];
         if (!_contactIDs) {
-            _contactIDs = [NSMutableArray array];
+            _contactIDs = [[NSMutableArray alloc]init];
             
             YBMessageConfig * config = [[YBMessageConfig alloc]init];
             
             for (YBMessageModel * model in [config LCCKContactProfilesArr]) {
                 
-                  [_contactIDs addObject:model.userId];
+                  [_contactIDs addObject:model.uid];
             }
             
 //            for (NSArray *contacts in __LCCKContactsOfSections) {
@@ -100,5 +100,68 @@
     NSString* path = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:fileName];
     return path;
 }
+
+
+-(NSString *)getFiledPathFriendList{
+    NSString * filePath = [NSHomeDirectory() stringByAppendingString:@"/Documents/friendList.text"];
+    
+    return filePath;
+}
+
+-(void)delegateFile:(NSString *)filePath
+{
+    NSFileManager * manager = [NSFileManager defaultManager];
+    NSError * error = nil;
+    BOOL isRemove = [manager removeItemAtPath:filePath error:&error];
+    if (isRemove==YES) {
+        
+        NSLog(@"删除文件成功");
+    }else {
+        NSLog(@"删除失败-----%@",error);
+    }
+}
+-(void)wirte:(NSArray *)resultDic writeTo:(NSString *)file{
+    
+    BOOL isExists1 = [[NSFileManager defaultManager] fileExistsAtPath:file];
+    if (isExists1 == NO) {
+        // 返回值类型,创建成功返回YES,创建失败返回NO
+        // 可以根据error看到错误原因
+        
+        // 可变的数据对象
+        NSMutableData * pData = [[NSMutableData alloc]init];
+        // 编码器
+        NSKeyedArchiver * archiver  = [[NSKeyedArchiver alloc]initForWritingWithMutableData:pData];
+        // 编码
+        //    [archiver encodeObject:array forKey:@"ARRAY"];
+        [archiver encodeObject:resultDic forKey:@"friendlist"];
+        // 编码结束的方法
+        [archiver finishEncoding];
+        // 这时候,pData已经有内容了,可以进行存储
+        [pData writeToFile:file atomically:YES];
+    }
+
+}
+
+-(NSArray *)getArrary:(NSString *)filePath
+{
+    // 根据文件路径创建一个NSData
+    NSData * pData = [[NSData alloc]initWithContentsOfFile:filePath];
+    
+    // 解码器
+    // 把要解码的data传进去
+    NSKeyedUnarchiver * unarchiver = [[NSKeyedUnarchiver alloc]initForReadingWithData:pData];
+    // 解码调用方法
+    // 解码后得到一个对象,对象类型为编码时的类型
+    //    for (int i=0; i<resultDic.count; i++) {
+    //
+    //        [archiver encodeObject:resultDic[i] forKey:[NSString stringWithFormat:@"%d",i]];
+    //    }
+    NSArray * arr= [unarchiver decodeObjectForKey:@"friendlist"];
+    
+    
+    return arr;
+}
+
+
 
 @end

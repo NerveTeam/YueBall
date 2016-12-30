@@ -90,3 +90,85 @@
 }
 
 @end
+
+
+@implementation FriendListRequest
+- (NSString *)requestUrl {
+    return @"http://wu.she-cheng.com/thinkphp/Message/friendList";
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+
+@implementation AddFriendRequest
+- (NSString *)requestUrl {
+    return @"http://wu.she-cheng.com/thinkphp/Message/addfriend";
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+
+@implementation AddChatIdRequest
+- (NSString *)requestUrl {
+    return @"http://wu.she-cheng.com/thinkphp/Message/addChatId";
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+
+//-(YTKRequestSerializerType *)
+
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+@implementation ChatGroupDetailRequest
+- (NSString *)requestUrl {
+    return @"http://wu.she-cheng.com/thinkphp/Message/addChatId";
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+
+
+@end
+
+
+
+
+
+
+
+
+
+

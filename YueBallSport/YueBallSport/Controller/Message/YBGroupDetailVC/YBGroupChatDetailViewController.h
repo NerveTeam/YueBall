@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AVOSCloudIM/AVOSCloudIM.h>
 @interface YBGroupChatDetailViewController : UIViewController
-
+@property (nonatomic,strong)AVIMConversation * groupConversation;
 @end

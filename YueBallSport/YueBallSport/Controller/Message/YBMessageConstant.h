@@ -23,12 +23,14 @@
 #import "YBMessageConstant.h"
 
 
-#define LCCKProfileKeyPeerId        @"chatId"
-#define LCCKProfileKeyName          @"chatName"
-#define LCCKProfileKeyAvatarURL     @"chatIcon"
+#define YBMessageUserId  [[LCChatKit sharedInstance] clientId]
+
+#define LCCKProfileKeyPeerId        @"uid"
+#define LCCKProfileKeyName          @"userName"
+#define LCCKProfileKeyAvatarURL     @"headIcon"
 #define LCCKDeveloperPeerId @"571dae7375c4cd3379024b2f"
 
-#define YBMESSAGE_NavgationBarBackGroundColor [UIColor colorWithRed:72/255.0 green:187/255.0 blue:91/255.0 alpha:1.0f]
+#define YBMESSAGE_NavgationBarBackGroundColor RGBACOLOR(4, 147, 71, 1) // [UIColor colorWithRed:72/255.0 green:187/255.0 blue:91/255.0 alpha:1.0f]
 
 #define NAVIGATION_COLOR_IMKIT RGBCOLOR(40, 130, 226)
 #define NAVIGATION_COLOR NAVIGATION_COLOR_IMKIT
