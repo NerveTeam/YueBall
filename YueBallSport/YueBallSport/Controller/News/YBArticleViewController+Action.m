@@ -36,7 +36,7 @@ static const NSString *albumViewControllerKey = @"albumViewController";
 }
 - (void)sn_requestCallback:(NSDictionary *)userInfo {
     self.spring = YES;
-    [self presentViewcontroller:[[YBLoginViewController alloc]init] animationType:UIViewAnimationTypeFall completion:nil];
+    [self pushViewcontroller:[[YBLoginViewController alloc]init] animationType:UIViewAnimationTypeFall];
 }
 
 - (YBAlbumViewController *)albumViewController {

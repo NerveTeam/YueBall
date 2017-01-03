@@ -12,7 +12,7 @@
 #import <objc/runtime.h>
 
 @interface UIView ()
-@property(nonatomic, strong)UIViewController *target;
+@property(nonatomic, weak)UIViewController *target;
 @end
 
 static const char *targetKey = "target";
@@ -27,7 +27,7 @@ static const char *targetKey = "target";
                      responseTarget:(UIViewController *)target {
     
     self.target = target;
-    self.backgroundColor = tintColor ? tintColor : TintColor;
+    self.backgroundColor = tintColor ? tintColor : ThemeColor;
     UILabel *titleLabel = [UILabel labelWithText:title fontSize:19 textColor:titleColor];
     [self addSubview:titleLabel];
     titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -67,7 +67,7 @@ static const char *targetKey = "target";
 }
 
 - (void)setTarget:(UIViewController *)target {
-    objc_setAssociatedObject(self, targetKey, target, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, targetKey, target, OBJC_ASSOCIATION_ASSIGN);
 }
 - (UIViewController *)target {
     

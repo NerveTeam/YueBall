@@ -32,6 +32,22 @@
 
 @end
 
+@interface PlatformLoginRequest : BaseDataRequest
+
+@end
+
+@interface PlatformRegisterRequest : BaseDataRequest
+
+@end
+
+@interface ModifyPasswordRequest : BaseDataRequest
+
+@end
+
+@interface UserRegisterStatusRequest : BaseDataRequest
+
+@end
+
 //获取好友列表
 @interface FriendListRequest : BaseDataRequest
 

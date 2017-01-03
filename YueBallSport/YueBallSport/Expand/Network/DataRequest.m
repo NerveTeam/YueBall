@@ -109,6 +109,69 @@ static const NSString *domain = @"http://wu.she-cheng.com/thinkphp/";
 
 @end
 
+@implementation PlatformLoginRequest
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"login/platform"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+@implementation PlatformRegisterRequest
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"login/register"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+@implementation ModifyPasswordRequest
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"login/reset_password"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+@implementation UserRegisterStatusRequest
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"login/status"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodGET;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
 
 @implementation FriendListRequest
 - (NSString *)requestUrl {
@@ -177,16 +240,4 @@ static const NSString *domain = @"http://wu.she-cheng.com/thinkphp/";
     return YES;
 }
 
-
-
 @end
-
-
-
-
-
-
-
-
-
-

@@ -30,6 +30,11 @@
 		60D11D941DF1165C00A01F7E /* scource.json in Resources */ = {isa = PBXBuildFile; fileRef = 60D11D931DF1165C00A01F7E /* scource.json */; };
 		60D177081E13985900C38298 /* YBMessageKickMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D177071E13985900C38298 /* YBMessageKickMembersViewController.m */; };
 		60F2A4CF1DEC7BA0006E63B3 /* YBContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */; };
+		8C097BEA1E127093009FFB88 /* YBRectTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C097BE91E127093009FFB88 /* YBRectTextField.m */; };
+		8C097BED1E13A1E6009FFB88 /* YBVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C097BEC1E13A1E6009FFB88 /* YBVerifyViewController.m */; };
+		8C097BF01E13AC33009FFB88 /* YBVerifyCodeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C097BEF1E13AC33009FFB88 /* YBVerifyCodeInputView.m */; };
+		8C097BF31E13B05F009FFB88 /* YBUnderLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C097BF21E13B05F009FFB88 /* YBUnderLineLabel.m */; };
+		8C097BF61E14B89C009FFB88 /* YBInputPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C097BF51E14B89C009FFB88 /* YBInputPasswordViewController.m */; };
 		8C11E0411DEED5BE00127593 /* YBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C11E0401DEED5BE00127593 /* YBLoginViewController.m */; };
 		8C14D7991DDC374000323CB8 /* YBHotNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7981DDC374000323CB8 /* YBHotNewsViewController.m */; };
 		8C14D79F1DDC47ED00323CB8 /* YBBaseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D79E1DDC47ED00323CB8 /* YBBaseCollectionView.m */; };
@@ -177,6 +182,8 @@
 		8C3320B81E0BC5610048269B /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3320B51E0BC5610048269B /* MOBFoundationEx.framework */; };
 		8C3320B91E0BC5610048269B /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3320B61E0BC5610048269B /* SMS_SDK.framework */; };
 		8C3320BB1E0BCAB50048269B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3320BA1E0BCAB50048269B /* MessageUI.framework */; };
+		8C3320C51E10C39F0048269B /* YBUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3320C41E10C39F0048269B /* YBUnderlineTextField.m */; };
+		8C3320C81E10C9BD0048269B /* YBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3320C71E10C9BD0048269B /* YBRegisterViewController.m */; };
 		8C70EBF21DD7670B009514EC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF11DD7670B009514EC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8C70EBFC1DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF51DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m */; };
 		8C70EBFD1DD8707F009514EC /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF71DD8707F009514EC /* UITableView+FDKeyedHeightCache.m */; };
@@ -219,7 +226,6 @@
 		8C80A23B1DEC409100F1D82E /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80A2241DEC409100F1D82E /* libWeChatSDK.a */; };
 		8C80A23C1DEC409100F1D82E /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C80A2251DEC409100F1D82E /* read_me.txt */; };
 		8C80A23D1DEC409100F1D82E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C80A2261DEC409100F1D82E /* README.txt */; };
-		8C80A23E1DEC409100F1D82E /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80A22B1DEC409100F1D82E /* MOBFoundation.framework */; };
 		8C80A23F1DEC409100F1D82E /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C80A22C1DEC409100F1D82E /* ShareSDK.bundle */; };
 		8C80A2401DEC409100F1D82E /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80A22D1DEC409100F1D82E /* ShareSDKConnector.framework */; };
 		8C80A2431DEC40E000F1D82E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80A2421DEC40E000F1D82E /* libicucore.tbd */; };
@@ -370,6 +376,16 @@
 		60F2A4CD1DEC7BA0006E63B3 /* YBContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBContactManager.h; sourceTree = "<group>"; };
 		60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBContactManager.m; sourceTree = "<group>"; };
 		8307CD0FC5BE3426EA5FB53A /* Pods-YueBallSport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YueBallSport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YueBallSport/Pods-YueBallSport.debug.xcconfig"; sourceTree = "<group>"; };
+		8C097BE81E127093009FFB88 /* YBRectTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBRectTextField.h; sourceTree = "<group>"; };
+		8C097BE91E127093009FFB88 /* YBRectTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBRectTextField.m; sourceTree = "<group>"; };
+		8C097BEB1E13A1E6009FFB88 /* YBVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBVerifyViewController.h; sourceTree = "<group>"; };
+		8C097BEC1E13A1E6009FFB88 /* YBVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBVerifyViewController.m; sourceTree = "<group>"; };
+		8C097BEE1E13AC33009FFB88 /* YBVerifyCodeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBVerifyCodeInputView.h; sourceTree = "<group>"; };
+		8C097BEF1E13AC33009FFB88 /* YBVerifyCodeInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBVerifyCodeInputView.m; sourceTree = "<group>"; };
+		8C097BF11E13B05F009FFB88 /* YBUnderLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBUnderLineLabel.h; sourceTree = "<group>"; };
+		8C097BF21E13B05F009FFB88 /* YBUnderLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBUnderLineLabel.m; sourceTree = "<group>"; };
+		8C097BF41E14B89C009FFB88 /* YBInputPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBInputPasswordViewController.h; sourceTree = "<group>"; };
+		8C097BF51E14B89C009FFB88 /* YBInputPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBInputPasswordViewController.m; sourceTree = "<group>"; };
 		8C11E03F1DEED5BE00127593 /* YBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLoginViewController.h; sourceTree = "<group>"; };
 		8C11E0401DEED5BE00127593 /* YBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLoginViewController.m; sourceTree = "<group>"; };
 		8C14D7971DDC374000323CB8 /* YBHotNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBHotNewsViewController.h; sourceTree = "<group>"; };
@@ -670,6 +686,13 @@
 		8C3320B51E0BC5610048269B /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
 		8C3320B61E0BC5610048269B /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		8C3320BA1E0BCAB50048269B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8C3320BC1E0D15C40048269B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8C3320BE1E0D15D00048269B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		8C3320C01E0D15DC0048269B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		8C3320C31E10C39F0048269B /* YBUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBUnderlineTextField.h; sourceTree = "<group>"; };
+		8C3320C41E10C39F0048269B /* YBUnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBUnderlineTextField.m; sourceTree = "<group>"; };
+		8C3320C61E10C9BD0048269B /* YBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBRegisterViewController.h; sourceTree = "<group>"; };
+		8C3320C71E10C9BD0048269B /* YBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBRegisterViewController.m; sourceTree = "<group>"; };
 		8C70EBF01DD7670B009514EC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		8C70EBF11DD7670B009514EC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		8C70EBF41DD8707F009514EC /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
@@ -752,7 +775,6 @@
 		8C80A2271DEC409100F1D82E /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		8C80A2281DEC409100F1D82E /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		8C80A2291DEC409100F1D82E /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		8C80A22B1DEC409100F1D82E /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		8C80A22C1DEC409100F1D82E /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
 		8C80A22D1DEC409100F1D82E /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
 		8C80A2421DEC40E000F1D82E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -943,7 +965,6 @@
 				8C80A2431DEC40E000F1D82E /* libicucore.tbd in Frameworks */,
 				8C3320B71E0BC5610048269B /* MOBFoundation.framework in Frameworks */,
 				8C80A22E1DEC409100F1D82E /* ShareSDK.framework in Frameworks */,
-				8C80A23E1DEC409100F1D82E /* MOBFoundation.framework in Frameworks */,
 				8C80A2371DEC409100F1D82E /* TencentOpenAPI.framework in Frameworks */,
 				8C80A2361DEC409100F1D82E /* WechatConnector.framework in Frameworks */,
 				8C80A23B1DEC409100F1D82E /* libWeChatSDK.a in Frameworks */,
@@ -1591,6 +1612,21 @@
 			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
+		8C3320C21E10C3600048269B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8C3320C31E10C39F0048269B /* YBUnderlineTextField.h */,
+				8C3320C41E10C39F0048269B /* YBUnderlineTextField.m */,
+				8C097BE81E127093009FFB88 /* YBRectTextField.h */,
+				8C097BE91E127093009FFB88 /* YBRectTextField.m */,
+				8C097BEE1E13AC33009FFB88 /* YBVerifyCodeInputView.h */,
+				8C097BEF1E13AC33009FFB88 /* YBVerifyCodeInputView.m */,
+				8C097BF11E13B05F009FFB88 /* YBUnderLineLabel.h */,
+				8C097BF21E13B05F009FFB88 /* YBUnderLineLabel.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		8C70EBEF1DD7670B009514EC /* JSONKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1777,7 +1813,6 @@
 		8C80A22A1DEC409100F1D82E /* Required */ = {
 			isa = PBXGroup;
 			children = (
-				8C80A22B1DEC409100F1D82E /* MOBFoundation.framework */,
 				8C80A22C1DEC409100F1D82E /* ShareSDK.bundle */,
 				8C80A22D1DEC409100F1D82E /* ShareSDKConnector.framework */,
 			);
@@ -1787,6 +1822,9 @@
 		8C80A2411DEC40E000F1D82E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C3320C01E0D15DC0048269B /* AdSupport.framework */,
+				8C3320BE1E0D15D00048269B /* CoreTelephony.framework */,
+				8C3320BC1E0D15C40048269B /* SystemConfiguration.framework */,
 				8C3320BA1E0BCAB50048269B /* MessageUI.framework */,
 				8C80A24C1DEC412B00F1D82E /* libsqlite3.tbd */,
 				8C80A24A1DEC411D00F1D82E /* ImageIO.framework */,
@@ -2254,6 +2292,12 @@
 				8CD3D4D41DAB449A00044ADB /* YBTabBarController.m */,
 				8C11E03F1DEED5BE00127593 /* YBLoginViewController.h */,
 				8C11E0401DEED5BE00127593 /* YBLoginViewController.m */,
+				8C3320C61E10C9BD0048269B /* YBRegisterViewController.h */,
+				8C3320C71E10C9BD0048269B /* YBRegisterViewController.m */,
+				8C097BEB1E13A1E6009FFB88 /* YBVerifyViewController.h */,
+				8C097BEC1E13A1E6009FFB88 /* YBVerifyViewController.m */,
+				8C097BF41E14B89C009FFB88 /* YBInputPasswordViewController.h */,
+				8C097BF51E14B89C009FFB88 /* YBInputPasswordViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -2396,6 +2440,7 @@
 		8CD3D5861DAC8B9900044ADB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8C3320C21E10C3600048269B /* Other */,
 				8CD3D5871DAC8B9900044ADB /* Find */,
 				8CD3D58A1DAC8B9A00044ADB /* Home */,
 				8CD3D58D1DAC8B9A00044ADB /* Me */,
@@ -2704,6 +2749,7 @@
 				8CD3D45A1DAA3A5200044ADB /* YTKNetworkPrivate.m in Sources */,
 				8CD3D4201DAA3A2F00044ADB /* AFURLSessionManager.m in Sources */,
 				8C19251B1DD5901600031BC5 /* SNArticleImageAD.m in Sources */,
+				8C097BED1E13A1E6009FFB88 /* YBVerifyViewController.m in Sources */,
 				8C1923BC1DD57DC300031BC5 /* MJRefreshGifHeader.m in Sources */,
 				8C1923D31DD57DC300031BC5 /* UIImage+MultiFormat.m in Sources */,
 				8CD3D43E1DAA3A4900044ADB /* UIWebView+AFNetworking.m in Sources */,
@@ -2723,6 +2769,7 @@
 				6023D33B1DDEE67800E44B80 /* YBMessageUser.m in Sources */,
 				8CD3D4701DAA3AA100044ADB /* NSString+Utilities.m in Sources */,
 				8C1923CC1DD57DC300031BC5 /* SDWebImageDecoder.m in Sources */,
+				8C097BEA1E127093009FFB88 /* YBRectTextField.m in Sources */,
 				8C1925DD1DD5901600031BC5 /* SNArticleHelper.m in Sources */,
 				8C19217D1DD57C9B00031BC5 /* MASViewConstraint.m in Sources */,
 				8C1925261DD5901600031BC5 /* SNArticleTempImage.m in Sources */,
@@ -2739,6 +2786,7 @@
 				8CD3D4561DAA3A5200044ADB /* YTKChainRequest.m in Sources */,
 				8CD3D3AE1DAA244600044ADB /* main.m in Sources */,
 				8C1925D81DD5901600031BC5 /* SNArticleBaseViewController+JSBridge.m in Sources */,
+				8C097BF61E14B89C009FFB88 /* YBInputPasswordViewController.m in Sources */,
 				8C7548701DD9ACCE00569DAE /* TAPageControl.m in Sources */,
 				6001D2F61E028B9900988349 /* DataManager.m in Sources */,
 				8CD3D46E1DAA3AA100044ADB /* NSDictionary+Safe.m in Sources */,
@@ -2787,6 +2835,7 @@
 				8CD3D41E1DAA3A2F00044ADB /* AFURLRequestSerialization.m in Sources */,
 				8CFFFD5E1DD750F4004629FE /* YBLiveViewController.m in Sources */,
 				8C19217F1DD57C9B00031BC5 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				8C097BF01E13AC33009FFB88 /* YBVerifyCodeInputView.m in Sources */,
 				8C70EBF21DD7670B009514EC /* JSONKit.m in Sources */,
 				8C1923C71DD57DC300031BC5 /* NSData+ImageContentType.m in Sources */,
 				8C1923B31DD57DC300031BC5 /* MJRefreshComponent.m in Sources */,
@@ -2846,6 +2895,7 @@
 				8C19252C1DD5901600031BC5 /* SNAttitude.m in Sources */,
 				8C1923C41DD57DC300031BC5 /* UIView+MJExtension.m in Sources */,
 				8C1923AC1DD57DC300031BC5 /* NSObject+MJClass.m in Sources */,
+				8C3320C51E10C39F0048269B /* YBUnderlineTextField.m in Sources */,
 				8C75486D1DD9ACCE00569DAE /* TAAbstractDotView.m in Sources */,
 				6001D2F31E028B9900988349 /* DemoCell.m in Sources */,
 				8C1923D11DD57DC300031BC5 /* UIButton+WebCache.m in Sources */,
@@ -2873,9 +2923,11 @@
 				8C1923C81DD57DC300031BC5 /* NSImage+WebCache.m in Sources */,
 				8C1923B51DD57DC300031BC5 /* MJRefreshHeader.m in Sources */,
 				8C1925141DD5901600031BC5 /* NSDate+SNArticle.m in Sources */,
+				8C3320C81E10C9BD0048269B /* YBRegisterViewController.m in Sources */,
 				8C1923B01DD57DC300031BC5 /* NSString+MJExtension.m in Sources */,
 				6001D2C81E022EA000988349 /* YBMessageModel.m in Sources */,
 				8C1925271DD5901600031BC5 /* SNArticleVideo.m in Sources */,
+				8C097BF31E13B05F009FFB88 /* YBUnderLineLabel.m in Sources */,
 				8C1925181DD5901600031BC5 /* UIColor+SNArticle.m in Sources */,
 				8C1925CD1DD5901600031BC5 /* NSFileManager+Size.m in Sources */,
 				8CD3D5411DABB3A100044ADB /* TestImage.m in Sources */,

@@ -21,7 +21,8 @@ typedef NS_ENUM(NSUInteger, UserLoginMode) {
     UserLoginModeThisPlatform = 3,
     UserLoginModeNone   = 4
 };
-typedef void(^thirdLoginBlock)(BOOL success, YBUser *user);
+typedef void(^loginBlock)(BOOL success, YBUser *user);
+typedef void(^verifyCodeBlock)(BOOL success);
 
 @protocol YBUserLoginDelegate <NSObject>
 @optional
@@ -49,26 +50,47 @@ extern NSString *const UserLoginError;
  */
 @property(nonatomic, weak)id<YBUserLoginDelegate> delegate;
 + (instancetype)getInstance;
+
+/**
+ *  获取验证码
+ */
+- (void)requestVerifyCode:(NSString *)iphoneNumber callBack:(verifyCodeBlock)block;
+/**
+ *  验证码验证
+ */
+- (void)verifyCodeResult:(NSString *)code callBack:(verifyCodeBlock)block;
+/**
+ *  提交注册
+ */
+- (void)userPostRegister:(NSString *)password callBack:(loginBlock)block;
+/**
+ *  本平台用户登录
+ */
+- (void)userLogin:(NSString *)account password:(NSString *)pwd callBack:(loginBlock)block;
 /**
  *  第三方登录/注册
  */
-- (void)thirdLogin:(ThirdPlatformType)type callBack:(thirdLoginBlock)block;
+- (void)thirdLogin:(ThirdPlatformType)type callBack:(loginBlock)block;
+
 /**
- *  用户登出
+ *  修改密码
  */
-- (void)userLogout;
-/**
- *  用户短信注册
- */
-- (void)userMessageRegister;
-/**
- *  用户登录
- */
-- (void)userLogin:(NSString *)account password:(NSString *)pwd;
+- (void)modifyPassword:(NSString *)password callBack:(verifyCodeBlock)block;
+
 /**
  *  判断用户是否登录
  */
 - (BOOL)isLoginIn;
+
+/**
+ *  判断用户是否注册
+ */
+- (void)isResister:(NSString *)account callBack:(verifyCodeBlock)block;
+
+/**
+ *  用户登出
+ */
+- (void)userLogout;
 @end
 
 
