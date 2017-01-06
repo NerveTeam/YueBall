@@ -15,6 +15,7 @@
 #import "YBLoginViewController.h"
 #import "YBRegisterViewController.h"
 #import "YBVerifyViewController.h"
+#import "YBResetPasswordViewController.h"
 #import "NSArray+Safe.h"
 
 
@@ -67,7 +68,8 @@
     for (UIViewController *subVc in self.navigationController.viewControllers) {
         if ([subVc isKindOfClass:[YBLoginViewController class]] ||
             [subVc isKindOfClass:[YBRegisterViewController class]] ||
-            [subVc isKindOfClass:[YBVerifyViewController class]]) {
+            [subVc isKindOfClass:[YBVerifyViewController class]] ||
+            [subVc isKindOfClass:[YBResetPasswordViewController class]]) {
             [subVc popViewControllerAnimated:NO];
             [array removeObject:subVc];
         }
@@ -76,13 +78,24 @@
     
 }
 - (void)enter {
-    [[YBUserLogin getInstance]userPostRegister:self.pwdField.text callBack:^(BOOL success, YBUser *user) {
-        if (success) {
-            [self popVc];
-        }else {
-        // 提示网络开小差
-        }
-    }];
+    if (_module == ModuleTypeRegister) {
+        [[YBUserLogin getInstance]userPostRegister:self.pwdField.text callBack:^(BOOL success, YBUser *user) {
+            if (success) {
+                [self popVc];
+            }else {
+                // 提示网络开小差
+            }
+        }];
+    }else {
+        [[YBUserLogin getInstance]modifyPassword:self.pwdField.text callBack:^(BOOL success) {
+            if (success) {
+                NSLog(@"修改成功");
+                [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(popVc) userInfo:nil repeats:NO];
+            }else {
+                // 提示网络开小差
+            }
+        }];
+    }
 }
 
 - (void)viewWillLayoutSubviews {
@@ -110,7 +123,7 @@
 #pragma mark - lazy
 - (UILabel *)logoTip {
     if (!_logoTip) {
-        _logoTip = [UILabel labelWithText:@"注册阿拉丁" fontSize:23 textColor:RGBACOLOR(0, 186, 89, 1)];
+        _logoTip = [UILabel labelWithText:_module == ModuleTypeRegister ? @"注册阿拉丁" : @"找回密码" fontSize:23 textColor:RGBACOLOR(0, 186, 89, 1)];
         [self.view addSubview:_logoTip];
     }
     return _logoTip;
@@ -118,7 +131,7 @@
 - (YBUnderlineTextField *)pwdField {
     if (!_pwdField) {
         _pwdField = [[YBUnderlineTextField alloc]init];
-        _pwdField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请创建一个密码" attributes:@{NSForegroundColorAttributeName:RGBACOLOR(194, 194, 194,1)}];
+        _pwdField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:_module == ModuleTypeRegister ? @"请创建一个密码" : @"请输入新密码" attributes:@{NSForegroundColorAttributeName:RGBACOLOR(194, 194, 194,1)}];
         _pwdField.font = [UIFont systemFontOfSize:15];
         _pwdField.textAlignment = NSTextAlignmentLeft;
         _pwdField.secureTextEntry = YES;
@@ -138,7 +151,7 @@
 }
 - (UIButton *)enterBtn {
     if (!_enterBtn) {
-        _enterBtn = [UIButton buttonWithTitle:@"开始体验" fontSize:16 titleColor:RGBACOLOR(107, 107, 107, 1)];
+        _enterBtn = [UIButton buttonWithTitle:_module == ModuleTypeRegister ? @"开始体验" : @"确认" fontSize:16 titleColor:RGBACOLOR(107, 107, 107, 1)];
         [_enterBtn addTarget:self action:@selector(enter) forControlEvents:UIControlEventTouchUpInside];
         _enterBtn.backgroundColor = RGBACOLOR(222, 222, 222, 1);
         _enterBtn.userInteractionEnabled = NO;

@@ -175,7 +175,7 @@ static YBUserLogin *_instance;
 - (void)saveUserInfo {
     NSString *homeDictionary = NSHomeDirectory();//获取根目录
     NSString *homePath  = [homeDictionary stringByAppendingPathComponent:DiskUserLoginInfo];//添加储存的文件名
-    [NSKeyedArchiver archiveRootObject:self.userInfo toFile:homePath];
+    [NSKeyedArchiver archiveRootObject:_userInfo toFile:homePath];
 }
 #pragma mark - 辅助组件
 - (SSDKPlatformType)matchPlatformType:(ThirdPlatformType)type {

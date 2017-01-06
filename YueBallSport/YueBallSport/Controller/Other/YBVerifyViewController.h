@@ -7,7 +7,9 @@
 //
 
 #import "YBBaseViewController.h"
+#import "YBInputPasswordViewController.h"
 
 @interface YBVerifyViewController : YBBaseViewController
 @property(nonatomic, copy)NSString *iphoneNumber;
+@property(nonatomic, assign)ModuleType module;
 @end

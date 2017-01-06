@@ -1,31 +1,31 @@
 //
-//  YBRegisterViewController.m
+//  YBResetPasswordViewController.m
 //  YueBallSport
 //
-//  Created by Minlay on 16/12/26.
-//  Copyright © 2016年 YueBall. All rights reserved.
+//  Created by Minlay on 17/1/4.
+//  Copyright © 2017年 YueBall. All rights reserved.
 //
 
-#import "YBRegisterViewController.h"
+#import "YBResetPasswordViewController.h"
 #import "YBUserLogin.h"
 #import "UILabel+Extention.h"
 #import "UIButton+Extention.h"
-#import "YBRectTextField.h"
+#import "YBUnderlineTextField.h"
 #import "YBVerifyViewController.h"
-#import "MLTransition.h"
 
-@interface YBRegisterViewController ()<UITextFieldDelegate>
+@interface YBResetPasswordViewController ()<UITextFieldDelegate>
 @property(nonatomic, strong)UILabel *logoTip;
-@property(nonatomic, strong)YBRectTextField *iphoneField;
+@property(nonatomic, strong)YBUnderlineTextField *iphoneField;
 @property(nonatomic, strong)UIButton *iphoneTip;
 @property(nonatomic, strong)UIButton *verifyCodeBtn;
-@property(nonatomic, strong)UIButton *loginBtn;
+@property(nonatomic, strong)UIButton *backBtn;
 @end
 
-@implementation YBRegisterViewController
+@implementation YBResetPasswordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -34,11 +34,12 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.iphoneField resignFirstResponder];
 }
+
 - (void)verifyClick {
     [[YBUserLogin getInstance]isResister:self.iphoneField.text callBack:^(BOOL success) {
-        if (!success) {
+        if (success) {
             YBVerifyViewController *verify = [[YBVerifyViewController alloc]init];
-            verify.module = ModuleTypeRegister;
+            verify.module = ModuleTypeResetPassword;
             verify.iphoneNumber = self.iphoneField.text;
             [[YBUserLogin getInstance]requestVerifyCode:self.iphoneField.text callBack:^(BOOL success) {
                 if (success) {
@@ -48,18 +49,26 @@
                 }
             }];
         }else {
-        // 提示该帐号已注册
-        
+            // 提示该帐号未注册
+            
         }
     }];
     
 }
-- (void)popVc {
-    self.spring = YES;
-    [self popViewcontrollerAnimationType:UIViewAnimationTypeSlideOut];
-}
-- (void)loginJump {
-    [self popViewControllerAnimated:YES];
+
+- (void)iphoneMessageChange {
+    // 输入完整信息登录可交互
+    if (self.iphoneField.text.length > 10) {
+        if ([self checkPhone:self.iphoneField.text]) {
+            self.verifyCodeBtn.userInteractionEnabled = YES;
+            self.verifyCodeBtn.selected = YES;
+            self.verifyCodeBtn.backgroundColor = ThemeColor;
+        }
+    }else {
+        self.verifyCodeBtn.userInteractionEnabled = NO;
+        self.verifyCodeBtn.selected = NO;
+        self.verifyCodeBtn.backgroundColor = RGBACOLOR(222, 222, 222, 1);
+    }
 }
 // 正则过滤手机号
 - (BOOL)checkPhone:(NSString *)phoneNumber
@@ -76,20 +85,7 @@
     return YES;
     
 }
-- (void)registerMessageChange {
-    // 输入完整信息登录可交互
-    if (self.iphoneField.text.length > 10) {
-        if ([self checkPhone:self.iphoneField.text]) {
-            self.verifyCodeBtn.userInteractionEnabled = YES;
-            self.verifyCodeBtn.selected = YES;
-            self.verifyCodeBtn.backgroundColor = ThemeColor;
-        }
-    }else {
-        self.verifyCodeBtn.userInteractionEnabled = NO;
-        self.verifyCodeBtn.selected = NO;
-        self.verifyCodeBtn.backgroundColor = RGBACOLOR(222, 222, 222, 1);
-    }
-}
+
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     static CGFloat margin = 20;
@@ -103,48 +99,32 @@
         make.top.equalTo(self.logoTip.mas_bottom).offset(65);
         make.height.offset(50);
     }];
-    [self.iphoneTip mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.iphoneField);
-        make.left.equalTo(self.iphoneField);
-    }];
     [self.verifyCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.iphoneField);
         make.top.equalTo(self.iphoneField.mas_bottom).offset(55);
         make.height.offset(44);
-    }];
-    [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.verifyCodeBtn.mas_bottom).offset(30);
-        make.centerX.equalTo(self.view);
     }];
 }
 
 #pragma mark - lazy
 - (UILabel *)logoTip {
     if (!_logoTip) {
-        _logoTip = [UILabel labelWithText:@"注册阿拉丁" fontSize:23 textColor:RGBACOLOR(0, 186, 89, 1)];
+        _logoTip = [UILabel labelWithText:@"找回密码" fontSize:23 textColor:RGBACOLOR(0, 186, 89, 1)];
         //        _logoTip.font = [UIFont boldSystemFontOfSize:23];
         [self.view addSubview:_logoTip];
     }
     return _logoTip;
 }
-- (UIButton *)iphoneTip {
-    if (!_iphoneTip) {
-        _iphoneTip = [UIButton buttonWithTitle:@"+86" fontSize:15 titleColor:RGBACOLOR(26, 26, 26,1)];
-        _iphoneTip.userInteractionEnabled = NO;
-        [self.iphoneField addSubview:_iphoneTip];
-    }
-    return _iphoneTip;
-}
-- (YBRectTextField *)iphoneField {
+- (YBUnderlineTextField *)iphoneField {
     if (!_iphoneField) {
-        _iphoneField = [[YBRectTextField alloc]init];
-        _iphoneField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号" attributes:@{NSForegroundColorAttributeName:RGBACOLOR(194, 194, 194,1)}];
+        _iphoneField = [[YBUnderlineTextField alloc]init];
+        _iphoneField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"手机号/邮箱/帐号" attributes:@{NSForegroundColorAttributeName:RGBACOLOR(194, 194, 194,1)}];
         _iphoneField.font = [UIFont systemFontOfSize:15];
         _iphoneField.textAlignment = NSTextAlignmentLeft;
         _iphoneField.keyboardType = UIKeyboardTypeNumberPad;
         _iphoneField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _iphoneField.delegate = self;
-        [_iphoneField addTarget:self action:@selector(registerMessageChange) forControlEvents:UIControlEventEditingChanged];
+        [_iphoneField addTarget:self action:@selector(iphoneMessageChange) forControlEvents:UIControlEventEditingChanged];
         [self.view addSubview:_iphoneField];
     }
     return _iphoneField;
@@ -160,12 +140,12 @@
     }
     return _verifyCodeBtn;
 }
-- (UIButton *)loginBtn {
-    if (!_loginBtn) {
-        _loginBtn = [UIButton buttonWithTitle:@"已有阿拉丁帐号,去登录" fontSize:16 titleColor:RGBACOLOR(107, 107, 107, 1)];
-        [_loginBtn addTarget:self action:@selector(loginJump) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:_loginBtn];
+- (UIButton *)backBtn {
+    if (!_backBtn) {
+        _backBtn = [UIButton buttonWithTitle:@"已有阿拉丁帐号,去登录" fontSize:16 titleColor:RGBACOLOR(107, 107, 107, 1)];
+        [_backBtn addTarget:self action:@selector(loginJump) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_backBtn];
     }
-    return _loginBtn;
+    return _backBtn;
 }
 @end

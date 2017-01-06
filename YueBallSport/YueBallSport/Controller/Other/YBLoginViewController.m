@@ -13,6 +13,7 @@
 #import "UIButton+Extention.h"
 #import "YBUnderlineTextField.h"
 #import "YBRegisterViewController.h"
+#import "YBResetPasswordViewController.h"
 
 
 @interface YBLoginViewController ()<UITextFieldDelegate>
@@ -23,6 +24,7 @@
 @property(nonatomic, strong)UIButton *loginBtn;
 @property(nonatomic, strong)UIButton *closeBtn;
 @property(nonatomic, strong)UIButton *registerBtn;
+@property(nonatomic, strong)UIButton *resetPwd;
 @property(nonatomic, strong)UIButton *weiboLoginBtn;
 @property(nonatomic, strong)UIButton *qqLoginBtn;
 @property(nonatomic, strong)UIButton *wxLoginBtn;
@@ -78,6 +80,10 @@
 - (void)registerJump {
     [self pushToController:[[YBRegisterViewController alloc]init] animated:YES];
 }
+- (void)resetPwdJump {
+    [self pushToController:[[YBResetPasswordViewController alloc]init] animated:YES];
+}
+
 - (void)weiboLogin {
     [[YBUserLogin getInstance]thirdLogin:ThirdPlatformTypeWeibo callBack:^(BOOL success, YBUser *user) {
         if (success) {
@@ -132,10 +138,14 @@
         make.height.offset(50);
         make.top.equalTo(self.iphoneField.mas_bottom).offset(0);
     }];
+    [self.resetPwd mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.pwdField);
+        make.top.equalTo(self.pwdField.mas_bottom).offset(margin);
+    }];
     [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.pwdField);
         make.right.equalTo(self.pwdField);
-        make.top.equalTo(self.pwdField.mas_bottom).offset(20);
+        make.top.equalTo(self.resetPwd.mas_bottom).offset(20);
         make.height.offset(44);
     }];
     [self.weiboLoginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -202,6 +212,14 @@
         [self.view addSubview:_loginBtn];
     }
     return _loginBtn;
+}
+- (UIButton *)resetPwd {
+    if (!_resetPwd) {
+        _resetPwd = [UIButton buttonWithTitle:@"忘记密码" fontSize:15 titleColor:RGBACOLOR(194, 194, 194,1)];
+        [_resetPwd addTarget:self action:@selector(resetPwdJump) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_resetPwd];
+    }
+    return _resetPwd;
 }
 - (UIButton *)registerBtn {
     if (!_registerBtn) {

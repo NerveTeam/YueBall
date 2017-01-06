@@ -184,6 +184,7 @@
 		8C3320BB1E0BCAB50048269B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3320BA1E0BCAB50048269B /* MessageUI.framework */; };
 		8C3320C51E10C39F0048269B /* YBUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3320C41E10C39F0048269B /* YBUnderlineTextField.m */; };
 		8C3320C81E10C9BD0048269B /* YBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3320C71E10C9BD0048269B /* YBRegisterViewController.m */; };
+		8C5CDC431E1D010B00028922 /* YBResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CDC421E1D010B00028922 /* YBResetPasswordViewController.m */; };
 		8C70EBF21DD7670B009514EC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF11DD7670B009514EC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8C70EBFC1DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF51DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m */; };
 		8C70EBFD1DD8707F009514EC /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF71DD8707F009514EC /* UITableView+FDKeyedHeightCache.m */; };
@@ -693,6 +694,8 @@
 		8C3320C41E10C39F0048269B /* YBUnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBUnderlineTextField.m; sourceTree = "<group>"; };
 		8C3320C61E10C9BD0048269B /* YBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBRegisterViewController.h; sourceTree = "<group>"; };
 		8C3320C71E10C9BD0048269B /* YBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBRegisterViewController.m; sourceTree = "<group>"; };
+		8C5CDC411E1D010B00028922 /* YBResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBResetPasswordViewController.h; sourceTree = "<group>"; };
+		8C5CDC421E1D010B00028922 /* YBResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBResetPasswordViewController.m; sourceTree = "<group>"; };
 		8C70EBF01DD7670B009514EC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		8C70EBF11DD7670B009514EC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		8C70EBF41DD8707F009514EC /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
@@ -2298,6 +2301,8 @@
 				8C097BEC1E13A1E6009FFB88 /* YBVerifyViewController.m */,
 				8C097BF41E14B89C009FFB88 /* YBInputPasswordViewController.h */,
 				8C097BF51E14B89C009FFB88 /* YBInputPasswordViewController.m */,
+				8C5CDC411E1D010B00028922 /* YBResetPasswordViewController.h */,
+				8C5CDC421E1D010B00028922 /* YBResetPasswordViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -2978,6 +2983,7 @@
 				8C1925DF1DD5901600031BC5 /* SNArticleCoverView.m in Sources */,
 				8C1923C11DD57DC300031BC5 /* NSBundle+MJRefresh.m in Sources */,
 				8C1923B21DD57DC300031BC5 /* MJRefreshBackFooter.m in Sources */,
+				8C5CDC431E1D010B00028922 /* YBResetPasswordViewController.m in Sources */,
 				8C1923C61DD57DC300031BC5 /* MKAnnotationView+WebCache.m in Sources */,
 				8C1923C01DD57DC300031BC5 /* MJRefreshConst.m in Sources */,
 				8C75489D1DDB09E500569DAE /* MLSphere.m in Sources */,

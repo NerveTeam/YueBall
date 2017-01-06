@@ -11,7 +11,6 @@
 #import "UILabel+Extention.h"
 #import "UIButton+Extention.h"
 #import "YBVerifyCodeInputView.h"
-#import "YBInputPasswordViewController.h"
 #import "MLTransition.h"
 
 @interface YBVerifyViewController ()<YBVerifyCodeInputViewDelegate>
@@ -37,7 +36,9 @@
 - (void)verifyInputDidFinish:(NSString *)code {
     [[YBUserLogin getInstance]verifyCodeResult:code callBack:^(BOOL success) {
         if (success) {
-            [self pushToController:[[YBInputPasswordViewController alloc]init] animated:YES];
+           YBInputPasswordViewController *inputPwd =  [[YBInputPasswordViewController alloc]init];
+            inputPwd.module = _module;
+            [self pushToController:inputPwd animated:YES];
         }else {
         // 提示验证码错误
         }
@@ -67,7 +68,7 @@
 #pragma mark - lazy
 - (UILabel *)logoTip {
     if (!_logoTip) {
-        _logoTip = [UILabel labelWithText:@"注册阿拉丁" fontSize:23 textColor:RGBACOLOR(0, 186, 89, 1)];
+        _logoTip = [UILabel labelWithText:_module == ModuleTypeRegister ? @"注册阿拉丁" : @"找回密码" fontSize:23 textColor:RGBACOLOR(0, 186, 89, 1)];
         //        _logoTip.font = [UIFont boldSystemFontOfSize:23];
         [self.view addSubview:_logoTip];
     }
@@ -77,6 +78,7 @@
     if (!_iphoneTip) {
         _iphoneTip = [UILabel labelWithText:self.iphoneNumber fontSize:15 textColor:RGBACOLOR(26, 26, 26, 1)];
         [self.view addSubview:_iphoneTip];
+        _iphoneTip.hidden = _module == ModuleTypeRegister ? NO : YES;
     }
     return _iphoneTip;
 }

@@ -8,6 +8,10 @@
 
 #import "YBBaseViewController.h"
 
+typedef NS_ENUM(NSUInteger, ModuleType) {
+    ModuleTypeRegister,
+    ModuleTypeResetPassword
+};
 @interface YBInputPasswordViewController : YBBaseViewController
-
+@property(nonatomic, assign)ModuleType module;
 @end
