@@ -296,8 +296,8 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
                  
                  [dict setSafeObject:conversation.conversationId forKey:@"chatId"];
                  [dict setSafeObject:chatIcon forKey:@"chatIcon"];
-                 [dict setSafeObject:peerIds forKey:@"member"];
-                 [dict setSafeObject:@"0" forKey:@"actionType"];
+                 [dict setSafeObject:arr forKey:@"member"];
+                 [dict setSafeObject:@"0" forKey:@"actionType"]; 
                  
                  DLog(@"传入参数----+ %@",dict);
                 [AddChatIdRequest requestDataWithParameters:dict successBlock:^(YTKRequest *request) {
@@ -368,6 +368,16 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
      }];
 }
 
+/**
+ *  设置收到ChatKit的通知处理
+ */
+- (void)lcck_setupNotification {
+    [[LCChatKit sharedInstance] setShowNotificationBlock:^(UIViewController *viewController, NSString *title,
+                                                           NSString *subtitle, LCCKMessageNotificationType type) {
+//        [self lcck_exampleShowNotificationWithTitle:title subtitle:subtitle type:type];
+    }];
+}
+
 #pragma mark -- 进入地图界面
 -(void)setPreviewLocationMessage{
     
@@ -381,6 +391,7 @@ typedef void (^UITableViewRowActionHandler)(UITableViewRowAction *action, NSInde
     }];
     
 }
+
 
 
 @end

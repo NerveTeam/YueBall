@@ -57,7 +57,7 @@
     }];
 
 
-    [[LCChatKit sharedInstance] openWithClientId:@"21"
+    [[LCChatKit sharedInstance] openWithClientId:@"22"
                                         callback:^(BOOL succeeded, NSError *error) {
                                             if (succeeded) {
 
@@ -487,6 +487,10 @@
     
 }
 
+-(void)setOther{
+    
+    [self lcck_setupNotification];
+}
 
 -(UIView *)contactView{
     

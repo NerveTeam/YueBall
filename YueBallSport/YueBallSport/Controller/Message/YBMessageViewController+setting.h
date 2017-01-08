@@ -44,6 +44,8 @@
 #pragma mark -- 创建群聊
 -(void)exampleCreateGroupConversationFromViewController:(UIViewController *)fromViewController;
 
+#pragma mark 通知处理
+-(void)lcck_setupNotification;
 #pragma mark -- 进入地图界面
 -(void)setPreviewLocationMessage;
 @end

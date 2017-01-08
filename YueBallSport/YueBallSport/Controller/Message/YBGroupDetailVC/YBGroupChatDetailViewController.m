@@ -54,6 +54,21 @@
 }
 -(void)kipGroupFriend{
     
+    
+    [self.groupConversation quitWithCallback:^(BOOL succeeded, NSError * _Nullable error) {
+       
+        if (succeeded) {
+            DLog(@"退出群聊成功");
+            
+//            self.groupConversation
+             [[LCChatKit sharedInstance] deleteRecentConversationWithConversationId:self.groupConversation.conversationId];
+            
+        }else{
+            DLog(@"退出群聊失败");
+        }
+    }];
+    
+    return;
     YBMessageKickMembersViewController * vc = [[YBMessageKickMembersViewController alloc]init];
     vc.sourceArray = self.sourceArray;
     vc.groupConversation = self.groupConversation;
