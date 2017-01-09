@@ -8,6 +8,7 @@
 
 #import "UIViewController+Navigation.h"
 #import "UIView+Position.h"
+#import "YBTabBarController.h"
 
 @implementation UIViewController (Navigation)
 - (void)pushToController:(UIViewController *)controller animated:(BOOL)animated{
@@ -21,6 +22,9 @@
         }
         else
         {
+           YBTabBarController *tabBar =  (YBTabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+            UINavigationController *nav = tabBar.selectedViewController;
+            [nav pushToController:controller animated:YES];
 //            AppDelegate* appDelegate = [AppDelegate appDelegate];
 //            SPBaseNavigationController* navigationController = (SPBaseNavigationController*)appDelegate.tab.selectedViewController;
 //            if ([navigationController isKindOfClass:[SPBaseNavigationController class]]) {

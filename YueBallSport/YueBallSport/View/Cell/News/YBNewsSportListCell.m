@@ -12,6 +12,7 @@
 #import "YBNewsSport.h"
 #import "UIImageView+WebCache.h"
 #import "MLTool.h"
+#import "UIImage+Stretch.h"
 
 @interface YBNewsSportListCell ()
 @property(nonatomic, strong)UILabel *titleLabel;
@@ -23,6 +24,8 @@
 @implementation YBNewsSportListCell
 static const CGFloat marginLeft = 10;
 static const CGFloat marginTop = 15;
+static const CGFloat imgW = 120;
+static const CGFloat imgH = 80;
 + (instancetype)newsSportListCellWithTableView:(UITableView *)tableView {
     YBNewsSportListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
     if (!cell) {
@@ -49,7 +52,15 @@ static const CGFloat marginTop = 15;
     _sportList = sportList;
     self.titleLabel.text = sportList.title;
     [self.titleLabel sizeToFit];
-    [self.img sd_setImageWithURL:[NSURL URLWithString:sportList.imgUrl.firstObject]];
+    __block typeof(self.img)blockImageView = self.img;
+    [self.img sd_setImageWithURL:[NSURL URLWithString:sportList.imgUrl.firstObject] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        if (image.size.height > image.size.width) {
+            blockImageView.contentMode = UIViewContentModeTop;
+            blockImageView.image = [image scaleToSize:CGSizeMake(imgW, imgH)];
+        }else {
+            blockImageView.contentMode = UIViewContentModeScaleAspectFill;
+        }
+    }];
     self.commentCount.text = [NSString stringWithFormat:@"%ld",sportList.commentCount];
     [self.commentCount sizeToFit];
     NSDate *commentDate = [NSDate dateWithTimeIntervalSince1970:sportList.pubDate];
@@ -61,8 +72,8 @@ static const CGFloat marginTop = 15;
         make.left.equalTo(self.contentView).offset(marginLeft);
         make.top.equalTo(self.contentView).offset(marginTop);
         make.bottom.equalTo(self.contentView).offset(-marginTop);
-        make.width.offset(120);
-        make.height.offset(80);
+        make.width.offset(imgW);
+        make.height.offset(imgH);
     }];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.img);

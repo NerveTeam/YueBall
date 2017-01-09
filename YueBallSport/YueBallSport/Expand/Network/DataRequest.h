@@ -27,6 +27,27 @@
 @interface ReplayCommentRequest : BaseDataRequest
 
 @end
+
+@interface ThirdLoginRequest : BaseDataRequest
+
+@end
+
+@interface PlatformLoginRequest : BaseDataRequest
+
+@end
+
+@interface PlatformRegisterRequest : BaseDataRequest
+
+@end
+
+@interface ModifyPasswordRequest : BaseDataRequest
+
+@end
+
+@interface UserRegisterStatusRequest : BaseDataRequest
+
+@end
+
 //获取好友列表
 @interface FriendListRequest : BaseDataRequest
 
@@ -42,7 +63,5 @@
 @end
 //获取群聊详情(群聊好友列表)
 @interface ChatGroupDetailRequest : BaseDataRequest
-
-@property (nonatomic,copy)NSString * urlStr;
 
 @end

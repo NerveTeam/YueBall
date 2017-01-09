@@ -7,6 +7,8 @@
 //
 
 #import "DataRequest.h"
+// 域名
+static const NSString *domain = @"http://wu.she-cheng.com/thinkphp/";
 
 @implementation TestRequest
 
@@ -28,7 +30,7 @@
 
 @implementation NewsSportListRequest
 - (NSString *)requestUrl {
-    return @"http://wu.she-cheng.com/thinkphp/news/feed?";
+    return [domain stringByAppendingString:@"news/feed?"];
 }
 - (YTKRequestMethod)requestMethod {
     return YTKRequestMethodGET;
@@ -45,7 +47,7 @@
 
 @implementation HotNewsSportListRequest
 - (NSString *)requestUrl {
-    return @"http://wu.she-cheng.com/thinkphp/news/hotlist?";
+    return [domain stringByAppendingString:@"news/hotlist?"];
 }
 - (YTKRequestMethod)requestMethod {
     return YTKRequestMethodGET;
@@ -61,7 +63,7 @@
 
 @implementation HotNewsFoucsRequest
 - (NSString *)requestUrl {
-    return @"http://wu.she-cheng.com/thinkphp/news/foucs";
+    return [domain stringByAppendingString:@"news/foucs"];
 }
 - (YTKRequestMethod)requestMethod {
     return YTKRequestMethodGET;
@@ -77,7 +79,7 @@
 
 @implementation ReplayCommentRequest
 - (NSString *)requestUrl {
-    return @"http://wu.she-cheng.com/thinkphp/comment/replay";
+    return [domain stringByAppendingString:@"comment/replay"];
 }
 - (YTKRequestMethod)requestMethod {
     return YTKRequestMethodPOST;
@@ -91,6 +93,85 @@
 
 @end
 
+@implementation ThirdLoginRequest
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"login/third"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+@implementation PlatformLoginRequest
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"login/platform"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+@implementation PlatformRegisterRequest
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"login/register"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+@implementation ModifyPasswordRequest
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"login/reset_password"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
+
+@implementation UserRegisterStatusRequest
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"login/status"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodGET;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end
 
 @implementation FriendListRequest
 - (NSString *)requestUrl {
@@ -159,16 +240,4 @@
     return YES;
 }
 
-
-
 @end
-
-
-
-
-
-
-
-
-
-
