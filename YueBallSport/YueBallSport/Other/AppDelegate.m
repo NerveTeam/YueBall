@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "YTKNetwork.h"
 #import "YBTabBarController.h"
+#import "YBMessageConstant.h"
+#import "YBMessageViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,9 +21,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self globalConfig];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [YBMessageConfig AVOSCloudConfig];
+    [YBMessageConfig ChatKitConfig];
+    [YBMessageConfig invokeThisMethodInDidFinishLaunching];
+    
+    
     YBTabBarController *tabBarController = [[YBTabBarController alloc]init];
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
+    
+    
+   
     return YES;
 }
 

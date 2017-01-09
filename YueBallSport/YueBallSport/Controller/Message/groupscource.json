@@ -1,0 +1,41 @@
+{
+    "status":0,
+    "member":[
+              {
+              "userId":"1001",
+              "userName" : "王园园",
+              "userRemark":"王园园",
+              "headIcon":"http://www.avatarsdb.com/avatars/tom_and_jerry2.jpg",
+              "userSign":"相信自己一切皆有可能",
+              "location":"北京海淀",
+              "sex"   : 1
+              },
+              {
+              "userId":"1002",
+              "userName" : "罗成瑶",
+              "userRemark":"王园园",
+              "headIcon":"http://www.avatarsdb.com/avatars/jerry.jpg",
+              "userSign":"相信自己一切皆有可能",
+              "location":"北京海淀",
+              "sex"   : 1,
+              },
+              {
+              "userId":"1003",
+              "userName" : "吴明磊",
+              "userRemark":"王园园",
+              "headIcon":"http://www.avatarsdb.com/avatars/young_harry.jpg",
+              "userSign":"相信自己一切皆有可能",
+              "location":"北京海淀",
+              "sex"   : 1
+              },
+              {
+              "userId":"1004",
+              "userName" : "韩森",
+              "userRemark":"王园园",
+              "headIcon":"http://www.avatarsdb.com/avatars/bath_bob.jpg",
+              "userSign":"相信自己一切皆有可能",
+              "location":"北京海淀",
+              "sex"   : 1
+              }
+              ]
+}

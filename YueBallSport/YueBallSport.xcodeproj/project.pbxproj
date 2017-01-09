@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6001D2C11E022D9900988349 /* YBGroupChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2BE1E022D9900988349 /* YBGroupChatDetailViewController.m */; };
+		6001D2C81E022EA000988349 /* YBMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2C71E022EA000988349 /* YBMessageModel.m */; };
+		6001D2CD1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2CB1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.m */; };
+		6001D2CE1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6001D2CC1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.xib */; };
+		6001D2F21E028B9900988349 /* SearchMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2EA1E028B9900988349 /* SearchMainTableViewController.m */; };
+		6001D2F31E028B9900988349 /* DemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2EC1E028B9900988349 /* DemoCell.m */; };
+		6001D2F41E028B9900988349 /* DemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6001D2ED1E028B9900988349 /* DemoCell.xib */; };
+		6001D2F51E028B9900988349 /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2EF1E028B9900988349 /* DemoModel.m */; };
+		6001D2F61E028B9900988349 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2F11E028B9900988349 /* DataManager.m */; };
+		6001D2F91E028C5E00988349 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2F81E028C5E00988349 /* BaseTableViewController.m */; };
+		6001D2FC1E028C9400988349 /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2FB1E028C9400988349 /* SearchResultTableViewController.m */; };
+		600266ED1DFD07C900E1A6D2 /* YBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 600266EC1DFD07C900E1A6D2 /* YBPopupMenu.m */; };
+		6023D33B1DDEE67800E44B80 /* YBMessageUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023D33A1DDEE67800E44B80 /* YBMessageUser.m */; };
+		6023D33E1DDEEA8B00E44B80 /* YBMessageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023D33D1DDEEA8B00E44B80 /* YBMessageConfig.m */; };
+		602F18981DF158F0002893DF /* jiahao.png in Resources */ = {isa = PBXBuildFile; fileRef = 602F18971DF158F0002893DF /* jiahao.png */; };
+		602F913D1E0046C2009C06E9 /* groupscource.json in Resources */ = {isa = PBXBuildFile; fileRef = 602F913C1E0046C2009C06E9 /* groupscource.json */; };
+		6038BC681E03C77B004F63B9 /* getFriend.json in Resources */ = {isa = PBXBuildFile; fileRef = 6038BC671E03C77B004F63B9 /* getFriend.json */; };
+		604830651E07D0A6002290C6 /* YBMessageViewController+setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 604830641E07D0A6002290C6 /* YBMessageViewController+setting.m */; };
+		604D345D1DE680E400940B49 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 604D345C1DE680E400940B49 /* LaunchScreen.strings */; };
+		604D34601DE68D2B00940B49 /* YBMessageMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604D345F1DE68D2B00940B49 /* YBMessageMapViewController.m */; };
+		60D11D941DF1165C00A01F7E /* scource.json in Resources */ = {isa = PBXBuildFile; fileRef = 60D11D931DF1165C00A01F7E /* scource.json */; };
+		60D177081E13985900C38298 /* YBMessageKickMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D177071E13985900C38298 /* YBMessageKickMembersViewController.m */; };
+		60F2A4CF1DEC7BA0006E63B3 /* YBContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */; };
 		8C14D7991DDC374000323CB8 /* YBHotNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7981DDC374000323CB8 /* YBHotNewsViewController.m */; };
 		8C14D79F1DDC47ED00323CB8 /* YBBaseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D79E1DDC47ED00323CB8 /* YBBaseCollectionView.m */; };
 		8C14D7A21DDC493700323CB8 /* YBChannelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C14D7A11DDC493700323CB8 /* YBChannelGroup.m */; };
@@ -274,6 +297,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F74A7986AF9AD00C5D19811 /* Pods-YueBallSport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YueBallSport.release.xcconfig"; path = "Pods/Target Support Files/Pods-YueBallSport/Pods-YueBallSport.release.xcconfig"; sourceTree = "<group>"; };
+		6001D2BD1E022D9900988349 /* YBGroupChatDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBGroupChatDetailViewController.h; sourceTree = "<group>"; };
+		6001D2BE1E022D9900988349 /* YBGroupChatDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBGroupChatDetailViewController.m; sourceTree = "<group>"; };
+		6001D2C61E022EA000988349 /* YBMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageModel.h; sourceTree = "<group>"; };
+		6001D2C71E022EA000988349 /* YBMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageModel.m; sourceTree = "<group>"; };
+		6001D2CA1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBGroupChatDetailCollectionViewCell.h; sourceTree = "<group>"; };
+		6001D2CB1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBGroupChatDetailCollectionViewCell.m; sourceTree = "<group>"; };
+		6001D2CC1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBGroupChatDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		6001D2E91E028B9900988349 /* SearchMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchMainTableViewController.h; sourceTree = "<group>"; };
+		6001D2EA1E028B9900988349 /* SearchMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchMainTableViewController.m; sourceTree = "<group>"; };
+		6001D2EB1E028B9900988349 /* DemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCell.h; sourceTree = "<group>"; };
+		6001D2EC1E028B9900988349 /* DemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCell.m; sourceTree = "<group>"; };
+		6001D2ED1E028B9900988349 /* DemoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCell.xib; sourceTree = "<group>"; };
+		6001D2EE1E028B9900988349 /* DemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoModel.h; sourceTree = "<group>"; };
+		6001D2EF1E028B9900988349 /* DemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModel.m; sourceTree = "<group>"; };
+		6001D2F01E028B9900988349 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		6001D2F11E028B9900988349 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		6001D2F71E028C5E00988349 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		6001D2F81E028C5E00988349 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		6001D2FA1E028C9400988349 /* SearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewController.h; sourceTree = "<group>"; };
+		6001D2FB1E028C9400988349 /* SearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewController.m; sourceTree = "<group>"; };
+		600266EB1DFD07C900E1A6D2 /* YBPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenu.h; sourceTree = "<group>"; };
+		600266EC1DFD07C900E1A6D2 /* YBPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPopupMenu.m; sourceTree = "<group>"; };
+		6023D3381DDEE63F00E44B80 /* YBMessageConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageConstant.h; sourceTree = "<group>"; };
+		6023D3391DDEE67800E44B80 /* YBMessageUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageUser.h; sourceTree = "<group>"; };
+		6023D33A1DDEE67800E44B80 /* YBMessageUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageUser.m; sourceTree = "<group>"; };
+		6023D33C1DDEEA8B00E44B80 /* YBMessageConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageConfig.h; sourceTree = "<group>"; };
+		6023D33D1DDEEA8B00E44B80 /* YBMessageConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageConfig.m; sourceTree = "<group>"; };
+		602F18971DF158F0002893DF /* jiahao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiahao.png; sourceTree = "<group>"; };
+		602F913C1E0046C2009C06E9 /* groupscource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = groupscource.json; sourceTree = "<group>"; };
+		6038BC671E03C77B004F63B9 /* getFriend.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getFriend.json; sourceTree = "<group>"; };
+		604830631E07D0A6002290C6 /* YBMessageViewController+setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YBMessageViewController+setting.h"; sourceTree = "<group>"; };
+		604830641E07D0A6002290C6 /* YBMessageViewController+setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YBMessageViewController+setting.m"; sourceTree = "<group>"; };
+		604D345C1DE680E400940B49 /* LaunchScreen.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LaunchScreen.strings; sourceTree = "<group>"; };
+		604D345E1DE68D2B00940B49 /* YBMessageMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageMapViewController.h; sourceTree = "<group>"; };
+		604D345F1DE68D2B00940B49 /* YBMessageMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageMapViewController.m; sourceTree = "<group>"; };
+		60D11D931DF1165C00A01F7E /* scource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scource.json; sourceTree = "<group>"; };
+		60D177061E13985900C38298 /* YBMessageKickMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageKickMembersViewController.h; sourceTree = "<group>"; };
+		60D177071E13985900C38298 /* YBMessageKickMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageKickMembersViewController.m; sourceTree = "<group>"; };
+		60F2A4CD1DEC7BA0006E63B3 /* YBContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBContactManager.h; sourceTree = "<group>"; };
+		60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBContactManager.m; sourceTree = "<group>"; };
+		8307CD0FC5BE3426EA5FB53A /* Pods-YueBallSport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YueBallSport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YueBallSport/Pods-YueBallSport.debug.xcconfig"; sourceTree = "<group>"; };
 		8C14D7971DDC374000323CB8 /* YBHotNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBHotNewsViewController.h; sourceTree = "<group>"; };
 		8C14D7981DDC374000323CB8 /* YBHotNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBHotNewsViewController.m; sourceTree = "<group>"; };
 		8C14D79D1DDC47ED00323CB8 /* YBBaseCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBBaseCollectionView.h; sourceTree = "<group>"; };
@@ -809,6 +874,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6001D2B71E022CF900988349 /* YBMessageSearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				6001D2F71E028C5E00988349 /* BaseTableViewController.h */,
+				6001D2F81E028C5E00988349 /* BaseTableViewController.m */,
+				6001D2E91E028B9900988349 /* SearchMainTableViewController.h */,
+				6001D2EA1E028B9900988349 /* SearchMainTableViewController.m */,
+				6001D2FA1E028C9400988349 /* SearchResultTableViewController.h */,
+				6001D2FB1E028C9400988349 /* SearchResultTableViewController.m */,
+				6001D2EB1E028B9900988349 /* DemoCell.h */,
+				6001D2EC1E028B9900988349 /* DemoCell.m */,
+				6001D2ED1E028B9900988349 /* DemoCell.xib */,
+				6001D2EE1E028B9900988349 /* DemoModel.h */,
+				6001D2EF1E028B9900988349 /* DemoModel.m */,
+				6001D2F01E028B9900988349 /* DataManager.h */,
+				6001D2F11E028B9900988349 /* DataManager.m */,
+			);
+			path = YBMessageSearchVC;
+			sourceTree = "<group>";
+		};
+		6001D2B81E022D0200988349 /* YBGroupDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				6001D2BD1E022D9900988349 /* YBGroupChatDetailViewController.h */,
+				6001D2BE1E022D9900988349 /* YBGroupChatDetailViewController.m */,
+				60D177061E13985900C38298 /* YBMessageKickMembersViewController.h */,
+				60D177071E13985900C38298 /* YBMessageKickMembersViewController.m */,
+			);
+			path = YBGroupDetailVC;
+			sourceTree = "<group>";
+		};
+		6001D2C51E022EA000988349 /* YBMessageModel */ = {
+			isa = PBXGroup;
+			children = (
+				6001D2C61E022EA000988349 /* YBMessageModel.h */,
+				6001D2C71E022EA000988349 /* YBMessageModel.m */,
+			);
+			path = YBMessageModel;
+			sourceTree = "<group>";
+		};
+		6001D2C91E022EC400988349 /* YBMessageGroupDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				6001D2CA1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.h */,
+				6001D2CB1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.m */,
+				6001D2CC1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.xib */,
+			);
+			path = YBMessageGroupDetailCell;
+			sourceTree = "<group>";
+		};
+		6001D2DC1E022FB000988349 /* YBMessageSearchView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YBMessageSearchView;
+			sourceTree = "<group>";
+		};
+		600266EA1DFD07C900E1A6D2 /* YBPopupMenu */ = {
+			isa = PBXGroup;
+			children = (
+				600266EB1DFD07C900E1A6D2 /* YBPopupMenu.h */,
+				600266EC1DFD07C900E1A6D2 /* YBPopupMenu.m */,
+			);
+			path = YBPopupMenu;
+			sourceTree = "<group>";
+		};
 		8C191ED01DD4658300031BC5 /* MLMeunView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1457,6 +1588,8 @@
 				8CD3D3C51DAA244600044ADB /* YueBallSportTests */,
 				8CD3D3D01DAA244600044ADB /* YueBallSportUITests */,
 				8CD3D3AA1DAA244600044ADB /* Products */,
+				F053B859A92B3419B50111F5 /* Pods */,
+				8DD17507B8AA026D496C97CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1575,8 +1708,26 @@
 		8CD3D3E41DAA387800044ADB /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				6001D2B81E022D0200988349 /* YBGroupDetailVC */,
+				6001D2B71E022CF900988349 /* YBMessageSearchVC */,
 				8CD3D4E51DAB458A00044ADB /* YBMessageViewController.h */,
 				8CD3D4E61DAB458A00044ADB /* YBMessageViewController.m */,
+				604830631E07D0A6002290C6 /* YBMessageViewController+setting.h */,
+				604830641E07D0A6002290C6 /* YBMessageViewController+setting.m */,
+				6023D33C1DDEEA8B00E44B80 /* YBMessageConfig.h */,
+				6023D33D1DDEEA8B00E44B80 /* YBMessageConfig.m */,
+				6023D3381DDEE63F00E44B80 /* YBMessageConstant.h */,
+				6023D3391DDEE67800E44B80 /* YBMessageUser.h */,
+				6023D33A1DDEE67800E44B80 /* YBMessageUser.m */,
+				604D345E1DE68D2B00940B49 /* YBMessageMapViewController.h */,
+				604D345F1DE68D2B00940B49 /* YBMessageMapViewController.m */,
+				60F2A4CD1DEC7BA0006E63B3 /* YBContactManager.h */,
+				60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */,
+				604D345C1DE680E400940B49 /* LaunchScreen.strings */,
+				60D11D931DF1165C00A01F7E /* scource.json */,
+				602F913C1E0046C2009C06E9 /* groupscource.json */,
+				6038BC671E03C77B004F63B9 /* getFriend.json */,
+				602F18971DF158F0002893DF /* jiahao.png */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -1776,6 +1927,7 @@
 				8CABD1731DE54A2B00812AB7 /* MLCommentInputView */,
 				8C7548871DDB09E500569DAE /* MLTransition */,
 				8C75485D1DD9ACCE00569DAE /* SDCycleScrollView */,
+				600266EA1DFD07C900E1A6D2 /* YBPopupMenu */,
 				8C70EBF31DD8707F009514EC /* UITableView-FDTemplateLayoutCell */,
 				8C70EBEF1DD7670B009514EC /* JSONKit */,
 				8C1923E11DD5901500031BC5 /* SNArticleSDK */,
@@ -1915,6 +2067,7 @@
 		8CD3D52E1DABB13700044ADB /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				6001D2C51E022EA000988349 /* YBMessageModel */,
 				8CD3D56F1DAC89D800044ADB /* TestMessage.h */,
 				8CD3D5701DAC89D800044ADB /* TestMessage.m */,
 			);
@@ -1985,6 +2138,7 @@
 		8CD3D5801DAC8B9900044ADB /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				6001D2C91E022EC400988349 /* YBMessageGroupDetailCell */,
 				8CD3D5811DAC8B9900044ADB /* TestMessageCell.h */,
 				8CD3D5821DAC8B9900044ADB /* TestMessageCell.m */,
 			);
@@ -2046,6 +2200,7 @@
 		8CD3D5901DAC8B9A00044ADB /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				6001D2DC1E022FB000988349 /* YBMessageSearchView */,
 				8CD3D5911DAC8B9A00044ADB /* TestMessageView.h */,
 				8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */,
 			);
@@ -2067,6 +2222,22 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		8DD17507B8AA026D496C97CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F053B859A92B3419B50111F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8307CD0FC5BE3426EA5FB53A /* Pods-YueBallSport.debug.xcconfig */,
+				2F74A7986AF9AD00C5D19811 /* Pods-YueBallSport.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2074,9 +2245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CD3D3D61DAA244600044ADB /* Build configuration list for PBXNativeTarget "YueBallSport" */;
 			buildPhases = (
+				0541DD963F35EA2EDEA81EE6 /* [CP] Check Pods Manifest.lock */,
 				8CD3D3A51DAA244600044ADB /* Sources */,
 				8CD3D3A61DAA244600044ADB /* Frameworks */,
 				8CD3D3A71DAA244600044ADB /* Resources */,
+				2CFD16E8B494DFD9BDD0BB73 /* [CP] Embed Pods Frameworks */,
+				88F2854CBC3FD91937B02AF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2135,7 +2309,7 @@
 				TargetAttributes = {
 					8CD3D3A81DAA244600044ADB = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = G5RPGT9NVU;
+						DevelopmentTeam = UX4L63XCE8;
 						ProvisioningStyle = Automatic;
 					};
 					8CD3D3C11DAA244600044ADB = {
@@ -2181,12 +2355,19 @@
 				8C70EC031DD87F80009514EC /* channelConfig.json in Resources */,
 				8C1927041DD5925B00031BC5 /* css in Resources */,
 				8C75485B1DD9A4D800569DAE /* content_ic_comments@2x.png in Resources */,
+				60D11D941DF1165C00A01F7E /* scource.json in Resources */,
 				8C1923BF1DD57DC300031BC5 /* MJRefresh.bundle in Resources */,
 				8C75485C1DD9A4D800569DAE /* content_ic_comments@3x.png in Resources */,
+				6038BC681E03C77B004F63B9 /* getFriend.json in Resources */,
 				8C1927061DD5925B00031BC5 /* js in Resources */,
+				602F913D1E0046C2009C06E9 /* groupscource.json in Resources */,
+				6001D2CE1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.xib in Resources */,
+				602F18981DF158F0002893DF /* jiahao.png in Resources */,
 				8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */,
 				8C1923A61DD57DC300031BC5 /* Info.plist in Resources */,
 				8C19253B1DD5901600031BC5 /* articleTemplate.html in Resources */,
+				604D345D1DE680E400940B49 /* LaunchScreen.strings in Resources */,
+				6001D2F41E028B9900988349 /* DemoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2205,6 +2386,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0541DD963F35EA2EDEA81EE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2CFD16E8B494DFD9BDD0BB73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YueBallSport/Pods-YueBallSport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88F2854CBC3FD91937B02AF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YueBallSport/Pods-YueBallSport-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8CD3D3A51DAA244600044ADB /* Sources */ = {
@@ -2225,8 +2454,10 @@
 				8CD3D43C1DAA3A4900044ADB /* UIProgressView+AFNetworking.m in Sources */,
 				8C70EC061DD88003009514EC /* YBFileHelper.m in Sources */,
 				8CD3D4571DAA3A5200044ADB /* YTKChainRequestAgent.m in Sources */,
+				6001D2C11E022D9900988349 /* YBGroupChatDetailViewController.m in Sources */,
 				8C1925321DD5901600031BC5 /* SNArticleParser+Image.m in Sources */,
 				8C75489F1DDB09E500569DAE /* UIViewController+MLSegue.m in Sources */,
+				6001D2F51E028B9900988349 /* DemoModel.m in Sources */,
 				8CD3D45A1DAA3A5200044ADB /* YTKNetworkPrivate.m in Sources */,
 				8CD3D4201DAA3A2F00044ADB /* AFURLSessionManager.m in Sources */,
 				8C19251B1DD5901600031BC5 /* SNArticleImageAD.m in Sources */,
@@ -2246,23 +2477,27 @@
 				8CD3D4E11DAB451700044ADB /* YBFindViewController.m in Sources */,
 				8CD3D41C1DAA3A2F00044ADB /* AFNetworkReachabilityManager.m in Sources */,
 				8C1925361DD5901600031BC5 /* SNArticleParser.m in Sources */,
+				6023D33B1DDEE67800E44B80 /* YBMessageUser.m in Sources */,
 				8CD3D4701DAA3AA100044ADB /* NSString+Utilities.m in Sources */,
 				8C1923CC1DD57DC300031BC5 /* SDWebImageDecoder.m in Sources */,
 				8C1925DD1DD5901600031BC5 /* SNArticleHelper.m in Sources */,
 				8C19217D1DD57C9B00031BC5 /* MASViewConstraint.m in Sources */,
 				8C1925261DD5901600031BC5 /* SNArticleTempImage.m in Sources */,
 				8C7548731DD9ACCE00569DAE /* UIView+SDExtension.m in Sources */,
+				6001D2F91E028C5E00988349 /* BaseTableViewController.m in Sources */,
 				8C1923B61DD57DC300031BC5 /* MJRefreshAutoGifFooter.m in Sources */,
 				8C14D7A51DDC4BC100323CB8 /* YBCollectionViewBaseCell.m in Sources */,
 				8CD3D4881DAA3ABD00044ADB /* UIView+Position.m in Sources */,
 				8C1925D61DD5901600031BC5 /* SNArticleBaseViewController+Gesture.m in Sources */,
 				8C1925DE1DD5901600031BC5 /* SNNewsWebView.m in Sources */,
 				8C1923AD1DD57DC300031BC5 /* NSObject+MJCoding.m in Sources */,
+				60D177081E13985900C38298 /* YBMessageKickMembersViewController.m in Sources */,
 				8CD3D43D1DAA3A4900044ADB /* UIRefreshControl+AFNetworking.m in Sources */,
 				8CD3D4561DAA3A5200044ADB /* YTKChainRequest.m in Sources */,
 				8CD3D3AE1DAA244600044ADB /* main.m in Sources */,
 				8C1925D81DD5901600031BC5 /* SNArticleBaseViewController+JSBridge.m in Sources */,
 				8C7548701DD9ACCE00569DAE /* TAPageControl.m in Sources */,
+				6001D2F61E028B9900988349 /* DataManager.m in Sources */,
 				8CD3D46E1DAA3AA100044ADB /* NSDictionary+Safe.m in Sources */,
 				8CD3D5971DAC8B9A00044ADB /* TestHomeCell.m in Sources */,
 				8C1923AA1DD57DC300031BC5 /* MJPropertyKey.m in Sources */,
@@ -2270,6 +2505,7 @@
 				8C1925DC1DD5901600031BC5 /* SNArticleBaseViewController.m in Sources */,
 				8C1923BD1DD57DC300031BC5 /* MJRefreshNormalHeader.m in Sources */,
 				8C1923CD1DD57DC300031BC5 /* SDWebImageDownloader.m in Sources */,
+				6023D33E1DDEEA8B00E44B80 /* YBMessageConfig.m in Sources */,
 				8C1923AF1DD57DC300031BC5 /* NSObject+MJProperty.m in Sources */,
 				8CD3D56E1DAC89CF00044ADB /* TestMe.m in Sources */,
 				8CD3D4861DAA3ABD00044ADB /* UIImage+Stretch.m in Sources */,
@@ -2284,6 +2520,7 @@
 				8C1925381DD5901600031BC5 /* SNCommentParser.m in Sources */,
 				8C70EBFC1DD8707F009514EC /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				8CD3D4361DAA3A4900044ADB /* AFAutoPurgingImageCache.m in Sources */,
+				6001D2CD1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.m in Sources */,
 				8C1925CB1DD5901600031BC5 /* SNArticleManager+Tag.m in Sources */,
 				8CD3D4671DAA3A8D00044ADB /* BaseDataRequest.m in Sources */,
 				8C75489E1DDB09E500569DAE /* MLSubmit.m in Sources */,
@@ -2316,6 +2553,7 @@
 				8CD3D4641DAA3A8500044ADB /* NSDate+Utilities.m in Sources */,
 				8C19252A1DD5901600031BC5 /* SNPoll.m in Sources */,
 				8C1923A91DD57DC300031BC5 /* MJProperty.m in Sources */,
+				60F2A4CF1DEC7BA0006E63B3 /* YBContactManager.m in Sources */,
 				8CD3D59C1DAC8B9A00044ADB /* TestHomeView.m in Sources */,
 				8C1923C31DD57DC300031BC5 /* UIScrollView+MJRefresh.m in Sources */,
 				8CD3D5681DAC89B800044ADB /* TestFind.m in Sources */,
@@ -2358,16 +2596,19 @@
 				8C1923CF1DD57DC300031BC5 /* SDWebImageManager.m in Sources */,
 				8C1923B71DD57DC300031BC5 /* MJRefreshAutoNormalFooter.m in Sources */,
 				8C1925D01DD5901600031BC5 /* SNCommonGlobalUtil.m in Sources */,
+				604830651E07D0A6002290C6 /* YBMessageViewController+setting.m in Sources */,
 				8CD3D4631DAA3A8500044ADB /* NSArray+Safe.m in Sources */,
 				8C19252C1DD5901600031BC5 /* SNAttitude.m in Sources */,
 				8C1923C41DD57DC300031BC5 /* UIView+MJExtension.m in Sources */,
 				8C1923AC1DD57DC300031BC5 /* NSObject+MJClass.m in Sources */,
 				8C75486D1DD9ACCE00569DAE /* TAAbstractDotView.m in Sources */,
+				6001D2F31E028B9900988349 /* DemoCell.m in Sources */,
 				8C1923D11DD57DC300031BC5 /* UIButton+WebCache.m in Sources */,
 				8C1925241DD5901600031BC5 /* SNArticlePicture.m in Sources */,
 				8C1925341DD5901600031BC5 /* SNArticleParser+Video.m in Sources */,
 				8C1925C91DD5901600031BC5 /* SNArticleManager+Attitude.m in Sources */,
 				8CD3D53E1DABB38A00044ADB /* TestStorage.m in Sources */,
+				6001D2F21E028B9900988349 /* SearchMainTableViewController.m in Sources */,
 				8C1923CA1DD57DC300031BC5 /* SDImageCacheConfig.m in Sources */,
 				8C70EBFF1DD87080009514EC /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				8C70EC0F1DD9683C009514EC /* YBNewsSportListCell.m in Sources */,
@@ -2388,6 +2629,7 @@
 				8C1923B51DD57DC300031BC5 /* MJRefreshHeader.m in Sources */,
 				8C1925141DD5901600031BC5 /* NSDate+SNArticle.m in Sources */,
 				8C1923B01DD57DC300031BC5 /* NSString+MJExtension.m in Sources */,
+				6001D2C81E022EA000988349 /* YBMessageModel.m in Sources */,
 				8C1925271DD5901600031BC5 /* SNArticleVideo.m in Sources */,
 				8C1925181DD5901600031BC5 /* UIColor+SNArticle.m in Sources */,
 				8C1925CD1DD5901600031BC5 /* NSFileManager+Size.m in Sources */,
@@ -2403,6 +2645,7 @@
 				8CD3D5981DAC8B9A00044ADB /* TestMeCell.m in Sources */,
 				8C1925221DD5901600031BC5 /* SNArticleImage.m in Sources */,
 				8C14D7991DDC374000323CB8 /* YBHotNewsViewController.m in Sources */,
+				604D34601DE68D2B00940B49 /* YBMessageMapViewController.m in Sources */,
 				8CD3D5741DAC89E200044ADB /* TestNews.m in Sources */,
 				8CD3D5471DABB3B500044ADB /* TestVideo.m in Sources */,
 				8C1925211DD5901600031BC5 /* SNArticleGroupImage.m in Sources */,
@@ -2434,6 +2677,7 @@
 				8C1925301DD5901600031BC5 /* SNUserSupportInfo.m in Sources */,
 				8C1925231DD5901600031BC5 /* SNArticleLive.m in Sources */,
 				8C1923AB1DD57DC300031BC5 /* MJPropertyType.m in Sources */,
+				6001D2FC1E028C9400988349 /* SearchResultTableViewController.m in Sources */,
 				8C1925DF1DD5901600031BC5 /* SNArticleCoverView.m in Sources */,
 				8C1923C11DD57DC300031BC5 /* NSBundle+MJRefresh.m in Sources */,
 				8C1923B21DD57DC300031BC5 /* MJRefreshBackFooter.m in Sources */,
@@ -2442,6 +2686,7 @@
 				8C75489D1DDB09E500569DAE /* MLSphere.m in Sources */,
 				8C1923D81DD57DC300031BC5 /* UIView+WebCacheOperation.m in Sources */,
 				8CD3D59E1DAC8B9A00044ADB /* TestMessageView.m in Sources */,
+				600266ED1DFD07C900E1A6D2 /* YBPopupMenu.m in Sources */,
 				8CD3D4851DAA3ABD00044ADB /* UIImage+Crop.m in Sources */,
 				8C75489B1DDB09E500569DAE /* MLTransitionAnimation.m in Sources */,
 				8C1925371DD5901600031BC5 /* SNAttitudeParser.m in Sources */,
@@ -2571,12 +2816,14 @@
 		};
 		8CD3D3D71DAA244600044ADB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8307CD0FC5BE3426EA5FB53A /* Pods-YueBallSport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = G5RPGT9NVU;
+				DEVELOPMENT_TEAM = UX4L63XCE8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YueBallSport/Other/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = YueBallSport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2587,10 +2834,11 @@
 		};
 		8CD3D3D81DAA244600044ADB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F74A7986AF9AD00C5D19811 /* Pods-YueBallSport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = G5RPGT9NVU;
+				DEVELOPMENT_TEAM = UX4L63XCE8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YueBallSport/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = YueBallSport/Info.plist;
