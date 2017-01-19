@@ -57,7 +57,7 @@
     }];
 
 
-    [[LCChatKit sharedInstance] openWithClientId:@"22"
+    [[LCChatKit sharedInstance] openWithClientId:@"12"
                                         callback:^(BOOL succeeded, NSError *error) {
                                             if (succeeded) {
 

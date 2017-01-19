@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53586E6F096288465C117DB9 /* Pods_YueBallSport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7B070FF3B8D4C0322C5FE5 /* Pods_YueBallSport.framework */; };
 		6001D2C11E022D9900988349 /* YBGroupChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2BE1E022D9900988349 /* YBGroupChatDetailViewController.m */; };
 		6001D2C81E022EA000988349 /* YBMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2C71E022EA000988349 /* YBMessageModel.m */; };
 		6001D2CD1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2CB1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.m */; };
@@ -338,6 +339,7 @@
 		60D177071E13985900C38298 /* YBMessageKickMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageKickMembersViewController.m; sourceTree = "<group>"; };
 		60F2A4CD1DEC7BA0006E63B3 /* YBContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBContactManager.h; sourceTree = "<group>"; };
 		60F2A4CE1DEC7BA0006E63B3 /* YBContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBContactManager.m; sourceTree = "<group>"; };
+		7C7B070FF3B8D4C0322C5FE5 /* Pods_YueBallSport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YueBallSport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8307CD0FC5BE3426EA5FB53A /* Pods-YueBallSport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YueBallSport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YueBallSport/Pods-YueBallSport.debug.xcconfig"; sourceTree = "<group>"; };
 		8C14D7971DDC374000323CB8 /* YBHotNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBHotNewsViewController.h; sourceTree = "<group>"; };
 		8C14D7981DDC374000323CB8 /* YBHotNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBHotNewsViewController.m; sourceTree = "<group>"; };
@@ -854,6 +856,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53586E6F096288465C117DB9 /* Pods_YueBallSport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2225,6 +2228,7 @@
 		8DD17507B8AA026D496C97CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C7B070FF3B8D4C0322C5FE5 /* Pods_YueBallSport.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
