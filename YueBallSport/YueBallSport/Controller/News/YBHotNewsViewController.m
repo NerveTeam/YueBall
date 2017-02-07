@@ -18,6 +18,7 @@
 #import "YBArticleViewController.h"
 #import "YBNewsFoucs.h"
 
+
 @interface YBHotNewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 // 频道数据
 @property(nonatomic, strong)NSArray *channelData;
@@ -44,6 +45,7 @@
 @implementation YBHotNewsViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.newsFoucs = [YBNewsFoucs requestNewsFoucs:^(NSArray *dataList) {
         self.foucsArray = dataList;
         [self parseFoucs];

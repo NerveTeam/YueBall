@@ -47,4 +47,5 @@ static const NSString *albumViewControllerKey = @"albumViewController";
     }
     return  albumVc;
 }
+
 @end

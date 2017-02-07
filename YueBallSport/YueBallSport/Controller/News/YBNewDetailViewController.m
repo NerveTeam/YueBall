@@ -27,11 +27,14 @@
     [super viewDidLoad];
     _currentIndex = 1;
     [self loadData:_currentIndex];
+    [self showHUD:self.tableView.frame inView:self.view];
 }
 
 - (void)loadData:(NSInteger)page {
     self.sportList = [YBNewsSport requestNewsList:@{@"channelId":@(_channelId),@"page":@(page)} success:^(NSArray *dataList) {
         [self stopRefresh];
+        [self removeHUD];
+        [self removeReloadHUD];
         if (page > 1) {
             if (dataList.count < 20) {
                 [self.tableView.mj_footer endRefreshingWithNoMoreData];
@@ -47,7 +50,13 @@
         }
         [self.tableView reloadData];
     } errorBack:^{
+        [self showMessage:@"网络异常"];
         [self stopRefresh];
+        [self removeHUD];
+        [self showReloadHUD:self.tableView callBack:^{
+            [self showHUD];
+            [self loadData:0];
+        }];
     }];
 }
 

@@ -138,6 +138,7 @@ NSString * const PlaceHolder_IMG = @"<!--{IMG_%d}-->";
     /* CommentId. */
     SNCommentSet *commentSet  = [[SNCommentSet alloc] init];
     commentSet.commentSetId = SNString([data objectDataForKeySafely:@"commentId"], @"");
+    commentSet.commentSetCount = [[data objectForKeySafely:@"commentCount"] longValue];
     if ([commentSet.commentSetId isEqualToString:@""])
     {
         commentSet.commentSetId = nil;

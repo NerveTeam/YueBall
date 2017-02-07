@@ -43,9 +43,12 @@
 @interface UIViewController (NoDataHUD)
 
 @end
-
+typedef void (^completeBlock)();
 @interface UIViewController (ReloadHUD)
 
+- (void)showReloadHUD:(UIView *)superview callBack:(completeBlock)complete;
+
+- (void)removeReloadHUD;
 @end
 
 @interface UIViewController (LoginHUD)

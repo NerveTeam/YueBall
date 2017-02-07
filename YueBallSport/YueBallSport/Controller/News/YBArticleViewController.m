@@ -30,9 +30,22 @@
 static CGFloat pullStartPosition = 20; // 下拉初始点
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self showHUD];
     [self config];
 }
 
+- (void)articleDidFailed {
+    [self removeHUD];
+    [self showReloadHUD:self.view callBack:^{
+       [super requestArticle]; 
+    }];
+}
+
+- (void)articleDidLoad {
+    [self removeReloadHUD];
+    [self removeHUD];
+    [self.commentInputView updateCommentCount:self.article.commentSet.commentSetCount];
+}
 /**
  *  配置相关
  */
@@ -60,9 +73,6 @@ static CGFloat pullStartPosition = 20; // 下拉初始点
     }];
 }
 
-- (void)articleDidLoad {
-    [self.commentInputView updateCommentCount:13];
-}
 
 
 

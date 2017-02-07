@@ -195,6 +195,7 @@
 		8C70EC091DD88404009514EC /* YBNewsSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EC081DD88404009514EC /* YBNewsSport.m */; };
 		8C70EC0C1DD8A2F7009514EC /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EC0B1DD8A2F7009514EC /* BaseModel.m */; };
 		8C70EC0F1DD9683C009514EC /* YBNewsSportListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EC0E1DD9683C009514EC /* YBNewsSportListCell.m */; };
+		8C7479041E2CB7A300069AA4 /* MLRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7479031E2CB7A300069AA4 /* MLRefreshView.m */; };
 		8C75485B1DD9A4D800569DAE /* content_ic_comments@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C7548591DD9A4D800569DAE /* content_ic_comments@2x.png */; };
 		8C75485C1DD9A4D800569DAE /* content_ic_comments@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C75485A1DD9A4D800569DAE /* content_ic_comments@3x.png */; };
 		8C75486D1DD9ACCE00569DAE /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7548601DD9ACCE00569DAE /* TAAbstractDotView.m */; };
@@ -715,6 +716,8 @@
 		8C70EC0B1DD8A2F7009514EC /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		8C70EC0D1DD9683C009514EC /* YBNewsSportListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNewsSportListCell.h; sourceTree = "<group>"; };
 		8C70EC0E1DD9683C009514EC /* YBNewsSportListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewsSportListCell.m; sourceTree = "<group>"; };
+		8C7479021E2CB7A300069AA4 /* MLRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLRefreshView.h; sourceTree = "<group>"; };
+		8C7479031E2CB7A300069AA4 /* MLRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLRefreshView.m; sourceTree = "<group>"; };
 		8C7548591DD9A4D800569DAE /* content_ic_comments@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "content_ic_comments@2x.png"; sourceTree = "<group>"; };
 		8C75485A1DD9A4D800569DAE /* content_ic_comments@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "content_ic_comments@3x.png"; sourceTree = "<group>"; };
 		8C75485F1DD9ACCE00569DAE /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -1654,6 +1657,15 @@
 			path = "UITableView-FDTemplateLayoutCell";
 			sourceTree = "<group>";
 		};
+		8C7479011E2CB7A300069AA4 /* MLRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				8C7479021E2CB7A300069AA4 /* MLRefreshView.h */,
+				8C7479031E2CB7A300069AA4 /* MLRefreshView.m */,
+			);
+			path = MLRefresh;
+			sourceTree = "<group>";
+		};
 		8C75485D1DD9ACCE00569DAE /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2194,6 +2206,7 @@
 		8CD3D40C1DAA387F00044ADB /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				8C7479011E2CB7A300069AA4 /* MLRefresh */,
 				8C3320B31E0BC5610048269B /* SMS_SDK */,
 				8C80A2041DEC409100F1D82E /* ShareSDK */,
 				8CABD1731DE54A2B00812AB7 /* MLCommentInputView */,
@@ -2507,13 +2520,6 @@
 			path = News;
 			sourceTree = "<group>";
 		};
-		8DD17507B8AA026D496C97CA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F053B859A92B3419B50111F5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2594,7 +2600,7 @@
 				TargetAttributes = {
 					8CD3D3A81DAA244600044ADB = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = UX4L63XCE8;
+						DevelopmentTeam = G5RPGT9NVU;
 						ProvisioningStyle = Automatic;
 					};
 					8CD3D3C11DAA244600044ADB = {
@@ -2836,6 +2842,7 @@
 				8C1923D61DD57DC300031BC5 /* UIImageView+WebCache.m in Sources */,
 				8CABD1761DE54A2B00812AB7 /* MLCommentInputView.m in Sources */,
 				8CD3D4E41DAB452500044ADB /* YBPersonViewController.m in Sources */,
+				8C7479041E2CB7A300069AA4 /* MLRefreshView.m in Sources */,
 				8C14D7AB1DDC5EFB00323CB8 /* UIButton+ImageTitleSpacing.m in Sources */,
 				8CD3D41E1DAA3A2F00044ADB /* AFURLRequestSerialization.m in Sources */,
 				8CFFFD5E1DD750F4004629FE /* YBLiveViewController.m in Sources */,
