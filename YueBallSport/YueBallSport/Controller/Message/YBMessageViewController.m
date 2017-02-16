@@ -12,12 +12,15 @@
 #import "NSDictionary+Safe.h"
 #import "YBMessageModel.h"
 #import "MJExtension.h"
-#define NavgationCenterY 40
 
+#import <ChatKit/LCChatKit.h>
+
+
+#define NavgationCenterY 40
 
 #define TITLES @[@"添加好友", @"发起群聊", @"扫一扫",@"添加球队"]
 #define ICONS  @[@"motify",@"delete",@"saoyisao",@"pay"]
-@interface YBMessageViewController ()<YBPopupMenuDelegate,YBMessageSearchCellDelegate,DataRequestDelegate>
+@interface YBMessageViewController ()<YBPopupMenuDelegate,YBMessageSearchCellDelegate,DataRequestDelegate,LCCKUIService>
 
 @property (nonatomic,strong)UIView * backView;
 
@@ -44,6 +47,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
     //配置信息
@@ -51,6 +55,12 @@
     
     self.conversationListVC = [[LCCKConversationListViewController alloc] init];
 
+    LCChatKit * chat = [[LCChatKit alloc]init];
+    // 设置头像圆角
+    [chat setAvatarImageViewCornerRadiusBlock:^CGFloat(CGSize avatarImageViewSize) {
+        NSLog(@"avatarImageViewSize=%@",NSStringFromCGSize(avatarImageViewSize));
+        return 2.0f;
+    }];
     
     [self.conversationListVC configureBarButtonItemStyle:LCCKBarButtonItemStyleAdd action:^(UIBarButtonItem *sender, UIEvent *event) {
 //        [self showPopOverMenu:sender event:event];
@@ -122,7 +132,7 @@
     
     if (segment.selectedSegmentIndex == 1) {
         
-        self.contactListViewController.isInfo = YES;
+//        self.contactListViewController.isInfo = YES;
         
         [self.contactView addSubview:self.contactListViewController.view];
        
@@ -131,7 +141,7 @@
     
     if (segment.selectedSegmentIndex == 0) {
         
-        self.conversationListVC.isInfo = YES;
+//        self.conversationListVC.isInfo = YES;
         [self.contactView addSubview:self.conversationListVC.view];
         
     }
@@ -283,6 +293,41 @@
     
     
 }
+
+#pragma mark - class method
+
++ (void)swizzling:(Class)aClass from:(SEL)before to:(SEL)after {
+    SEL originalSelector = before;
+    SEL swizzledSelector = after;
+    
+    Method originalMethod = class_getInstanceMethod(aClass, originalSelector);
+    Method swizzledMethod = class_getInstanceMethod(aClass, swizzledSelector);
+    
+    BOOL didAddMethod = class_addMethod(aClass, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+    
+    if (didAddMethod) {
+        class_replaceMethod(aClass, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    }
+    else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+}
+
+#pragma mark - instance method
+
+- (NSString *)iLoveDaidouji:(NSString *)input {
+    NSLog(@"OriginDaidouji");
+    return [NSString stringWithFormat:@"iLoveDaidouji+%@", input];
+}
+
+#pragma mark - life cycle
+
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//   
+//}
+
+
 #pragma mark -- 右上角 加号
 -(void)addFunction:(UIButton *)button{
     
@@ -315,7 +360,8 @@
         }
             break;
         case 2:
-            
+        {
+        }
             break;
         case 3:
             

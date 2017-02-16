@@ -108,7 +108,7 @@ CGFloat const LCCKConversationListCellDefaultHeight = 61; //LCCKImageSize + LCCK
         UILabel *timestampLabel = [[UILabel alloc] initWithFrame:CGRectMake(LCCKAutoResizingDefaultScreenWidth - LCCKHorizontalSpacing - LCCKTimestampeLabelWidth, CGRectGetMinY(_avatarImageView.frame), LCCKTimestampeLabelWidth, LCCKNameLabelHeight)];
         timestampLabel.font = [UIFont systemFontOfSize:13];
         timestampLabel.textAlignment = NSTextAlignmentRight;
-        timestampLabel.textColor = [[LCCKSettingService sharedInstance] defaultThemeColorForKey:@"TableView-CellMinor"];
+        timestampLabel.textColor = [[LCCKSettingService sharedInstance] defaultThemeColorForKey:@"TableView-CellDetail"];
         timestampLabel.autoresizingMask =  UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
         _timestampLabel = timestampLabel;
     }
@@ -118,7 +118,7 @@ CGFloat const LCCKConversationListCellDefaultHeight = 61; //LCCKImageSize + LCCK
 - (UILabel *)nameLabel {
     if (_nameLabel == nil) {
         UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_avatarImageView.frame) + LCCKHorizontalSpacing, CGRectGetMinY(_avatarImageView.frame), CGRectGetMinX(_timestampLabel.frame) - LCCKHorizontalSpacing * 3 - LCCKImageSize, LCCKNameLabelHeight)];
-        nameLabel.font = [UIFont systemFontOfSize:17];
+        nameLabel.font = [UIFont systemFontOfSize:16];
         nameLabel.textColor = [[LCCKSettingService sharedInstance] defaultThemeColorForKey:@"TableView-CellTitle"];
         nameLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _nameLabel = nameLabel;

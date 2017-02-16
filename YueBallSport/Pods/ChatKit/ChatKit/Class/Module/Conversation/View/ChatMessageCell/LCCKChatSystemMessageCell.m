@@ -34,6 +34,8 @@
         CGFloat widthLimit = MIN(width, height)/5 * 3;
         make.width.lessThanOrEqualTo(@(widthLimit));
         make.centerX.equalTo(self.contentView.mas_centerX);
+        
+//        make.height.offset(15);
     }];
 }
 
@@ -61,6 +63,7 @@
         _systemmessageContentView.layer.cornerRadius = 6.0f;
         _systemmessageContentView.translatesAutoresizingMaskIntoConstraints = NO;
 
+        
         UILabel *systemMessageLabel = [[UILabel alloc] init];
         systemMessageLabel.numberOfLines = 0;
         systemMessageLabel.textColor = self.conversationViewTimeLineTextColor;

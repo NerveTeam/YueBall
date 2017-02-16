@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CE6A8BC639FA9807F2CA48B /* Pods_YueBallSport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E989C9D75AD5839FF61C483F /* Pods_YueBallSport.framework */; };
 		6001D2C11E022D9900988349 /* YBGroupChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2BE1E022D9900988349 /* YBGroupChatDetailViewController.m */; };
 		6001D2C81E022EA000988349 /* YBMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2C71E022EA000988349 /* YBMessageModel.m */; };
 		6001D2CD1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2CB1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.m */; };
@@ -19,6 +20,16 @@
 		6001D2F91E028C5E00988349 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2F81E028C5E00988349 /* BaseTableViewController.m */; };
 		6001D2FC1E028C9400988349 /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001D2FB1E028C9400988349 /* SearchResultTableViewController.m */; };
 		600266ED1DFD07C900E1A6D2 /* YBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 600266EC1DFD07C900E1A6D2 /* YBPopupMenu.m */; };
+		6019BF4E1E5576D9007F6A3C /* UIAlertView+ DaiMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019BF451E5576D9007F6A3C /* UIAlertView+ DaiMethodHelper.m */; };
+		6019BF4F1E5576D9007F6A3C /* NSString+Daidouji1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019BF471E5576D9007F6A3C /* NSString+Daidouji1.m */; };
+		6019BF501E5576D9007F6A3C /* NSString+Daidouji2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019BF491E5576D9007F6A3C /* NSString+Daidouji2.m */; };
+		6019BF511E5576D9007F6A3C /* MainViewController+DaidoujiCategory1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019BF4B1E5576D9007F6A3C /* MainViewController+DaidoujiCategory1.m */; };
+		6019BF521E5576D9007F6A3C /* MainViewController+DaidoujiCategory2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019BF4D1E5576D9007F6A3C /* MainViewController+DaidoujiCategory2.m */; };
+		6019BF541E5576E2007F6A3C /* ILoveDaidouji.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6019BF531E5576E2007F6A3C /* ILoveDaidouji.a */; };
+		6019BF591E5576EE007F6A3C /* DaiMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019BF561E5576EE007F6A3C /* DaiMethodHelper.m */; };
+		6019BF5A1E5576EE007F6A3C /* DaiMethodInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019BF581E5576EE007F6A3C /* DaiMethodInfomation.m */; };
+		6019BF5D1E55782D007F6A3C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019BF5C1E55782D007F6A3C /* MainViewController.m */; };
+		6019BF5F1E557838007F6A3C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6019BF5E1E557838007F6A3C /* MainViewController.xib */; };
 		6023D33B1DDEE67800E44B80 /* YBMessageUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023D33A1DDEE67800E44B80 /* YBMessageUser.m */; };
 		6023D33E1DDEEA8B00E44B80 /* YBMessageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023D33D1DDEEA8B00E44B80 /* YBMessageConfig.m */; };
 		602F18981DF158F0002893DF /* jiahao.png in Resources */ = {isa = PBXBuildFile; fileRef = 602F18971DF158F0002893DF /* jiahao.png */; };
@@ -359,6 +370,24 @@
 		6001D2FB1E028C9400988349 /* SearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewController.m; sourceTree = "<group>"; };
 		600266EB1DFD07C900E1A6D2 /* YBPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenu.h; sourceTree = "<group>"; };
 		600266EC1DFD07C900E1A6D2 /* YBPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPopupMenu.m; sourceTree = "<group>"; };
+		6019BF441E5576D9007F6A3C /* UIAlertView+DaiMethodHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+DaiMethodHelper.h"; sourceTree = "<group>"; };
+		6019BF451E5576D9007F6A3C /* UIAlertView+ DaiMethodHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+ DaiMethodHelper.m"; sourceTree = "<group>"; };
+		6019BF461E5576D9007F6A3C /* NSString+Daidouji1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Daidouji1.h"; sourceTree = "<group>"; };
+		6019BF471E5576D9007F6A3C /* NSString+Daidouji1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Daidouji1.m"; sourceTree = "<group>"; };
+		6019BF481E5576D9007F6A3C /* NSString+Daidouji2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Daidouji2.h"; sourceTree = "<group>"; };
+		6019BF491E5576D9007F6A3C /* NSString+Daidouji2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Daidouji2.m"; sourceTree = "<group>"; };
+		6019BF4A1E5576D9007F6A3C /* MainViewController+DaidoujiCategory1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MainViewController+DaidoujiCategory1.h"; sourceTree = "<group>"; };
+		6019BF4B1E5576D9007F6A3C /* MainViewController+DaidoujiCategory1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MainViewController+DaidoujiCategory1.m"; sourceTree = "<group>"; };
+		6019BF4C1E5576D9007F6A3C /* MainViewController+DaidoujiCategory2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MainViewController+DaidoujiCategory2.h"; sourceTree = "<group>"; };
+		6019BF4D1E5576D9007F6A3C /* MainViewController+DaidoujiCategory2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MainViewController+DaidoujiCategory2.m"; sourceTree = "<group>"; };
+		6019BF531E5576E2007F6A3C /* ILoveDaidouji.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = ILoveDaidouji.a; sourceTree = "<group>"; };
+		6019BF551E5576EE007F6A3C /* DaiMethodHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiMethodHelper.h; sourceTree = "<group>"; };
+		6019BF561E5576EE007F6A3C /* DaiMethodHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiMethodHelper.m; sourceTree = "<group>"; };
+		6019BF571E5576EE007F6A3C /* DaiMethodInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiMethodInfomation.h; sourceTree = "<group>"; };
+		6019BF581E5576EE007F6A3C /* DaiMethodInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiMethodInfomation.m; sourceTree = "<group>"; };
+		6019BF5B1E55782D007F6A3C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6019BF5C1E55782D007F6A3C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6019BF5E1E557838007F6A3C /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		6023D3381DDEE63F00E44B80 /* YBMessageConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageConstant.h; sourceTree = "<group>"; };
 		6023D3391DDEE67800E44B80 /* YBMessageUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMessageUser.h; sourceTree = "<group>"; };
 		6023D33A1DDEE67800E44B80 /* YBMessageUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMessageUser.m; sourceTree = "<group>"; };
@@ -954,6 +983,7 @@
 		8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNewDetailViewController.m; sourceTree = "<group>"; };
 		8CFFFD5C1DD750F4004629FE /* YBLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLiveViewController.h; sourceTree = "<group>"; };
 		8CFFFD5D1DD750F4004629FE /* YBLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLiveViewController.m; sourceTree = "<group>"; };
+		E989C9D75AD5839FF61C483F /* Pods_YueBallSport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YueBallSport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -973,6 +1003,7 @@
 				8C80A22E1DEC409100F1D82E /* ShareSDK.framework in Frameworks */,
 				8C80A2371DEC409100F1D82E /* TencentOpenAPI.framework in Frameworks */,
 				8C80A2361DEC409100F1D82E /* WechatConnector.framework in Frameworks */,
+				6019BF541E5576E2007F6A3C /* ILoveDaidouji.a in Frameworks */,
 				8C80A23B1DEC409100F1D82E /* libWeChatSDK.a in Frameworks */,
 				8C80A2391DEC409100F1D82E /* libWeiboSDK.a in Frameworks */,
 				8C80A2401DEC409100F1D82E /* ShareSDKConnector.framework in Frameworks */,
@@ -981,6 +1012,7 @@
 				8C3320B91E0BC5610048269B /* SMS_SDK.framework in Frameworks */,
 				8C80A2351DEC409100F1D82E /* SinaWeiboConnector.framework in Frameworks */,
 				8C80A2331DEC409100F1D82E /* ShareSDKUI.framework in Frameworks */,
+				4CE6A8BC639FA9807F2CA48B /* Pods_YueBallSport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1065,6 +1097,31 @@
 				600266EC1DFD07C900E1A6D2 /* YBPopupMenu.m */,
 			);
 			path = YBPopupMenu;
+			sourceTree = "<group>";
+		};
+		6019BF431E5576B6007F6A3C /* DaiMethodHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6019BF441E5576D9007F6A3C /* UIAlertView+DaiMethodHelper.h */,
+				6019BF451E5576D9007F6A3C /* UIAlertView+ DaiMethodHelper.m */,
+				6019BF461E5576D9007F6A3C /* NSString+Daidouji1.h */,
+				6019BF471E5576D9007F6A3C /* NSString+Daidouji1.m */,
+				6019BF481E5576D9007F6A3C /* NSString+Daidouji2.h */,
+				6019BF491E5576D9007F6A3C /* NSString+Daidouji2.m */,
+				6019BF4A1E5576D9007F6A3C /* MainViewController+DaidoujiCategory1.h */,
+				6019BF4B1E5576D9007F6A3C /* MainViewController+DaidoujiCategory1.m */,
+				6019BF4C1E5576D9007F6A3C /* MainViewController+DaidoujiCategory2.h */,
+				6019BF4D1E5576D9007F6A3C /* MainViewController+DaidoujiCategory2.m */,
+				6019BF531E5576E2007F6A3C /* ILoveDaidouji.a */,
+				6019BF551E5576EE007F6A3C /* DaiMethodHelper.h */,
+				6019BF561E5576EE007F6A3C /* DaiMethodHelper.m */,
+				6019BF571E5576EE007F6A3C /* DaiMethodInfomation.h */,
+				6019BF581E5576EE007F6A3C /* DaiMethodInfomation.m */,
+				6019BF5B1E55782D007F6A3C /* MainViewController.h */,
+				6019BF5C1E55782D007F6A3C /* MainViewController.m */,
+				6019BF5E1E557838007F6A3C /* MainViewController.xib */,
+			);
+			name = DaiMethodHelper;
 			sourceTree = "<group>";
 		};
 		8C191ED01DD4658300031BC5 /* MLMeunView */ = {
@@ -1847,6 +1904,7 @@
 				8C80A2461DEC40FC00F1D82E /* libstdc++.tbd */,
 				8C80A2441DEC40F200F1D82E /* libz.tbd */,
 				8C80A2421DEC40E000F1D82E /* libicucore.tbd */,
+				E989C9D75AD5839FF61C483F /* Pods_YueBallSport.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2007,6 +2065,7 @@
 				602F913C1E0046C2009C06E9 /* groupscource.json */,
 				6038BC671E03C77B004F63B9 /* getFriend.json */,
 				602F18971DF158F0002893DF /* jiahao.png */,
+				6019BF431E5576B6007F6A3C /* DaiMethodHelper */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -2600,7 +2659,7 @@
 				TargetAttributes = {
 					8CD3D3A81DAA244600044ADB = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = G5RPGT9NVU;
+						DevelopmentTeam = UX4L63XCE8;
 						ProvisioningStyle = Automatic;
 					};
 					8CD3D3C11DAA244600044ADB = {
@@ -2649,6 +2708,7 @@
 				60D11D941DF1165C00A01F7E /* scource.json in Resources */,
 				8C1923BF1DD57DC300031BC5 /* MJRefresh.bundle in Resources */,
 				8C75485C1DD9A4D800569DAE /* content_ic_comments@3x.png in Resources */,
+				6019BF5F1E557838007F6A3C /* MainViewController.xib in Resources */,
 				6038BC681E03C77B004F63B9 /* getFriend.json in Resources */,
 				8C80A23C1DEC409100F1D82E /* read_me.txt in Resources */,
 				8CB150A41E06542C002359C4 /* loginBg.jpg in Resources */,
@@ -2750,6 +2810,7 @@
 				8C11E0411DEED5BE00127593 /* YBLoginViewController.m in Sources */,
 				8C1925161DD5901600031BC5 /* NSString+SNArticle.m in Sources */,
 				8CD3D4591DAA3A5200044ADB /* YTKNetworkConfig.m in Sources */,
+				6019BF4E1E5576D9007F6A3C /* UIAlertView+ DaiMethodHelper.m in Sources */,
 				8CD3D43C1DAA3A4900044ADB /* UIProgressView+AFNetworking.m in Sources */,
 				8C70EC061DD88003009514EC /* YBFileHelper.m in Sources */,
 				8CD3D4571DAA3A5200044ADB /* YTKChainRequestAgent.m in Sources */,
@@ -2770,6 +2831,7 @@
 				8CD3D59D1DAC8B9A00044ADB /* TestMeView.m in Sources */,
 				8CD3D4551DAA3A5200044ADB /* YTKBatchRequestAgent.m in Sources */,
 				8C70EBFD1DD8707F009514EC /* UITableView+FDKeyedHeightCache.m in Sources */,
+				6019BF501E5576D9007F6A3C /* NSString+Daidouji2.m in Sources */,
 				8CD3D43A1DAA3A4900044ADB /* UIButton+AFNetworking.m in Sources */,
 				8C1925171DD5901600031BC5 /* UIApplication+SNUtil.m in Sources */,
 				8C1925351DD5901600031BC5 /* SNArticleParser+Weibo.m in Sources */,
@@ -2829,6 +2891,7 @@
 				8C1923D41DD57DC300031BC5 /* UIImage+WebP.m in Sources */,
 				8CD3D41D1DAA3A2F00044ADB /* AFSecurityPolicy.m in Sources */,
 				8C1925151DD5901600031BC5 /* NSDictionary+SNArticle.m in Sources */,
+				6019BF4F1E5576D9007F6A3C /* NSString+Daidouji1.m in Sources */,
 				8C2827D31DF95F8200AD41B4 /* YBUserLogin.m in Sources */,
 				8C1925D71DD5901600031BC5 /* SNArticleBaseViewController+HotComment.m in Sources */,
 				8C1923B91DD57DC300031BC5 /* MJRefreshBackGifFooter.m in Sources */,
@@ -2900,6 +2963,7 @@
 				8CD3D46F1DAA3AA100044ADB /* NSFileManager+Utilities.m in Sources */,
 				8C19252B1DD5901600031BC5 /* SNSpecalContent.m in Sources */,
 				8C1923CF1DD57DC300031BC5 /* SDWebImageManager.m in Sources */,
+				6019BF521E5576D9007F6A3C /* MainViewController+DaidoujiCategory2.m in Sources */,
 				8C1923B71DD57DC300031BC5 /* MJRefreshAutoNormalFooter.m in Sources */,
 				8C1925D01DD5901600031BC5 /* SNCommonGlobalUtil.m in Sources */,
 				604830651E07D0A6002290C6 /* YBMessageViewController+setting.m in Sources */,
@@ -2948,6 +3012,7 @@
 				8C1925D11DD5901600031BC5 /* SNArticleSetting.m in Sources */,
 				8C7548991DDB09E500569DAE /* MLBridgeBlock.m in Sources */,
 				8C19217C1DD57C9B00031BC5 /* MASViewAttribute.m in Sources */,
+				6019BF591E5576EE007F6A3C /* DaiMethodHelper.m in Sources */,
 				8C14D7F61DE2FC6900323CB8 /* YBNewsFoucs.m in Sources */,
 				8CD3D59A1DAC8B9A00044ADB /* TestNewsCell.m in Sources */,
 				8C75486F1DD9ACCE00569DAE /* TADotView.m in Sources */,
@@ -2963,7 +3028,9 @@
 				8CD3D4DE1DAB450A00044ADB /* YBHomeViewController.m in Sources */,
 				8CD3D59F1DAC8B9A00044ADB /* TestNewsViews.m in Sources */,
 				8C1923B41DD57DC300031BC5 /* MJRefreshFooter.m in Sources */,
+				6019BF5D1E55782D007F6A3C /* MainViewController.m in Sources */,
 				8C1925201DD5901600031BC5 /* SNArticleDeepReadGroup.m in Sources */,
+				6019BF511E5576D9007F6A3C /* MainViewController+DaidoujiCategory1.m in Sources */,
 				8C19251A1DD5901600031BC5 /* SNArticleAD.m in Sources */,
 				8C1921801DD57C9B00031BC5 /* View+MASAdditions.m in Sources */,
 				8C14D7A21DDC493700323CB8 /* YBChannelGroup.m in Sources */,
@@ -2979,6 +3046,7 @@
 				8CD3D5711DAC89D800044ADB /* TestMessage.m in Sources */,
 				8CD3D5291DABAF0500044ADB /* YBBaseViewController.m in Sources */,
 				8CD3D4841DAA3ABD00044ADB /* UIButton+Extention.m in Sources */,
+				6019BF5A1E5576EE007F6A3C /* DaiMethodInfomation.m in Sources */,
 				8CD3D4891DAA3ABD00044ADB /* UIView+TopBar.m in Sources */,
 				8C75489A1DDB09E500569DAE /* MLCustomTransition.m in Sources */,
 				8CD3D4391DAA3A4900044ADB /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -3130,7 +3198,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = G5RPGT9NVU;
+				DEVELOPMENT_TEAM = UX4L63XCE8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK",
@@ -3150,6 +3218,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK/Support/PlatformSDK/WeChatSDK",
+					"$(PROJECT_DIR)/YueBallSport/Controller/Message",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.yueball.YueBallSport;
@@ -3163,7 +3232,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = G5RPGT9NVU;
+				DEVELOPMENT_TEAM = UX4L63XCE8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK",
@@ -3182,6 +3251,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK/Support/PlatformSDK/WeChatSDK",
+					"$(PROJECT_DIR)/YueBallSport/Controller/Message",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.yueball.YueBallSport;

@@ -242,7 +242,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
         //用户本身
         YBMessageUser *user_ = [YBMessageUser userWithUserId:YBMessageUserId
                                                         name:YBMessageUserId
-                                                   avatarURL:[NSURL URLWithString:@"http://www.avatarsdb.com/avatars/bath_bob.jpg"]
+                                                   avatarURL:[NSURL URLWithString:@"http://touxiang.qqzhi.com/uploads/2012-11/1111101929935.jpg"]
                                                     clientId:YBMessageUserId];
 
         NSMutableArray * users = [[NSMutableArray alloc]initWithObjects:user_, nil];

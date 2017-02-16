@@ -118,6 +118,9 @@
     if (conversation.muted == YES) {
         cell.remindMuteImageView.hidden = NO;
     }
+    
+    NSLog(@"conversation.lcck_displayName=%@ \n cell.messageTextLabel.attributedText =%@,",conversation.lcck_displayName,cell.messageTextLabel.attributedText);
+    
     LCCKConfigureCellBlock configureCellBlock = [[LCCKConversationListService sharedInstance] configureCellBlock];
     if (configureCellBlock) {
         configureCellBlock(cell, tableView, indexPath, conversation);

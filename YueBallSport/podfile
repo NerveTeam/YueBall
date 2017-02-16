@@ -2,5 +2,5 @@ platform :ios, '7.0'
 use_frameworks!
 
 target 'YueBallSport' do
-  pod 'ChatKit','0.8.2'
+  pod 'ChatKit', '~> 0.8.3'
 end
