@@ -253,6 +253,21 @@
 		8CD3D59D1DAC8B9A00044ADB /* TestMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D58F1DAC8B9A00044ADB /* TestMeView.m */; };
 		8CD3D59E1DAC8B9A00044ADB /* TestMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */; };
 		8CD3D59F1DAC8B9A00044ADB /* TestNewsViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */; };
+		8CFD20571E5B044F0020E518 /* ChatKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD20561E5B044F0020E518 /* ChatKit.framework */; };
+		8CFD20591E5B04560020E518 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD20581E5B04560020E518 /* Masonry.framework */; };
+		8CFD205B1E5B045F0020E518 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD205A1E5B045F0020E518 /* MJRefresh.framework */; };
+		8CFD205F1E5B04B10020E518 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD205E1E5B04B10020E518 /* SDWebImage.framework */; };
+		8CFD20611E5B04BE0020E518 /* Pods_YueBallSport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD20601E5B04BE0020E518 /* Pods_YueBallSport.framework */; };
+		8CFD20621E5B051A0020E518 /* UITableView_FDTemplateLayoutCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD205C1E5B04690020E518 /* UITableView_FDTemplateLayoutCell.framework */; };
+		8CFD20921E5DAD5D0020E518 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD20911E5DAD5D0020E518 /* AVOSCloud.framework */; };
+		8CFD20941E5DAD600020E518 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD20931E5DAD600020E518 /* AVOSCloudIM.framework */; };
+		8CFD20961E5DAD640020E518 /* DACircularProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD20951E5DAD640020E518 /* DACircularProgress.framework */; };
+		8CFD20981E5DAD670020E518 /* FDStackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD20971E5DAD670020E518 /* FDStackView.framework */; };
+		8CFD209A1E5DAD690020E518 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD20991E5DAD690020E518 /* FMDB.framework */; };
+		8CFD209C1E5DAD6D0020E518 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD209B1E5DAD6D0020E518 /* MBProgressHUD.framework */; };
+		8CFD209E1E5DAD700020E518 /* MLLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD209D1E5DAD700020E518 /* MLLabel.framework */; };
+		8CFD20A01E5DAD720020E518 /* MWPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD209F1E5DAD720020E518 /* MWPhotoBrowser.framework */; };
+		8CFD20A21E5DAD790020E518 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFD20A11E5DAD790020E518 /* pop.framework */; };
 		8CFF927C1DE6EA3900C4CDEF /* YBArticlePullTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF927B1DE6EA3900C4CDEF /* YBArticlePullTipView.m */; };
 		8CFFFD5B1DD750D3004629FE /* YBNewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD5A1DD750D3004629FE /* YBNewDetailViewController.m */; };
 		8CFFFD5E1DD750F4004629FE /* YBLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFFD5D1DD750F4004629FE /* YBLiveViewController.m */; };
@@ -762,6 +777,21 @@
 		8CD3D5921DAC8B9A00044ADB /* TestMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessageView.m; sourceTree = "<group>"; };
 		8CD3D5941DAC8B9A00044ADB /* TestNewsViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNewsViews.h; sourceTree = "<group>"; };
 		8CD3D5951DAC8B9A00044ADB /* TestNewsViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNewsViews.m; sourceTree = "<group>"; };
+		8CFD20561E5B044F0020E518 /* ChatKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChatKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphoneos/ChatKit/ChatKit.framework"; sourceTree = "<group>"; };
+		8CFD20581E5B04560020E518 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphoneos/Masonry/Masonry.framework"; sourceTree = "<group>"; };
+		8CFD205A1E5B045F0020E518 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphoneos/MJRefresh/MJRefresh.framework"; sourceTree = "<group>"; };
+		8CFD205C1E5B04690020E518 /* UITableView_FDTemplateLayoutCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UITableView_FDTemplateLayoutCell.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphoneos/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework"; sourceTree = "<group>"; };
+		8CFD205E1E5B04B10020E518 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
+		8CFD20601E5B04BE0020E518 /* Pods_YueBallSport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_YueBallSport.framework; path = "Pods/../build/Debug-iphoneos/Pods_YueBallSport.framework"; sourceTree = "<group>"; };
+		8CFD20911E5DAD5D0020E518 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphonesimulator/AVOSCloud/AVOSCloud.framework"; sourceTree = "<group>"; };
+		8CFD20931E5DAD600020E518 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloudIM.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphonesimulator/AVOSCloudIM/AVOSCloudIM.framework"; sourceTree = "<group>"; };
+		8CFD20951E5DAD640020E518 /* DACircularProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DACircularProgress.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphonesimulator/DACircularProgress/DACircularProgress.framework"; sourceTree = "<group>"; };
+		8CFD20971E5DAD670020E518 /* FDStackView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FDStackView.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphonesimulator/FDStackView/FDStackView.framework"; sourceTree = "<group>"; };
+		8CFD20991E5DAD690020E518 /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FMDB.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphonesimulator/FMDB/FMDB.framework"; sourceTree = "<group>"; };
+		8CFD209B1E5DAD6D0020E518 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphonesimulator/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
+		8CFD209D1E5DAD700020E518 /* MLLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MLLabel.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphonesimulator/MLLabel/MLLabel.framework"; sourceTree = "<group>"; };
+		8CFD209F1E5DAD720020E518 /* MWPhotoBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MWPhotoBrowser.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphonesimulator/MWPhotoBrowser/MWPhotoBrowser.framework"; sourceTree = "<group>"; };
+		8CFD20A11E5DAD790020E518 /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = "../../../Library/Developer/Xcode/DerivedData/YueBallSport-eswtejkmsobfqeekiyygoclhdynl/Build/Products/Debug-iphonesimulator/pop/pop.framework"; sourceTree = "<group>"; };
 		8CFF927A1DE6EA3900C4CDEF /* YBArticlePullTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBArticlePullTipView.h; sourceTree = "<group>"; };
 		8CFF927B1DE6EA3900C4CDEF /* YBArticlePullTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBArticlePullTipView.m; sourceTree = "<group>"; };
 		8CFFFD591DD750D3004629FE /* YBNewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNewDetailViewController.h; sourceTree = "<group>"; };
@@ -775,6 +805,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFD20A21E5DAD790020E518 /* pop.framework in Frameworks */,
+				8CFD20A01E5DAD720020E518 /* MWPhotoBrowser.framework in Frameworks */,
+				8CFD209E1E5DAD700020E518 /* MLLabel.framework in Frameworks */,
+				8CFD209C1E5DAD6D0020E518 /* MBProgressHUD.framework in Frameworks */,
+				8CFD209A1E5DAD690020E518 /* FMDB.framework in Frameworks */,
+				8CFD20981E5DAD670020E518 /* FDStackView.framework in Frameworks */,
+				8CFD20961E5DAD640020E518 /* DACircularProgress.framework in Frameworks */,
+				8CFD20941E5DAD600020E518 /* AVOSCloudIM.framework in Frameworks */,
+				8CFD20921E5DAD5D0020E518 /* AVOSCloud.framework in Frameworks */,
+				8CFD20621E5B051A0020E518 /* UITableView_FDTemplateLayoutCell.framework in Frameworks */,
+				8CFD20611E5B04BE0020E518 /* Pods_YueBallSport.framework in Frameworks */,
+				8CFD205F1E5B04B10020E518 /* SDWebImage.framework in Frameworks */,
+				8CFD205B1E5B045F0020E518 /* MJRefresh.framework in Frameworks */,
+				8CFD20591E5B04560020E518 /* Masonry.framework in Frameworks */,
+				8CFD20571E5B044F0020E518 /* ChatKit.framework in Frameworks */,
 				8C3320BB1E0BCAB50048269B /* MessageUI.framework in Frameworks */,
 				8C80A24D1DEC412B00F1D82E /* libsqlite3.tbd in Frameworks */,
 				8C80A24B1DEC411D00F1D82E /* ImageIO.framework in Frameworks */,
@@ -1463,6 +1508,21 @@
 		8C80A2411DEC40E000F1D82E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CFD20A11E5DAD790020E518 /* pop.framework */,
+				8CFD209F1E5DAD720020E518 /* MWPhotoBrowser.framework */,
+				8CFD209D1E5DAD700020E518 /* MLLabel.framework */,
+				8CFD209B1E5DAD6D0020E518 /* MBProgressHUD.framework */,
+				8CFD20991E5DAD690020E518 /* FMDB.framework */,
+				8CFD20971E5DAD670020E518 /* FDStackView.framework */,
+				8CFD20951E5DAD640020E518 /* DACircularProgress.framework */,
+				8CFD20931E5DAD600020E518 /* AVOSCloudIM.framework */,
+				8CFD20911E5DAD5D0020E518 /* AVOSCloud.framework */,
+				8CFD20601E5B04BE0020E518 /* Pods_YueBallSport.framework */,
+				8CFD205E1E5B04B10020E518 /* SDWebImage.framework */,
+				8CFD205C1E5B04690020E518 /* UITableView_FDTemplateLayoutCell.framework */,
+				8CFD205A1E5B045F0020E518 /* MJRefresh.framework */,
+				8CFD20581E5B04560020E518 /* Masonry.framework */,
+				8CFD20561E5B044F0020E518 /* ChatKit.framework */,
 				8C3320C01E0D15DC0048269B /* AdSupport.framework */,
 				8C3320BE1E0D15D00048269B /* CoreTelephony.framework */,
 				8C3320BC1E0D15C40048269B /* SystemConfiguration.framework */,
@@ -2687,6 +2747,7 @@
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK/Support/Required",
 					"$(PROJECT_DIR)/YueBallSport/Vender/SMS_SDK",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YueBallSport/Other/PrefixHeader.pch;
@@ -2702,6 +2763,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.yueball.YueBallSport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -2720,6 +2782,7 @@
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/YueBallSport/Vender/ShareSDK/Support/Required",
 					"$(PROJECT_DIR)/YueBallSport/Vender/SMS_SDK",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YueBallSport/Other/PrefixHeader.pch;
@@ -2734,6 +2797,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.yueball.YueBallSport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
