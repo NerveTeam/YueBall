@@ -57,4 +57,6 @@
  *  @return 虚化后的图片
  */
 + (UIImage *)blurrImage:(UIImage *)image scale:(float)scale;
+
+
 @end

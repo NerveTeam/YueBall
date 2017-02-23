@@ -35,6 +35,7 @@
 #import "TAPageControl.h"
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
+#import "UIImage+Stretch.h"
 
 
 #define kCycleScrollViewInitialPageControlDotSize CGSizeMake(10, 10)
@@ -547,8 +548,18 @@ NSString * const ID = @"cycleCell";
     NSString *imagePath = self.imagePathsGroup[itemIndex];
     
     if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]]) {
+        __block typeof(cell.imageView)blockImageView = cell.imageView;
         if ([imagePath hasPrefix:@"http"]) {
-            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                // 自己添加图片压缩正常展示
+                if (image.size.height > image.size.width || image.size.height > SCREEN_WIDTH * 0.5) {
+                    UIImage *newImge = [image scaleToSize:CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH*image.size.height/image.size.width)];
+                    blockImageView.contentMode = UIViewContentModeTop;
+                    [blockImageView setImage:newImge];
+                }else{
+                    blockImageView.contentMode = UIViewContentModeScaleAspectFill;
+                }
+            }];
         } else {
             UIImage *image = [UIImage imageNamed:imagePath];
             if (!image) {
@@ -570,7 +581,7 @@ NSString * const ID = @"cycleCell";
         cell.titleLabelTextColor = self.titleLabelTextColor;
         cell.titleLabelTextFont = self.titleLabelTextFont;
         cell.hasConfigured = YES;
-        cell.imageView.contentMode = self.bannerImageViewContentMode;
+//        cell.imageView.contentMode = self.bannerImageViewContentMode;
         cell.clipsToBounds = YES;
         cell.onlyDisplayText = self.onlyDisplayText;
     }

@@ -22,6 +22,8 @@
 @interface YBHotNewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 // 频道数据
 @property(nonatomic, strong)NSArray *channelData;
+// 头部
+@property(nonatomic, strong)UIView *tableviewHeader;
 // 焦点图
 @property(nonatomic, strong)SDCycleScrollView *cycleView;
 // 子导航
@@ -45,18 +47,21 @@
 @implementation YBHotNewsViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.newsFoucs = [YBNewsFoucs requestNewsFoucs:^(NSArray *dataList) {
-        self.foucsArray = dataList;
-        [self parseFoucs];
-    } error:^{
-        
-    }];
     _currentIndex = 1;
     [self loadData:_currentIndex];
     [self initNavigationBar];
 }
 - (void)loadData:(NSInteger)page {
+    
+    if (page == 1) {
+        self.newsFoucs = [YBNewsFoucs requestNewsFoucs:^(NSArray *dataList) {
+            self.foucsArray = dataList;
+            [self parseFoucs];
+        } error:^{
+            
+        }];
+    }
+    
     self.sportList = [YBNewsSport requestHotNewsList:@{@"page":@(page)} success:^(NSArray *dataList) {
         [self stopRefresh];
         if (page > 1) {
@@ -163,6 +168,15 @@
     }
     return _channelData;
 }
+- (UIView *)tableviewHeader {
+    if (!_tableviewHeader) {
+        _tableviewHeader = [[UIView alloc]init];
+        _tableviewHeader.backgroundColor = [UIColor clearColor];
+        _tableviewHeader.frame = CGRectMake(0, 0, self.view.width, self.view.width * 0.5 + 90);
+        [self.view addSubview:_tableviewHeader];
+    }
+    return _tableviewHeader;
+}
 - (SDCycleScrollView *)cycleView {
     if (!_cycleView) {
         _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.width, self.view.width * 0.5) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
@@ -170,7 +184,8 @@
         _cycleView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
         _cycleView.currentPageDotColor = [UIColor whiteColor];
         _cycleView.titleLabelTextFont = [UIFont systemFontOfSize:14];
-        [self.view addSubview:_cycleView];
+        _cycleView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+        [self.tableviewHeader addSubview:_cycleView];
     }
     return _cycleView;
 }
@@ -178,7 +193,7 @@
     if (!_navigationBar) {
         _navigationBar = [[UIScrollView alloc]init];
         _navigationBar.frame = CGRectMake(0, self.cycleView.height, self.view.width, 90);
-        [self.view addSubview:_navigationBar];
+        [self.tableviewHeader addSubview:_navigationBar];
     }
     return _navigationBar;
 }
@@ -187,15 +202,15 @@
         _separateLine = [CALayer layer];
         _separateLine.backgroundColor = RGBACOLOR(235, 235, 235, 1).CGColor;
         _separateLine.frame = CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), self.view.width, 1);
-        [self.view.layer addSublayer:_separateLine];
+        [self.tableviewHeader.layer addSublayer:_separateLine];
     }
     return _separateLine;
 }
 - (UITableView *)hotTableView {
     if (!_hotTableView) {
-        CGFloat Y = CGRectGetMaxY(self.separateLine.frame);
-        _hotTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, Y, self.view.width, self.view.height - Y)];
+        _hotTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
         [_hotTableView registerClass:[YBNewsSportListCell class] forCellReuseIdentifier:NSStringFromClass([YBNewsSportListCell class])];
+        _hotTableView.tableHeaderView = self.tableviewHeader;
         _hotTableView.delegate = self;
         _hotTableView.dataSource = self;
         _hotTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

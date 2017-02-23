@@ -13,6 +13,7 @@
 #import "UIImageView+WebCache.h"
 #import "MLTool.h"
 #import "UIImage+Stretch.h"
+#import "UIImageView+Animation.h"
 
 @interface YBNewsSportListCell ()
 @property(nonatomic, strong)UILabel *titleLabel;
@@ -60,6 +61,7 @@ static const CGFloat imgH = 80;
         }else {
             blockImageView.contentMode = UIViewContentModeScaleAspectFill;
         }
+        [blockImageView animationForFeedPictureFadeIn];
     }];
     self.commentCount.text = [NSString stringWithFormat:@"%ld",sportList.commentCount];
     [self.commentCount sizeToFit];

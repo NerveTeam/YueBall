@@ -136,6 +136,8 @@
 		8C3320C51E10C39F0048269B /* YBUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3320C41E10C39F0048269B /* YBUnderlineTextField.m */; };
 		8C3320C81E10C9BD0048269B /* YBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3320C71E10C9BD0048269B /* YBRegisterViewController.m */; };
 		8C5CDC431E1D010B00028922 /* YBResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CDC421E1D010B00028922 /* YBResetPasswordViewController.m */; };
+		8C6F40741E5EE581006B07FD /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C6F40731E5EE581006B07FD /* home.jpg */; };
+		8C6F40771E5EEC7C006B07FD /* UIImageView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F40761E5EEC7C006B07FD /* UIImageView+Animation.m */; };
 		8C70EBF21DD7670B009514EC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF11DD7670B009514EC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8C70EC031DD87F80009514EC /* channelConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C70EC021DD87F80009514EC /* channelConfig.json */; };
 		8C70EC061DD88003009514EC /* YBFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EC051DD88003009514EC /* YBFileHelper.m */; };
@@ -184,7 +186,6 @@
 		8C80A24B1DEC411D00F1D82E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80A24A1DEC411D00F1D82E /* ImageIO.framework */; };
 		8C80A24D1DEC412B00F1D82E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80A24C1DEC412B00F1D82E /* libsqlite3.tbd */; };
 		8CABD1761DE54A2B00812AB7 /* MLCommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CABD1751DE54A2B00812AB7 /* MLCommentInputView.m */; };
-		8CB150A41E06542C002359C4 /* loginBg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CB150A31E06542C002359C4 /* loginBg.jpg */; };
 		8CD3D3AE1DAA244600044ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3AD1DAA244600044ADB /* main.m */; };
 		8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3D3B81DAA244600044ADB /* Assets.xcassets */; };
 		8CD3D3C71DAA244600044ADB /* YueBallSportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3C61DAA244600044ADB /* YueBallSportTests.m */; };
@@ -548,6 +549,9 @@
 		8C3320C71E10C9BD0048269B /* YBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBRegisterViewController.m; sourceTree = "<group>"; };
 		8C5CDC411E1D010B00028922 /* YBResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBResetPasswordViewController.h; sourceTree = "<group>"; };
 		8C5CDC421E1D010B00028922 /* YBResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBResetPasswordViewController.m; sourceTree = "<group>"; };
+		8C6F40731E5EE581006B07FD /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
+		8C6F40751E5EEC7C006B07FD /* UIImageView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Animation.h"; sourceTree = "<group>"; };
+		8C6F40761E5EEC7C006B07FD /* UIImageView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Animation.m"; sourceTree = "<group>"; };
 		8C70EBF01DD7670B009514EC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		8C70EBF11DD7670B009514EC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		8C70EC021DD87F80009514EC /* channelConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = channelConfig.json; sourceTree = "<group>"; };
@@ -634,7 +638,6 @@
 		8C80A24C1DEC412B00F1D82E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8CABD1741DE54A2B00812AB7 /* MLCommentInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCommentInputView.h; sourceTree = "<group>"; };
 		8CABD1751DE54A2B00812AB7 /* MLCommentInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCommentInputView.m; sourceTree = "<group>"; };
-		8CB150A31E06542C002359C4 /* loginBg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginBg.jpg; sourceTree = "<group>"; };
 		8CD3D3A91DAA244600044ADB /* YueBallSport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueBallSport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD3D3AD1DAA244600044ADB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CD3D3B81DAA244600044ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1765,6 +1768,8 @@
 				8CD3D4811DAA3ABD00044ADB /* UIViewController+AnimationHUD.m */,
 				8CD3D4821DAA3ABD00044ADB /* UIViewController+Navigation.h */,
 				8CD3D4831DAA3ABD00044ADB /* UIViewController+Navigation.m */,
+				8C6F40751E5EEC7C006B07FD /* UIImageView+Animation.h */,
+				8C6F40761E5EEC7C006B07FD /* UIImageView+Animation.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1860,7 +1865,7 @@
 		8CD3D3FA1DAA387800044ADB /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				8CB150A31E06542C002359C4 /* loginBg.jpg */,
+				8C6F40731E5EE581006B07FD /* home.jpg */,
 				8C7548591DD9A4D800569DAE /* content_ic_comments@2x.png */,
 				8C75485A1DD9A4D800569DAE /* content_ic_comments@3x.png */,
 			);
@@ -2314,11 +2319,11 @@
 				8C70EC031DD87F80009514EC /* channelConfig.json in Resources */,
 				8C1927041DD5925B00031BC5 /* css in Resources */,
 				8C75485B1DD9A4D800569DAE /* content_ic_comments@2x.png in Resources */,
+				8C6F40741E5EE581006B07FD /* home.jpg in Resources */,
 				60D11D941DF1165C00A01F7E /* scource.json in Resources */,
 				8C75485C1DD9A4D800569DAE /* content_ic_comments@3x.png in Resources */,
 				6038BC681E03C77B004F63B9 /* getFriend.json in Resources */,
 				8C80A23C1DEC409100F1D82E /* read_me.txt in Resources */,
-				8CB150A41E06542C002359C4 /* loginBg.jpg in Resources */,
 				8C80A2321DEC409100F1D82E /* ShareSDKUI.bundle in Resources */,
 				8C80A23D1DEC409100F1D82E /* README.txt in Resources */,
 				8C80A2381DEC409100F1D82E /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -2467,6 +2472,7 @@
 				8C1923AF1DD57DC300031BC5 /* NSObject+MJProperty.m in Sources */,
 				8CD3D4861DAA3ABD00044ADB /* UIImage+Stretch.m in Sources */,
 				8CD3D4581DAA3A5200044ADB /* YTKNetworkAgent.m in Sources */,
+				8C6F40771E5EEC7C006B07FD /* UIImageView+Animation.m in Sources */,
 				8C1925DA1DD5901600031BC5 /* SNArticleBaseViewController+Support.m in Sources */,
 				8CD3D4E71DAB458A00044ADB /* YBMessageViewController.m in Sources */,
 				8C1925251DD5901600031BC5 /* SNArticlePictureGroup.m in Sources */,
