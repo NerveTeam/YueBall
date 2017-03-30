@@ -241,3 +241,19 @@ static const NSString *domain = @"http://wu.she-cheng.com/thinkphp/";
 }
 
 @end
+
+@implementation NewsCommentList
+- (NSString *)requestUrl {
+    return [domain stringByAppendingString:@"comment/lists"];
+}
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodGET;
+}
+- (YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+- (BOOL)useCDN {
+    return YES;
+}
+
+@end

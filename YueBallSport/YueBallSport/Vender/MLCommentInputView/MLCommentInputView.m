@@ -8,6 +8,7 @@
 
 #import "MLCommentInputView.h"
 #import "UIView+Position.h"
+#import "YBPlaceholderTextView.h"
 #define screenWidth  [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 #define normalFrame CGRectMake(0, screenHeight - 50, screenWidth, 50)
@@ -19,11 +20,12 @@ typedef NS_ENUM(NSInteger ,KeyboardType) {
 @interface MLCommentInputView ()<UITextViewDelegate>
 @property(nonatomic, strong)UITextField *commentInputField;
 @property(nonatomic, strong)UIView *commentInputBgView;
-@property(nonatomic, strong)UITextView *commentInputTextView;
 @property(nonatomic, strong)UIButton *commentTip;
 @property(nonatomic, strong)UIButton *sendView;
 @property(nonatomic, assign)BOOL isReset;
 @property(nonatomic, assign)KeyboardType keyBoardType;
+@property(nonatomic, assign)CommentStyle commentStyle;
+@property(nonatomic, copy)NSString *parentId;
 @end
 
 @implementation MLCommentInputView
@@ -39,9 +41,35 @@ typedef NS_ENUM(NSInteger ,KeyboardType) {
     }
     return self;
 }
+
+- (instancetype)initWithCommentStyle:(CommentStyle)commentStyle {
+    if ([super init]) {
+        self.commentStyle = commentStyle;
+        [self setupUI];
+    }
+    return self;
+}
 - (void)updateCommentCount:(NSInteger)count {
     [self.commentTip setTitle:[NSString stringWithFormat:@"%ld评论",count] forState:UIControlStateNormal];
 }
+
+- (void)replayComment:(NSString *)parentId name:(NSString *)replayName {
+    self.commentInputTextView.placeholder = [NSString stringWithFormat:@"回复%@:",replayName];
+    self.commentInputField.placeholder = [NSString stringWithFormat:@"回复%@:",replayName];
+    self.parentId = parentId;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+       [self.commentInputTextView becomeFirstResponder];
+    });
+}
+
+- (void)resetComment {
+    self.commentInputTextView.placeholder = @"";
+    self.commentInputTextView.text = @"";
+    self.commentInputField.placeholder = [NSString stringWithFormat:@"聊点什么吧..."];
+    self.parentId = @"";
+    [self endEditing:YES];
+}
+
 - (BOOL)endEditing:(BOOL)force {
     if (_keyBoardType == KeyboardTypeShow) {
         [self.commentInputTextView resignFirstResponder];
@@ -50,8 +78,8 @@ typedef NS_ENUM(NSInteger ,KeyboardType) {
     return NO;
 }
 - (void)sendComment {
-    if ([_delegate respondsToSelector:@selector(sendComment:)]) {
-        [_delegate sendComment:self.commentInputTextView.text];
+    if ([_delegate respondsToSelector:@selector(sendComment:text:)]) {
+        [_delegate sendComment:self.parentId text:self.commentInputTextView.text];
     }
 }
 - (void)commentClick {
@@ -119,7 +147,9 @@ typedef NS_ENUM(NSInteger ,KeyboardType) {
     [self addSubview:self.commentInputBgView];
     [self.commentInputBgView addSubview:self.commentInputTextView];
     [self.commentInputBgView addSubview:self.sendView];
-    
+    if (self.commentStyle == CommentStylePage) {
+        [self.commentTip setTitle:@"回到正文" forState:UIControlStateNormal];
+    }
 }
 
 - (void)registerNotification {
@@ -128,9 +158,9 @@ typedef NS_ENUM(NSInteger ,KeyboardType) {
 }
 
 #pragma mark - lazy
-- (UITextView *)commentInputTextView {
+- (YBPlaceholderTextView *)commentInputTextView {
     if (!_commentInputTextView) {
-        _commentInputTextView = [[UITextView alloc]init];
+        _commentInputTextView = [[YBPlaceholderTextView alloc]init];
         _commentInputTextView.delegate = self;
         _commentInputTextView.font = [UIFont systemFontOfSize:15];
         _commentInputTextView.textColor = [UIColor colorWithRed:105/255.0 green:105/255.0 blue:105/255.0 alpha:1];

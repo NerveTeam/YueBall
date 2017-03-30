@@ -7,7 +7,8 @@
 //
 
 #import "SNArticleBaseViewController.h"
+#import "MLCommentInputView.h"
 
 @interface YBArticleViewController : SNArticleBaseViewController
-
+@property(nonatomic, strong)MLCommentInputView *commentInputView;
 @end

@@ -702,8 +702,9 @@
     {
         NSDictionary *data = [userInfo objectForKeySafely:@"data"];
 
-        NSInteger type = [[data objectForKeySafely:@"type"] integerValue];
-        NSInteger index = [[data objectForKeySafely:@"index"] integerValue];
+        NSDictionary *params = [data objectForKeySafely:@"params"];
+        NSInteger type = [[params objectForKeySafely:@"type"] integerValue];
+        NSInteger index = [[params objectForKeySafely:@"index"] integerValue];
 
         SNComment *comment = nil;
         if(type == SNCommentTypeFamous)
@@ -842,5 +843,4 @@
         [self.actionDelegate sn_openCommentInput];
     }
 }
-
 @end

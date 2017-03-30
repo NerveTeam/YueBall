@@ -10514,6 +10514,53 @@ define('lib/kit/func/delay',function(require,exports,module){
 		};
 	};
 });
+                                    
+define('mods/comp/commentReply', function(require,exports,module){
+       var $ = require('lib');
+       var $htmlRender = require('lib/common/htmlRender');
+       var $channelApp = require('mods/channel/app');
+       var $bridge = require('mods/bridge/global');
+       var $propQuery = require('lib/kit/util/propQuery');
+       
+       var selector = '[click-type="comment-reply"]';
+       var compconf = {};
+       var $doc = $(document);
+       var UI_PARAM = 'ui-param';
+       
+    var buildCommentReplay = function(){
+       $doc.delegate(selector, 'tap', function(evt){
+         var el = $(evt.currentTarget);
+         var params = el.attr(UI_PARAM);
+         params = $propQuery.parse(params);
+         
+         if(params.offset){
+         params.offset = el.offset();
+         }
+         if(params.pos){
+         params.pos = {};
+         var pos = el.get(0).getBoundingClientRect();
+         //ios8下 pos对象未能正常解析json字符串 所以遍历属性输出值
+         ['bottom','height','left','right','top','width'].forEach(function(key){
+                                                                  params.pos[key] = pos[key];
+                                                                  });
+         }
+         $bridge.request('comment_reply', {
+                         timeout : 200 * 1000,
+                         data : {
+                         params : params
+                         }
+                         });
+                     });
+       };
+       $htmlRender.ready(buildCommentReplay);
+       
+       module.exports = {
+       init : function(options){
+       $.extend(compconf, options);
+       }
+       };
+       
+});
 
 
 ;(function(){
@@ -10600,6 +10647,7 @@ define('conf/page/compindex',function(require,exports,module){
 	var compShare = require('mods/comp/shareEntry');
 	var compMoreRecommend = require('mods/comp/loadRecommend');
 	var compISupport = require('mods/comp/iSupport');
+    var compCommentReply = require('mods/comp/commentReply');
 
 	uiButton.init();
 	uiLink.init();
@@ -10632,6 +10680,7 @@ define('conf/page/compindex',function(require,exports,module){
 	compMoreRecommend.init();
 	compISupport.init();
 	compDigger.init();
+    compCommentReply.init();
     //appConsole.init();
 });
 
