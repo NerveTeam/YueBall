@@ -11,7 +11,7 @@
 #import "UIViewController+MLSegue.h"
 #import "MLPercentInteractiveTransition.h"
 #define navigationBar toController.navigationController.navigationBar
-#define Duration 1 // 动画时长
+#define Duration 0.5 // 动画时长
 #define UIScreen_Width [UIScreen mainScreen].bounds.size.width
 #define UIScreen_Height [UIScreen mainScreen].bounds.size.height
 #define movePosition 300
@@ -72,6 +72,7 @@ UIViewControllerJumpType _jumpType; // 跳转类型
 + (animationType)Gradient:(completion)finish{
     
     animationType gradient = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
+        [self transitionSeting:toController];
         fromView.alpha = 1.0;
         toView.alpha = 0.0;
         navigationBar.alpha = 0.0;
@@ -347,6 +348,7 @@ animationType FlipPage = ^(UIView *containerView,UIView *fromView,UIView *toView
 
 + (animationType)Ripple:(completion)finish {
     animationType Ripple = ^(UIView *containerView,UIView *fromView,UIView *toView,UIViewController *toController,UIViewController *fromController){
+        [self transitionSeting:toController];
         [fromView addSubview:toView];
         CATransition *transition = [CATransition animation];
         toView.alpha = 0.0;

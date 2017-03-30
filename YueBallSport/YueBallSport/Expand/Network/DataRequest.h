@@ -65,3 +65,7 @@
 @interface ChatGroupDetailRequest : BaseDataRequest
 
 @end
+// 新闻评论列表页
+@interface NewsCommentList : BaseDataRequest
+
+@end

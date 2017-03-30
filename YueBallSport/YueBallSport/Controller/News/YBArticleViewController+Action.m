@@ -11,6 +11,7 @@
 #import "YBAlbumViewController.h"
 #import "YBLoginViewController.h"
 #import "MLTransition.h"
+#import "YBCommentViewController.h"
 
 @interface YBArticleViewController ()<SNArticleActionProtocal>
 @property(nonatomic, strong)YBAlbumViewController *albumViewController;
@@ -34,10 +35,24 @@ static const NSString *albumViewControllerKey = @"albumViewController";
     [self.view addSubview:self.albumViewController.view];
     
 }
+
+
+
 - (void)sn_requestCallback:(NSDictionary *)userInfo {
     self.spring = YES;
     [self pushViewcontroller:[[YBLoginViewController alloc]init] animationType:UIViewAnimationTypeFall];
 }
+
+- (void)sn_commentReply:(SNComment *)comment {
+    [self.commentInputView replayComment:[NSString stringWithFormat:@"%ld",comment.mId] name:comment.userName];
+}
+
+- (void)sn_commentMoreClick {
+    YBCommentViewController *commentVc = [[YBCommentViewController alloc]init];
+    commentVc.newsId = self.newsId;
+    [self.navigationController pushViewController:commentVc animated:YES];
+}
+
 
 - (YBAlbumViewController *)albumViewController {
     YBAlbumViewController *albumVc = objc_getAssociatedObject(self, (__bridge void *)(albumViewControllerKey));

@@ -17,6 +17,7 @@
 #import "YBMessageConfig.h"
 #import "YBMessageModel.h"
 #import "MJExtension.h"
+#import "NSArray+Safe.h"
 @interface YBContactManager ()
 
 //@property (strong, nonatomic) NSMutableArray *contactIDs;
@@ -47,7 +48,7 @@
             
             for (YBMessageModel * model in [config LCCKContactProfilesArr]) {
                 
-                  [_contactIDs addObject:model.uid];
+                  [_contactIDs safeAddObject:model.uid];
             }
             
 //            for (NSArray *contacts in __LCCKContactsOfSections) {

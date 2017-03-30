@@ -15,13 +15,14 @@
 #import "AFNetworking.h"
 #import "YBArticlePullTipView.h"
 #import "MLTransition.h"
+#import "MLCommentViewController.h"
+#import "YBCommentViewController.h"
 
 @interface YBArticleViewController ()<MLCommentInputViewDelegate,DataRequestDelegate,SNArticleActionProtocal>
 
 @property(nonatomic, strong)UIView *topBar;
 @property(nonatomic, strong)UIButton *backItem;
 @property(nonatomic, strong)UIButton *shareItem;
-@property(nonatomic, strong)MLCommentInputView *commentInputView;
 // 上拉提示
 @property(nonatomic, strong)YBArticlePullTipView *pullTipView;
 @end
@@ -77,21 +78,25 @@ static CGFloat pullStartPosition = 20; // 下拉初始点
 
 
 #pragma mark - MLCommentInputViewDelegate
-- (void)sendComment:(NSString *)inputText {
+- (void)sendComment:(NSString *)parentId text:(NSString *)inputText {
     NSDictionary *parameter = @{@"articleId":self.newsId,
                                 @"uid":@(12),
                                 @"content":inputText,
-                                @"type":@"news"};
+                                @"type":@"news",
+                                @"parentId":parentId};
     AFSecurityPolicy *securityPolicy = [[AFSecurityPolicy alloc] init];
     [securityPolicy setAllowInvalidCertificates:YES];
     [ReplayCommentRequest requestDataWithDelegate:self parameters:parameter];
 }
 // TODU: 跳转评论页
 - (void)commentItemClick {
-
+    YBCommentViewController *commentVc = [[YBCommentViewController alloc]init];
+    commentVc.newsId = self.newsId;
+    [self pushViewcontroller:commentVc animationType:UIViewAnimationTypeFlip];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.commentInputView endEditing:YES];
     CGFloat ofset = scrollView.contentOffset.y;
     CGFloat totalOfset = scrollView.contentSize.height;
     
@@ -129,12 +134,14 @@ static CGFloat pullStartPosition = 20; // 下拉初始点
 
 - (void)requestFinished:(BaseDataRequest *)request {
     if ([request isKindOfClass:[ReplayCommentRequest class]]) {
-        [self.commentInputView endEditing:YES];
+        [self.commentInputView resetComment];
+        [self showMessage:@"评论成功"];
     }
 }
 - (void)requestFailed:(BaseDataRequest *)request {
     if ([request isKindOfClass:[ReplayCommentRequest class]]) {
-//        [self.commentInputView endEditing:YES];
+        [self.commentInputView endEditing:YES];
+        [self showMessage:@"评论失败"];
     }
 }
 
@@ -160,7 +167,7 @@ static CGFloat pullStartPosition = 20; // 下拉初始点
 }
 - (MLCommentInputView *)commentInputView {
     if (!_commentInputView) {
-        _commentInputView = [[MLCommentInputView alloc]init];
+        _commentInputView = [[MLCommentInputView alloc]initWithCommentStyle:CommentStyleArticle];
         _commentInputView.delegate = self;
         [self.view addSubview:_commentInputView];
     }

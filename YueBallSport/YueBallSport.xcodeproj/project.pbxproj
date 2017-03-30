@@ -136,6 +136,17 @@
 		8C3320C51E10C39F0048269B /* YBUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3320C41E10C39F0048269B /* YBUnderlineTextField.m */; };
 		8C3320C81E10C9BD0048269B /* YBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3320C71E10C9BD0048269B /* YBRegisterViewController.m */; };
 		8C5CDC431E1D010B00028922 /* YBResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CDC421E1D010B00028922 /* YBResetPasswordViewController.m */; };
+		8C64A4321E66AD8500668203 /* MLBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A41F1E66AD8500668203 /* MLBorderView.m */; };
+		8C64A4331E66AD8500668203 /* MLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A4211E66AD8500668203 /* MLComment.m */; };
+		8C64A4341E66AD8500668203 /* MLCommentContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A4231E66AD8500668203 /* MLCommentContentCell.m */; };
+		8C64A4351E66AD8500668203 /* MLCommentContentList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A4251E66AD8500668203 /* MLCommentContentList.m */; };
+		8C64A4361E66AD8500668203 /* MLCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A4271E66AD8500668203 /* MLCommentViewController.m */; };
+		8C64A4371E66AD8500668203 /* MLCommentVoteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A4291E66AD8500668203 /* MLCommentVoteButton.m */; };
+		8C64A4381E66AD8500668203 /* MLCommentVoteButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C64A42A1E66AD8500668203 /* MLCommentVoteButton.xib */; };
+		8C64A4391E66AD8500668203 /* agreed_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C64A42C1E66AD8500668203 /* agreed_icon@2x.png */; };
+		8C64A43A1E66AD8500668203 /* extension_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C64A42D1E66AD8500668203 /* extension_icon@2x.png */; };
+		8C64A43B1E66AD8500668203 /* reply_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C64A42E1E66AD8500668203 /* reply_icon@2x.png */; };
+		8C64A43C1E66AD8500668203 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A4311E66AD8500668203 /* NSString+URLEncode.m */; };
 		8C6F40741E5EE581006B07FD /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C6F40731E5EE581006B07FD /* home.jpg */; };
 		8C6F40771E5EEC7C006B07FD /* UIImageView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F40761E5EEC7C006B07FD /* UIImageView+Animation.m */; };
 		8C70EBF21DD7670B009514EC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C70EBF11DD7670B009514EC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -185,7 +196,9 @@
 		8C80A2491DEC410700F1D82E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80A2481DEC410700F1D82E /* JavaScriptCore.framework */; };
 		8C80A24B1DEC411D00F1D82E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80A24A1DEC411D00F1D82E /* ImageIO.framework */; };
 		8C80A24D1DEC412B00F1D82E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C80A24C1DEC412B00F1D82E /* libsqlite3.tbd */; };
+		8CA107B31E8B9EB000417C5A /* YBPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA107B21E8B9EB000417C5A /* YBPlaceholderTextView.m */; };
 		8CABD1761DE54A2B00812AB7 /* MLCommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CABD1751DE54A2B00812AB7 /* MLCommentInputView.m */; };
+		8CB34A8F1E81278C0042A2D9 /* YBCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB34A8E1E81278C0042A2D9 /* YBCommentViewController.m */; };
 		8CD3D3AE1DAA244600044ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3AD1DAA244600044ADB /* main.m */; };
 		8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3D3B81DAA244600044ADB /* Assets.xcassets */; };
 		8CD3D3C71DAA244600044ADB /* YueBallSportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3D3C61DAA244600044ADB /* YueBallSportTests.m */; };
@@ -549,6 +562,24 @@
 		8C3320C71E10C9BD0048269B /* YBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBRegisterViewController.m; sourceTree = "<group>"; };
 		8C5CDC411E1D010B00028922 /* YBResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBResetPasswordViewController.h; sourceTree = "<group>"; };
 		8C5CDC421E1D010B00028922 /* YBResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBResetPasswordViewController.m; sourceTree = "<group>"; };
+		8C64A41E1E66AD8500668203 /* MLBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBorderView.h; sourceTree = "<group>"; };
+		8C64A41F1E66AD8500668203 /* MLBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBorderView.m; sourceTree = "<group>"; };
+		8C64A4201E66AD8500668203 /* MLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLComment.h; sourceTree = "<group>"; };
+		8C64A4211E66AD8500668203 /* MLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLComment.m; sourceTree = "<group>"; };
+		8C64A4221E66AD8500668203 /* MLCommentContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCommentContentCell.h; sourceTree = "<group>"; };
+		8C64A4231E66AD8500668203 /* MLCommentContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCommentContentCell.m; sourceTree = "<group>"; };
+		8C64A4241E66AD8500668203 /* MLCommentContentList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCommentContentList.h; sourceTree = "<group>"; };
+		8C64A4251E66AD8500668203 /* MLCommentContentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCommentContentList.m; sourceTree = "<group>"; };
+		8C64A4261E66AD8500668203 /* MLCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCommentViewController.h; sourceTree = "<group>"; };
+		8C64A4271E66AD8500668203 /* MLCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCommentViewController.m; sourceTree = "<group>"; };
+		8C64A4281E66AD8500668203 /* MLCommentVoteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCommentVoteButton.h; sourceTree = "<group>"; };
+		8C64A4291E66AD8500668203 /* MLCommentVoteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCommentVoteButton.m; sourceTree = "<group>"; };
+		8C64A42A1E66AD8500668203 /* MLCommentVoteButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLCommentVoteButton.xib; sourceTree = "<group>"; };
+		8C64A42C1E66AD8500668203 /* agreed_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agreed_icon@2x.png"; sourceTree = "<group>"; };
+		8C64A42D1E66AD8500668203 /* extension_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "extension_icon@2x.png"; sourceTree = "<group>"; };
+		8C64A42E1E66AD8500668203 /* reply_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reply_icon@2x.png"; sourceTree = "<group>"; };
+		8C64A4301E66AD8500668203 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
+		8C64A4311E66AD8500668203 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
 		8C6F40731E5EE581006B07FD /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
 		8C6F40751E5EEC7C006B07FD /* UIImageView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Animation.h"; sourceTree = "<group>"; };
 		8C6F40761E5EEC7C006B07FD /* UIImageView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Animation.m"; sourceTree = "<group>"; };
@@ -636,8 +667,12 @@
 		8C80A2481DEC410700F1D82E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		8C80A24A1DEC411D00F1D82E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		8C80A24C1DEC412B00F1D82E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8CA107B11E8B9EB000417C5A /* YBPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPlaceholderTextView.h; sourceTree = "<group>"; };
+		8CA107B21E8B9EB000417C5A /* YBPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPlaceholderTextView.m; sourceTree = "<group>"; };
 		8CABD1741DE54A2B00812AB7 /* MLCommentInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCommentInputView.h; sourceTree = "<group>"; };
 		8CABD1751DE54A2B00812AB7 /* MLCommentInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCommentInputView.m; sourceTree = "<group>"; };
+		8CB34A8D1E81278C0042A2D9 /* YBCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBCommentViewController.h; sourceTree = "<group>"; };
+		8CB34A8E1E81278C0042A2D9 /* YBCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBCommentViewController.m; sourceTree = "<group>"; };
 		8CD3D3A91DAA244600044ADB /* YueBallSport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueBallSport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD3D3AD1DAA244600044ADB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CD3D3B81DAA244600044ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1318,8 +1353,59 @@
 				8C097BEF1E13AC33009FFB88 /* YBVerifyCodeInputView.m */,
 				8C097BF11E13B05F009FFB88 /* YBUnderLineLabel.h */,
 				8C097BF21E13B05F009FFB88 /* YBUnderLineLabel.m */,
+				8CA107B11E8B9EB000417C5A /* YBPlaceholderTextView.h */,
+				8CA107B21E8B9EB000417C5A /* YBPlaceholderTextView.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		8C64A41C1E66AD8500668203 /* MLCommentPage */ = {
+			isa = PBXGroup;
+			children = (
+				8C64A41D1E66AD8500668203 /* Core */,
+				8C64A42B1E66AD8500668203 /* Image */,
+				8C64A42F1E66AD8500668203 /* Tool */,
+			);
+			path = MLCommentPage;
+			sourceTree = "<group>";
+		};
+		8C64A41D1E66AD8500668203 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8C64A41E1E66AD8500668203 /* MLBorderView.h */,
+				8C64A41F1E66AD8500668203 /* MLBorderView.m */,
+				8C64A4201E66AD8500668203 /* MLComment.h */,
+				8C64A4211E66AD8500668203 /* MLComment.m */,
+				8C64A4221E66AD8500668203 /* MLCommentContentCell.h */,
+				8C64A4231E66AD8500668203 /* MLCommentContentCell.m */,
+				8C64A4241E66AD8500668203 /* MLCommentContentList.h */,
+				8C64A4251E66AD8500668203 /* MLCommentContentList.m */,
+				8C64A4261E66AD8500668203 /* MLCommentViewController.h */,
+				8C64A4271E66AD8500668203 /* MLCommentViewController.m */,
+				8C64A4281E66AD8500668203 /* MLCommentVoteButton.h */,
+				8C64A4291E66AD8500668203 /* MLCommentVoteButton.m */,
+				8C64A42A1E66AD8500668203 /* MLCommentVoteButton.xib */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8C64A42B1E66AD8500668203 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				8C64A42C1E66AD8500668203 /* agreed_icon@2x.png */,
+				8C64A42D1E66AD8500668203 /* extension_icon@2x.png */,
+				8C64A42E1E66AD8500668203 /* reply_icon@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		8C64A42F1E66AD8500668203 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				8C64A4301E66AD8500668203 /* NSString+URLEncode.h */,
+				8C64A4311E66AD8500668203 /* NSString+URLEncode.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		8C70EBEF1DD7670B009514EC /* JSONKit */ = {
@@ -1719,6 +1805,8 @@
 				8C162C3E1DEAB2A0009A3514 /* YBArticleViewController+Action.m */,
 				8C162C431DEAB603009A3514 /* YBAlbumViewController.h */,
 				8C162C441DEAB603009A3514 /* YBAlbumViewController.m */,
+				8CB34A8D1E81278C0042A2D9 /* YBCommentViewController.h */,
+				8CB34A8E1E81278C0042A2D9 /* YBCommentViewController.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -1893,6 +1981,7 @@
 		8CD3D40C1DAA387F00044ADB /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				8C64A41C1E66AD8500668203 /* MLCommentPage */,
 				8C7479011E2CB7A300069AA4 /* MLRefresh */,
 				8C3320B31E0BC5610048269B /* SMS_SDK */,
 				8C80A2041DEC409100F1D82E /* ShareSDK */,
@@ -2318,6 +2407,7 @@
 				8C1927051DD5925B00031BC5 /* images in Resources */,
 				8C70EC031DD87F80009514EC /* channelConfig.json in Resources */,
 				8C1927041DD5925B00031BC5 /* css in Resources */,
+				8C64A43B1E66AD8500668203 /* reply_icon@2x.png in Resources */,
 				8C75485B1DD9A4D800569DAE /* content_ic_comments@2x.png in Resources */,
 				8C6F40741E5EE581006B07FD /* home.jpg in Resources */,
 				60D11D941DF1165C00A01F7E /* scource.json in Resources */,
@@ -2331,12 +2421,15 @@
 				602F913D1E0046C2009C06E9 /* groupscource.json in Resources */,
 				6001D2CE1E022EC400988349 /* YBGroupChatDetailCollectionViewCell.xib in Resources */,
 				602F18981DF158F0002893DF /* jiahao.png in Resources */,
+				8C64A4391E66AD8500668203 /* agreed_icon@2x.png in Resources */,
 				8CD3D3B91DAA244600044ADB /* Assets.xcassets in Resources */,
 				8C80A23A1DEC409100F1D82E /* WeiboSDK.bundle in Resources */,
 				8C80A23F1DEC409100F1D82E /* ShareSDK.bundle in Resources */,
 				8C1923A61DD57DC300031BC5 /* Info.plist in Resources */,
 				8C19253B1DD5901600031BC5 /* articleTemplate.html in Resources */,
 				604D345D1DE680E400940B49 /* LaunchScreen.strings in Resources */,
+				8C64A43A1E66AD8500668203 /* extension_icon@2x.png in Resources */,
+				8C64A4381E66AD8500668203 /* MLCommentVoteButton.xib in Resources */,
 				6001D2F41E028B9900988349 /* DemoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2418,8 +2511,10 @@
 				8C1925CC1DD5901600031BC5 /* SNArticleManager.m in Sources */,
 				8C1925191DD5901600031BC5 /* UIImage+SNArticle.m in Sources */,
 				8C11E0411DEED5BE00127593 /* YBLoginViewController.m in Sources */,
+				8C64A4341E66AD8500668203 /* MLCommentContentCell.m in Sources */,
 				8C1925161DD5901600031BC5 /* NSString+SNArticle.m in Sources */,
 				8CD3D4591DAA3A5200044ADB /* YTKNetworkConfig.m in Sources */,
+				8C64A4351E66AD8500668203 /* MLCommentContentList.m in Sources */,
 				8CD3D43C1DAA3A4900044ADB /* UIProgressView+AFNetworking.m in Sources */,
 				8C70EC061DD88003009514EC /* YBFileHelper.m in Sources */,
 				8CD3D4571DAA3A5200044ADB /* YTKChainRequestAgent.m in Sources */,
@@ -2450,6 +2545,7 @@
 				8C1925261DD5901600031BC5 /* SNArticleTempImage.m in Sources */,
 				8C7548731DD9ACCE00569DAE /* UIView+SDExtension.m in Sources */,
 				6001D2F91E028C5E00988349 /* BaseTableViewController.m in Sources */,
+				8C64A4371E66AD8500668203 /* MLCommentVoteButton.m in Sources */,
 				8C14D7A51DDC4BC100323CB8 /* YBCollectionViewBaseCell.m in Sources */,
 				8CD3D4881DAA3ABD00044ADB /* UIView+Position.m in Sources */,
 				8C1925D61DD5901600031BC5 /* SNArticleBaseViewController+Gesture.m in Sources */,
@@ -2519,6 +2615,8 @@
 				8CD3D59B1DAC8B9A00044ADB /* TestFindView.m in Sources */,
 				8CD3D45B1DAA3A5200044ADB /* YTKRequest.m in Sources */,
 				8CD3D5351DABB36400044ADB /* TestConfig.m in Sources */,
+				8CA107B31E8B9EB000417C5A /* YBPlaceholderTextView.m in Sources */,
+				8C64A4321E66AD8500668203 /* MLBorderView.m in Sources */,
 				8C14D7A81DDC4C9500323CB8 /* YBChannelListCell.m in Sources */,
 				8CD3D4731DAA3AA900044ADB /* DataRequest.m in Sources */,
 				8C2827D61DF9613B00AD41B4 /* YBUser.m in Sources */,
@@ -2537,6 +2635,7 @@
 				8C1925CA1DD5901600031BC5 /* SNArticleManager+Cache.m in Sources */,
 				8CD3D4541DAA3A5200044ADB /* YTKBatchRequest.m in Sources */,
 				8CD3D4871DAA3ABD00044ADB /* UILabel+Extention.m in Sources */,
+				8C64A43C1E66AD8500668203 /* NSString+URLEncode.m in Sources */,
 				8C14D7AE1DDDA74A00323CB8 /* YBBaseDetailViewController.m in Sources */,
 				8C162C421DEAB4B4009A3514 /* YBAlbum.m in Sources */,
 				8C1925CF1DD5901600031BC5 /* NSDate+Helper.m in Sources */,
@@ -2560,6 +2659,7 @@
 				8C1923A71DD57DC300031BC5 /* MJExtensionConst.m in Sources */,
 				8C7548791DD9B86700569DAE /* YBArticleRequestDelegate.m in Sources */,
 				8CD3D41F1DAA3A2F00044ADB /* AFURLResponseSerialization.m in Sources */,
+				8CB34A8F1E81278C0042A2D9 /* YBCommentViewController.m in Sources */,
 				8C19251D1DD5901600031BC5 /* SNArticleAppInfo.m in Sources */,
 				8CFF927C1DE6EA3900C4CDEF /* YBArticlePullTipView.m in Sources */,
 				8CD3D41B1DAA3A2F00044ADB /* AFHTTPSessionManager.m in Sources */,
@@ -2573,6 +2673,7 @@
 				8C097BF31E13B05F009FFB88 /* YBUnderLineLabel.m in Sources */,
 				8C1925181DD5901600031BC5 /* UIColor+SNArticle.m in Sources */,
 				8C1925CD1DD5901600031BC5 /* NSFileManager+Size.m in Sources */,
+				8C64A4331E66AD8500668203 /* MLComment.m in Sources */,
 				8C19251C1DD5901600031BC5 /* SNArticle.m in Sources */,
 				8C1925D11DD5901600031BC5 /* SNArticleSetting.m in Sources */,
 				8C7548991DDB09E500569DAE /* MLBridgeBlock.m in Sources */,
@@ -2615,6 +2716,7 @@
 				8C75489B1DDB09E500569DAE /* MLTransitionAnimation.m in Sources */,
 				8C1925371DD5901600031BC5 /* SNAttitudeParser.m in Sources */,
 				8C1925D51DD5901600031BC5 /* SNArticleBaseViewController+Attitude.m in Sources */,
+				8C64A4361E66AD8500668203 /* MLCommentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
